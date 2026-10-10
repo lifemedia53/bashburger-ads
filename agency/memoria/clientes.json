@@ -93,5 +93,12 @@
         "Renovar ST TLL antes del 22-oct"
       ]
     }
+  },
+  "ex_clientes": {
+    "Picanha Rodizio": {
+      "cuenta": "1856416768406342",
+      "desde": "2026-10-10",
+      "nota": "Laura confirmó que ya no es cliente; 4 boosts vencidos figuran activos con $0"
+    }
   }
 }
