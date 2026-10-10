@@ -1,0 +1,13 @@
+{
+  "nombre": "Flujo Auditor → Jefe → Laura → Paid Media → medición",
+  "pasos": [
+    "1. meta-ads-auditor audita (solo lectura en Meta) y registra cada hallazgo en la Bitácora de hallazgos Ads (Estado 'Nuevo', Urgencia P1/P2/P3) y actualiza Estado auditoría + Próxima acción en Control de cuentas",
+    "2. Jefe consolida los hallazgos P1/P2 y se los presenta a Laura en una lista corta",
+    "3. Laura aprueba cuáles se ejecutan",
+    "4. paid-media-lead prepara cada cambio; si mueve dinero o activa/pausa, lo ejecuta el Jefe paso a paso",
+    "5. REGISTRO DE CAMBIOS: todo cambio ejecutado en Meta se registra en la Bitácora con Clave única 'cliente|fecha|accion-implementada|slug', Tipo según corresponda, Evidencia = antes→después + IDs + métricas base (gasto, resultados, costo/resultado 7 días previos), Estado 'En seguimiento', y fecha de revisión a 7 días en Control de cuentas",
+    "6. MEDICIÓN: a los 7 días paid-media-lead compara antes vs después y marca el hallazgo 'Resuelto' (con Resultado confirmado) o propone ajuste",
+    "7. CAMBIOS DE TERCEROS: en cada revisión paid-media-lead lee el registro de actividad de la cuenta en Meta (ads_account_get_activity_logs) y registra en la Bitácora cualquier cambio hecho por otra persona"
+  ],
+  "permisos_notion": "Auditor y Paid Media pueden CREAR hallazgos en la Bitácora y ACTUALIZAR Estado auditoría / Próxima acción / Última revisión en Control de cuentas. No cierran tareas, no borran, no cambian deadlines sin aprobación."
+}
