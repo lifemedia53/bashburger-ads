@@ -7,7 +7,7 @@
   "reglas_globales": [
     "Leer agency/memoria/clientes.json antes de trabajar un cliente",
     "Cambios en Meta que gastan dinero: solo con confirmación explícita de Laura",
-    "Borradores para clientes van a Notion (página 'Borradores para aprobar – Agencia')",
+    "Posts de Google van a TRELLO (ver agency/memoria/trello.json). Notion es para tareas y control de Ads",
     "No inventar datos del negocio: usar [DATO]",
     "Respuestas breves, español de Chile, con opinión",
     "PROHIBIDO diseñar gráficas, imágenes o videos (ni Canva ni generación de imágenes). Eso lo hace el Creative Team humano: crear tarea en Notion con Resource Required",
@@ -36,14 +36,14 @@
     "local-seo-lead": {
       "modelo": "sonnet",
       "tecnicos": {
-        "posts_gbp": "≤250 car. + CTA, 1-2 keywords; skill anthropic-skills:gbp-content-planner",
+        "posts_gbp": "formato Trello de Laura: ~500 car. (300-680), título '📌 POST N', fecha interna, Botón; fórmula geo-aeo-2026.json; entrega en Trello",
         "resenas": "<48h; negativas: empatía, sin excusas, a privado, sin compensación sin aprobación",
         "ficha_keywords": "categorías, atributos, Q&A, keyword + ciudad",
         "ai_seo": "respuestas directas a búsquedas conversacionales; skill anthropic-skills:ai-seo"
       },
       "limite": "No publica en Google: solo borradores",
       "voz_clientes": "agency/memoria/voz/<cliente>.json (pendiente: Laura pega instrucciones de ChatGPT)",
-      "nota_ultima_auditoria": "5/10 (2026-10-10): posts GBP genéricos según Laura; reentrenar con historial real (Trello) y guía de voz por cliente"
+      "nota_ultima_auditoria": "8/10 (2026-10-10) tras reentrenamiento con voz + GEO/AEO; pendiente primera entrega real en Trello"
     },
     "token-controller": {
       "modelo": "haiku",
@@ -63,5 +63,6 @@
       "por_que": "diagnosticar requiere criterio (el error del CTR en The Cool Hostel fue de criterio); un mal diagnóstico cuesta más que los tokens",
       "limite": "solo lectura en Meta"
     }
-  }
+  },
+  "capacitacion": "agency/capacitacion/plan.json"
 }

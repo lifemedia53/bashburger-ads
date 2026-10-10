@@ -1,41 +1,122 @@
 {
   "actualizado": "2026-10-10",
   "geo_generativo": [
-    {"regla": "Google dice que no hay markup ni archivo especial para salir en AI Overviews/AI Mode: basta estar indexado, con snippet, y contenido útil y fiable. No escribir 'para la IA'.", "fuente": "Google Search Central: AI features and your website (developers.google.com/search/docs/appearance/ai-features)"},
-    {"regla": "AI Overviews/AI Mode hacen 'query fan-out' (varias búsquedas relacionadas). Cubrir en ficha, web y posts las sub-preguntas: precio, horario, cómo llegar, para quién, qué incluye.", "fuente": "Google Search Central: AI features and your website"},
-    {"regla": "En ChatGPT/Perplexity/Gemini pesa la corroboración: el mismo dato en varias fuentes. Mismo concepto, dirección y horario en Google, Instagram, TripAdvisor, Booking, Uber Eats, Apple Maps.", "fuente": "InsItes AI visibility benchmark (10.000 negocios locales); Whitespark 2026 (citations 13% en visibilidad IA)"},
-    {"regla": "Volumen de reseñas es el mejor correlato de ser recomendado por IA; schema y llms.txt casi no correlacionaron. Priorizar pedir y responder reseñas por sobre tecnicismos.", "fuente": "InsItes benchmark (estudio de vendor, indicativo)"},
-    {"regla": "Las IA recomiendan a muy pocos negocios locales (ChatGPT ~1,2%, Perplexity ~7,4%, Gemini ~11% de ubicaciones). Ser específico y verificable pesa más que ser genérico.", "fuente": "SOCi 2026 Local Visibility Index, vía MapAtlas (secundaria)"},
-    {"regla": "Para IA, el sitio web pesa más que la ficha (on-page 24%, reseñas 16%, citas 13%). Cada cliente necesita una página con concepto, precio vigente, horario y dirección en texto plano.", "fuente": "Whitespark Local Search Ranking Factors 2026 (47 expertos, directional)"},
-    {"regla": "No keyword stuffing: máx. 1-2 keywords por post; en estudios de GEO baja la visibilidad. Datos concretos y fluidez suben la citabilidad.", "fuente": "Princeton GEO (KDD 2024), vía skill ai-seo"}
+    {
+      "regla": "Google dice que no hay markup ni archivo especial para salir en AI Overviews/AI Mode: basta estar indexado, con snippet, y contenido útil y fiable. No escribir 'para la IA'.",
+      "fuente": "Google Search Central: AI features and your website (developers.google.com/search/docs/appearance/ai-features)"
+    },
+    {
+      "regla": "AI Overviews/AI Mode hacen 'query fan-out' (varias búsquedas relacionadas). Cubrir en ficha, web y posts las sub-preguntas: precio, horario, cómo llegar, para quién, qué incluye.",
+      "fuente": "Google Search Central: AI features and your website"
+    },
+    {
+      "regla": "En ChatGPT/Perplexity/Gemini pesa la corroboración: el mismo dato en varias fuentes. Mismo concepto, dirección y horario en Google, Instagram, TripAdvisor, Booking, Uber Eats, Apple Maps.",
+      "fuente": "InsItes AI visibility benchmark (10.000 negocios locales); Whitespark 2026 (citations 13% en visibilidad IA)"
+    },
+    {
+      "regla": "Volumen de reseñas es el mejor correlato de ser recomendado por IA; schema y llms.txt casi no correlacionaron. Priorizar pedir y responder reseñas por sobre tecnicismos.",
+      "fuente": "InsItes benchmark (estudio de vendor, indicativo)"
+    },
+    {
+      "regla": "Las IA recomiendan a muy pocos negocios locales (ChatGPT ~1,2%, Perplexity ~7,4%, Gemini ~11% de ubicaciones). Ser específico y verificable pesa más que ser genérico.",
+      "fuente": "SOCi 2026 Local Visibility Index, vía MapAtlas (secundaria)"
+    },
+    {
+      "regla": "Para IA, el sitio web pesa más que la ficha (on-page 24%, reseñas 16%, citas 13%). Cada cliente necesita una página con concepto, precio vigente, horario y dirección en texto plano.",
+      "fuente": "Whitespark Local Search Ranking Factors 2026 (47 expertos, directional)"
+    },
+    {
+      "regla": "No keyword stuffing: máx. 1-2 keywords por post; en estudios de GEO baja la visibilidad. Datos concretos y fluidez suben la citabilidad.",
+      "fuente": "Princeton GEO (KDD 2024), vía skill ai-seo"
+    }
   ],
   "geo_local": [
-    {"regla": "Google rankea local por relevancia, distancia y prominencia. La distancia no se cambia: lo que sí se controla es dirección exacta y consistente en todos lados.", "fuente": "Google Business Profile Help: How to improve your local ranking (support.google.com/business/answer/7091)"},
-    {"regla": "NAP idéntico en todas las plataformas: 'Peñuelas Nte. 167, Coquimbo' escrito siempre igual, mismo nombre, mismo teléfono.", "fuente": "Google Business Profile Help (info de toda la web cuenta para prominencia)"},
-    {"regla": "Anclar a hitos reales y verificables: Casino Enjoy Coquimbo, Pueblito Peñuelas, playa de Peñuelas, con distancia solo si está confirmada ('a una cuadra' hostel; 'a metros' Bash).", "fuente": "Práctica local + voz de clientes; la distancia es dato del negocio"},
-    {"regla": "Nombrar barrio + ciudad en cada post (Peñuelas, Coquimbo) y no mezclar La Serena como ubicación: Bash y Hostel están en Coquimbo. La Serena solo como zona de búsqueda del visitante.", "fuente": "Voz bash-burger y the-cool-hostel"},
-    {"regla": "No inventar áreas de servicio ni direcciones para ganar cercanía; es riesgo de suspensión. Delivery Uber Eats se declara como delivery, no como área de servicio de la ficha.", "fuente": "Google Business Profile Help / políticas de ficha (guías secundarias)"}
+    {
+      "regla": "Google rankea local por relevancia, distancia y prominencia. La distancia no se cambia: lo que sí se controla es dirección exacta y consistente en todos lados.",
+      "fuente": "Google Business Profile Help: How to improve your local ranking (support.google.com/business/answer/7091)"
+    },
+    {
+      "regla": "NAP idéntico en todas las plataformas: 'Peñuelas Nte. 167, Coquimbo' escrito siempre igual, mismo nombre, mismo teléfono.",
+      "fuente": "Google Business Profile Help (info de toda la web cuenta para prominencia)"
+    },
+    {
+      "regla": "Anclar a hitos reales y verificables: Casino Enjoy Coquimbo, Pueblito Peñuelas, playa de Peñuelas, con distancia solo si está confirmada ('a una cuadra' hostel; 'a metros' Bash).",
+      "fuente": "Práctica local + voz de clientes; la distancia es dato del negocio"
+    },
+    {
+      "regla": "Nombrar barrio + ciudad en cada post (Peñuelas, Coquimbo) y no mezclar La Serena como ubicación: Bash y Hostel están en Coquimbo. La Serena solo como zona de búsqueda del visitante.",
+      "fuente": "Voz bash-burger y the-cool-hostel"
+    },
+    {
+      "regla": "No inventar áreas de servicio ni direcciones para ganar cercanía; es riesgo de suspensión. Delivery Uber Eats se declara como delivery, no como área de servicio de la ficha.",
+      "fuente": "Google Business Profile Help / políticas de ficha (guías secundarias)"
+    }
   ],
   "aeo": [
-    {"regla": "Empezar el texto con la respuesta directa: qué es + dónde + para quién. Bloques de 40-60 palabras se extraen mejor (recomendación de skill ai-seo, no regla de Google).", "fuente": "Skill ai-seo (patrones de contenido)"},
-    {"regla": "Google no recomienda trocear contenido ni escribir versiones 'para IA'. Un solo texto claro para personas, con títulos normales.", "fuente": "Google Search Central: AI features and your website"},
-    {"regla": "El Q&A público de la ficha ya no existe (API cerrada nov 2025, retiro desde dic 2025). Hoy Gemini 'Ask Maps' arma respuestas con ficha, reseñas, web y menciones. El dueño no puede sembrar respuestas.", "fuente": "Whitespark, PPC Land, BrightLocal (cobertura 2025-26; rollout gradual)"},
-    {"regla": "Poner las preguntas frecuentes en la web y en la descripción/posts, no en Q&A: precio, duración, qué incluye, mascotas, niños, cumpleaños, check-in, ubicación.", "fuente": "Inferencia desde cambio de Q&A; Whitespark 'Maps ask a question strategy'"},
-    {"regla": "Las reseñas son fuente de respuesta: al responder, repetir el plato/servicio y el lugar de forma natural ('tenedor libre de smash en Peñuelas').", "fuente": "Whitespark 2026 (reseñas 16-20%); Ask Maps usa reseñas"},
-    {"regla": "FAQPage ya no da rich results en Google (dejaron de mostrarse el 7-may-2026). Sirve solo como orden de contenido; no invertir tiempo en eso por Google.", "fuente": "Google Search Central blog 2023 + cobertura SEJ 2026"},
-    {"regla": "Schema útil: LocalBusiness/Restaurant (Bash) y Hotel/LodgingBusiness (Hostel) con nombre, dirección, horario, teléfono, coordenadas. Debe coincidir con el texto visible. No mueve IA según el estudio InsItes, pero ordena la entidad.", "fuente": "Google Search Central: Local business structured data; InsItes"}
+    {
+      "regla": "Empezar el texto con la respuesta directa: qué es + dónde + para quién. Bloques de 40-60 palabras se extraen mejor (recomendación de skill ai-seo, no regla de Google).",
+      "fuente": "Skill ai-seo (patrones de contenido)"
+    },
+    {
+      "regla": "Google no recomienda trocear contenido ni escribir versiones 'para IA'. Un solo texto claro para personas, con títulos normales.",
+      "fuente": "Google Search Central: AI features and your website"
+    },
+    {
+      "regla": "El Q&A público de la ficha ya no existe (API cerrada nov 2025, retiro desde dic 2025). Hoy Gemini 'Ask Maps' arma respuestas con ficha, reseñas, web y menciones. El dueño no puede sembrar respuestas.",
+      "fuente": "Whitespark, PPC Land, BrightLocal (cobertura 2025-26; rollout gradual)"
+    },
+    {
+      "regla": "Poner las preguntas frecuentes en la web y en la descripción/posts, no en Q&A: precio, duración, qué incluye, mascotas, niños, cumpleaños, check-in, ubicación.",
+      "fuente": "Inferencia desde cambio de Q&A; Whitespark 'Maps ask a question strategy'"
+    },
+    {
+      "regla": "Las reseñas son fuente de respuesta: al responder, repetir el plato/servicio y el lugar de forma natural ('tenedor libre de smash en Peñuelas').",
+      "fuente": "Whitespark 2026 (reseñas 16-20%); Ask Maps usa reseñas"
+    },
+    {
+      "regla": "FAQPage ya no da rich results en Google (dejaron de mostrarse el 7-may-2026). Sirve solo como orden de contenido; no invertir tiempo en eso por Google.",
+      "fuente": "Google Search Central blog 2023 + cobertura SEJ 2026"
+    },
+    {
+      "regla": "Schema útil: LocalBusiness/Restaurant (Bash) y Hotel/LodgingBusiness (Hostel) con nombre, dirección, horario, teléfono, coordenadas. Debe coincidir con el texto visible. No mueve IA según el estudio InsItes, pero ordena la entidad.",
+      "fuente": "Google Search Central: Local business structured data; InsItes"
+    }
   ],
   "gbp_senales": [
-    {"regla": "En el local pack manda la ficha (GBP ~32%), luego reseñas (~20%) y on-page (~15%). Son estimaciones de expertos, no pesos oficiales de Google.", "fuente": "Whitespark 2026, vía Emulent/Advicelocal"},
-    {"regla": "Categoría principal exacta (Bash: restaurante de hamburguesas/buffet según corresponda; Hostel: hostal) y categorías secundarias reales. Revisar en la ficha, no suponer.", "fuente": "Google Business Profile Help (info completa y precisa); Whitespark"},
-    {"regla": "Ficha completa: horarios, atributos (pet friendly, familiar, LGBTQ+ friendly), menú/servicios, fotos reales y recientes. Completar todo lo que Google ofrezca.", "fuente": "Google Business Profile Help"},
-    {"regla": "Reseñas: cantidad, nota y recencia. La recencia subió al top 5 de factores en 2026. Pedir reseñas todo el año, no en oleadas.", "fuente": "Whitespark 2026 (resumen de Reputation.com)"},
-    {"regla": "Responder todas las reseñas con detalle específico y sin plantilla. Las reseñas alimentan también las respuestas de Gemini.", "fuente": "Google Business Profile Help + Ask Maps"},
-    {"regla": "Posts GBP: sirven como señal de actividad y contexto, pero no hay dato oficial de cuánto pesan. Mantener ritmo semanal ligado a eventos.", "fuente": "Sin fuente primaria; ver no_confirmado"},
-    {"regla": "Consistencia en directorios y OTAs: TripAdvisor, Booking, Airbnb, Uber Eats, Apple Maps, Instagram. Mismos datos y mismas fotos clave. Las IA corroboran entidades con estas fuentes.", "fuente": "Whitespark 2026 (citas suben para IA); InsItes"},
-    {"regla": "No hay forma de pagar por rankear mejor en local; solo mejorar ficha, reseñas y presencia web.", "fuente": "Google Business Profile Help"}
+    {
+      "regla": "En el local pack manda la ficha (GBP ~32%), luego reseñas (~20%) y on-page (~15%). Son estimaciones de expertos, no pesos oficiales de Google.",
+      "fuente": "Whitespark 2026, vía Emulent/Advicelocal"
+    },
+    {
+      "regla": "Categoría principal exacta (Bash: restaurante de hamburguesas/buffet según corresponda; Hostel: hostal) y categorías secundarias reales. Revisar en la ficha, no suponer.",
+      "fuente": "Google Business Profile Help (info completa y precisa); Whitespark"
+    },
+    {
+      "regla": "Ficha completa: horarios, atributos (pet friendly, familiar, LGBTQ+ friendly), menú/servicios, fotos reales y recientes. Completar todo lo que Google ofrezca.",
+      "fuente": "Google Business Profile Help"
+    },
+    {
+      "regla": "Reseñas: cantidad, nota y recencia. La recencia subió al top 5 de factores en 2026. Pedir reseñas todo el año, no en oleadas.",
+      "fuente": "Whitespark 2026 (resumen de Reputation.com)"
+    },
+    {
+      "regla": "Responder todas las reseñas con detalle específico y sin plantilla. Las reseñas alimentan también las respuestas de Gemini.",
+      "fuente": "Google Business Profile Help + Ask Maps"
+    },
+    {
+      "regla": "Posts GBP: sirven como señal de actividad y contexto, pero no hay dato oficial de cuánto pesan. Mantener ritmo semanal ligado a eventos.",
+      "fuente": "Sin fuente primaria; ver no_confirmado"
+    },
+    {
+      "regla": "Consistencia en directorios y OTAs: TripAdvisor, Booking, Airbnb, Uber Eats, Apple Maps, Instagram. Mismos datos y mismas fotos clave. Las IA corroboran entidades con estas fuentes.",
+      "fuente": "Whitespark 2026 (citas suben para IA); InsItes"
+    },
+    {
+      "regla": "No hay forma de pagar por rankear mejor en local; solo mejorar ficha, reseñas y presencia web.",
+      "fuente": "Google Business Profile Help"
+    }
   ],
-  "formula_post": "ENTIDAD (Bash Burger / The Cool Hostel) + LUGAR (Peñuelas, Coquimbo + hito) + MOTIVO (evento o fecha concreta) + DATO VERIFICABLE (1-2 de voz/ficha, o [DATO]) + PREGUNTA RESPONDIDA (la búsqueda conversacional que contesta, en la primera frase). <=250 caracteres, 1-2 keywords, cierre con dirección (Bash) o CTA natural (Hostel), sin links ni teléfono.",
+  "formula_post": "ENTIDAD (Bash Burger / The Cool Hostel) + LUGAR (Peñuelas, Coquimbo + hito) + MOTIVO (evento o fecha concreta) + DATO VERIFICABLE (1-2 de voz/ficha, o [DATO]) + PREGUNTA RESPONDIDA (la búsqueda conversacional que contesta, en la primera frase). ~300-680 caracteres (formato Trello de Laura), 1-2 keywords, cierre con dirección (Bash) o CTA natural (Hostel), sin links ni teléfono.",
   "checklist_post": [
     "Tiene motivo concreto (evento, feriado, temporada) con fecha real",
     "Primera frase responde una pregunta que alguien teclea o dicta",

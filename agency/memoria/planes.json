@@ -1,28 +1,178 @@
 {
   "fuente": "Google Sheet 'Calendario Contenido Octubre 2026' > hoja Pilares + pestañas por marca (foco)",
   "actualizado": "2026-10-10",
-  "equipo_humano": {"rrss": ["Fran", "Vero", "Max"], "google_posts": "Vero", "diseno": ["Rodrigo", "Fran", "Thiago"], "regla": "2 gráficas/día (1/día en marcas de 28)"},
-  "columnas": ["sesiones/mes", "google (Full = posts semanales; número = posts/mes)", "rrss semanal", "plan", "pauta contratada", "piezas gráficas", "planner", "bio optimizada", "historias destacadas"],
+  "equipo_humano": {
+    "rrss": [
+      "Fran",
+      "Vero",
+      "Max"
+    ],
+    "google_posts": "Vero",
+    "diseno": [
+      "Rodrigo",
+      "Fran",
+      "Thiago"
+    ],
+    "regla": "2 gráficas/día (1/día en marcas de 28)"
+  },
+  "columnas": [
+    "sesiones/mes",
+    "google (Full = posts semanales; número = posts/mes)",
+    "rrss semanal",
+    "plan",
+    "pauta contratada",
+    "piezas gráficas",
+    "planner",
+    "bio optimizada",
+    "historias destacadas"
+  ],
   "clientes": {
-    "Bombo Burger": {"sesiones": 4, "google": "Full", "rrss": "3 posts 2 reels", "plan": "ESTÁNDAR", "pauta": "3 campañas Meta + 1 boost IG", "foco": "bajar promos (máx 30%), subir marca, storytelling y fans"},
-    "Santerra By Bombo": {"sesiones": 3, "google": "Full", "rrss": "3 posts 1 reel", "plan": "ESTÁNDAR", "pauta": "3 campañas Meta + 1 boost IG"},
-    "The Cool Hostel": {"sesiones": 4, "google": "Full", "rrss": "2 posts 1 reel", "plan": "ESTÁNDAR", "pauta": "3 campañas Meta + 1 boost IG", "foco": "amplificar safe space + nómada digital; probar contenido en inglés"},
-    "Bombo Comercializadora": {"sesiones": 0, "google": "Full", "rrss": "4-5 posts 0 reel", "plan": "ESTÁNDAR", "pauta": "2 campañas Meta + 1 boost IG", "foco": "claridad B2B; pilar confianza (casos + operación)"},
-    "Bash Burger": {"sesiones": 3, "google": "Full", "rrss": "3 posts 1 reel", "plan": "ESTÁNDAR", "pauta": "2 campañas Meta + 1 boost IG", "foco": "construir identidad visual 80's antes que más promos", "pilares": ["Happy Hour / Hora Feliz", "Cumpleañeros", "Postres", "Tragos", "Barra Libre", "Opciones Veggies", "Promos delivery Uber", "Promos delivery Justo"], "precio_planner": "$13.990 (Trello decía $12.990: CONFIRMAR)"},
-    "Entre Tacos": {"sesiones": 3, "google": 4, "rrss": "2 posts 1 reel", "plan": "ESTÁNDAR", "pauta": "2 campañas Meta + 1 boost IG", "foco": "cultura mexicana y vida nocturna (Av. del Mar + Peñuelas)"},
-    "Bendito Completo": {"sesiones": 3, "google": 4, "rrss": "2 posts 1 reel", "plan": "ESTÁNDAR", "pauta": "2 campañas Meta + 1 boost IG"},
-    "Bombo Tiki House y Beach": {"sesiones": 4, "google": 8, "rrss": "3 posts 1 reel", "plan": "ESTÁNDAR", "pauta": "1 campaña Meta + 1 boost IG", "foco": "energía y universo tiki; diferenciar House vs Beach"},
-    "Mare By Bombo": {"sesiones": 1, "google": "Full", "rrss": "2 posts 1 reel", "plan": "ESENCIAL", "pauta": "2 campañas Meta", "foco": "el MAR como protagonista (pilar subexplotado)"},
-    "Steakhouse by Bombo": {"sesiones": 1, "google": "Full", "rrss": "2 posts 1 reel", "plan": "ESENCIAL", "pauta": "1 campaña Meta"},
-    "Tony's Pasta": {"sesiones": 1, "google": "Full", "rrss": "1 post 1 reel", "plan": "BÁSICO PLUS", "pauta": "2 boost IG", "foco": "más creatividad ('comes gratis si...'), menos flyers; personaje Tonino"},
-    "Lullaby Rentals": {"sesiones": 0, "google": "Full", "rrss": "2 posts 1 reel", "plan": "PRO", "pauta": "2 campañas Meta", "foco": "vender Bliss sobre todo y Lobster"},
-    "Pressures Perfect": {"sesiones": 0, "google": "Full + WEB SEO", "rrss": "2 posts 1 reel", "plan": "BÁSICO USA", "pauta": "-"},
-    "Lemarc": {"sesiones": 2, "google": 4, "rrss": "1 post 1 reel", "plan": "ESENCIAL", "pauta": "1 campaña Meta + 1 boost IG"},
-    "La Siciliana Trattoria": {"sesiones": 3, "google": 4, "rrss": "2 posts 1 reel", "plan": "ESTÁNDAR", "pauta": "1 campaña Meta + 1 boost IG", "foco": "atmósferas de playa, crear expectativa; cambiaron nombres de platos"},
-    "Lotus Estilistas": {"plan": "META ADS ESENCIAL", "pauta": "2 campañas Meta + 1 boost IG"},
-    "Lotus Casa Cultural": {"google": 4, "plan": "META ADS BÁSICO", "pauta": "1 campaña Meta + 1 boost IG"},
-    "Somos Casa Lotus": {"plan": "META ADS BÁSICO", "pauta": "1 campaña Meta + 1 boost IG"},
-    "Lighthouse": {"sesiones": 1, "google": "1 post por perfil", "rrss": "2 posts 1 reel", "plan": "ESENCIAL", "pauta": "1 o 2 boost IG"}
+    "Bombo Burger": {
+      "sesiones": 4,
+      "google": "Full",
+      "rrss": "3 posts 2 reels",
+      "plan": "ESTÁNDAR",
+      "pauta": "3 campañas Meta + 1 boost IG",
+      "foco": "bajar promos (máx 30%), subir marca, storytelling y fans"
+    },
+    "Santerra By Bombo": {
+      "sesiones": 3,
+      "google": "Full",
+      "rrss": "3 posts 1 reel",
+      "plan": "ESTÁNDAR",
+      "pauta": "3 campañas Meta + 1 boost IG"
+    },
+    "The Cool Hostel": {
+      "sesiones": 4,
+      "google": "Full",
+      "rrss": "2 posts 1 reel",
+      "plan": "ESTÁNDAR",
+      "pauta": "3 campañas Meta + 1 boost IG",
+      "foco": "amplificar safe space + nómada digital; probar contenido en inglés"
+    },
+    "Bombo Comercializadora": {
+      "sesiones": 0,
+      "google": "Full",
+      "rrss": "4-5 posts 0 reel",
+      "plan": "ESTÁNDAR",
+      "pauta": "2 campañas Meta + 1 boost IG",
+      "foco": "claridad B2B; pilar confianza (casos + operación)"
+    },
+    "Bash Burger": {
+      "sesiones": 3,
+      "google": "Full",
+      "rrss": "3 posts 1 reel",
+      "plan": "ESTÁNDAR",
+      "pauta": "2 campañas Meta + 1 boost IG",
+      "foco": "construir identidad visual 80's antes que más promos",
+      "pilares": [
+        "Happy Hour / Hora Feliz",
+        "Cumpleañeros",
+        "Postres",
+        "Tragos",
+        "Barra Libre",
+        "Opciones Veggies",
+        "Promos delivery Uber",
+        "Promos delivery Justo"
+      ],
+      "precio_planner": "$13.990 (confirmado)"
+    },
+    "Entre Tacos": {
+      "sesiones": 3,
+      "google": 4,
+      "rrss": "2 posts 1 reel",
+      "plan": "ESTÁNDAR",
+      "pauta": "2 campañas Meta + 1 boost IG",
+      "foco": "cultura mexicana y vida nocturna (Av. del Mar + Peñuelas)"
+    },
+    "Bendito Completo": {
+      "sesiones": 3,
+      "google": 4,
+      "rrss": "2 posts 1 reel",
+      "plan": "ESTÁNDAR",
+      "pauta": "2 campañas Meta + 1 boost IG"
+    },
+    "Bombo Tiki House y Beach": {
+      "sesiones": 4,
+      "google": 8,
+      "rrss": "3 posts 1 reel",
+      "plan": "ESTÁNDAR",
+      "pauta": "1 campaña Meta + 1 boost IG",
+      "foco": "energía y universo tiki; diferenciar House vs Beach"
+    },
+    "Mare By Bombo": {
+      "sesiones": 1,
+      "google": "Full",
+      "rrss": "2 posts 1 reel",
+      "plan": "ESENCIAL",
+      "pauta": "2 campañas Meta",
+      "foco": "el MAR como protagonista (pilar subexplotado)"
+    },
+    "Steakhouse by Bombo": {
+      "sesiones": 1,
+      "google": "Full",
+      "rrss": "2 posts 1 reel",
+      "plan": "ESENCIAL",
+      "pauta": "1 campaña Meta"
+    },
+    "Tony's Pasta": {
+      "sesiones": 1,
+      "google": "Full",
+      "rrss": "1 post 1 reel",
+      "plan": "BÁSICO PLUS",
+      "pauta": "2 boost IG",
+      "foco": "más creatividad ('comes gratis si...'), menos flyers; personaje Tonino"
+    },
+    "Lullaby Rentals": {
+      "sesiones": 0,
+      "google": "Full",
+      "rrss": "2 posts 1 reel",
+      "plan": "PRO",
+      "pauta": "2 campañas Meta",
+      "foco": "vender Bliss sobre todo y Lobster"
+    },
+    "Pressures Perfect": {
+      "sesiones": 0,
+      "google": "Full + WEB SEO",
+      "rrss": "2 posts 1 reel",
+      "plan": "BÁSICO USA",
+      "pauta": "-"
+    },
+    "Lemarc": {
+      "sesiones": 2,
+      "google": 4,
+      "rrss": "1 post 1 reel",
+      "plan": "ESENCIAL",
+      "pauta": "1 campaña Meta + 1 boost IG"
+    },
+    "La Siciliana Trattoria": {
+      "sesiones": 3,
+      "google": 4,
+      "rrss": "2 posts 1 reel",
+      "plan": "ESTÁNDAR",
+      "pauta": "1 campaña Meta + 1 boost IG",
+      "foco": "atmósferas de playa, crear expectativa; cambiaron nombres de platos"
+    },
+    "Lotus Estilistas": {
+      "plan": "META ADS ESENCIAL",
+      "pauta": "2 campañas Meta + 1 boost IG"
+    },
+    "Lotus Casa Cultural": {
+      "google": 4,
+      "plan": "META ADS BÁSICO",
+      "pauta": "1 campaña Meta + 1 boost IG"
+    },
+    "Somos Casa Lotus": {
+      "plan": "META ADS BÁSICO",
+      "pauta": "1 campaña Meta + 1 boost IG"
+    },
+    "Lighthouse": {
+      "sesiones": 1,
+      "google": "1 post por perfil",
+      "rrss": "2 posts 1 reel",
+      "plan": "ESENCIAL",
+      "pauta": "1 o 2 boost IG"
+    }
   },
   "regla_auditoria": "Comparar siempre campañas activas vs 'pauta' contratada. Ej. The Cool Hostel contrata 3 campañas + 1 boost y hoy tiene 1 campaña activa"
 }

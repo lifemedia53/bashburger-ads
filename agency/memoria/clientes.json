@@ -55,7 +55,8 @@
         "Guía de voz desde chats de ChatGPT",
         "Evaluar campaña nueva el 2026-10-31"
       ],
-      "voz": "agency/memoria/voz/the-cool-hostel.json"
+      "voz": "agency/memoria/voz/the-cool-hostel.json",
+      "decision_laura": "2026-10-10: dejar Meta como está (1 campaña Reservas Hotelier). No proponer más campañas por ahora"
     },
     "bash-burger": {
       "rubro": "tenedor libre de hamburguesas smash ($12.990 x 2 h) + barra libre",

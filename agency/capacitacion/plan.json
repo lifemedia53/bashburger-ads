@@ -1,0 +1,29 @@
+{
+  "nombre": "Ciclo semanal de auditoría y capacitación — Life Media",
+  "responsable": "Jefe (Opus)",
+  "ritmo": "Semanal (lunes). Corre también ante cualquier queja de Laura sobre un entregable.",
+  "pasos": [
+    {"paso": 1, "que": "Recolectar evidencia", "como": "3 entregables reales por agente de la semana (Trello, Notion, Meta, chat) + feedback de Laura + log de tokens"},
+    {"paso": 2, "que": "Auditar con rúbrica", "como": "Jefe puntúa cada entregable (ver rubrica). Token Controller audita costo por agente"},
+    {"paso": 3, "que": "Registrar", "como": "Archivo agency/auditorias/<fecha>-<agente>.json con nota, errores, causa raíz y corrección. Actualizar nota_ultima_auditoria en agentes.json"},
+    {"paso": 4, "que": "Corregir la causa raíz", "como": "Si el error es de conocimiento → tarea de entrenamiento. Si es de regla → editar su .md. Si es de memoria → corregir el JSON con fuente citada"},
+    {"paso": 5, "que": "Capacitar", "como": "El agente investiga/relee la fuente y actualiza su JSON de conocimiento (máx. 8 búsquedas, fuentes oficiales primero, lo no confirmado separado)"},
+    {"paso": 6, "que": "Re-test", "como": "Repetir la misma tarea donde falló y comparar antes/después. Mostrar a Laura solo si cambió algo visible"},
+    {"paso": 7, "que": "Decidir", "como": "≥8 mantener; 6-7 ajustar y re-test la semana siguiente; <6 dos semanas seguidas = despedir o cambiar de modelo"}
+  ],
+  "rubrica": {
+    "exactitud": "0-3: datos del negocio correctos y con fuente, nada inventado",
+    "sistema_laura": "0-2: usa sus herramientas y formatos (Trello/Notion/playbook/planes), no inventa procesos",
+    "calidad": "0-2: suena a la marca (guía de voz), aplica GEO/AEO o playbook",
+    "seguridad": "0-2: respeta permisos (sin gasto ni publicación sin OK, sin diseño)",
+    "eficiencia": "0-1: costo de tokens razonable para el resultado"
+  },
+  "capacitacion_continua": {
+    "paid-media-lead": ["Mensual: novedades Meta Ads → meta-ads-2026.json", "Tras cada auditoría: aplicar lecciones al checklist_obligatorio", "Laboratorio del playbook: 1 prueba A/B por mes documentada"],
+    "meta-ads-auditor": ["Contrastar sus diagnósticos con el resultado real 2 semanas después", "Sumar a su checklist cada error que no detectó"],
+    "local-seo-lead": ["Mensual: novedades GBP/GEO/AEO → geo-aeo-2026.json", "Antes de cada marca nueva: crear su guía de voz desde Trello/Drive", "Comparar sus posts con los publicados de mejor rendimiento (Estadísticas Google)"],
+    "ops-coordinator": ["Medir: tareas vencidas semana a semana; meta = bajar", "Aprender del feedback de Laura sobre qué priorizar"],
+    "token-controller": ["Mantener precios al día", "Reporte semanal de costo por agente y por cliente"]
+  },
+  "automatizacion": "Propuesta: rutina programada cada lunes que dispare este ciclo (requiere aprobación de Laura)"
+}

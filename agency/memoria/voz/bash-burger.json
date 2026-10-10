@@ -2,7 +2,7 @@
   "fuente": "Trello 'Centro Bombo' > Generalidades Bash Burger (prompts de Laura: Memoria, Reseñas Google, Publicaciones Google) + 42 tarjetas publicadas",
   "actualizado": "2026-10-10",
   "negocio": {
-    "concepto": "TENEDOR LIBRE de hamburguesas smash por 2 horas, se pide y se repite. PRECIO: el planner de octubre dice $13.990 y Trello $12.990 → CONFIRMAR con Laura antes de publicar precio",
+    "concepto": "TENEDOR LIBRE de hamburguesas smash por 2 horas: $13.990 (subió desde $12.990, confirmado por Laura 2026-10-10). Se pide y se repite",
     "incluye": [
       "hamburguesas smash artesanales",
       "completos/hotdogs",
@@ -45,7 +45,9 @@
       "escribir 'CTA'",
       "repetir estructura o cierre entre posts"
     ],
-    "incluir": "fecha de publicación interna (referencia)"
+    "incluir": "fecha de publicación interna (referencia)",
+    "formato_y_largo": "Ver agency/memoria/trello.json > formato_tarjeta. Largo real ~500 caracteres (300-680) en párrafos cortos, con título '📌 POST N – TÍTULO', fecha interna y 'Botón: ...'. NO limitar a 250.",
+    "boton": "Pedir en línea (delivery) o Cómo llegar"
   },
   "tono_posts": {
     "estilo": "juvenil, moderno, directo, simple, seguro y cercano; sin exagerar jerga",

@@ -3,30 +3,106 @@
   "actualizado": "2026-10-10",
   "negocio": {
     "ubicacion": "Peñuelas, Coquimbo — a una cuadra del Enjoy Coquimbo, frente a Pueblito Peñuelas, playa a pasos",
-    "alojamiento": ["habitaciones privadas para 2-4 personas (Queen, Twin, Matrimonial)", "literas", "cápsulas", "departamentos privados (The View, The Hidden: 2 habitaciones)", "baño y cocina compartidos en el hostel"],
-    "extras": ["piscina", "cowork", "actividades y eventos gratis para huéspedes", "Casa Magnolia abajo (restaurantes y bar)", "clases de surf", "queer-friendly / LGBTQ+"],
+    "alojamiento": [
+      "habitaciones privadas para 2-4 personas (Queen, Twin, Matrimonial)",
+      "literas",
+      "cápsulas",
+      "departamentos privados (The View, The Hidden: 2 habitaciones)",
+      "baño y cocina compartidos en el hostel"
+    ],
+    "extras": [
+      "piscina",
+      "cowork",
+      "actividades y eventos gratis para huéspedes",
+      "Casa Magnolia abajo (restaurantes y bar)",
+      "clases de surf",
+      "queer-friendly / LGBTQ+"
+    ],
     "reservas": "botón 'Consultar disponibilidad' (WhatsApp) en Google; reserva directa",
-    "branding": {"colores": ["#38b6ff", "#ffde59", "#000000"], "tipografias": "Lilita One / Lazydog, Garet, Montserrat"}
+    "branding": {
+      "colores": [
+        "#38b6ff",
+        "#ffde59",
+        "#000000"
+      ],
+      "tipografias": "Lilita One / Lazydog, Garet, Montserrat"
+    }
   },
   "estrategia_google_posts": {
     "eje": "EVENTOS: shows y congresos en Enjoy Coquimbo y La Serena (médicos, científicos, conciertos), festivales de verano, feriados largos con 'escapada posible' (ej. Glorias Navales 21-24 mayo). Destacar distancia real al evento (ej. 'a una cuadra del Enjoy', '12 minutos en auto')",
     "mensuales": "campaña del mes con nombre (ej. MARZO 'Después del verano', ABRIL 'Otoño en la Costa', invierno = vacaciones de invierno)",
     "formato": "4 posts por evento/temporada, sin repetir estructura ni enfoque",
-    "cada_post_refuerza_2_de": ["ventajas vs hoteles, Airbnb y Booking (mejor precio, sin gastos de reserva, sin cargos ocultos)", "privacidad de habitación + espacios compartidos", "ideal para grupos", "alta demanda / disponibilidad limitada", "reserva rápida y simple, confirmación inmediata", "vacaciones, escapadas y turismo en La Serena/Coquimbo"],
-    "cta_naturales": ["Reserva ahora", "Asegura tu hospedaje", "Confirma tu estadía hoy", "Reserva para esta noche", "Reserva para mañana"],
-    "prohibido": ["enlaces públicos", "escribir 'CTA'", "repetir estructuras"],
-    "incluir": "fecha de publicación interna"
+    "cada_post_refuerza_2_de": [
+      "ventajas vs hoteles, Airbnb y Booking (mejor precio, sin gastos de reserva, sin cargos ocultos)",
+      "privacidad de habitación + espacios compartidos",
+      "ideal para grupos",
+      "alta demanda / disponibilidad limitada",
+      "reserva rápida y simple, confirmación inmediata",
+      "vacaciones, escapadas y turismo en La Serena/Coquimbo"
+    ],
+    "cta_naturales": [
+      "Reserva ahora",
+      "Asegura tu hospedaje",
+      "Confirma tu estadía hoy",
+      "Reserva para esta noche",
+      "Reserva para mañana"
+    ],
+    "prohibido": [
+      "enlaces públicos",
+      "escribir 'CTA'",
+      "repetir estructuras"
+    ],
+    "incluir": "fecha de publicación interna",
+    "formato_y_largo": "Ver agency/memoria/trello.json > formato_tarjeta. Largo real ~500 caracteres (300-680) en párrafos cortos, con título '📌 POST N – TÍTULO', fecha interna y 'Botón: ...'. NO limitar a 250.",
+    "boton": "Consultar disponibilidad (WhatsApp)"
   },
-  "tono_posts": {"estilo": "juvenil, viajero, urbano, cercano y práctico", "emojis": "sutiles (🌍🛏️✨🎒☀️), sin abusar"},
-  "keywords_posts": ["The Cool Hostel", "hospedaje", "alojamiento", "hostel", "arriendo temporal", "arriendos en La Serena", "alquiler de departamentos", "casas vacacionales", "habitación privada", "grupos", "viajeros", "alojamiento para vacaciones", "alternativa a hoteles, Airbnb y Booking", "disponibilidad", "estadía cómoda"],
+  "tono_posts": {
+    "estilo": "juvenil, viajero, urbano, cercano y práctico",
+    "emojis": "sutiles (🌍🛏️✨🎒☀️), sin abusar"
+  },
+  "keywords_posts": [
+    "The Cool Hostel",
+    "hospedaje",
+    "alojamiento",
+    "hostel",
+    "arriendo temporal",
+    "arriendos en La Serena",
+    "alquiler de departamentos",
+    "casas vacacionales",
+    "habitación privada",
+    "grupos",
+    "viajeros",
+    "alojamiento para vacaciones",
+    "alternativa a hoteles, Airbnb y Booking",
+    "disponibilidad",
+    "estadía cómoda"
+  ],
   "resenas_google": {
     "tono": "cálido, humano, auténtico, storytelling breve; SIN emojis; ortografía impecable",
     "estructura": "saludo con nombre → agradecer → mencionar lo que destacó → invitar a volver con keyword local natural",
     "cuatro_estrellas": "agradecer lo positivo, valorar la sugerencia, no justificar, apertura a mejorar",
     "palabra_favorita": "Hospedaje",
-    "keywords": ["hostal en Coquimbo", "playa de Peñuelas", "hospedaje en la costa", "cerca del casino Enjoy / Pueblito Peñuelas", "habitaciones privadas y compartidas", "vista al mar", "descanso en la costa", "clases de surf", "alojamiento en Coquimbo"],
+    "keywords": [
+      "hostal en Coquimbo",
+      "playa de Peñuelas",
+      "hospedaje en la costa",
+      "cerca del casino Enjoy / Pueblito Peñuelas",
+      "habitaciones privadas y compartidas",
+      "vista al mar",
+      "descanso en la costa",
+      "clases de surf",
+      "alojamiento en Coquimbo"
+    ],
     "ejemplo": "Hola Millaray, gracias por tu comentario. Qué bonito saber que conectaste con el ambiente y la buena onda de The Cool Hostel. Nos alegra que hayas disfrutado la vista y la tranquilidad del lugar. Ojalá vuelvas pronto a disfrutar de la costa y del cariño de nuestra gente en Coquimbo.",
     "ejemplo_4_estrellas": "Gracias por tu reseña. Nos alegra saber que disfrutaste el entorno y la tranquilidad de The Cool Hostel. Valoramos mucho tu sugerencia sobre opciones veganas para el desayuno; es algo que tomamos en cuenta para seguir mejorando. Estaremos felices de recibirte nuevamente si decides volver a disfrutar de las playas de Coquimbo."
   },
-  "resenas_airbnb": {"largo": "1 a 3 líneas", "foco": "destacar lo buen huésped que fue la persona", "reglas": ["siempre 'The Cool Hostel'", "mencionar Coquimbo a veces, NUNCA La Serena", "sin emojis"]}
+  "resenas_airbnb": {
+    "largo": "1 a 3 líneas",
+    "foco": "destacar lo buen huésped que fue la persona",
+    "reglas": [
+      "siempre 'The Cool Hostel'",
+      "mencionar Coquimbo a veces, NUNCA La Serena",
+      "sin emojis"
+    ]
+  }
 }

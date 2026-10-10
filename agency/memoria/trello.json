@@ -1,0 +1,28 @@
+{
+  "fuente": "Análisis de tableros Trello de Laura (2026-10-10)",
+  "regla": "Los posts de Google Business se trabajan en TRELLO, no en Notion. Notion = tareas y control de Ads.",
+  "conexion": "Composio toolkit 'trello' (cuenta activa). Herramientas: TRELLO_GET_BOARDS_CARDS_BY_ID_BOARD, TRELLO_GET_CARDS_BY_ID_CARD, y para crear: buscar slugs con COMPOSIO_SEARCH_TOOLS ('create Trello card', 'add checklist to Trello card', 'add checklist item')",
+  "tableros": {
+    "Centro Bombo (t09C3ZLr)": {
+      "uso": "Google posts y generalidades de marcas gastronómicas",
+      "listas_bash": {"pendientes": "Eventos Bash Burger (6930f1b5bc06b197c632a1fb)", "publicados": "Publicados (Bash / Bendito y Entre Tacos) (6930f1e01ded45a49eb13f7e)", "generalidades": "Generalidades Bash Burger (prompts, memoria, diario)"},
+      "otras": "Eventos <marca> / Publicados (<marcas>) / Generalidades <marca> / Posteos Google Tonys Pasta (6a55948bd00def4ac2188323) / Posteos Google Pressures Perfect (6a554c05639b8c74d2651198)"
+    },
+    "The Cool Hostel (RQ4wl4xn)": {
+      "listas": {"pendientes": "Eventos (68fc23bd9a30f6e086293992)", "publicados": "Eventos publicados (Google) (69041d1732d493e00d337120)", "generalidades": "Generalidades (branding, prompts)", "ideas": "Ideas de contenido - Planner (686bfed3ad2ecea3d7720925)"}
+    },
+    "Centro - Redes Sociales (rTz7FuGv)": "tareas de RRSS por persona del equipo y marca"
+  },
+  "formato_tarjeta": {
+    "titulo": "NOMBRE DEL EVENTO (fecha)  ej: 'Glorias Navales (21 Mayo)', 'LOS JAIVAS – ENJOY COQUIMBO (24 julio)', o 'Posteos semanales <marca> (Mes de X 2026)'",
+    "descripcion": "📍 Lugar / 📅 Fechas / 🎯 Objetivo (1-2 líneas) + bloque de links del negocio (Maps, WhatsApp, Menú, Uber, PedidosYa) + 'Botón: <tipo>'",
+    "checklist": "nombre 'Posts programados'; 1 ítem por post (normalmente 2-4)",
+    "item_post": "📌 POST N – TÍTULO CORTO\\n\\nFecha publicación interna: <día mes año>\\n\\n<cuerpo en párrafos cortos>\\n\\n📍 <cierre con dirección (Bash) / CTA (Hostel)>\\n\\nBotón: <Pedir en línea | Consultar disponibilidad | Reservar>",
+    "largo_real": "mediana ~500 caracteres (rango 300-680). NO limitar a 250.",
+    "estado": "Ítem marcado 'complete' = publicado en Google (lo hace Vero). Tarjeta con todo publicado se mueve a la lista 'Publicados'"
+  },
+  "permisos_agentes": {
+    "puede": ["leer tableros", "crear tarjeta nueva en la lista de PENDIENTES de la marca con su checklist 'Posts programados'", "agregar comentario de revisión"],
+    "no_puede": ["marcar ítems como completos", "mover tarjetas a Publicados", "editar o borrar tarjetas existentes", "tocar listas de Generalidades"]
+  }
+}
