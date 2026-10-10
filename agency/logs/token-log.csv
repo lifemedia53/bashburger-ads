@@ -1,0 +1,4 @@
+fecha,cliente,agente,modelo,tokens,herramientas,costo_est_usd,veredicto
+2026-10-10,Bash Burger,paid-media-lead,Sonnet 5.5,93980,5,0.23,mantener
+2026-10-10,Bash Burger,local-seo-lead,Sonnet 5.5,70613,3,0.17,ajustar
+2026-10-10,Bash Burger,token-controller,Haiku 5.5,73276,5,0.01,ajustar
