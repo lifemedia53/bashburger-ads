@@ -42,7 +42,7 @@
       },
       "limite": "No publica en Google: solo borradores",
       "voz_clientes": "agency/memoria/voz/<cliente>.json (pendiente: Laura pega instrucciones de ChatGPT)",
-      "nota_ultima_auditoria": "9/10"
+      "nota_ultima_auditoria": "5/10 (2026-10-10): posts GBP genéricos según Laura; reentrenar con historial real (Trello) y guía de voz por cliente"
     },
     "token-controller": {
       "modelo": "haiku",
@@ -50,6 +50,17 @@
       "estimacion": "sin desglose: 95% entrada / 5% salida",
       "log": "agency/logs/token-log.csv",
       "nota_ultima_auditoria": "8/10 (corrigió su error de cálculo)"
+    },
+    "ops-coordinator": {
+      "modelo": "haiku",
+      "por_que": "tareas mecánicas y repetitivas sobre Notion (consultar, contar, listar); 20x más barato que Sonnet",
+      "limite": "propone cierres, no los ejecuta sin aprobación"
+    },
+    "meta-ads-auditor": {
+      "modelo": "sonnet",
+      "reporta_a": "paid-media-lead",
+      "por_que": "diagnosticar requiere criterio (el error del CTR en The Cool Hostel fue de criterio); un mal diagnóstico cuesta más que los tokens",
+      "limite": "solo lectura en Meta"
     }
   }
 }
