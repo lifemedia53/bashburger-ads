@@ -78,6 +78,20 @@
         "Cruzar gasto Meta con ventas POS"
       ],
       "voz": "agency/memoria/voz/bash-burger.json"
+    },
+    "lullaby-rentals": {
+      "rubro": "vacation rentals Florida (USA)",
+      "moneda": "USD",
+      "meta": {
+        "cuenta_oficial": "10201332475268991",
+        "cuenta_no_usar": "894994272588936 (vacía, sin pago)"
+      },
+      "fuente": "confirmado por Laura 2026-10-10 + auditoría Meta",
+      "pendientes": [
+        "Confirmar URL de destino por anuncio (Airbnb/Furnished Finder/sitio)",
+        "Confirmar si TLL = Lobster",
+        "Renovar ST TLL antes del 22-oct"
+      ]
     }
   }
 }
