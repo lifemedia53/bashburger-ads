@@ -1,0 +1,35 @@
+{
+  "actualizado": "2026-10-10",
+  "clientes": {
+    "the-cool-hostel": {
+      "rubro": "hostel",
+      "ubicacion": "Av. Los Pescadores 5050, Peñuelas, Coquimbo",
+      "web": "https://www.thecoolhostel.cl/",
+      "motor_reservas": "Little Hotelier",
+      "canal_venta_principal": ["web (Little Hotelier)", "WhatsApp (vende mucho, no medido por pixel)"],
+      "meta": {
+        "cuenta_oficial": "1428593511882773",
+        "cuenta_no_usar": "3079760962193758",
+        "pagina_fb": "584907934709599",
+        "instagram": "@thecoolhostel (17841471710664181)",
+        "pixel_bueno": {"id": "1487303793186321", "nombre": "Datos de The Cool Hostel", "eventos": ["Purchase"], "nota": "solo navegador, sin CAPI desde 2026-05-30; sin PageView"},
+        "pixel_no_usar": {"id": "1579391480280656", "nombre": "The Cool Hostel - LH", "nota": "nunca recibió eventos; Meta no permite borrarlo"}
+      },
+      "presupuesto_mensual_clp": 60000,
+      "presupuesto_diario_clp": 2000,
+      "campanas": {
+        "activa": {"id": "120249343804190575", "nombre": "Reservas Hotelier - Purchase", "objetivo": "OUTCOME_SALES", "optimizacion": "Purchase", "publico": "CL+AR, edad 21-55 (sugerencia Advantage+)", "anuncios": ["Reel Max dormido - Reservar web", "Reel Cris + Rawy - Reservar web"], "lanzada": "2026-10-10"},
+        "pausadas": ["120249045153320575 Tráfico a Hotelier II", "120249209785140575 Triatlón"]
+      },
+      "pendientes": ["Campaña WhatsApp (conversaciones/ventas por mensaje)", "Activar CAPI y PageView en pixel", "Guía de voz desde chats de ChatGPT", "Evaluar campaña nueva el 2026-10-31"]
+    },
+    "bash-burger": {
+      "rubro": "hamburguesería",
+      "ubicacion": "La Serena / Coquimbo",
+      "meta": {"cuenta": "1753718285299909"},
+      "pos": "Justo Admin (usar get_dashboard o archivos de colección, nunca api_call para reportes)",
+      "campanas": {"activa": "Tráfico Delivery (CTR 2,02%, $51/clic)", "sin_entrega": ["Tírate una paya", "Reconocimiento Jul-Sep"]},
+      "pendientes": ["Oferta y presupuesto Halloween", "Revisar 2 campañas activas sin entrega", "Cruzar gasto Meta con ventas POS"]
+    }
+  }
+}

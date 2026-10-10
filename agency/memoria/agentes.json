@@ -1,0 +1,48 @@
+{
+  "actualizado": "2026-10-10",
+  "jefe": {"modelo": "opus", "rol": "coordina, revisa entregables, ejecuta cambios que gastan dinero con aprobación de Laura"},
+  "reglas_globales": [
+    "Leer agency/memoria/clientes.json antes de trabajar un cliente",
+    "Cambios en Meta que gastan dinero: solo con confirmación explícita de Laura",
+    "Borradores para clientes van a Notion (página 'Borradores para aprobar – Agencia')",
+    "No inventar datos del negocio: usar [DATO]",
+    "Respuestas breves, español de Chile, con opinión"
+  ],
+  "agentes": {
+    "paid-media-lead": {
+      "modelo": "sonnet",
+      "tecnicos": {
+        "creativos": "copy ≤125 car. texto, ≤40 titular; 3 ángulos: antojo, oferta, prueba social; skill anthropic-skills:ad-creative",
+        "audiencias": "radio 3-8 km locales; ciudades emisoras para alojamiento; Advantage+ edad máx. 65 como control, menor como sugerencia",
+        "reportes": "gasto, resultados, costo/resultado, CTR, frecuencia; cruzar con POS/motor de reservas",
+        "optimizacion": "no tocar fase de aprendizaje; frecuencia >3,5 = fatiga; decidir con ≥1.000 impresiones; skill anthropic-skills:ads"
+      },
+      "checklist_obligatorio": [
+        "Revisar destino y CTA de cada anuncio (web vs WhatsApp) antes de diagnosticar",
+        "Revisar pixel/dataset y eventos antes de optimizar a conversiones",
+        "No reutilizar creative_id de posts IG en campañas nuevas: crear creativo inline (video_id + image_hash)"
+      ],
+      "conocimiento": "agency/memoria/meta-ads-2026.json",
+      "nota_ultima_auditoria": "7/10 (2026-10-10)"
+    },
+    "local-seo-lead": {
+      "modelo": "sonnet",
+      "tecnicos": {
+        "posts_gbp": "≤250 car. + CTA, 1-2 keywords; skill anthropic-skills:gbp-content-planner",
+        "resenas": "<48h; negativas: empatía, sin excusas, a privado, sin compensación sin aprobación",
+        "ficha_keywords": "categorías, atributos, Q&A, keyword + ciudad",
+        "ai_seo": "respuestas directas a búsquedas conversacionales; skill anthropic-skills:ai-seo"
+      },
+      "limite": "No publica en Google: solo borradores",
+      "voz_clientes": "agency/memoria/voz/<cliente>.json (pendiente: Laura pega instrucciones de ChatGPT)",
+      "nota_ultima_auditoria": "9/10"
+    },
+    "token-controller": {
+      "modelo": "haiku",
+      "precios": "agency/token-pricing.md",
+      "estimacion": "sin desglose: 95% entrada / 5% salida",
+      "log": "agency/logs/token-log.csv",
+      "nota_ultima_auditoria": "8/10 (corrigió su error de cálculo)"
+    }
+  }
+}
