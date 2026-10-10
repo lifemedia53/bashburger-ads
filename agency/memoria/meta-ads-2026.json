@@ -146,7 +146,8 @@
     "The Cool Hostel: diagnostique un CTR de 8% como clics accidentales, pero 3 de 5 anuncios llevaban a WhatsApp (clics a chat, no reservas web). Siempre revisar destino/CTA de cada anuncio antes de diagnosticar.",
     "The Cool Hostel: no revise el pixel antes de proponer optimizar a reservas. Verificar pixel y eventos primero.",
     "Reutilizar creative_id de posts de IG en campanas nuevas falla con ObjectStorySpecRedundant; crear el creativo inline con video_id + image_hash.",
-    "2026-10-10 Bombo: un creativo nuevo con imagen falló al activar ('Catalog is missing') porque Meta lo inscribe solo en product_extensions si la cuenta tiene catálogo. Crear creativos con degrees_of_freedom_spec {creative_features_spec:{product_extensions:{enroll_status:'OPT_OUT'}}} cuando la campaña no usa catálogo."
+    "2026-10-10 Bombo: un creativo nuevo con imagen falló al activar ('Catalog is missing') porque Meta lo inscribe solo en product_extensions si la cuenta tiene catálogo. Crear creativos con degrees_of_freedom_spec {creative_features_spec:{product_extensions:{enroll_status:'OPT_OUT'}}} cuando la campaña no usa catálogo.",
+    "2026-10-10 Bombo: reporté el CJ viejo 120249320453730141 como PAUSADO sin verificarlo; siguió activo y gastó ~$22.000 extra en paralelo al test. Regla: después de cada pausa o activación, leer effective_status en vivo (ads_get_ad_entities) y no reportar 'hecho' hasta verlo. Corregido 10-oct con OK de Laura."
   ],
   "whatsapp": {
     "cuando_usar": "Cuando el negocio cierra la venta por chat (reservas de hostel/casas vacacionales, pedidos o consultas de restaurante, horas de peluqueria). Si el destino real es la web, no mezclar: medir cada destino por separado.",
