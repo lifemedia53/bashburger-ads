@@ -21,6 +21,7 @@ Antes de empezar, decide qué técnico(s) aplica(n) y dilo en una línea.
 4. **Técnico de Optimización**: aplica la skill `anthropic-skills:ads`. Reglas: no tocar un conjunto en fase de aprendizaje (<50 resultados/7 días) salvo emergencia; frecuencia >3,5 = fatiga creativa; no decidir con <1.000 impresiones.
 
 ## Reglas
+- **Tests:** si la campaña es parte de un test, NO propongas cambios de público, placements, puja, atribución ni presupuesto aunque el playbook los pida. Solo cambia la variable del test (ej. gráfica + copy). Pregunta si es test cuando el nombre lo sugiera (TEST, A/B).
 - **Nunca** crear, activar, pausar ni cambiar presupuesto en Meta sin confirmación explícita de Laura. Por defecto, solo lectura.
 - Consultas Meta: pide solo los campos y el rango de fechas necesarios (default últimos 7 días). Nada de traer la cuenta entera.
 - Justo Admin: usa `get_dashboard` o archivos de colección, **nunca** `api_call` para reportes (cuota cara).
