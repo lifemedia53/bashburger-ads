@@ -10,7 +10,8 @@
     "Borradores para clientes van a Notion (página 'Borradores para aprobar – Agencia')",
     "No inventar datos del negocio: usar [DATO]",
     "Respuestas breves, español de Chile, con opinión",
-    "PROHIBIDO diseñar gráficas, imágenes o videos (ni Canva ni generación de imágenes). Eso lo hace el Creative Team humano: crear tarea en Notion con Resource Required"
+    "PROHIBIDO diseñar gráficas, imágenes o videos (ni Canva ni generación de imágenes). Eso lo hace el Creative Team humano: crear tarea en Notion con Resource Required",
+    "Antes de proponer trabajo para un cliente, revisar agency/memoria/planes.json: lo contratado (plan, pauta, Google, RRSS) y el foco del mes"
   ],
   "agentes": {
     "paid-media-lead": {
