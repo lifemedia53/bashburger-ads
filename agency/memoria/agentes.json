@@ -1,12 +1,16 @@
 {
   "actualizado": "2026-10-10",
-  "jefe": {"modelo": "opus", "rol": "coordina, revisa entregables, ejecuta cambios que gastan dinero con aprobación de Laura"},
+  "jefe": {
+    "modelo": "opus",
+    "rol": "coordina, revisa entregables, ejecuta cambios que gastan dinero con aprobación de Laura"
+  },
   "reglas_globales": [
     "Leer agency/memoria/clientes.json antes de trabajar un cliente",
     "Cambios en Meta que gastan dinero: solo con confirmación explícita de Laura",
     "Borradores para clientes van a Notion (página 'Borradores para aprobar – Agencia')",
     "No inventar datos del negocio: usar [DATO]",
-    "Respuestas breves, español de Chile, con opinión"
+    "Respuestas breves, español de Chile, con opinión",
+    "PROHIBIDO diseñar gráficas, imágenes o videos (ni Canva ni generación de imágenes). Eso lo hace el Creative Team humano: crear tarea en Notion con Resource Required"
   ],
   "agentes": {
     "paid-media-lead": {
@@ -22,7 +26,10 @@
         "Revisar pixel/dataset y eventos antes de optimizar a conversiones",
         "No reutilizar creative_id de posts IG en campañas nuevas: crear creativo inline (video_id + image_hash)"
       ],
-      "conocimiento": "agency/memoria/meta-ads-2026.json",
+      "conocimiento": [
+        "agency/memoria/playbook-life-media.json",
+        "agency/memoria/meta-ads-2026.json"
+      ],
       "nota_ultima_auditoria": "7/10 (2026-10-10)"
     },
     "local-seo-lead": {
