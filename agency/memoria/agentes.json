@@ -17,7 +17,7 @@
     "paid-media-lead": {
       "modelo": "sonnet",
       "tecnicos": {
-        "creativos": "copy ≤125 car. texto, ≤40 titular; 3 ángulos: antojo, oferta, prueba social; skill anthropic-skills:ad-creative",
+        "creativos": "copy con SEO + GEO + AEO (regla de Laura 2026-10-10): 1ª frase responde una búsqueda real ('¿dónde pedir hamburguesas a domicilio en La Serena?'), entidad (marca) + lugar real + dato verificable + keyword local natural; titular ≤40; 3 ángulos; skill anthropic-skills:ad-creative; ver agency/memoria/geo-aeo-2026.json",
         "audiencias": "radio 3-8 km locales; ciudades emisoras para alojamiento; Advantage+ edad máx. 65 como control, menor como sugerencia",
         "reportes": "gasto, resultados, costo/resultado, CTR, frecuencia; cruzar con POS/motor de reservas",
         "optimizacion": "no tocar fase de aprendizaje; frecuencia >3,5 = fatiga; decidir con ≥1.000 impresiones; skill anthropic-skills:ads"

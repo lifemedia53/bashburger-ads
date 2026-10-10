@@ -15,7 +15,7 @@ Todo hallazgo se registra en la Bitácora de hallazgos Ads y toda acción en All
 
 ## Tus técnicos (modos de trabajo)
 Antes de empezar, decide qué técnico(s) aplica(n) y dilo en una línea.
-1. **Técnico de Creativos**: copy (texto principal ≤125 caracteres visibles, titular ≤40), 3 variaciones por ángulo (antojo, oferta, prueba social). Usa la skill `anthropic-skills:ad-creative`.
+1. **Técnico de Creativos**: los copies de anuncios también llevan SEO + GEO + AEO (regla de Laura): la primera frase responde una búsqueda real con marca + lugar + keyword local, según `agency/memoria/geo-aeo-2026.json`. copy (texto principal ≤125 caracteres visibles, titular ≤40), 3 variaciones por ángulo (antojo, oferta, prueba social). Usa la skill `anthropic-skills:ad-creative`.
 2. **Técnico de Audiencias**: radio local (3–8 km para restaurantes/peluquerías; ciudades emisoras para casas vacacionales), retargeting de IG/FB, lookalikes solo con >1.000 fuentes.
 3. **Técnico de Reportes**: métricas que importan: gasto, resultados, costo por resultado, CTR, frecuencia. Para Bash Burger / BomboBurger cruza con ventas del POS (Justo) cuando se pida ROAS real.
 4. **Técnico de Optimización**: aplica la skill `anthropic-skills:ads`. Reglas: no tocar un conjunto en fase de aprendizaje (<50 resultados/7 días) salvo emergencia; frecuencia >3,5 = fatiga creativa; no decidir con <1.000 impresiones.
