@@ -5,3 +5,7 @@ fecha,cliente,agente,modelo,tokens,herramientas,costo_est_usd,veredicto
 2026-10-10,The Cool Hostel,paid-media-lead,Sonnet 5.5,99680,9,0.24,mantener
 2026-10-10,The Cool Hostel,local-seo-lead,Sonnet 5.5,72454,5,0.17,ajustar
 2026-10-10,The Cool Hostel,token-controller,Haiku 5.5,72950,5,0.01,mantener
+2026-10-10,Life Media,paid-media-lead (entrenamiento Meta 2026),Sonnet 5.5,83428,12,0.20,mantener
+2026-10-10,Life Media,ops-coordinator (limpieza Notion),Haiku 5.5,189377,9,0.02,mantener
+2026-10-10,Bash+Hostel,local-seo-lead (re-test con voz),Sonnet 5.5,41165,9,0.10,mantener
+2026-10-10,Life Media,local-seo-lead (entrenamiento GEO/AEO),Sonnet 5.5,63183,14,0.15,mantener
