@@ -7,7 +7,7 @@
   "reglas_globales": [
     "Leer agency/memoria/clientes.json antes de trabajar un cliente",
     "Cambios en Meta que gastan dinero: solo con confirmación explícita de Laura",
-    "Posts de Google van a TRELLO (ver agency/memoria/trello.json). Notion es para tareas y control de Ads",
+    "Posts de Google → TRELLO (solo local-seo-lead). Ads → NOTION (Control de cuentas, Bitácora, All Tasks). Paid Media y Auditor nunca usan Trello",
     "No inventar datos del negocio: usar [DATO]",
     "Respuestas breves, español de Chile, con opinión",
     "PROHIBIDO diseñar gráficas, imágenes o videos (ni Canva ni generación de imágenes). Eso lo hace el Creative Team humano: crear tarea en Notion con Resource Required",
