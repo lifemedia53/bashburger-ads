@@ -1,0 +1,38 @@
+{
+  "fuente": "Laura, chat 2026-10-12",
+  "regla": "Local SEO solo hace posts de Google para estos clientes. Los inactivos se vigilan: el día 7 de cada mes revisar en la planilla de Google y DATA CLIENTES si ya están activos y avisar al Jefe.",
+  "activos": [
+    "Bombo Burger",
+    "Santerra By Bombo",
+    "The Cool Hostel",
+    "Bombo Comercializadora",
+    "Bash Burger",
+    "Entre Tacos",
+    "Bendito Completo",
+    "Bombo Tiki House",
+    "Bombo Tiki Beach",
+    "Mare By Bombo",
+    "Steakhouse by Bombo",
+    "Tony's Pasta Centro",
+    "Lullaby Rentals",
+    "Pressures Perfect",
+    "Lemarc Eusebio Lillo",
+    "La Siciliana Trattoria",
+    "Lotus Estilistas"
+  ],
+  "inactivos_vigilar": [
+    "Lemarc Los Albañiles",
+    "Lotus Casa Cultural"
+  ],
+  "por_confirmar": {
+    "Bombo Burger": "¿incluye los 5 perfiles (Balmaceda, Beach, Ulriksen, Mall Plaza, Santiago)?",
+    "Entre Tacos / Bendito Completo": "¿incluye los perfiles Peñuelas además de Av. del Mar?",
+    "Tony's Pasta 4 Esquinas": "no está en la lista; se le creó tarjeta de Halloween el 2026-10-12"
+  },
+  "mercado": {
+    "Lullaby Rentals": "inglés, USA (Florida)",
+    "Pressures Perfect": "inglés, USA (Huntsville AL)",
+    "Lotus Estilistas": "español argentino, voseo (San Telmo, Buenos Aires)",
+    "Lotus Casa Cultural": "español argentino, voseo (San Telmo, Buenos Aires)"
+  }
+}
