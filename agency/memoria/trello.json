@@ -2,6 +2,7 @@
   "fuente": "Análisis de tableros Trello de Laura (2026-10-10)",
   "regla": "Los posts de Google Business se trabajan en TRELLO, no en Notion. Notion = tareas y control de Ads.",
   "conexion": "Composio toolkit 'trello' (cuenta activa). Herramientas: TRELLO_GET_BOARDS_CARDS_BY_ID_BOARD, TRELLO_GET_CARDS_BY_ID_CARD, y para crear: buscar slugs con COMPOSIO_SEARCH_TOOLS ('create Trello card', 'add checklist to Trello card', 'add checklist item')",
+  "actualizacion_2026_10_12": "Fuente: agentes local-seo al crear tarjetas Halloween. En Centro Bombo las listas de pendientes ahora se llaman 'Posteos Google <marca>' (Bash conserva el id 6930f1b5bc06b197c632a1fb; Bombo Burger 690958b013d5c75bb26d343e; Lemarc 6accea91e9ce5a4fca84fa94; Distribuidora = 'Posteos Comercializadora Bombo'; Bendito y Entre Tacos Av. del Mar comparten lista, Peñuelas tiene la suya). No hay listas 'Publicados' visibles. Voz por marca: tarjeta 'Prompt publicaciones Google' en Generalidades de cada marca.",
   "tableros": {
     "Centro Bombo (t09C3ZLr)": {
       "uso": "Google posts y generalidades de marcas gastronómicas",
