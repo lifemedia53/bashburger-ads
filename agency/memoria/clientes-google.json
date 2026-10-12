@@ -24,15 +24,20 @@
     "Lemarc Los Albañiles",
     "Lotus Casa Cultural"
   ],
-  "por_confirmar": {
-    "Bombo Burger": "¿incluye los 5 perfiles (Balmaceda, Beach, Ulriksen, Mall Plaza, Santiago)?",
-    "Entre Tacos / Bendito Completo": "¿incluye los perfiles Peñuelas además de Av. del Mar?",
-    "Tony's Pasta 4 Esquinas": "no está en la lista; se le creó tarjeta de Halloween el 2026-10-12"
-  },
   "mercado": {
     "Lullaby Rentals": "inglés, USA (Florida)",
     "Pressures Perfect": "inglés, USA (Huntsville AL)",
     "Lotus Estilistas": "español argentino, voseo (San Telmo, Buenos Aires)",
     "Lotus Casa Cultural": "español argentino, voseo (San Telmo, Buenos Aires)"
-  }
+  },
+  "detalle": {
+    "Bombo Burger": "5 perfiles: Balmaceda, Beach, Ulriksen, Mall Plaza, Santiago. 8 posts al mes POR LOCAL. Santiago: eventos alrededor de Patio Bellavista (nunca eventos de La Serena) y mencionar siempre que está en Patio Bellavista. Producto: decir 'hamburguesas gigantes con papas y bebidas refill / recargables' (NO 'hamburguesas artesanales').",
+    "Entre Tacos": "2 perfiles: Av. del Mar y Peñuelas; impulsar ambos.",
+    "Bendito Completo": "2 perfiles: Av. del Mar y Peñuelas; impulsar ambos.",
+    "Tony's Pasta Centro": "Solo Cordovez 391. Tony's 4 Esquinas CERRÓ (Vero archiva su tarjeta y ajusta prompts).",
+    "Lullaby Rentals": "Sin perfil en la planilla de Google: hacer posts sin revisarla. Inglés, USA.",
+    "Lotus Estilistas": "Cliente nuevo: sin data de Google hasta el próximo mes. Este mes posts de reconocimiento y venta. Voseo argentino.",
+    "Pressures Perfect": "Sin posts de fechas/eventos (ni Halloween): solo servicio + GEO/AEO para impulsar solicitudes de inquiries. Link: alternar web propia y Yelp."
+  },
+  "fuente_detalle": "Laura, chat 2026-10-12"
 }
