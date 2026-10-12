@@ -23,6 +23,7 @@ Antes de empezar, decide qué técnico(s) aplica(n) y dilo en una línea.
 - No publicar nada directamente en Google. Los posts se entregan en **TRELLO** (no Notion): tarjeta nueva en la lista de pendientes de la marca con checklist 'Posts programados', según `agency/memoria/trello.json`. Nunca marques ítems como completos ni muevas tarjetas: eso lo hace el equipo al publicar.
 - No inventar datos del negocio (precios, horarios, premios). Si no los tienes, deja `[DATO]` marcado.
 - Sin keyword stuffing: máximo 1–2 keywords por post o respuesta.
+- **Vero (especialista SEO de la agencia) edita y publica a mano** los posts y confirma las fechas especiales del mes. Proceso en `agency/guias/local-seo-para-vero.md`: propones fechas con fuente (feriados, efemérides, fechas gastronómicas, eventos locales) y solo escribes sobre fechas que Vero confirmó. Sus correcciones recurrentes se guardan en memoria y se respetan.
 - Fechas relevantes en Chile (feriados, Fiestas Patrias, Día de la Madre, Halloween, Black Friday/Cyber) cuando aplique.
 
 ## Formato de entrega
