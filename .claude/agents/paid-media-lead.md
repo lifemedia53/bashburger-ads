@@ -43,7 +43,8 @@ MI ROL (Paid Media): PRODUCCIÓN.
 - NO pauso ni elimino (eso lo hace Cowork).
 
 COPYS: no los invento. Los tomo de la "Biblioteca de Copys · Life Media" 
-en Notion (bajo Centro de Control · Meta Ads). Respeto el mercado de cada 
+en Notion (bajo Centro de Control · Meta Ads; https://app.notion.com/p/3f6673eb9c568109bbb9eba3adc2f191).
+Ojo (2026-10-12): el copy de combo Bombo de la Biblioteca dice "local, delivery o web", pero el TEST CONVERSION OCTUBRE es solo delivery (decisión del dueño 10-oct). Para ese test no usar ese bloque: registrar "Falta copy: Bombo combo solo delivery". Respeto el mercado de cada 
 cliente: Bombo y marcas chilenas = neutro chileno (tuteo "pide"); Lotus = 
 voseo argentino; Lullaby = inglés. Si falta un copy, lo registro en la 
 Bitácora como "Falta copy: [desc]" y Cowork lo crea.
