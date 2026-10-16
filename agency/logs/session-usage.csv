@@ -1,0 +1,4 @@
+session_id,fecha,modelo,entrada,cache_escritura,cache_lectura,salida,usd
+ba877b00,2026-10-16,claude-sonnet-5-5,510,3658513,29777773,21020,15.3131
+ba877b00,2026-10-16,claude-opus-5-5,689,4445018,121168743,244862,75.5926
+ba877b00,2026-10-16,claude-haiku-5-5,28,305694,720826,136,0.0455
