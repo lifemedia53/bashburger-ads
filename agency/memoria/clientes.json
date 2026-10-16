@@ -1,0 +1,104 @@
+{
+  "actualizado": "2026-10-10",
+  "clientes": {
+    "the-cool-hostel": {
+      "rubro": "hostel",
+      "ubicacion": "Av. Los Pescadores 5050, Peñuelas, Coquimbo — a una cuadra del Enjoy",
+      "web": "https://www.thecoolhostel.cl/",
+      "motor_reservas": "Little Hotelier",
+      "canal_venta_principal": [
+        "web (Little Hotelier)",
+        "WhatsApp (vende mucho, no medido por pixel)"
+      ],
+      "meta": {
+        "cuenta_oficial": "1428593511882773",
+        "cuenta_no_usar": "3079760962193758",
+        "pagina_fb": "584907934709599",
+        "instagram": "@thecoolhostel (17841471710664181)",
+        "pixel_bueno": {
+          "id": "1487303793186321",
+          "nombre": "Datos de The Cool Hostel",
+          "eventos": [
+            "Purchase"
+          ],
+          "nota": "solo navegador, sin CAPI desde 2026-05-30; sin PageView"
+        },
+        "pixel_no_usar": {
+          "id": "1579391480280656",
+          "nombre": "The Cool Hostel - LH",
+          "nota": "nunca recibió eventos; Meta no permite borrarlo"
+        }
+      },
+      "presupuesto_mensual_clp": 60000,
+      "presupuesto_diario_clp": 2000,
+      "campanas": {
+        "activa": {
+          "id": "120249343804190575",
+          "nombre": "Reservas Hotelier - Purchase",
+          "objetivo": "OUTCOME_SALES",
+          "optimizacion": "Purchase",
+          "publico": "CL+AR, edad 21-55 (sugerencia Advantage+)",
+          "anuncios": [
+            "Reel Max dormido - Reservar web",
+            "Reel Cris + Rawy - Reservar web"
+          ],
+          "lanzada": "2026-10-10"
+        },
+        "pausadas": [
+          "120249045153320575 Tráfico a Hotelier II",
+          "120249209785140575 Triatlón"
+        ]
+      },
+      "pendientes": [
+        "Campaña WhatsApp (conversaciones/ventas por mensaje)",
+        "Activar CAPI y PageView en pixel",
+        "Guía de voz desde chats de ChatGPT",
+        "Evaluar campaña nueva el 2026-10-31"
+      ],
+      "voz": "agency/memoria/voz/the-cool-hostel.json",
+      "decision_laura": "2026-10-10: dejar Meta como está (1 campaña Reservas Hotelier). No proponer más campañas por ahora"
+    },
+    "bash-burger": {
+      "rubro": "tenedor libre de hamburguesas smash ($13.990 x 2 h, confirmado por Laura 2026-10-10) + barra libre",
+      "ubicacion": "Peñuelas Nte. 167, Coquimbo (a metros del Enjoy y de The Cool Hostel)",
+      "meta": {
+        "cuenta": "1753718285299909"
+      },
+      "pos": "Justo Admin (usar get_dashboard o archivos de colección, nunca api_call para reportes)",
+      "campanas": {
+        "activa": "Tráfico Delivery (CTR 2,02%, $51/clic)",
+        "sin_entrega": [
+          "Tírate una paya",
+          "Reconocimiento Jul-Sep"
+        ]
+      },
+      "pendientes": [
+        "Oferta y presupuesto Halloween",
+        "Revisar 2 campañas activas sin entrega",
+        "Cruzar gasto Meta con ventas POS"
+      ],
+      "voz": "agency/memoria/voz/bash-burger.json"
+    },
+    "lullaby-rentals": {
+      "rubro": "vacation rentals Florida (USA)",
+      "moneda": "USD",
+      "meta": {
+        "cuenta_oficial": "10201332475268991",
+        "cuenta_no_usar": "894994272588936 (vacía, sin pago)"
+      },
+      "fuente": "confirmado por Laura 2026-10-10 + auditoría Meta",
+      "pendientes": [
+        "Confirmar URL de destino por anuncio (Airbnb/Furnished Finder/sitio)",
+        "Confirmar si TLL = Lobster",
+        "Renovar ST TLL antes del 22-oct"
+      ]
+    }
+  },
+  "ex_clientes": {
+    "Picanha Rodizio": {
+      "cuenta": "1856416768406342",
+      "desde": "2026-10-10",
+      "nota": "Laura confirmó que ya no es cliente; 4 boosts vencidos figuran activos con $0"
+    }
+  }
+}

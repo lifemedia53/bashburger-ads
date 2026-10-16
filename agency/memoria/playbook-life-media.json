@@ -1,0 +1,260 @@
+{
+  "fuente": "Playbook Meta Ads v2.0 (Google Doc 1qdFOhf5PKAb_9WkmUM5HJSxWjl8JDVhwwPNCQDYodDQ, 10-oct-2026, reemplaza v1) + v1 + transcript + Notion",
+  "actualizado": "2026-10-10",
+  "metodologia": {
+    "jerarquia_senales": "compra > mensaje > video 95% > guardado > like",
+    "temperaturas": [
+      "caliente",
+      "tibio",
+      "frío"
+    ],
+    "ventanas_dias": [
+      7,
+      30,
+      90,
+      180,
+      365
+    ],
+    "video_funnel": "retención 25% → 50% → 75% → 95%",
+    "exclusiones": "no re-molestar compradores recientes (excluir clientes 7d)",
+    "lookalikes": "calidad de semilla: compradores (value-based) > mensajes > engagement",
+    "mapa_senales": {
+      "compra": 10,
+      "inicio_checkout": 9,
+      "mensaje": 9,
+      "formulario": 8,
+      "video_95": 8,
+      "guardado": 8,
+      "compartido": 8,
+      "visita_perfil": 6,
+      "video_50": 5,
+      "comentario": 4,
+      "like": 3,
+      "alcance": 1
+    },
+    "niveles_remarketing": {
+      "muy_caliente": "mensajes, formularios, visitas web, checkout",
+      "caliente": "video 95%, guardados, visitas perfil",
+      "tibio": "interacción IG, video 50%, likes/comentarios"
+    },
+    "jerarquia_lookalike": [
+      "A: compradores",
+      "B: mensajes",
+      "C: video 95%",
+      "D: visitas perfil"
+    ],
+    "ventanas_significado": {
+      "7": "muy caliente",
+      "30": "caliente",
+      "90": "consideración",
+      "180": "reactivación",
+      "365": "branding"
+    },
+    "exclusiones_regla": "Campaña a un nivel excluye siempre a los niveles más avanzados (ej. a video 95% excluir compradores, mensajes y reservas)",
+    "principio": "El anuncio es tu segmentación: Meta vende por señales y aprende del creativo, no de intereses"
+  },
+  "audiencias_estandar": {
+    "A-001": "Mensajes IG 30d",
+    "A-002": "Mensajes IG 180d",
+    "A-003": "Video 95% 30d",
+    "A-004": "Guardaron IG 30d",
+    "A-005": "Visitó perfil 30d (la más útil)",
+    "A-006": "LAL 1% Mensajes (semilla A-002)",
+    "A-007": "LAL 1% Compradores VIP (semilla lista clientes con valor)"
+  },
+  "arquitectura_7_campanas": [
+    {
+      "n": 1,
+      "nombre": "WEB [PLATAFORMA] AÑO - Promos/Tarjetas",
+      "objetivo": "Tráfico→LPV o Ventas si hay pixel",
+      "peso": "38%"
+    },
+    {
+      "n": 2,
+      "nombre": "TRAFICO DELIVERY AÑO",
+      "objetivo": "Tráfico→LPV",
+      "peso": "15%"
+    },
+    {
+      "n": 3,
+      "nombre": "REMARKETING MENSAJES AÑO",
+      "objetivo": "Interacción→Mensajes",
+      "peso": "15-23%",
+      "conjuntos": [
+        "CJ 3.1 Caliente (A-002+A-003+A-005, Advantage OFF)",
+        "CJ 3.2 Advantage Mensajes (ON)"
+      ]
+    },
+    {
+      "n": 4,
+      "nombre": "AWARENESS LAL AÑO",
+      "objetivo": "Alcance/ThruPlay",
+      "peso": "12%",
+      "publico": "A-006+A-007, excluir custom"
+    },
+    {
+      "n": 5,
+      "nombre": "BOOSTS INSTAGRAM AÑO",
+      "objetivo": "Interacción/Alcance",
+      "peso": "12%"
+    },
+    {
+      "n": 6,
+      "nombre": "PROMOS EXPRESS LOCAL",
+      "objetivo": "Tráfico/Alcance, geo estricto",
+      "peso": "8-11%"
+    },
+    {
+      "n": 7,
+      "nombre": "RESERVA EVENTOS",
+      "objetivo": "flexible",
+      "peso": "5-8%"
+    }
+  ],
+  "estandares": {
+    "nomenclatura": {
+      "campana": "[TIPO] [AÑO] - [Descripción] en MAYÚSCULA",
+      "conjunto": "CJ X.Y - [Descripción]",
+      "anuncio": "AD X.Y.LETRA - [Descripción]"
+    },
+    "placements": "Manual solo IG (Feed/Reels/Stories/Explorar) + FB (Feed/Reels/Stories). EXCEPCIÓN Ventas/Conversión: Advantage+ placements aceptable (las exclusiones de cuenta ya quitan Audience Network, Marketplace, Columna derecha). EXCEPCIÓN Lotus Estilistas: SOLO IG (sin FB por comentarios negativos)",
+    "puja": "Menor costo sin tope; cost cap solo si el CPA es estable",
+    "atribucion": {
+      "web_trafico": "7d clic + 1d vista",
+      "mensajes": "1d clic",
+      "delivery": "7d clic",
+      "awareness": "7d clic + 1d vista",
+      "promos_express": "1d clic"
+    },
+    "presupuesto_minimo_conjunto_clp": 1700,
+    "pixel": "Si no hay pixel con Purchase: conversión = Tráfico+LPV. Si hay pixel: optimizar a compra",
+    "presupuesto_minimo": "Chile $1.700 CLP/día · Argentina $1.518 ARS/día por conjunto",
+    "cbo_vs_conjunto": "Usar presupuesto POR CONJUNTO cuando se necesita dayparting (no funciona con CBO)",
+    "prefijos_audiencias": "A- (Bombo), CC-A- (Casa Cultural), LE-A- (Estilistas)"
+  },
+  "reglas_ganadoras": [
+    "Creativo con PROMO concreta (precio/cupón en el primer segundo) gana a reel de marca: 3x más barato por mensaje",
+    "Concentrar presupuesto en días fuertes del cliente (en Bombo: Vi-Sá-Do = 65% ventas); programar aumentos",
+    "Boosts baratos > Reconocimiento pago para alcance",
+    "LAL por valor (compradores) rinde 30-50% mejor que LAL de engagement",
+    "Refrescar creativos cada 7-10 días",
+    "Preferir duplicar y modificar sobre crear desde cero",
+    "Revisar fechas de fin de conjuntos: en Bombo la campaña principal estuvo 9 días muerta por fecha vencida"
+  ],
+  "kpis_objetivo_restaurantes": {
+    "roas": ">3x",
+    "costo_mensaje_clp": "2.000-4.000 (Bombo logró 506-570)",
+    "cpo_clp": "<800"
+  },
+  "correcciones_posteriores": [
+    "Bombo: peak real es CENA 19-22h (53%), no almuerzo; días fuertes Sáb, Jue, Dom, Mié",
+    "Bombo: ya existe pixel con compras (Pixel Prueba 1, 718708380714349)",
+    "The Cool Hostel: usar SOLO cuenta 1428593511882773 (Notion manda sobre el playbook, que decía ambas)",
+    "Copy marcas chilenas: español neutro chileno con tuteo. Lotus (Argentina): voseo",
+    "Bombo 10-oct-2026: TEST CONVERSION OCTUBRE pasa a enfoque SOLO DELIVERY por decisión del dueño (excepción al foco 'bajar promos'). Consultas por local → CM derivan a WhatsApp. Conjunto duplicado tal cual (ID 120249348553550141, pausado, sin anuncio) esperando gráfica (tarea Notion 3f5673eb9c5681b3a0b7d846e212d0be)",
+    "Bombo 10-oct-2026 (activado con OK de Laura): CJ viejo 120249320453730141 PAUSADO (en realidad quedó activo; pausado y verificado en vivo recién el 10-oct tarde tras gastar $22.071 ese día); CJ duplicado 120249348553550141 ACTIVO $25.000/día con AD 1.B v2 (120249348887600141, creativo 1419543376997696, copy AEO 'hamburguesas a domicilio en La Serena', gráfica cuadrada hash 6b011f20). AD 1.B v1 queda pausado con error de catálogo. Versión 9:16 no está subida.",
+    "Lullaby Rentals: cuenta real es USD 10201332475268991 (no act_894994272588936), confirmado por Laura 2026-10-10",
+    "El Playbook v2 aún lista Lullaby act_894994272588936 y The Cool Hostel #2: prevalecen las decisiones de Laura (Lullaby real = 10201332475268991; Hostel solo 1428593511882773)",
+    "Picanha Rodizio (act 1856416768406342) YA NO ES CLIENTE (Laura, 10-oct-2026): no auditar ni proponer nada"
+  ],
+  "roadmap": {
+    "fase1": "Bombo Burger piloto — VALIDADA (ROAS 4,28x)",
+    "fase2_oct_2026": "Bash Burger, Steakhouse, Santerra",
+    "fase3_nov_2026": "Tiki House, La Siciliana, Tony's Pasta, Mare, Entre Tacos, Bendito",
+    "fase4_dic_q1": "Bombo Distribuidores (Leads), The Cool Hostel (reservas directas, verano austral, público internacional), Lullaby Rentals (USD, USA), Lotus (ARS)"
+  },
+  "protocolo_notion": {
+    "regla": "Cada cuenta debe tener una próxima acción y una fecha de revisión",
+    "flujo": [
+      "Detectar hallazgo",
+      "Registrar en Bitácora de hallazgos Ads (collection://7a59ba7a-ebbd-4dcf-ade3-ea3901e53be6), sin duplicar: usar Clave única cliente|fecha|tipo|slug",
+      "Actualizar Control de cuentas Meta Ads (collection://8b35305a-3daa-4a63-be74-1de95799164a)",
+      "Si requiere ejecución: tarea en All Tasks (collection://9c4673eb-9c56-8306-a680-072990a30031) con Tipo=Ads, cliente y deadline"
+    ],
+    "cierre": "Una alerta se cierra solo cuando la acción se ejecutó en Meta y quedó registrada en Notion",
+    "auditoria_90d": "Primero auditar y ordenar (inventario, pagos, verificación, calidad de cuenta, tracking, destinos); clasificar en mantener/escalar/pausar/rehacer/limpiar; recién después aplicar el playbook"
+  },
+  "estilo_laura": [
+    "TDAH: pasos ultra específicos en bloques de 5-15 min",
+    "Respuestas breves con opinión",
+    "Confirmar antes de pausar o eliminar",
+    "Presupuestos en CLP (Lullaby USD, Lotus ARS)"
+  ],
+  "embudos_por_industria": {
+    "restaurante": "Reel comida → video 50% → 95% → promo → mensaje → cliente",
+    "peluqueria": "transformación (antes/después) → testimonios → agenda → fidelización",
+    "distribuidora": "contenido educativo → catálogo → WhatsApp → venta",
+    "hostel": "experiencia/ambiente → video 95%/guardados → oferta reserva directa → reserva"
+  },
+  "laboratorio": {
+    "regla": "Cada mes 1 prueba A/B documentada: mismo anuncio, mismo presupuesto, misma duración",
+    "pruebas_planeadas": [
+      "Video 50% vs 95%",
+      "Guardado vs Visita perfil",
+      "LAL 1% vs Advantage Audience"
+    ],
+    "registro": "resultado a Bitácora de hallazgos y al playbook"
+  },
+  "version": "2.0",
+  "v2_cambios": {
+    "pixel": "Bombo tiene Pixel Prueba 1 (718708380714349) con compras reales → se pueden hacer campañas de Ventas reales (Iniciar pago primero, luego Compra con volumen)",
+    "horarios_bombo": "Peak CENA 19-22h = 53% ventas (hora pico 20h), almuerzo 29%. Días fuertes: Sáb, Jue, Dom, Mié. Ticket promedio $25.999. Programar presupuesto hacia la cena",
+    "justo_mcp": "Justo Admin MCP (Bombo + Bash) es fuente de verdad de ventas",
+    "promos_caducan": "Conjuntos de promos con fecha de fin se detienen solos sin aviso → revisar fechas y renovar cada inicio de mes",
+    "idioma": "Chile: neutro chileno con tuteo (nunca voseo) · Lotus (Argentina): voseo · Lullaby (USA): inglés"
+  },
+  "playbook_remarketing_mensajes": {
+    "estructura": "1 campaña CBO, Interacción → Mensajes (IG DM o WhatsApp)",
+    "CJ1_CALIENTE": "incluye A-002/003/005",
+    "CJ2_ABIERTO": "Advantage+ ON, excluye A-002/003/005",
+    "ads": "replicar creativos ganadores con variantes de copy",
+    "destino": "WhatsApp si responden rápido ahí; IG DM si no",
+    "usado_en": [
+      "Bombo",
+      "Lotus Casa Cultural (06-oct)",
+      "Lotus Estilistas (08-oct)"
+    ]
+  },
+  "promos_bombo_oct_2026": [
+    {
+      "promo": "BancoEstado",
+      "descuento": "50%",
+      "vigencia": "todos los días",
+      "cupon": "6 dígitos tarjeta VISA",
+      "conjunto": "CJ 1.1"
+    },
+    {
+      "promo": "Banco de Chile",
+      "descuento": "30%",
+      "vigencia": "Lun-Dom",
+      "cupon": "BCHJUSTO26",
+      "conjunto": "CJ 1.3"
+    },
+    {
+      "promo": "MACHBANK",
+      "descuento": "30%",
+      "vigencia": "Jue-Vie-Sáb",
+      "cupon": "MACHBANK30",
+      "conjunto": "CJ 1.4 (pausado)"
+    },
+    {
+      "promo": "Cyber Days",
+      "descuento": "30%",
+      "vigencia": "1-11 oct",
+      "cupon": "CYBER30",
+      "conjunto": "sin conjunto"
+    },
+    {
+      "promo": "Entel",
+      "descuento": "20%",
+      "vigencia": "Lun-Vie",
+      "cupon": "App Entel",
+      "conjunto": "sin conjunto"
+    },
+    {
+      "promo": "CencoSud",
+      "vigencia": "no vigente oct",
+      "conjunto": "CJ 1.2 (pausado)"
+    }
+  ]
+}

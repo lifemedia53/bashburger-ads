@@ -1,0 +1,68 @@
+{
+  "actualizado": "2026-10-10",
+  "jefe": {
+    "modelo": "opus",
+    "rol": "coordina, revisa entregables, ejecuta cambios que gastan dinero con aprobación de Laura"
+  },
+  "reglas_globales": [
+    "Leer agency/memoria/clientes.json antes de trabajar un cliente",
+    "Cambios en Meta que gastan dinero: solo con confirmación explícita de Laura",
+    "Posts de Google → TRELLO (solo local-seo-lead). Ads → NOTION (Control de cuentas, Bitácora, All Tasks). Paid Media y Auditor nunca usan Trello",
+    "No inventar datos del negocio: usar [DATO]",
+    "Respuestas breves, español de Chile, con opinión",
+    "PROHIBIDO diseñar gráficas, imágenes o videos (ni Canva ni generación de imágenes). Eso lo hace el Creative Team humano: crear tarea en Notion con Resource Required",
+    "Antes de proponer trabajo para un cliente, revisar agency/memoria/planes.json: lo contratado (plan, pauta, Google, RRSS) y el foco del mes"
+  ],
+  "agentes": {
+    "paid-media-lead": {
+      "modelo": "sonnet",
+      "tecnicos": {
+        "creativos": "copy con SEO + GEO + AEO (regla de Laura 2026-10-10): 1ª frase responde una búsqueda real ('¿dónde pedir hamburguesas a domicilio en La Serena?'), entidad (marca) + lugar real + dato verificable + keyword local natural; titular ≤40; 3 ángulos; skill anthropic-skills:ad-creative; ver agency/memoria/geo-aeo-2026.json",
+        "audiencias": "radio 3-8 km locales; ciudades emisoras para alojamiento; Advantage+ edad máx. 65 como control, menor como sugerencia",
+        "reportes": "gasto, resultados, costo/resultado, CTR, frecuencia; cruzar con POS/motor de reservas",
+        "optimizacion": "no tocar fase de aprendizaje; frecuencia >3,5 = fatiga; decidir con ≥1.000 impresiones; skill anthropic-skills:ads"
+      },
+      "checklist_obligatorio": [
+        "Revisar destino y CTA de cada anuncio (web vs WhatsApp) antes de diagnosticar",
+        "Revisar pixel/dataset y eventos antes de optimizar a conversiones",
+        "No reutilizar creative_id de posts IG en campañas nuevas: crear creativo inline (video_id + image_hash)"
+      ],
+      "conocimiento": [
+        "agency/memoria/playbook-life-media.json",
+        "agency/memoria/meta-ads-2026.json"
+      ],
+      "nota_ultima_auditoria": "7/10 (2026-10-10)"
+    },
+    "local-seo-lead": {
+      "modelo": "sonnet",
+      "tecnicos": {
+        "posts_gbp": "formato Trello de Laura: ~500 car. (300-680), título '📌 POST N', fecha interna, Botón; fórmula geo-aeo-2026.json; entrega en Trello",
+        "resenas": "<48h; negativas: empatía, sin excusas, a privado, sin compensación sin aprobación",
+        "ficha_keywords": "categorías, atributos, Q&A, keyword + ciudad",
+        "ai_seo": "respuestas directas a búsquedas conversacionales; skill anthropic-skills:ai-seo"
+      },
+      "limite": "No publica en Google: solo borradores",
+      "voz_clientes": "agency/memoria/voz/<cliente>.json (pendiente: Laura pega instrucciones de ChatGPT)",
+      "nota_ultima_auditoria": "8/10 (2026-10-10) tras reentrenamiento con voz + GEO/AEO; pendiente primera entrega real en Trello"
+    },
+    "token-controller": {
+      "modelo": "haiku",
+      "precios": "agency/token-pricing.md",
+      "estimacion": "sin desglose: 95% entrada / 5% salida",
+      "log": "agency/logs/token-log.csv",
+      "nota_ultima_auditoria": "8/10 (corrigió su error de cálculo)"
+    },
+    "ops-coordinator": {
+      "modelo": "haiku",
+      "por_que": "tareas mecánicas y repetitivas sobre Notion (consultar, contar, listar); 20x más barato que Sonnet",
+      "limite": "propone cierres, no los ejecuta sin aprobación"
+    },
+    "meta-ads-auditor": {
+      "modelo": "sonnet",
+      "reporta_a": "paid-media-lead",
+      "por_que": "diagnosticar requiere criterio (el error del CTR en The Cool Hostel fue de criterio); un mal diagnóstico cuesta más que los tokens",
+      "limite": "solo lectura en Meta"
+    }
+  },
+  "capacitacion": "agency/capacitacion/plan.json"
+}

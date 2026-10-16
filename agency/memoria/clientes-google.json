@@ -1,0 +1,43 @@
+{
+  "fuente": "Laura, chat 2026-10-12",
+  "regla": "Local SEO solo hace posts de Google para estos clientes. Los inactivos se vigilan: el día 7 de cada mes revisar en la planilla de Google y DATA CLIENTES si ya están activos y avisar al Jefe.",
+  "activos": [
+    "Bombo Burger",
+    "Santerra By Bombo",
+    "The Cool Hostel",
+    "Bombo Comercializadora",
+    "Bash Burger",
+    "Entre Tacos",
+    "Bendito Completo",
+    "Bombo Tiki House",
+    "Bombo Tiki Beach",
+    "Mare By Bombo",
+    "Steakhouse by Bombo",
+    "Tony's Pasta Centro",
+    "Lullaby Rentals",
+    "Pressures Perfect",
+    "Lemarc Eusebio Lillo",
+    "La Siciliana Trattoria",
+    "Lotus Estilistas"
+  ],
+  "inactivos_vigilar": [
+    "Lemarc Los Albañiles",
+    "Lotus Casa Cultural"
+  ],
+  "mercado": {
+    "Lullaby Rentals": "inglés, USA (Florida)",
+    "Pressures Perfect": "inglés, USA (Huntsville AL)",
+    "Lotus Estilistas": "español argentino, voseo (San Telmo, Buenos Aires)",
+    "Lotus Casa Cultural": "español argentino, voseo (San Telmo, Buenos Aires)"
+  },
+  "detalle": {
+    "Bombo Burger": "5 perfiles: Balmaceda, Beach, Ulriksen, Mall Plaza, Santiago. 8 posts al mes POR LOCAL. Santiago: eventos alrededor de Patio Bellavista (nunca eventos de La Serena) y mencionar siempre que está en Patio Bellavista. Producto: decir 'hamburguesas gigantes con papas y bebidas refill / recargables' (NO 'hamburguesas artesanales'). Casa Magnolia ya NO existe. Balmaceda SÍ tiene Hot Dogs (Laura 2026-10-16).",
+    "Entre Tacos": "2 perfiles: Av. del Mar y Peñuelas; impulsar ambos.",
+    "Bendito Completo": "2 perfiles: Av. del Mar y Peñuelas; impulsar ambos.",
+    "Tony's Pasta Centro": "Solo Cordovez 391. Tony's 4 Esquinas CERRÓ (Vero archiva su tarjeta y ajusta prompts).",
+    "Lullaby Rentals": "Sin perfil en la planilla de Google: hacer posts sin revisarla. Inglés, USA. Propiedades activas: Bliss By The Bay (capacidad 4) y A Wave From It All (capacidad 6, objetivo: arriendo MENSUAL). The Lost Lobster NO se usa en posts (Laura 2026-10-16). Lista Trello propia 'Posteos Google Lullaby'. A Wave From It All: sin mínimo de noches (Laura 2026-10-16).",
+    "Lotus Estilistas": "Cliente nuevo: sin data de Google hasta el próximo mes. Este mes posts de reconocimiento y venta. Voseo argentino. Dirección confirmada: Defensa 1213, San Telmo (NO Chacabuco 1025).",
+    "Pressures Perfect": "Sin posts de fechas/eventos: solo servicio + GEO/AEO para impulsar inquiries. Oct-dic 2026: impulsar Lighting service (colgar y decorar con luces el exterior de casas). Link: alternar web propia y Yelp https://m.yelp.com/biz/pressures-perfect-owens-cross-roads (Laura 2026-10-16). Su prompt en Trello (GHa83Jm7) pide cuerpo de 180-280 palabras, título ≤58 caracteres, sin emojis; ya incluye Lighting Service y Yelp. Nombre oficial: 'Pressures Perfect' (sin apóstrofo; Laura 2026-10-16). El prompt de Trello y los posts de Lighting aún dicen \"Pressure's Perfect\": corregir."
+  },
+  "fuente_detalle": "Laura, chat 2026-10-12"
+}

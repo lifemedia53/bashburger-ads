@@ -1,0 +1,193 @@
+{
+ "fuente": "Drive 1mJf6EznBz_Qo-P15BfqVbOcCSl8rf3Rgi_Jdweml138 (planilla ' Desk', único archivo de Drive con 'DESK' en el título que es planilla; los otros resultados son desktopmanager.py/.pyc), hoja 'DATA CLIENTES', columna O, leído 2026-10-12",
+ "encabezado_columna_O": "RESERVA",
+ "notas": [
+  "Columna O contiene el link de reserva (no un sí/no). null = celda vacía, no necesariamente 'no acepta reserva'.",
+  "tipo_reserva lo derivé del dominio del link (wa.me / covermanager / otro). Steakhouse by Bombo usa el mismo link CoverManager de Mare by Bombo (módulo 'mare-by-bombo').",
+  "Bash Burger tiene en RESERVA https://www.bashburger.cl/ (sitio web, no un sistema de reservas explícito)."
+ ],
+ "clientes": [
+  {
+   "fila": 2,
+   "cliente": "Bombo Playa",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56935225080",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 3,
+   "cliente": "Bombo Mall",
+   "casilla_col_A": true,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 4,
+   "cliente": "Bombo Balmaceda",
+   "casilla_col_A": true,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 5,
+   "cliente": "Bombo Ulriksen",
+   "casilla_col_A": true,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 6,
+   "cliente": "Bombo Santiago",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56989936724",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 7,
+   "cliente": "Entre tacos ",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56939288409",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 8,
+   "cliente": "Entre tacos Peñuelas",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56988130160",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 9,
+   "cliente": "Bendito completo",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56939288409",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 10,
+   "cliente": "Bendito completo Peñuelas",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56988130160",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 11,
+   "cliente": "Tony's Pasta Centro",
+   "casilla_col_A": false,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 12,
+   "cliente": "Mare by Bombo",
+   "casilla_col_A": true,
+   "reserva": "https://www.covermanager.com/reservation/module_restaurant/mare-by-bombo/spanish?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafJQH5ek536d0fGXcAJW3cIW_C_RsIG4Uu_bLItHa04XoFyANkFijv9M8h0qA_aem_iQZ8mNLNXMLPqPPt9pLT2Q&utm_id=97760_v0_s00_e0_tv3",
+   "tipo_reserva": "CoverManager"
+  },
+  {
+   "fila": 13,
+   "cliente": "Steakhouse by Bombo",
+   "casilla_col_A": true,
+   "reserva": "https://www.covermanager.com/reservation/module_restaurant/mare-by-bombo/spanish?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafJQH5ek536d0fGXcAJW3cIW_C_RsIG4Uu_bLItHa04XoFyANkFijv9M8h0qA_aem_iQZ8mNLNXMLPqPPt9pLT2Q&utm_id=97760_v0_s00_e0_tv3",
+   "tipo_reserva": "CoverManager"
+  },
+  {
+   "fila": 14,
+   "cliente": "Santerra by Bombo",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56966661861",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 15,
+   "cliente": "Comercializadora Bombo",
+   "casilla_col_A": true,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 16,
+   "cliente": "La Siciliana Trattoria",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56981285155",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 17,
+   "cliente": "The Cool Hostel",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56948465248",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 18,
+   "cliente": "Pressures Perfect",
+   "casilla_col_A": false,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 19,
+   "cliente": "Bash Burger",
+   "casilla_col_A": true,
+   "reserva": "https://www.bashburger.cl/",
+   "tipo_reserva": "Sitio web"
+  },
+  {
+   "fila": 20,
+   "cliente": "Bombo Tiki house",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56973696461",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 21,
+   "cliente": "Bombo Tiki beach",
+   "casilla_col_A": true,
+   "reserva": "https://wa.me/56943569600",
+   "tipo_reserva": "WhatsApp"
+  },
+  {
+   "fila": 22,
+   "cliente": "Lemarc Eusebio Lillo 616",
+   "casilla_col_A": true,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 23,
+   "cliente": "Lemarc Los Albañiles 1261",
+   "casilla_col_A": true,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 24,
+   "cliente": "Casa Lotus",
+   "casilla_col_A": false,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 25,
+   "cliente": "Lotus Estilistas",
+   "casilla_col_A": false,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 26,
+   "cliente": "Lullaby Rentals",
+   "casilla_col_A": false,
+   "reserva": null,
+   "tipo_reserva": null
+  },
+  {
+   "fila": 27,
+   "cliente": "Tony's Pasta Milagro",
+   "casilla_col_A": false,
+   "reserva": null,
+   "tipo_reserva": null
+  }
+ ]
+}

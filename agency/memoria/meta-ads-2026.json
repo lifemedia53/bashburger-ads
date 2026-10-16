@@ -1,0 +1,157 @@
+{
+  "actualizado": "2026-10-10",
+  "reglas": [
+    {
+      "tema": "Advantage+ audience - edad",
+      "regla": "La edad minima es el unico control duro (en Locations > Show more options). Edad maxima, genero e intereses son sugerencias.",
+      "fuente": "https://www.facebook.com/business/help/273363992030035"
+    },
+    {
+      "tema": "Advantage+ audience - edad maxima",
+      "regla": "El tope definible de edad en Meta es 65+ (incluye a todos los mayores). No se puede fijar un maximo duro con Advantage+ audience activado.",
+      "fuente": "https://www.facebook.com/business/help/103928676365132"
+    },
+    {
+      "tema": "Advantage+ audience - sugerencias",
+      "regla": "Audiencias personalizadas, lookalikes, edad, genero e intereses son punto de partida: Meta puede entregar fuera de ellos si cree que rinde mejor.",
+      "fuente": "https://www.facebook.com/business/help/273363992030035"
+    },
+    {
+      "tema": "Advantage+ audience - control estricto",
+      "regla": "Si necesitas un limite duro (edad maxima, ej. 25-54), apaga Advantage+ audience y usa segmentacion original (fuente terciaria; un caso real mostro entrega a 65+).",
+      "fuente": "https://www.jonloomer.com/how-advantage-plus-audience-works/"
+    },
+    {
+      "tema": "Advantage+ audience - ubicacion",
+      "regla": "Ubicacion, idioma y exclusiones de audiencia personalizada tambien son controles estrictos: usalos para el radio local.",
+      "fuente": "https://www.facebook.com/business/help/273363992030035"
+    },
+    {
+      "tema": "Advantage+ leads",
+      "regla": "En campanas Advantage+ leads la audiencia queda en 18+ (no se puede acotar edad). Objetivo API: OUTCOME_LEADS.",
+      "fuente": "https://www.facebook.com/business/ads/meta-advantage-plus/leads"
+    },
+    {
+      "tema": "Flujo unificado Advantage+",
+      "regla": "El flujo nuevo reemplaza los workflows Manual / Advantage+ shopping / Advantage+ app. 'Manual' ahora es apagar automatizaciones (presupuesto, audiencia, ubicaciones) una a una.",
+      "fuente": "https://developers.facebook.com/docs/marketing-api/advantage-campaigns"
+    },
+    {
+      "tema": "Estructura de campanas",
+      "regla": "Para la misma oferta y mismo evento de conversion, pocas campanas y pocos conjuntos. Separar solo por diferencias reales (pais, margen, producto, proceso de venta). Fuente terciaria.",
+      "fuente": "https://bir.ch/blog/advantage-plus-sales-campaigns-guide"
+    },
+    {
+      "tema": "Cuando usar manual",
+      "regla": "Mantener control manual para tests, retargeting y nichos con restriccion dura (edad, radio). Practica comun entre media buyers; no es guia oficial de Meta.",
+      "fuente": "https://bir.ch/blog/advantage-plus-sales-campaigns-guide"
+    },
+    {
+      "tema": "WhatsApp - optimizacion",
+      "regla": "Meta ofrece optimizar a compras por mensajeria (no solo a conversaciones). Meta reporta 10% menor costo por compra en estudio global H2 2024 (dato de Meta, no garantia local).",
+      "fuente": "https://business.whatsapp.com/resources/resource-library/whatsapp-business-app-resources/down-funnel-optimizations-whatsapp"
+    },
+    {
+      "tema": "WhatsApp - conversacion no es venta",
+      "regla": "Una conversacion es un paso temprano; juzgar CTWA por ventas reales en ventana mas larga, no por costo por conversacion. Fuente terciaria.",
+      "fuente": "https://www.spurnow.com/en/blogs/click-to-whatsapp-ads-benchmarks"
+    },
+    {
+      "tema": "WhatsApp - CAPI mensajeria",
+      "regla": "Para reportar ventas cerradas por WhatsApp: Conversions API for Business Messaging con action_source=business_messaging, messaging_channel=whatsapp y ctwa_clid en user_data.",
+      "fuente": "https://developers.facebook.com/docs/marketing-api/conversions-api/business-messaging"
+    },
+    {
+      "tema": "WhatsApp - ctwa_clid",
+      "regla": "ctwa_clid es obligatorio para enviar eventos y llega en el webhook de mensajes cuando el usuario entro desde un anuncio CTWA. Requiere WhatsApp Business Platform (Cloud API); On-Premises se descontinuo.",
+      "fuente": "https://developers.facebook.com/docs/marketing-api/conversions-api/business-messaging"
+    },
+    {
+      "tema": "CAPI - Purchase",
+      "regla": "Purchase requiere value y currency, mas event_name, event_time y action_source.",
+      "fuente": "https://developers.facebook.com/docs/marketing-api/best-practices/omni-optimal-setup-guide"
+    },
+    {
+      "tema": "CAPI - EMQ",
+      "regla": "EMQ va de 1 a 10 y aplica solo a eventos web. Solo los eventos con match sirven para atribucion y optimizacion de entrega.",
+      "fuente": "https://developers.facebook.com/docs/marketing-api/best-practices/omni-optimal-setup-guide"
+    },
+    {
+      "tema": "CAPI - calidad",
+      "regla": "Enviar external_id y event_id en todos los eventos, mas parametros de cliente adicionales, para subir EMQ.",
+      "fuente": "https://developers.facebook.com/docs/marketing-api/conversions-api/best-practices"
+    },
+    {
+      "tema": "CAPI - deduplicacion",
+      "regla": "Si Pixel y CAPI mandan el mismo evento: mismo event_name y mismo event_id (o external_id + fbp) para deduplicar.",
+      "fuente": "https://developers.facebook.com/docs/marketing-api/conversions-api/best-practices"
+    },
+    {
+      "tema": "CAPI - prueba",
+      "regla": "Validar la conexion con la herramienta Test Events antes de optimizar a ese evento.",
+      "fuente": "https://developers.facebook.com/docs/marketing-api/conversions-api/best-practices"
+    },
+    {
+      "tema": "Creatividades - diversidad",
+      "regla": "Diversidad real = distintos formatos, ganchos y angulos, no variaciones de color de un mismo concepto (practica de la industria tras Andromeda, no doc oficial).",
+      "fuente": "https://ecommercefastlane.com/meta-andromeda-update-new-creative-strategy-for-facebook-and-instagram-ads/"
+    },
+    {
+      "tema": "Creatividades - formatos",
+      "regla": "Mezclar 1:1, 9:16 (Reels) y carrusel por conjunto. No hay benchmark confiable de Reels; testear en la cuenta.",
+      "fuente": "https://segwise.ai/blog/meta-andromeda-update-creative-strategy-2026"
+    },
+    {
+      "tema": "Creatividades - fatiga",
+      "regla": "La fatiga llega mas rapido que antes (fuentes hablan de 2-4 semanas en cuentas grandes). Los umbrales exactos son opinion de vendors: vigilar frecuencia y CTR propios.",
+      "fuente": "https://segwise.ai/blog/meta-andromeda-update-creative-strategy-2026"
+    },
+    {
+      "tema": "Aprendizaje",
+      "regla": "Regla practica: ~50 eventos de optimizacion por conjunto en 7 dias para salir de aprendizaje (rule of thumb de terceros, no garantia oficial).",
+      "fuente": "https://lseo.com/paid-media/paid-social-media-marketing/understanding-the-facebook-ads-learning-phase-a-full-guide"
+    },
+    {
+      "tema": "Presupuestos chicos",
+      "regla": "Con presupuesto bajo, menos conjuntos con mas plata cada uno; 10 conjuntos de poco presupuesto se canibalizan y no salen de aprendizaje.",
+      "fuente": "https://lseo.com/paid-media/paid-social-media-marketing/understanding-the-facebook-ads-learning-phase-a-full-guide"
+    },
+    {
+      "tema": "Evento de optimizacion escaso",
+      "regla": "Si Purchase es muy escaso, se puede lanzar con un evento mas alto en el embudo y migrar cuando haya volumen. Cambios grandes (evento, presupuesto, segmentacion) reinician aprendizaje.",
+      "fuente": "https://lseo.com/paid-media/paid-social-media-marketing/understanding-the-facebook-ads-learning-phase-a-full-guide"
+    }
+  ],
+  "checklist_diagnostico": [
+    "Antes de interpretar CTR/CPC: revisar destino y CTA de CADA anuncio (web, WhatsApp, Messenger, perfil IG). Un CTR alto puede ser clics a chat, no clics accidentales.",
+    "Separar metricas por destino: clics a WhatsApp se miden en conversaciones, clics web en reservas/compras. No mezclarlos en un solo CTR.",
+    "Revisar el pixel / dataset (eventos recibidos, EMQ, deduplicacion) ANTES de proponer optimizar a reservas o compras.",
+    "Confirmar que el evento de optimizacion existe, dispara y tiene volumen (~50/7 dias por conjunto).",
+    "No decidir con menos de 1.000 impresiones ni tocar conjuntos en aprendizaje (<50 resultados/7 dias) salvo emergencia.",
+    "Frecuencia >3,5 = posible fatiga creativa; revisar cuantos conceptos distintos hay activos.",
+    "Con Advantage+ audience, verificar el desglose real por edad antes de culpar a la segmentacion (la edad maxima es sugerencia).",
+    "Para Bash Burger / BomboBurger, cruzar con ventas del POS (Justo) antes de hablar de ROAS real."
+  ],
+  "checklist_lanzamiento": [
+    "Confirmar con Laura objetivo, presupuesto, oferta y destino (web vs WhatsApp) antes de crear nada; nada se crea ni activa sin su OK explicito.",
+    "Revisar pixel/dataset y eventos disponibles antes de elegir el evento de optimizacion.",
+    "Elegir estructura minima: una campana por objetivo, pocos conjuntos, varios conceptos creativos distintos (formatos, ganchos, angulos).",
+    "Si se necesita limite duro de edad o radio, apagar Advantage+ audience; si no, usar edad minima + ubicacion como controles y el resto como sugerencias.",
+    "Creativos: incluir 9:16 y 1:1; copy sin inventar ingredientes ni cifras (usar [DATO]).",
+    "Crear el creativo inline con video_id + image_hash. NO reutilizar creative_id de un post de IG en campanas nuevas (error ObjectStorySpecRedundant).",
+    "Si el destino es WhatsApp: decidir si se optimiza a conversaciones o a compras por mensajeria y definir como se registraran las ventas antes de lanzar.",
+    "Dejar definida la ventana de revision (7 dias, sin tocar conjuntos en aprendizaje)."
+  ],
+  "lecciones_propias": [
+    "The Cool Hostel: diagnostique un CTR de 8% como clics accidentales, pero 3 de 5 anuncios llevaban a WhatsApp (clics a chat, no reservas web). Siempre revisar destino/CTA de cada anuncio antes de diagnosticar.",
+    "The Cool Hostel: no revise el pixel antes de proponer optimizar a reservas. Verificar pixel y eventos primero.",
+    "Reutilizar creative_id de posts de IG en campanas nuevas falla con ObjectStorySpecRedundant; crear el creativo inline con video_id + image_hash.",
+    "2026-10-10 Bombo: un creativo nuevo con imagen falló al activar ('Catalog is missing') porque Meta lo inscribe solo en product_extensions si la cuenta tiene catálogo. Crear creativos con degrees_of_freedom_spec {creative_features_spec:{product_extensions:{enroll_status:'OPT_OUT'}}} cuando la campaña no usa catálogo.",
+    "2026-10-10 Bombo: reporté el CJ viejo 120249320453730141 como PAUSADO sin verificarlo; siguió activo y gastó ~$22.000 extra en paralelo al test. Regla: después de cada pausa o activación, leer effective_status en vivo (ads_get_ad_entities) y no reportar 'hecho' hasta verlo. Corregido 10-oct con OK de Laura."
+  ],
+  "whatsapp": {
+    "cuando_usar": "Cuando el negocio cierra la venta por chat (reservas de hostel/casas vacacionales, pedidos o consultas de restaurante, horas de peluqueria). Si el destino real es la web, no mezclar: medir cada destino por separado.",
+    "como_medir_ventas": "Marcar compras en WhatsApp Business y/o enviar el evento Purchase (con value y currency) por Conversions API for Business Messaging: action_source=business_messaging, messaging_channel=whatsapp, ctwa_clid en user_data, via dataset de la cuenta WhatsApp Business. Requiere Cloud API. Cruzar con el POS (Justo) en Bash Burger / BomboBurger. [NO CONFIRMADO en fuente oficial: como marcar compras desde la app WhatsApp Business y el nombre exacto MESSAGING_PURCHASE_CONVERSION; verificar en Ads Manager.]",
+    "optimizacion_recomendada": "Empezar optimizando a conversaciones mientras no haya compras registradas; pasar a compras por mensajeria cuando el flujo de eventos Purchase este funcionando y haya volumen (~50/7 dias). Meta reporta menor costo por compra con esa optimizacion, pero depende de que los eventos lleguen. CONFIRMADO por el Jefe (2026-10-10): la API de Meta expone optimization_goal MESSAGING_PURCHASE_CONVERSION (habilitado por cuenta), compatible con OUTCOME_SALES y OUTCOME_ENGAGEMENT con destino WhatsApp."
+  }
+}
