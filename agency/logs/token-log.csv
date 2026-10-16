@@ -26,3 +26,11 @@ fecha,cliente,agente,modelo,tokens,herramientas,costo_est_usd,veredicto
 2026-10-16,Bombo,local-seo-lead (correccion prompt+Halloween Bombo),Sonnet 5.5,123978,s/d,0.30,ajustar (retrabajo)
 2026-10-16,Varios,local-seo-lead (Lullaby/Lotus/Pressures),Sonnet 5.5,188138,s/d,0.45,mantener
 2026-10-16,Varios,local-seo-lead (ajustes Bombo/Lullaby/Pressures),Sonnet 5.5,146787,s/d,0.35,ajustar (retrabajo)
+2026-10-16,Varios,local-seo-lead (entrenamiento: auditoria+reglas+re-test),Sonnet 5.5,82662,15,0.20,mantener
+2026-10-16,Bash+Bombo,paid-media-lead (analisis lote 1),Sonnet 5.5,198278,14,0.47,mantener
+2026-10-16,Mare+Steakhouse,paid-media-lead (analisis lote 2),Sonnet 5.5,137243,12,0.33,mantener
+2026-10-16,Bendito+EntreTacos,paid-media-lead (analisis lote 3),Sonnet 5.5,143225,11,0.34,mantener
+2026-10-16,Tonys+Tiki,paid-media-lead (analisis lote 4),Sonnet 5.5,137279,10,0.33,ajustar (no leyo Bitacora; tope de 10 llamadas)
+2026-10-16,Comercializadora+Lullaby,paid-media-lead (analisis lote 5),Sonnet 5.5,175819,10,0.42,ajustar (no leyo voz ni Biblioteca)
+2026-10-16,Lotus Casa Cultural+Somos,paid-media-lead (analisis lote 6),Sonnet 5.5,107121,9,0.26,mantener
+2026-10-16,Estilistas+Hostel,paid-media-lead (analisis lote 7),Sonnet 5.5,110133,9,0.26,ajustar (repite Casa Cultural del lote 6; no leyo paginas de pausas)

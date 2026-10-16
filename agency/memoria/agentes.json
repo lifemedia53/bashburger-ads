@@ -43,7 +43,7 @@
       },
       "limite": "No publica en Google: solo borradores",
       "voz_clientes": "agency/memoria/voz/<cliente>.json (pendiente: Laura pega instrucciones de ChatGPT)",
-      "nota_ultima_auditoria": "8/10 (2026-10-10) tras reentrenamiento con voz + GEO/AEO; pendiente primera entrega real en Trello"
+      "nota_ultima_auditoria": "7/10 (2026-10-16) auditoría formal con 3 tarjetas reales + 8 reglas nuevas en su .md; re-test la semana siguiente. Detalle: agency/auditorias/2026-10-16-local-seo-lead.json"
     },
     "token-controller": {
       "modelo": "haiku",

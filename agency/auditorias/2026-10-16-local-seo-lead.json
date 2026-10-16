@@ -1,0 +1,96 @@
+{
+ "fecha": "2026-10-16",
+ "agente": "local-seo-lead",
+ "modelo": "Sonnet 5.5",
+ "auditor": "Jefe (entrenamiento solicitado por Laura)",
+ "nota_rubrica": {
+  "exactitud": 2,
+  "sistema_laura": 2,
+  "calidad": 1,
+  "seguridad": 2,
+  "eficiencia": 0,
+  "total": 7,
+  "decision": "6-7: ajustar y re-test la semana siguiente"
+ },
+ "fuentes": [
+  "agency/logs/token-log.csv",
+  "agency/memoria/trello.json",
+  "agency/memoria/clientes-google.json",
+  "agency/memoria/voz/bash-burger.json",
+  "Trello (solo lectura): tarjetas 6acd083a944b83d2bd186876 (Pressures Lighting), 6acd08a3e855d48c99985c2f (Tony's Cordovez), 6acd0324fead853b3589b3bb (Bash Halloween), prompt GHa83Jm7"
+ ],
+ "errores_recurrentes": [
+  {
+   "error": "Nombre oficial mal escrito (Pressure's Perfect)",
+   "causa_raiz": "No copié el Business Name del prompt de Trello; usé el nombre de memoria/historial",
+   "correccion": "Regla 1 y 8 en el .md"
+  },
+  {
+   "error": "Servicio pedido (Lighting) no estaba en el prompt de la marca y se escribió igual",
+   "causa_raiz": "No contrasté servicios pedidos vs lista 'Only write about these services' del prompt",
+   "correccion": "Regla 2: detenerse y avisar"
+  },
+  {
+   "error": "Lotes de 4-5 locales en un solo agente (217k y 224k tokens, retrabajo)",
+   "causa_raiz": "Sin tope de marcas por corrida; contexto enorme degrada precisión",
+   "correccion": "Regla 3"
+  },
+  {
+   "error": "Retrabajos 16-oct: 3 corridas 'ajustar' (123k, 146k tokens) tras cambios de Laura",
+   "causa_raiz": "Datos de cliente cambiaron (Casa Magnolia, Lullaby, Pressures) y no releí prompt/memoria del día",
+   "correccion": "Reglas 1, 2, 8"
+  },
+  {
+   "error": "Tarjeta Halloween creada para Tony's 4 Esquinas, local cerrado según Laura",
+   "causa_raiz": "Creada el 12-oct antes de registrar el cierre; no verifiqué vigencia",
+   "correccion": "Regla 4; proponer a Vero archivar (no yo)"
+  }
+ ],
+ "auditoria_entregables": [
+  {
+   "cliente": "Pressures Perfect",
+   "tarjeta": "Posts Lighting service (oct 2026)",
+   "nombre": "OK (sin apóstrofe en título, desc y posts)",
+   "servicios": "OK: solo Lighting Service; teléfono, veteran-owned y free estimate están en el prompt",
+   "formato": "OK: títulos 45 y 56 caracteres; body post 1 = 230 palabras; sin emojis; inglés",
+   "observaciones": "Repiten frases ancla (veteran-owned, locally owned, professional equipment, free estimate) entre post 1 y 2: riesgo de que Google los marque como similares",
+   "nota": 8
+  },
+  {
+   "cliente": "Tony's Pasta Cordovez 391",
+   "tarjeta": "Halloween 2026",
+   "nombre": "OK",
+   "servicios": "Spaghetti Salsa Tony's: [DATO] sin verificar vs menú vigente en esta auditoría",
+   "formato": "OK: emojis 1 por post, tuteo; no hay voz/tonys.json",
+   "observaciones": "'primer Pasta Bar del norte de Chile' y 'plato más reconocido' sin fuente citada; horario del 31-oct marcado [DATO] solo en la descripción, el post lo afirma; existe tarjeta hermana de Tony's 4 Esquinas (local cerrado)",
+   "nota": 6
+  },
+  {
+   "cliente": "Bash Burger",
+   "tarjeta": "Halloween (sáb 31 oct)",
+   "nombre": "OK",
+   "servicios": "OK: $13.990, hamburguesas, completos, nachos, alitas, helados, veganas, pet friendly, horario 12:00-00:00 y dirección coinciden con voz/bash-burger.json",
+   "formato": "OK: ~450 caracteres, 1 emoji por post, cierre con dirección variado, sin links/teléfono",
+   "observaciones": "Bloque de links [DATO] pendiente; sin hallazgos de fondo",
+   "nota": 9
+  }
+ ],
+ "correcciones_propuestas_no_aplicadas": [
+  "Tony's Cordovez: agregar [DATO] o fuente a 'primer Pasta Bar' y 'plato más reconocido'; confirmar horario del 31-oct con el local; Vero decide.",
+  "Tony's 4 Esquinas: Vero archiva la tarjeta (cerró).",
+  "Pressures: reescribir post 2 con otra apertura/estructura para no repetir frases del post 1 (propuesta en re-test).",
+  "Crear voz/tonys-pasta.json y voz/pressures-perfect.json desde Trello (no existen)."
+ ],
+ "reglas_nuevas_agregadas_al_md": 8,
+ "re_test": {
+  "tarea": "Post de ejemplo Pressures Perfect, Lighting (solo texto, sin escribir en Trello)",
+  "antes": "Nombre 'Pressure's Perfect' y Lighting fuera del prompt; posts con frases ancla repetidas",
+  "despues": "Title 'Can Someone Else Hang My Holiday Lights in Athens, AL?' (54 caracteres); body ~235 palabras tras quitar 1 frase sin fuente; nombre exacto; solo Lighting Service + Gutter Cleaning (ambos en el prompt); Athens está en Service Areas; Veteran Discount sin cifras; teléfono (256) 558-8387 y Yelp del prompt; sin emojis; apertura 'Yes.' respondiendo la pregunta; estructura en pasos, distinta de los posts actuales",
+  "resultado": "Cumple checklist reglas 1,2,6,7"
+ },
+ "tokens": {
+  "corridas_local_seo_16_oct": "123.978 + 188.138 + 146.787 tokens; 2 de 3 marcadas retrabajo",
+  "observacion": "Costo concentrado en retrabajo, no en trabajo nuevo"
+ },
+ "pendiente_para_jefe": "Actualizar nota_ultima_auditoria en agentes.json (7) y registrar esta sesión en token-log.csv"
+}
