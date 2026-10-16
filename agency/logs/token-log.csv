@@ -14,3 +14,15 @@ fecha,cliente,agente,modelo,tokens,herramientas,costo_est_usd,veredicto
 2026-10-10,Varios,meta-ads-auditor (grupo 3: Bash/Tonys/Picanha/Hostel),Sonnet 5.5,233159,36,0.56,mantener
 2026-10-10,Varios,meta-ads-auditor (grupo 4: Lotus/Lullaby),Sonnet 5.5,266825,41,0.64,mantener
 2026-10-10,Bombo+Hostel,paid-media-lead (registro de cambios + correcciones),Sonnet 5.5,306490,30,0.74,mantener
+2026-10-12,Bash+Hostel,local-seo-lead (Halloween Bash+Hostel),Sonnet 5.5,75979,s/d,0.18,mantener
+2026-10-12,Varios,general-purpose (extraccion pestana Google),Opus 5.5,126236,s/d,0.61,ajustar (extraccion mecanica en Opus; debio ser Haiku)
+2026-10-12,Pressures+Lemarc,local-seo-lead (Halloween Pressures+Lemarc),Sonnet 5.5,130831,s/d,0.31,mantener
+2026-10-12,Bombo,local-seo-lead (Halloween grupo Bombo 5 locales),Sonnet 5.5,164334,s/d,0.39,mantener
+2026-10-12,Varios,local-seo-lead (Halloween Bendito/Tacos/Siciliana/Tony's),Sonnet 5.5,217609,s/d,0.52,ajustar (4 locales en un agente; contexto grande)
+2026-10-12,Varios,local-seo-lead (Halloween Mare/Tiki/Steak/Santerra/Distribuidora),Sonnet 5.5,224178,s/d,0.54,ajustar (5 locales en un agente; contexto grande)
+2026-10-12,Varios,general-purpose (DATA CLIENTES/DESK/keywords),Opus 5.5,s/d,s/d,s/d,ajustar (cortado por limite de gasto; Opus en tarea mecanica)
+2026-10-12,Varios,local-seo-lead (cortado antes de trabajar),Sonnet 5.5,0,0,0.00,ajustar (0 trabajo; limite de gasto mensual de la organizacion)
+2026-10-12,Varios,local-seo-lead (cortado antes de trabajar),Sonnet 5.5,0,0,0.00,ajustar (0 trabajo; limite de gasto mensual de la organizacion)
+2026-10-16,Bombo,local-seo-lead (correccion prompt+Halloween Bombo),Sonnet 5.5,123978,s/d,0.30,ajustar (retrabajo)
+2026-10-16,Varios,local-seo-lead (Lullaby/Lotus/Pressures),Sonnet 5.5,188138,s/d,0.45,mantener
+2026-10-16,Varios,local-seo-lead (ajustes Bombo/Lullaby/Pressures),Sonnet 5.5,146787,s/d,0.35,ajustar (retrabajo)
