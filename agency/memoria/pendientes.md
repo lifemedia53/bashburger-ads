@@ -27,3 +27,10 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - **Gasto (consola, 16-oct):** US$12,34 de US$20 mensual; semana: Cowork 62%, Claude Code 38%.
 - **stack-auditor:** resultado en agency/auditorias/2026-10-16-stack.json (limitar tools de 3 agentes, quitar plugins/conectores rotos, deduplicar session-usage.csv, Justo caído por proxy).
 - **Mañana 17-oct:** medir test Bombo (CJ Delivery 120249348553550141) y campaña Hostel (120249343804190575); pixel Hostel último disparo 7-oct.
+
+## Panel respondido por Laura (16-oct, 20 respuestas) — estado
+- **Hecho y verificado en Meta:** Tony's pausó "Fetuccine y salsa" (52618186598777) y "ESTAMOS EN EL CENTRO" (52622541027377); Tiki pausó "Vueeeeelve" (120248610420310618, cuenta 1802064240289181). Lullaby: todo TLL/Lobster ya estaba pausado (nada que hacer).
+- **ROAS (pixel, últimos 30d, Bombo 362765604642572):** REMARKETING MENSAJES 2026 ROAS 6,23 con 172 conversaciones a $575 (gasto $98.932, frecuencia 3,27; tope $300k alcanzado); Reconocimiento 0,19; TEST CONVERSION 2,94. Sin cruce con ventas de Justo (caído por proxy): ROAS no verificado.
+- **Hostel:** conjunto "CJ 1 - Viajeros La Serena" (120249359954750575) lo creó la cuenta de Laura vía Power Editor el 11-oct 8:46 p.m., $3.000/día, Chile+Argentina, 21-45, Advantage+.
+- **Laura dijo:** u1 Después (primero ROAS); u2 Sí subir tope Reconocimiento (falta monto); u3 Sí investigar WEB JUSTO; u4 Sí anotar en Bitácora; d1-d10 Sí; d11 Después; d12 Sí; q1 Lullaby TLL es Lobster y está pausado; q2 no sabe del conjunto WhatsApp; q3 presupuestos después; s1/s2 Después (usa Slack y Vercel); s3 Sí; s4 Sí (puede reconectar Justo desde Cowork).
+- **Pendiente de ejecutar:** Notion (Bitácora test AD 1.B, ficha Somos Casa Lotus, briefs Bombo promo martes y Bash reel 80's); ficha+voz Lotus; fecha Entre Tacos Delivery y Comercializadora Tráfico (falta fecha de fin); audiencias Bendito; campaña mensajes Mare/Steakhouse (falta presupuesto); dedupe session-usage.csv.
