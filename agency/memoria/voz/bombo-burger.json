@@ -16,7 +16,7 @@
       "Santiago": "Constitucion 58, Local 72, Patio Bellavista, Santiago"
     },
     "cupo": "8 posts al mes POR LOCAL (5 perfiles)",
-    "ojo": "El prompt de Trello lista sucursales 'Beach, Casa Magnolia, Ulriksen, Balmaceda, Mall Plaza' (La Serena y Coquimbo) y no incluye Santiago. Casa Magnolia no figura entre los 5 perfiles activos de clientes-google.json. [DATO] preguntar a Laura si Casa Magnolia sigue activa y si se agrega Santiago a la lista del prompt. Horarios y precios: [DATO] (no estan en el prompt; no inventar)."
+    "ojo": "El prompt de Trello lista sucursales 'Beach, Casa Magnolia, Ulriksen, Balmaceda, Mall Plaza' (La Serena y Coquimbo) y no incluye Santiago. Casa Magnolia no figura entre los 5 perfiles activos de clientes-google.json. Laura 2026-10-16: Casa Magnolia ya no existe; Santiago (Patio Bellavista) sí se incluye. Horarios y precios: [DATO] (no estan en el prompt; no inventar)."
   },
   "regla_santiago": "Local Santiago: mencionar siempre que estamos en Patio Bellavista; usar eventos de Santiago/Patio Bellavista, NUNCA de La Serena (linea agregada al prompt de Trello el 16-oct-2026).",
   "estrategia_google_posts": {
@@ -81,7 +81,7 @@
   },
   "pendientes": [
     "[DATO] horario del sabado 31-oct en Ulriksen (Post 2 Halloween lo lleva como [DATO])",
-    "[DATO] confirmar con Laura si 'Hot Dogs' (usado en posts Halloween Balmaceda) esta vigente en la carta de Balmaceda",
+    "Balmaceda SÍ tiene Hot Dogs (confirmado por Laura 2026-10-16)",
     "[DATO] confirmar si el menu QR aplica a Santiago",
     "Cruzar keywords con agency/memoria/google-resultados.json antes del proximo lote de posts"
   ]
