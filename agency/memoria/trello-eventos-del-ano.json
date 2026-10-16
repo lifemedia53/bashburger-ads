@@ -1,0 +1,101 @@
+{
+ "fuente": "Trello vía Composio (TRELLO_GET_MEMBERS_BOARDS_BY_ID_MEMBER, TRELLO_GET_LISTS_CARDS_BY_ID_LIST, TRELLO_GET_CARDS_ACTIONS_BY_ID_CARD), leído 2026-10-12. Solo lectura.",
+ "tablero": {
+  "nombre": "Centro Bombo",
+  "shortLink": "t09C3ZLr",
+  "id": "6827af06ca79dc48c28b2877"
+ },
+ "lista": {
+  "nombre": "EVENTOS DEL AÑO",
+  "id": "6acd0e965ccc02a0b84dcd79",
+  "pos": 35840,
+  "nota": "Creada hoy 2026-10-12 por Laura (cuenta Life Media); se llamó brevemente 'EVENTOS DEL AÑO (CHILE)'. Es la única lista con ese nombre en los 14 tableros. The Cool Hostel (RQ4wl4xn) tiene listas propias 'Eventos' (68fc23bd9a30f6e086293992) y 'Eventos publicados (Google)' (69041d1732d493e00d337120)."
+ },
+ "estructura": "Una tarjeta por mes; las fechas van en la descripción, formato 'DD/MM: Evento - marcas'. Sin comentarios, checklists, etiquetas ni vencimientos.",
+ "tarjetas": [
+  {
+   "nombre": "EVENTOS OCTUBRE 2026",
+   "id": "6acd0f1e40aaf88265292c7a",
+   "pos": 140737488338944,
+   "url": "https://trello.com/c/2jQfgTvw",
+   "comentarios": 0,
+   "descripcion": "Fechas importantes del mes\n\n19/10: Día del Gin & Tonic - Bombo Burger \\*\\*\n20/10: Día del Churrasco - Bendito Completo\n20/10: Día del Chef - Steakhouse, Mare, Bendito Completo, Entre Tacos, La Siciliana, Santerra, Bombo Tiki House y Bombo Tiki Beach,  Bombo Burger, Bash Burger,.\n25/10: Día Mundial de la Pasta - Tony’s pasta y La Siciliana Trattoria\n31/10: Halloween - Todos\n\nHacer un par de post por local para reconocimiento, mejorar SEO GEO Y AEO",
+   "fechas": [
+    {
+     "fecha": "2026-10-19",
+     "evento": "Día del Gin & Tonic",
+     "marcas": [
+      "Bombo Burger"
+     ],
+     "nota": "marcado con ** en la tarjeta"
+    },
+    {
+     "fecha": "2026-10-20",
+     "evento": "Día del Churrasco",
+     "marcas": [
+      "Bendito Completo"
+     ]
+    },
+    {
+     "fecha": "2026-10-20",
+     "evento": "Día del Chef",
+     "marcas": [
+      "Steakhouse",
+      "Mare",
+      "Bendito Completo",
+      "Entre Tacos",
+      "La Siciliana",
+      "Santerra",
+      "Bombo Tiki House",
+      "Bombo Tiki Beach",
+      "Bombo Burger",
+      "Bash Burger"
+     ]
+    },
+    {
+     "fecha": "2026-10-25",
+     "evento": "Día Mundial de la Pasta",
+     "marcas": [
+      "Tony's Pasta",
+      "La Siciliana Trattoria"
+     ]
+    },
+    {
+     "fecha": "2026-10-31",
+     "evento": "Halloween",
+     "marcas": [
+      "Todos"
+     ]
+    }
+   ],
+   "instruccion": "Hacer un par de post por local para reconocimiento, mejorar SEO GEO Y AEO"
+  },
+  {
+   "nombre": "EVENTO NOVIEMBRE 2026",
+   "id": "6acd0ecba57ceed35f570428",
+   "pos": 140737488355328,
+   "url": "https://trello.com/c/KQdXu9Kw",
+   "comentarios": 0,
+   "descripcion": "",
+   "fechas": [],
+   "nota": "Vacía. Se creó como 'FECHAS NOVIEMBRE 2026' y se renombró. Nombre en singular 'EVENTO'."
+  },
+  {
+   "nombre": "EVENTOS DICIEMBRE 2026",
+   "id": "6acd0edc69d276787e3521e4",
+   "pos": 140737488371712,
+   "url": "https://trello.com/c/pPtXF08V",
+   "descripcion": "",
+   "fechas": []
+  },
+  {
+   "nombre": "EVENTOS ENERO 2026",
+   "id": "6acd0f0d9faff2bb999bacc3",
+   "pos": 140737488388096,
+   "url": "https://trello.com/c/7nVEYHvM",
+   "descripcion": "",
+   "fechas": [],
+   "nota": "Dice 2026 pero va después de diciembre 2026: probablemente es ENERO 2027 [DATO: confirmar con Laura]."
+  }
+ ]
+}
