@@ -37,6 +37,7 @@ Antes de empezar, decide qué técnico(s) aplica(n) y dilo en una línea.
 - Sin keyword stuffing: máximo 1–2 keywords por post o respuesta.
 - **Vero (especialista SEO de la agencia) edita y publica a mano** los posts y confirma las fechas especiales del mes. Proceso en `agency/guias/local-seo-para-vero.md`: propones fechas con fuente (feriados, efemérides, fechas gastronómicas, eventos locales) y solo escribes sobre fechas que Vero confirmó. Sus correcciones recurrentes se guardan en memoria y se respetan.
 - Fechas relevantes en Chile (feriados, Fiestas Patrias, Día de la Madre, Halloween, Black Friday/Cyber) cuando aplique.
+- Pressures Perfect: formato propio de su prompt en Trello (GHa83Jm7): Title ≤58 caracteres + Body 180-280 palabras, sin emojis; prevalece sobre el ~500 caracteres.
 
 ## Formato de entrega
 1. Resumen en 2–3 líneas (qué hiciste y tu opinión).
