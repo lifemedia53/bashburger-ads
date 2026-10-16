@@ -1,0 +1,54 @@
+{
+  "fecha": "2026-10-16",
+  "auditor": "stack-auditor",
+  "modo": "solo lectura, primera corrida. 0 busquedas web (no hicieron falta).",
+  "tabla": [
+    {"item":"Meta Ads, Notion, Composio(Trello), Drive, Gmail, Calendar nativos","estado":"conectan","accion":"mantener","impacto":"nucleo del negocio","fuente":"evidencia del Jefe"},
+    {"item":"Canva","estado":"conecta","accion":"mantener conectado, pero ningun agente lo usa (regla: no disenar)","impacto":"bajo; revisar si se usa en Cowork","fuente":"agentes.json reglas_globales"},
+    {"item":"Slack, Vercel, Claude Docs, GitHub","estado":"conectan","accion":"mantener GitHub; Slack/Vercel [DATO] sin uso visible en agentes ni logs","impacto":"contexto (Vercel declara 200+ tools)","fuente":".claude/agents/*.md sin menciones"},
+    {"item":"Justo Admin (Bash Burger y Bombo Burger)","estado":"FALLA ERR_PROXY_TUNNEL (dial a api.service.getjusto.com)","accion":"arreglar primero","impacto":"alto: sin ventas POS no hay ROAS real; paid-media-lead lo exige (paid-media-lead.md l.21 y l.28)","fuente":"errores MCP de la sesion"},
+    {"item":"ActiveCampaign","estado":"INVALID_CONFIG (URL sin configurar)","accion":"quitar o configurar solo si Laura usa ActiveCampaign [DATO]","impacto":"ruido","fuente":"error MCP"},
+    {"item":"BigQuery (2 variantes)","estado":"pide OAuth / auth server incompatible","accion":"quitar","impacto":"sin uso en el negocio","fuente":"error MCP"},
+    {"item":"Plugin small-business (Gmail/Calendar/Drive)","estado":"desconectados, duplican nativos","accion":"quitar","impacto":"menos contexto, cero perdida","fuente":"instrucciones MCP + evidencia Jefe"},
+    {"item":"~45 conectores plugin con proxy 403 (Adobe, Box, Figma, Gong, Hex, Intercom, Linear, Asana, ClickUp, Klaviyo, Ahrefs, Similarweb, Supermetrics, Salesforce, etc.)","estado":"fallan por proxy","accion":"quitar los de ventas/legal/RRHH/finanzas/diseno; los de marketing (Ahrefs, Klaviyo, Supermetrics) solo reportar al Jefe, no saltarse el proxy","impacto":"ruido, no cuestan nada si no cargan pero ensucian el diagnostico","fuente":"error MCP; el proxy es seguridad del entorno"},
+    {"item":"Plugins/skills sales, legal, HR, finance, brightdata, adobe, design","estado":"activos sin uso","accion":"quitar","impacto":"alto ahorro de contexto por turno [DATO exacto: medir con /context]","fuente":"evidencia Jefe"},
+    {"item":"Skills anthropic-skills:ads, ad-creative, ai-seo","estado":"en uso","accion":"mantener","impacto":"las citan agentes.json y paid-media-lead.md l.19 y l.22","fuente":"agentes.json"},
+    {"item":"Agentes paid-media-lead, meta-ads-auditor, ops-coordinator","estado":"SIN linea tools: heredan TODAS las herramientas (hasta Vercel, Slack, Gmail, GitHub)","accion":"arreglar: agregar lista tools minima","impacto":"alto: contexto de cada subagente y riesgo (meta-ads-auditor 'solo lectura' solo por instruccion, no por permisos)","fuente":".claude/agents/ (grep tools:)"},
+    {"item":"local-seo-lead","estado":"tools acotadas, pero tiene Write + Bash + Composio generico","accion":"mantener; Composio multi-execute es amplio, limitar por instruccion a Trello","impacto":"medio; 15 corridas, US$3.83, 14 'ajustar' globales","fuente":"local-seo-lead.md l.5, token-log.csv"},
+    {"item":"token-controller (haiku), ops-coordinator (haiku)","estado":"modelo correcto","accion":"mantener","impacto":"correcto; ops-coordinator sin tools: agregar Notion solo","fuente":"agentes.json"},
+    {"item":"stack-auditor","estado":"nuevo, sonnet, tools acotadas","accion":"mantener; podria ser haiku si solo lista","impacto":"bajo","fuente":"stack-auditor.md"},
+    {"item":"Hooks SessionStart/Stop","estado":"funcionan (token_brief.py, token_log.py)","accion":"arreglar el log","impacto":"medio: session-usage.csv tiene sesiones duplicadas","fuente":"settings.json, session-usage.csv"}
+  ],
+  "hallazgos_clave": [
+    "session-usage.csv guarda snapshots acumulados de la MISMA sesion con dos ids (ba877b00 y ba877b00-a7b2-...). Opus: 77.10 + 77.35 = 154.45, que coincide con los 'US$154 de 190'. Probable doble conteo: costo real Opus de esa sesion ~US$77 [DATO: confirmar contra consola]. Fuente: agency/logs/session-usage.csv filas 1-6.",
+    "El gasto esta en el Jefe (Opus): en el CSV Opus es ~80% del costo de la sesion principal, mientras subagentes Sonnet/Haiku en token-log.csv suman ~US$11 en 35 corridas. Cache lectura 125M tokens: la sesion larga es el costo.",
+    "token-log.csv: 35 corridas, 21 mantener / 14 ajustar. Patron repetido: no leer Bitacora, voz o Biblioteca por tope de 10 llamadas (lotes 4, 5, 7). El tope esta cortando la lectura obligatoria.",
+    "Contradiccion menor: agentes.json dice voz_clientes 'pendiente: Laura pega instrucciones de ChatGPT' pero existen 3 voz/*.json (bash-burger, bombo-burger, the-cool-hostel). Faltan los demas clientes (12 cuentas Meta).",
+    "Contradiccion: CLAUDE.md dice 'Paid Media solo produce'; paid-media-lead no tiene restriccion de herramientas, por lo que tecnicamente podria pausar. Solo la instruccion lo frena.",
+    "agentes.json 'actualizado: 2026-10-10' esta desactualizado respecto al 16-oct (stack-auditor no figura)."
+  ],
+  "no_confirmado": [
+    "Costo en contexto de los plugins inactivos: no medido. Usar /context antes de decidir.",
+    "Si Laura usa Slack, Vercel, Canva o Cowork con esos conectores: [DATO] preguntar.",
+    "Causa del bloqueo de Justo: es politica de salida del proxy del entorno de la sesion; no confirmado si funciona en Cowork/escritorio. No se evito."
+  ],
+  "top5_mejoras_impacto_esfuerzo": [
+    "1. Poner 'tools:' minimas en paid-media-lead, meta-ads-auditor y ops-coordinator (5 min, mayor impacto en contexto y seguridad).",
+    "2. Quitar plugins sin uso (sales, legal, HR, finance, brightdata, adobe, design, small-business, ActiveCampaign, BigQuery). Con OK de Laura.",
+    "3. Corregir session-usage.csv: dedupe por session_id base y por snapshot final; asi el reporte semanal es real.",
+    "4. Resolver Justo: reportar al Jefe/Laura el error ERR_PROXY_TUNNEL para que se permita api.service.getjusto.com en la politica de red; probar desde Cowork como alternativa.",
+    "5. Crear skill propia voz-cliente (ver abajo) y subir el tope de llamadas a 14 para lotes que requieren Bitacora+voz."
+  ],
+  "skills_propias_propuestas": [
+    {"nombre":"voz-cliente","que":"carga voz/<cliente>.json + clientes.json + planes.json y devuelve ficha de 10 lineas antes de escribir posts o copies","por_que":"los lotes 4, 5 y 7 omitieron voz/Biblioteca (token-log.csv)"},
+    {"nombre":"resumen-semanal","que":"Notion (vencidas, semaforo) + gasto Meta vs presupuesto + 3 acciones de 5-15 min para Laura, en max 3 bloques","por_que":"ops-coordinator lo hace a mano cada semana; corre en Haiku"}
+  ],
+  "desactivar_propuesta": ["small-business (3 conectores)","ActiveCampaign","BigQuery x2","sales","legal","HR","finance","brightdata","adobe-for-creativity","design","brand-voice (box, figma, gong, granola)","data (definite, hex)","productivity y operations (clickup, linear, asana)"],
+  "recomendacion_unica": "Hoy: agregar la linea tools: a los 3 agentes que no la tienen y quitar los plugins muertos, en una sola sesion con OK de Laura. Es lo mas barato y baja contexto y riesgo; Justo se escala aparte porque depende de la red.",
+  "decisiones_para_laura": [
+    "1. OK para quitar los plugins sin uso (lista arriba)?",
+    "2. OK para que el Jefe limite herramientas de los 3 agentes?",
+    "3. Usas Slack, Vercel o Canva en tu dia a dia?",
+    "4. Quieres que el Jefe pida habilitar Justo en la red o probar desde Cowork?"
+  ]
+}

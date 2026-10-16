@@ -1,0 +1,272 @@
+<title>Panel de Decisiones</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: una columna angosta, tarjetas planas por decisión, botones grandes. Acento azul petróleo; verde/rojo/ámbar solo para estado. */
+:root {
+  --bg: #F2F5F7; --surface: #FFFFFF; --ink: #1A2230; --muted: #5B6676; --line: #D9E0E7;
+  --accent: #17607A; --accent-ink: #FFFFFF;
+  --yes: #1F7A4D; --yes-bg: #DDF1E6; --no: #B3372B; --no-bg: #F9E1DE; --later: #8A5A00; --later-bg: #FBEBC8;
+  --urgent: #B3372B; --hint: #E7EEF3;
+  --font: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "DM Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F151C; --surface: #18212B; --ink: #E7EDF3; --muted: #9AA7B7; --line: #2B3745;
+  --accent: #5FB4D1; --accent-ink: #08202B;
+  --yes: #6CD39B; --yes-bg: #153A29; --no: #FF8F82; --no-bg: #43201C; --later: #F2C45A; --later-bg: #3D2F0E;
+  --urgent: #FF8F82; --hint: #1E2A36; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0F151C; --surface: #18212B; --ink: #E7EDF3; --muted: #9AA7B7; --line: #2B3745;
+  --accent: #5FB4D1; --accent-ink: #08202B;
+  --yes: #6CD39B; --yes-bg: #153A29; --no: #FF8F82; --no-bg: #43201C; --later: #F2C45A; --later-bg: #3D2F0E;
+  --urgent: #FF8F82; --hint: #1E2A36; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.45 var(--font); margin: 0;
+  padding-block: 20px 120px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+main { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+h1 { font-size: 1.6rem; line-height: 1.15; margin: 0; text-wrap: balance; }
+h2 { font-size: 1.05rem; margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 4px 0 0; }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 8px; display: flex; flex-direction: column; gap: 6px; }
+.track { height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; }
+.fill { height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+.count { display: flex; justify-content: space-between; gap: 8px; font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.save { font-family: var(--mono); font-size: .8rem; }
+.banner { background: var(--later-bg); color: var(--later); padding: 10px 12px; border-radius: 8px; font-size: .9rem; }
+details.sec { background: transparent; }
+details.sec > summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 14px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); font-weight: 700; }
+details.sec > summary::-webkit-details-marker { display: none; }
+details.sec[open] > summary { margin-bottom: 10px; }
+.pill { font-family: var(--mono); font-size: .8rem; font-weight: 500; padding: 2px 8px; border-radius: 99px; background: var(--hint); color: var(--muted); }
+.sec.urgent > summary { border-color: var(--urgent); }
+.sec.urgent > summary .pill { background: var(--no-bg); color: var(--no); }
+.list { display: flex; flex-direction: column; gap: 10px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.card.done { border-color: var(--accent); }
+.tag { font-family: var(--mono); font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.ctx { margin: 0; color: var(--muted); font-size: .95rem; }
+.opinion { font-size: .85rem; color: var(--accent); font-weight: 600; }
+.btns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.btn { font: inherit; font-weight: 700; min-height: 48px; border-radius: 10px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.btn:focus-visible, textarea:focus-visible, .go:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.btn[aria-pressed="true"].si { background: var(--yes-bg); border-color: var(--yes); color: var(--yes); }
+.btn[aria-pressed="true"].no { background: var(--no-bg); border-color: var(--no); color: var(--no); }
+.btn[aria-pressed="true"].despues { background: var(--later-bg); border-color: var(--later); color: var(--later); }
+textarea { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px; resize: vertical; min-height: 44px; }
+.big textarea { min-height: 120px; }
+.done-list { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 6px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.stat b { display: block; font-family: var(--mono); font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--muted); font-size: .85rem; }
+.foot { position: fixed; left: 0; right: 0; bottom: 0; padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: var(--surface); border-top: 1px solid var(--line); z-index: 6; }
+.foot-in { max-width: 720px; margin: 0 auto; display: flex; gap: 10px; align-items: center; justify-content: space-between; }
+.foot-in span { font-size: .85rem; color: var(--muted); }
+.go { font: inherit; font-weight: 700; min-height: 48px; padding: 0 18px; border-radius: 10px; border: 0; background: var(--accent); color: var(--accent-ink); cursor: pointer; }
+.go[disabled] { opacity: .6; cursor: default; }
+@media (max-width: 420px) { .foot-in span { display: none; } .go { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+</style>
+
+<main>
+  <header>
+    <h1>Panel de decisiones</h1>
+    <p class="sub">Viernes 16-oct · Life Media. Marca Sí, No o Después. Si quieres, escribe una nota. Todo se guarda solo.</p>
+  </header>
+
+  <div class="bar" role="status">
+    <div class="count"><span id="prog-text">0 de 0 respondidas</span><span class="save" id="save">listo</span></div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+  </div>
+  <div class="banner" id="nodb" hidden>No hay conexión con el guardado. Puedes marcar, pero esta vez no se guardará. Avísale a Claude por el chat.</div>
+
+  <details class="sec">
+    <summary>Ya hecho hoy <span class="pill">6</span></summary>
+    <div class="card">
+      <ul class="done-list">
+        <li><b>Bash Burger:</b> pausé y verifiqué "Reconocimiento Julio - Septiembre" y el boost "Tírate una paya". Ambos aparecen PAUSED en Meta.</li>
+        <li><b>Bombo:</b> "Día del niño 2026", "Recarga de Papas y videos" y "Mall Plaza - Promo" ya estaban pausados desde hoy 12:29 a.m. No hizo falta tocar nada.</li>
+        <li><b>local-seo-lead:</b> entrenamiento listo, nota 7/10, 8 reglas nuevas.</li>
+        <li><b>Análisis de las 12 cuentas</b> guardado en agency/auditorias/.</li>
+        <li><b>stack-auditor</b> creado y ejecutado (resultado más abajo, sección Sistema).</li>
+        <li><b>Aviso de tokens</b> programado para los lunes 8:50.</li>
+      </ul>
+      <div class="stats">
+        <div class="stat"><b>US$ 12,34</b><span>gastados de US$ 20 este mes (62%)</span></div>
+        <div class="stat"><b>62% / 38%</b><span>uso semanal: Cowork / Claude Code</span></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="sec">
+    <summary>Lo que ya decidiste <span class="pill">4</span></summary>
+    <div class="card">
+      <ul class="done-list">
+        <li>No pausar los 3 anuncios de Lotus Casa Cultural hasta verlo cliente por cliente.</li>
+        <li>Promo martes $11.990 de Bombo: la preparamos nosotros y tú se la planteas a Jhonny después.</li>
+        <li>Somos Casa Lotus sí tiene anuncios; Notion está desactualizado.</li>
+        <li>Pausar los elementos vencidos de Bombo y Bash (hecho, ver arriba).</li>
+      </ul>
+    </div>
+  </details>
+
+  <div id="sections" style="display:flex;flex-direction:column;gap:20px"></div>
+
+  <section class="card big">
+    <h2>Otras instrucciones para Claude</h2>
+    <p class="ctx">Lo que no esté en las tarjetas: escríbelo aquí, como si me hablaras.</p>
+    <textarea id="general" placeholder="Ej.: antes de tocar Bombo, avísame; mañana parte con la medición..." aria-label="Otras instrucciones para Claude"></textarea>
+  </section>
+</main>
+
+<div class="foot"><div class="foot-in">
+  <span id="foot-msg">Cuando termines, toca el botón y dime "revisa el panel" en el chat.</span>
+  <button class="go" id="go" type="button">Listo, avísale a Claude</button>
+</div></div>
+
+<script>
+const ITEMS = [
+  { sec: "Urgente", urgent: true, open: true, items: [
+    { id: "u1", tag: "Bombo · Remarketing", t: "Llegó a su tope de $300.000", c: "Por eso cayó el gasto: gastó exactamente $300.000 de su tope. Sí = subir el tope (escribe cuánto en la nota).", op: "despues" },
+    { id: "u2", tag: "Bombo · Reconocimiento", t: "Se queda sin tope en unos 2 días", c: "Gastó $2.985.173 de $3.000.000 y gasta $6.000 al día. Sí = subir el tope. No = dejar que termine.", op: "no" },
+    { id: "u3", tag: "Bombo · WEB JUSTO", t: "El tope de $200k no era la causa del $0", c: "La campaña no tiene tope y ya gastó $221.585. ¿Sigo buscando por qué estuvo 4 semanas sin gasto?", op: "si" },
+    { id: "u4", tag: "Bombo · Test de mañana", t: "Un anuncio del test estuvo rechazado 4 horas", c: "AD 1.B Delivery Combo: \"No aprobado\" el 15-oct 9:25 p.m., activo otra vez el 16-oct 1:41 a.m. ¿Lo anoto en la Bitácora para la medición?", op: "si" }
+  ]},
+  { sec: "Decisiones por cliente", open: false, items: [
+    { id: "d1", tag: "Lotus · Presupuesto", t: "Subir presupuesto solo después del 18-oct", c: "Aplica a Lotus Casa Cultural (CBO, subir +25% escalonado) y Estilistas (confirmar el CBO real). ¿Lo dejamos para esa revisión?", op: "si" },
+    { id: "d2", tag: "Somos Casa Lotus", t: "Actualizar Notion", c: "Crear su ficha en Control de cuentas y corregir el estado (hoy dice sin campañas ni pago).", op: "si" },
+    { id: "d3", tag: "Lotus", t: "Crear ficha de cliente y guía de voz", c: "Las armo con fuente (Trello, Drive, Notion y posts publicados). Tú las revisas antes de guardarlas.", op: "si" },
+    { id: "d4", tag: "Bombo", t: "Preparar el brief de la promo martes $11.990", c: "Brief para Creative Team y borrador de copy. No lanzo nada hasta que hables con Jhonny. Ojo: es ~54% de descuento y el foco dice máx. 30%.", op: "si" },
+    { id: "d5", tag: "Mare y Steakhouse", t: "Campaña de mensajes en vez de boosts", c: "$2.000–2.500 al día cada una. Los boosts caros se pausan solo cuando la nueva tenga creativo. Anota el presupuesto real.", op: "si" },
+    { id: "d6", tag: "Bendito", t: "Remarketing de mensajes ahora", c: "Primero creo las audiencias A-001 y A-005. La Delivery no se toca.", op: "si" },
+    { id: "d7", tag: "Entre Tacos", t: "Renovar fecha de Interacción Delivery", c: "Se duplica tal cual (público, ubicaciones, puja). Además pausar 9 boosts vencidos que no gastan.", op: "si" },
+    { id: "d8", tag: "Tony's Pasta", t: "Pausar 2 boosts", c: "\"Fetuccine y salsa\" (1 conversación por $22k) y \"ESTAMOS EN EL CENTRO\" (sin entrega).", op: "si" },
+    { id: "d9", tag: "Bombo Tiki", t: "Pausar \"Vueeeeelve\"", c: "Queda solo el boost \"Publicación de Instagram\". El creativo de Vueeeeelve (CTR 5,72%) sirve de base para la campaña nueva.", op: "si" },
+    { id: "d10", tag: "Comercializadora", t: "Extender la fecha del Tráfico", c: "Venció el 30-sep. Solo cambia la fecha; techo $10.000 al día, sin tocar público ni puja.", op: "si" },
+    { id: "d11", tag: "Lotus Estilistas", t: "Pausar 2 anuncios", c: "\"Café + Look\" y \"AD 7\" tienen CTR menor a 0,07%. El 1.C se mantiene hasta el 23-oct.", op: "si" },
+    { id: "d12", tag: "Bash Burger", t: "Pedir un reel 80's al Creative Team", c: "Se suma como anuncio nuevo en Tráfico Delivery (frecuencia 4,48). El presupuesto no cambia.", op: "si" }
+  ]},
+  { sec: "Preguntas para ti (responde en la nota)", open: false, items: [
+    { id: "q1", tag: "Lullaby", t: "¿A qué URL manda cada anuncio? ¿TLL es Lobster?", c: "Hasta saber el destino (Airbnb, Furnished Finder o sitio) no toco nada. Escribe la respuesta en la nota." },
+    { id: "q2", tag: "The Cool Hostel", t: "¿Qué es el conjunto de WhatsApp con 14 leads a $924?", c: "No está en nuestra memoria. Y ¿quién revisa el pixel en Little Hotelier antes de mañana?" },
+    { id: "q3", tag: "Todas las cuentas", t: "Presupuesto mensual por cliente", c: "En Notion está vacío. Pega los montos que tengas (cliente: monto)." },
+    { id: "q4", tag: "Para Vero", t: "Plato de mar (Mare), plato o promo (Steakhouse) y precios de Tiki", c: "Tiki: 14.990, el tenedor 17.990 y tenedor libre. No prometo tomahawk hasta que Vero lo confirme." }
+  ]},
+  { sec: "Sistema y herramientas", open: false, items: [
+    { id: "s1", tag: "Agentes", t: "Limitar las herramientas de 3 agentes", c: "Paid Media, Auditor y Ops hoy heredan todo (Gmail, Slack, Vercel). Les dejo solo lo que usan. Más seguro y más barato.", op: "si" },
+    { id: "s2", tag: "Conectores", t: "Quitar plugins sin uso y conectores caídos", c: "Ventas, legal, RRHH, finanzas, diseño y ~45 conectores rotos. ¿Usas Slack, Vercel o Canva? Cuéntame en la nota.", op: "si" },
+    { id: "s3", tag: "Gasto", t: "Corregir el conteo de Opus", c: "El registro cuenta la misma sesión dos veces: US$154 probablemente son ~US$77. Lo arreglo para el aviso del lunes.", op: "si" },
+    { id: "s4", tag: "Justo", t: "Probar Justo desde Cowork", c: "Aquí está bloqueado por la red. Sin ventas no hay ROAS real en ninguna cuenta.", op: "si" }
+  ]}
+];
+const ALL = ITEMS.flatMap(s => s.items);
+const state = {};            // id -> {choice, note}
+let db = null, general = "", pend = {}, chain = {};
+const $ = id => document.getElementById(id);
+
+function saveFlag(txt) { $("save").textContent = txt; }
+
+function write(id) {
+  if (!db) { saveFlag("sin guardar"); return; }
+  const body = id === "general" ? { note: general, t: new Date().toISOString() }
+    : { choice: state[id]?.choice || "", note: state[id]?.note || "", t: new Date().toISOString() };
+  const ref = db.collection("respuestas").doc(id);
+  saveFlag("guardando…");
+  chain[id] = (chain[id] || Promise.resolve()).then(() => ref.set(body))
+    .then(() => saveFlag("guardado"), () => saveFlag("error al guardar"));
+}
+function later(id) { clearTimeout(pend[id]); pend[id] = setTimeout(() => { pend[id] = 0; write(id); }, 600); }
+
+function progress() {
+  const n = ALL.filter(i => state[i.id]?.choice || (i.op === undefined && (state[i.id]?.note || "").trim())).length;
+  $("prog-text").textContent = n + " de " + ALL.length + " respondidas";
+  $("fill").style.width = (100 * n / ALL.length) + "%";
+}
+
+function opLabel(o) { return o === "si" ? "Mi opinión: Sí" : o === "no" ? "Mi opinión: No" : o === "despues" ? "Mi opinión: Después" : ""; }
+
+function render() {
+  const root = $("sections");
+  ITEMS.forEach(sec => {
+    const d = document.createElement("details");
+    d.className = "sec" + (sec.urgent ? " urgent" : "");
+    if (sec.open) d.open = true;
+    const s = document.createElement("summary");
+    s.append(document.createTextNode(sec.sec + " "));
+    const p = document.createElement("span"); p.className = "pill"; p.textContent = sec.items.length;
+    s.append(p); d.append(s);
+    const list = document.createElement("div"); list.className = "list";
+    sec.items.forEach(it => list.append(card(it)));
+    d.append(list); root.append(d);
+  });
+}
+
+function card(it) {
+  const c = document.createElement("div"); c.className = "card"; c.id = "c-" + it.id;
+  const tag = document.createElement("div"); tag.className = "tag"; tag.textContent = it.tag;
+  const h = document.createElement("h2"); h.textContent = it.t;
+  const p = document.createElement("p"); p.className = "ctx"; p.textContent = it.c;
+  c.append(tag, h, p);
+  if (it.op) { const o = document.createElement("div"); o.className = "opinion"; o.textContent = opLabel(it.op); c.append(o); }
+  if (it.op !== undefined) {
+    const b = document.createElement("div"); b.className = "btns"; b.setAttribute("role", "group"); b.setAttribute("aria-label", it.t);
+    [["si", "Sí"], ["no", "No"], ["despues", "Después"]].forEach(([v, l]) => {
+      const x = document.createElement("button"); x.type = "button"; x.className = "btn " + v; x.textContent = l; x.dataset.v = v; x.setAttribute("aria-pressed", "false");
+      x.addEventListener("click", () => {
+        const cur = state[it.id] || (state[it.id] = { choice: "", note: "" });
+        cur.choice = cur.choice === v ? "" : v;
+        paint(it.id); progress(); write(it.id);
+      });
+      b.append(x);
+    });
+    c.append(b);
+  }
+  const t = document.createElement("textarea"); t.id = "n-" + it.id; t.rows = 2;
+  t.placeholder = it.op !== undefined ? "Nota o instrucción (opcional)" : "Tu respuesta aquí";
+  t.setAttribute("aria-label", "Nota: " + it.t);
+  t.addEventListener("input", () => {
+    const cur = state[it.id] || (state[it.id] = { choice: "", note: "" });
+    cur.note = t.value; progress(); later(it.id);
+  });
+  c.append(t);
+  return c;
+}
+
+function paint(id) {
+  const c = $("c-" + id); if (!c) return;
+  const st = state[id] || { choice: "", note: "" };
+  c.querySelectorAll(".btn").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === st.choice)));
+  const it = ALL.find(i => i.id === id);
+  c.classList.toggle("done", !!st.choice || (it.op === undefined && !!(st.note || "").trim()));
+  const t = $("n-" + id);
+  if (t && document.activeElement !== t) t.value = st.note || "";
+}
+
+$("general").addEventListener("input", e => { general = e.target.value; later("general"); });
+$("go").addEventListener("click", async () => {
+  if (!db) { $("foot-msg").textContent = "No se pudo guardar. Avísale a Claude por el chat."; return; }
+  $("go").disabled = true;
+  try { await db.doc("meta/listo").set({ at: new Date().toISOString(), respondidas: ALL.filter(i => state[i.id]?.choice).length }); $("foot-msg").textContent = "Avisado. Ahora dime \"revisa el panel\" en el chat."; }
+  catch (e) { $("foot-msg").textContent = "No se pudo avisar. Dímelo por el chat."; }
+  $("go").disabled = false;
+});
+
+render(); progress();
+
+(async () => {
+  try { db = await claude.use("db"); } catch (e) { db = null; }
+  if (!db) { $("nodb").hidden = false; saveFlag("sin guardar"); return; }
+  db.collection("respuestas").onSnapshot(snap => {
+    snap.docs.forEach(d => {
+      const v = d.data() || {};
+      if (d.id === "general") { if (document.activeElement !== $("general")) { general = v.note || ""; $("general").value = general; } return; }
+      if (!ALL.some(i => i.id === d.id)) return;
+      const cur = state[d.id] || (state[d.id] = { choice: "", note: "" });
+      if (!pend[d.id]) { cur.choice = v.choice || ""; cur.note = v.note || ""; }
+      paint(d.id);
+    });
+    progress(); saveFlag("guardado");
+  }, () => { saveFlag("error de lectura"); });
+})();
+</script>

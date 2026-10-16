@@ -18,3 +18,12 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Rutinas creadas: día 7 (resultados de Google y clientes) y días 28 y 6 (correcciones de Vero, Eventos del Año y posts del mes).
 - Halloween 2026: tarjetas listas en Trello para todos los clientes activos (ver `clientes-google.json`).
 - Pendientes que confirma Vero: horario del 31-oct (Bombo Ulriksen), tomahawk en Steakhouse, tenedor libre en Tiki House y links de PedidosYa/Uber Eats.
+
+## Sesión 2026-10-16 (tarde) — para la próxima sesión
+- **Panel de decisiones** (Laura marca Sí/No/Después + notas): https://claude.ai/artifact/GL4Lw66hiqrNkL3aPVNPCt — leer la colección `respuestas` con ArtifactData (action list) cuando Laura diga "revisa el panel". Fuente local: agency/panel/panel-decisiones.html.
+- **Ejecutado y verificado en Meta (OK de Laura 16-oct):** Bash pausó "Reconocimiento Julio - Septiembre" (120251459313140019) y boost "Tírate una paya" (120253340425420019). Bombo "Día del niño 2026", "Recarga de Papas y videos" y "Mall Plaza - Promo" ya estaban pausados (12:29 a.m., cuenta de Laura).
+- **Hallazgos Meta (lectura en vivo):** REMARKETING MENSAJES 2026 (Bombo) llegó a su spend_cap $300.000; Reconocimiento (Bombo) $2.985.173 de $3.000.000; WEB JUSTO no tiene spend_cap y ya gastó $221.585 (el tope de $200k no era la causa del $0). AD 1.B del test estuvo "Not Approved" 15-oct 9:25 p.m. → Active 16-oct 1:41 a.m.
+- **Decisiones de Laura:** no pausar los 3 anuncios de Casa Cultural (ver cliente por cliente); promo martes $11.990 la preparamos nosotros, ella se la plantea a Jhonny; Somos Casa Lotus sí tiene anuncios (Notion desactualizado); aviso semanal de tokens los lunes.
+- **Gasto (consola, 16-oct):** US$12,34 de US$20 mensual; semana: Cowork 62%, Claude Code 38%.
+- **stack-auditor:** resultado en agency/auditorias/2026-10-16-stack.json (limitar tools de 3 agentes, quitar plugins/conectores rotos, deduplicar session-usage.csv, Justo caído por proxy).
+- **Mañana 17-oct:** medir test Bombo (CJ Delivery 120249348553550141) y campaña Hostel (120249343804190575); pixel Hostel último disparo 7-oct.
