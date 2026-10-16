@@ -1,0 +1,88 @@
+{
+  "fuente": "Trello 'Centro Bombo' (t09C3ZLr) > Generalidades Bombo Burger > tarjeta 'Prompt publicaciones Google' (l3UI6cOU), version corregida el 16-oct-2026 por pedido de Laura (respaldo del original en comentario de la misma tarjeta) + agency/memoria/clientes-google.json (detalle Bombo Burger, Laura chat 2026-10-12). Direcciones y botones: tarjetas Halloween 2026 de cada local en Trello.",
+  "actualizado": "2026-10-16",
+  "negocio": {
+    "producto": "hamburguesas gigantes con papas y bebidas refill / recargables. PROHIBIDO decir 'hamburguesas artesanales' o 'burgers artesanales' (correccion de Laura 2026-10-16)",
+    "otros_productos_mencionados_en_prompt": [
+      "papas crujientes",
+      "opcion veggie / hamburguesa veggie",
+      "carta Bombo Burger"
+    ],
+    "locales_google": {
+      "Balmaceda": "Av. Balmaceda 3039, La Serena",
+      "Beach": "Av. del Mar 994, La Serena (avenida del mar)",
+      "Ulriksen": "Av. Guillermo Ulriksen 2965, La Serena",
+      "Mall Plaza": "Terraza Mall Plaza, Alberto Solari 1400, La Serena",
+      "Santiago": "Constitucion 58, Local 72, Patio Bellavista, Santiago"
+    },
+    "cupo": "8 posts al mes POR LOCAL (5 perfiles)",
+    "ojo": "El prompt de Trello lista sucursales 'Beach, Casa Magnolia, Ulriksen, Balmaceda, Mall Plaza' (La Serena y Coquimbo) y no incluye Santiago. Casa Magnolia no figura entre los 5 perfiles activos de clientes-google.json. [DATO] preguntar a Laura si Casa Magnolia sigue activa y si se agrega Santiago a la lista del prompt. Horarios y precios: [DATO] (no estan en el prompt; no inventar)."
+  },
+  "regla_santiago": "Local Santiago: mencionar siempre que estamos en Patio Bellavista; usar eventos de Santiago/Patio Bellavista, NUNCA de La Serena (linea agregada al prompt de Trello el 16-oct-2026).",
+  "estrategia_google_posts": {
+    "eje": "Posts por evento (nombre + ciudad + lugar + fecha): 4 posts por evento con angulos distintos (anticipacion, juntarse a comer/pausa, dia previo/ambiente, dia del evento/cierre)",
+    "objetivo": "Posicionar a Bombo Burger como buena opcion para comer en eventos, fines de semana largos o panoramas locales, y dar ganas reales de ir a almorzar o cenar (no solo informar el evento)",
+    "destacar": [
+      "hamburguesas gigantes con papas y bebidas refill / recargables",
+      "comida sabrosa",
+      "ambiente relajado",
+      "panorama para compartir",
+      "ubicacion conveniente"
+    ],
+    "sucursales_en_post": "No listar todas siempre: mencionar 1 sucursal, 2 sucursales o 'nuestras sucursales'; priorizar la mas cercana al evento",
+    "enfoques_para_variar": [
+      "hamburguesas gigantes con papas y bebidas refill / recargables y carta sabrosa",
+      "almuerzo relajado",
+      "cena despues del evento",
+      "salida con amigos",
+      "panorama familiar",
+      "hamburguesas cerca de la avenida del mar (Beach)",
+      "opcion veggie o carta variada"
+    ],
+    "cierre": "invitacion natural a visitar Bombo Burger, variando la formula entre posts; nunca escribir la palabra 'CTA'",
+    "no_repetir": "Cada post con estructura, inicio, cierre e idea distintos; no plantilla con palabras cambiadas",
+    "formato_y_largo": "Ver agency/memoria/trello.json > formato_tarjeta. 300-680 caracteres por item, titulo '📌 POST N – TITULO', 'Fecha publicacion interna', cierre con direccion y 'Boton: ...'"
+  },
+  "tono_posts": {
+    "estilo": "chileno, cercano, calido, relajado, natural; marca local con personalidad; rico, antojable y cotidiano, sin exagerar ni sonar forzado",
+    "emojis": "maximo 1-2 por post (adecuados: hamburguesa, brillo, ola, papas); no en nombres de sucursales, no en exceso, no en todas las lineas, no como reemplazo de contenido",
+    "prohibido": [
+      "enlaces publicos",
+      "telefono ni WhatsApp",
+      "hashtags",
+      "palabra 'CTA'",
+      "hamburguesas/burgers artesanales",
+      "textos planos que solo hablen del evento"
+    ],
+    "frases_vacias_a_evitar": [
+      "siempre es una buena opcion",
+      "el hambre pega fuerte",
+      "perfecto para cualquier ocasion",
+      "ven a disfrutar",
+      "una experiencia unica"
+    ]
+  },
+  "keywords_del_prompt": [
+    "hamburguesas La Serena",
+    "burger La Serena",
+    "restaurantes en La Serena",
+    "comida en La Serena",
+    "carta Bombo Burger",
+    "Bombo Burger Beach - avenida del mar",
+    "hamburguesa veggie"
+  ],
+  "keywords_objetivo_tarjetas_halloween_2026": {
+    "fuente": "Descripciones de las tarjetas Halloween 2026 en Trello (creadas por local-seo); NO verificadas aun contra google-resultados.json",
+    "Balmaceda": ["hamburguesas la serena", "bombo burger carta"],
+    "Beach": ["bombo burger beach - avenida del mar", "para cenar", "hamburguesas la serena"],
+    "Ulriksen": ["comida rapida", "bombo burger horario"],
+    "Mall Plaza": ["bombo burger mall plaza", "hamburguesas la serena"],
+    "Santiago": ["hamburguesas santiago", "mejores hamburguesas santiago"]
+  },
+  "pendientes": [
+    "[DATO] horario del sabado 31-oct en Ulriksen (Post 2 Halloween lo lleva como [DATO])",
+    "[DATO] confirmar con Laura si 'Hot Dogs' (usado en posts Halloween Balmaceda) esta vigente en la carta de Balmaceda",
+    "[DATO] confirmar si el menu QR aplica a Santiago",
+    "Cruzar keywords con agency/memoria/google-resultados.json antes del proximo lote de posts"
+  ]
+}
