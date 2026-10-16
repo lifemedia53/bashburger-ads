@@ -68,5 +68,20 @@ def main():
         w.writeheader()
         w.writerows(filas)
 
+def guardar_en_git():
+    """Commit + push solo del CSV para que el registro no se pierda al reciclar el contenedor."""
+    import subprocess
+    raiz = os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd())
+    rel = "agency/logs/session-usage.csv"
+    def git(*a):
+        return subprocess.run(["git", "-C", raiz, *a], capture_output=True, text=True)
+    if not git("status", "--porcelain", "--", rel).stdout.strip():
+        return
+    git("commit", "-q", "-m", "Token log automático", "--", rel) if git("add", "--", rel).returncode == 0 else None
+    rama = git("rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
+    if rama and rama != "HEAD":
+        git("push", "-q", "origin", rama)
+
 if __name__ == "__main__":
     main()
+    guardar_en_git()
