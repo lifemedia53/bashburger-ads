@@ -31,6 +31,13 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Pressures Perfect: ya estaba corregido en Trello (prompt GHa83Jm7, 2 posts de Lighting y descripción de la tarjeta 6qK2FXfi). Fuente: lectura de Trello el 17-oct. No requiere cambios.
 - Aviso semanal de tokens activado: lunes 08:47 (hora de Chile), tarea programada "Aviso semanal de tokens (lunes)" (trig_0136M5Q31usuL71Twpjphuvi). Primer aviso: 2026-10-19. Lee `agency/logs/` y avisa por push.
 
+## Sesión 3 del 2026-10-17: pixel Hostel, agentes, modelos
+- Pixel Hostel (fuente: Meta, solo lectura, 17-oct): "Datos de The Cool Hostel" (1487303793186321) activo, último disparo 2026-10-07; Purchase solo el 23-sep, 30-sep, 1-oct, 6-oct y 7-oct; ninguno desde el 8-oct; sin PageView; sin calidad de datos web; server_last_fired 2026-05-30. Little Hotelier muestra la app "Seguimiento de conversiones con el píxel de Meta" ACTIVADA con ese ID (captura de Laura, sin fecha). Ya figuraba en la auditoría del 16-oct (Notion, "Pausas ejecutadas tras auditoría"). Hay 5 reservas desde el 10-oct y 0 Purchase en Meta: la app no está disparando en la confirmación. [DATO] cuándo se activó la app.
+- Próximo paso Hostel: reserva de prueba en la web de reservas y revisar Purchase en Meta (Pixel Helper o Test Events); si no llega, escribir a soporte de Little Hotelier con el ID.
+- Trello (fuente: lectura vía Composio, 17-oct): además de Halloween hay tarjetas "Eventos octubre" (Día del Chef / Pasta / Churrasco / Gin&Tonic) en todas las marcas del Centro Bombo, creadas 16-17 oct, y "SEO octubre" en Pressures, Lotus Estilistas, Lemarc, Comercializadora Bombo y The Cool Hostel. Hostel también tiene "Publicaciones Hostel Octubre 2026". [DATO] contenido y N° de posts por tarjeta no revisado; Lullaby sin tarjetas nuevas en los tableros revisados.
+- Modelos: nueva guía `agency/memoria/modelos.json`; el hook de inicio avisa si Opus pasa del 50 % del gasto; token-controller ahora recomienda cambios de modelo (no los ejecuta).
+- Auditoría de agentes cada 5 días (orden de Laura) y seguimiento Paid Media cada 3 días: rutinas creadas pero DESACTIVADAS (trig_01B3MtT1qU92VgMQgocyjJuj y trig_01LEjdsnVvFGXVn71CjiTUZW) porque las rutinas se crean sin conectores (Meta, Notion, Composio) y no podrían leer nada. Activarlas requiere que Laura apruebe darles esos conectores (o crearlas desde la UI de rutinas de claude.ai). ops-coordinator no tiene rutina: solo corre cuando alguien lo llama (propuesta pendiente: revisión semanal en Haiku).
+
 ## Datos útiles
 - Trello se maneja con Composio (cuenta conectada, ya activa). Se usa solo para Local SEO.
 - Rutinas creadas: día 7 (resultados de Google y clientes) y días 28 y 6 (correcciones de Vero, Eventos del Año y posts del mes).
