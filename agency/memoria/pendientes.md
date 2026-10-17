@@ -34,3 +34,10 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - **Hostel:** conjunto "CJ 1 - Viajeros La Serena" (120249359954750575) lo creó la cuenta de Laura vía Power Editor el 11-oct 8:46 p.m., $3.000/día, Chile+Argentina, 21-45, Advantage+.
 - **Laura dijo:** u1 Después (primero ROAS); u2 Sí subir tope Reconocimiento (falta monto); u3 Sí investigar WEB JUSTO; u4 Sí anotar en Bitácora; d1-d10 Sí; d11 Después; d12 Sí; q1 Lullaby TLL es Lobster y está pausado; q2 no sabe del conjunto WhatsApp; q3 presupuestos después; s1/s2 Después (usa Slack y Vercel); s3 Sí; s4 Sí (puede reconectar Justo desde Cowork).
 - **Pendiente de ejecutar:** Notion (Bitácora test AD 1.B, ficha Somos Casa Lotus, briefs Bombo promo martes y Bash reel 80's); ficha+voz Lotus; fecha Entre Tacos Delivery y Comercializadora Tráfico (falta fecha de fin); audiencias Bendito; campaña mensajes Mare/Steakhouse (falta presupuesto); dedupe session-usage.csv.
+
+## 17-oct — posts de Google de octubre (regla nueva de Laura: sin aprobación, Vero edita)
+- Subidas a Trello (tarjetas nuevas, 2 posts c/u): Mare, Steakhouse, Tiki House, Tiki Beach, Tony's Cordovez, La Siciliana, Bash, Santerra, Bombo Burger (5 locales), Bendito (2), Entre Tacos (2). Copias en agency/borradores/.
+- Faltan por cubrir: Lullaby, Pressures, Lotus Estilistas, Lemarc, Hostel, Comercializadora (SEO sin fecha de evento) y más posts hasta 8/mes por local en Bombo Burger.
+- "Vero confirma": horarios (Steakhouse, Tiki House, Ulriksen, Bendito/Entre Tacos), Gin & Tonic de Bombo Burger, tenedor libre Tiki House, nombre oficial Tiki Beach, link PedidosYa Siciliana, mecánica "comes gratis si..." Tony's, $13.990 Bash (prompt Trello dice $12.990).
+- Hoja DATA CLIENTES: no se pudo leer completa en vivo (herramienta devuelve base64); copia de 12-oct en enlaces-perfiles-cartas.json. Cartas faltantes: Tony's Centro, Comercializadora, Hostel, Lemarc, Lotus, Lullaby.
+- Pendiente sugerido: crear voz/<marca>.json para Mare, Steakhouse, Tiki, Santerra, Bendito, Entre Tacos y actualizar el prompt de Bash ($13.990).
