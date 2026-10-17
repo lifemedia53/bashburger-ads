@@ -1,12 +1,12 @@
-# Pendientes (traspaso de sesión 2026-10-17)
+# Pendientes (traspaso de sesión 2026-10-17, actualizado en la 2ª sesión del día)
 
 Leer esto al iniciar una sesión nueva y seguir desde aquí.
 
 ## Hacer
 1. Bombo: remedir el test CJ Delivery (120249348553550141, cuenta 362765604642572) el 2026-10-24 y cerrar como ganador si se mantiene. No tocar público, placements, puja, atribución ni presupuesto.
-2. Hostel (campaña 120249343804190575, cuenta 1428593511882773): sin línea base de reservas. Laura tiene los datos de Hotelier pero yo no puedo entrar; pedirle el número de reservas web desde el 10-oct. Sin CAPI el pixel no mide compras (Meta 10 al 17-oct: $14.397 gastados, 14.368 impresiones, 1.493 clics, 0 compras medidas). No proponer campañas nuevas (decisión de Laura 2026-10-10); evaluar el 2026-10-31.
-3. Hostel: Laura activa "Meta Pixel Conversion Tracking" en Little Hotelier (Reserva directa > Configuración > Aplicaciones de complemento, pixel 1487303793186321). Little Hotelier no tiene CAPI (respuesta de soporte, 2026-10-17). Cuando avise, verificar en Meta que llegan Purchase.
-4. Instagram (programar posts yo directo, sin herramientas de terceros): diseño en curso, falta decisión de Laura (ver abajo). Instagram no está conectado en Composio todavía (requiere que Laura autorice cada cuenta). Google Business: sin vía directa, queda manual (Trello).
+2. Hostel (campaña 120249343804190575, cuenta 1428593511882773): línea base de reservas ya recibida (ver abajo). Sin CAPI el pixel no mide compras (Meta 10 al 17-oct: $14.397 gastados, 14.368 impresiones, 1.493 clics, 0 compras medidas). No proponer campañas nuevas (decisión de Laura 2026-10-10); evaluar el 2026-10-31.
+3. Hostel: Laura NO sabe activar "Meta Pixel Conversion Tracking" en Little Hotelier (respuesta de Laura, 2026-10-17). Opciones a ofrecerle: (a) guía paso a paso con capturas de su pantalla, (b) correo a soporte de Little Hotelier pidiendo que lo activen. Ruta a verificar: Reserva directa > Configuración > Aplicaciones de complemento, pixel 1487303793186321. Little Hotelier no tiene CAPI (soporte, 2026-10-17). Cuando quede activo, verificar en Meta que llegan Purchase.
+4. Instagram (programar posts yo directo, sin herramientas de terceros): Laura lo ve la semana del 2026-10-19 (respuesta 2026-10-17); no avanzar antes. Decisiones abiertas abajo. Instagram no está conectado en Composio todavía (requiere que Laura autorice cada cuenta). Google Business: sin vía directa, queda manual (Trello).
 
 ## IG: lo que mostró el calendario (fuente: lectura de Laura con Claude en Chrome del Sheet "Calendario Contenido Octubre 2026", pestañas Bash Burger y Santerra By Bombo, 2026-10-17)
 - Columnas: Publicacion, Dia, Formato, Pilar, Texto/Contenido, Enlaces, Estado, Fotografía, Diseñador, Notas/Base plantillas. No hay columna de hora ni de caption: la columna Texto es el concepto o el texto de las láminas, no el caption.
@@ -17,6 +17,12 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Al 17-oct ninguna pieza de feed futura tiene diseño y estado listos.
 - Propuesta (sin aprobar): agregar al Sheet columnas Hora, Caption, Link Drive del diseño y Aprobado por cliente; yo publico solo Post/Carrusel/Reel con todo completo; primero en modo ensayo (preparo y muestro, sin publicar). Pendiente verificar si Composio Google Sheets lee rangos completos sin Chrome.
 - Decisiones de Laura pendientes: dónde programan hoy (herramienta), qué estado significa aprobación del cliente, cliente de prueba (Bash Burger o Santerra), si agregan las columnas nuevas.
+
+## Hostel: línea base de reservas (fuente: panel de Little Hotelier, copiado por Laura, actualizado 2026-10-17 19:51)
+- Rango de reserva: 10-oct-2026 a 31-ene-2027. Ingresos habitaciones $541.880; ingresos totales $546.280; 5 reservas (sin cancelaciones); 11 pernoctaciones; ADR $49.262; estadía media 2,2 noches; 10,4 días entre reserva y llegada.
+- Los porcentajes que acompañan cada cifra en el panel (96,2 %, 97,4 %, etc.) no están explicados: [DATO] preguntar a Laura qué comparan.
+- [DATO] No se sabe si el rango es fecha de reserva o de estadía, ni si son solo reservas web (Laura dijo "reservas web"). Sin eso, las 5 reservas no se pueden atribuir a Meta: es el tope, no el resultado de la campaña.
+- Cálculo (mío, no de la fuente): gasto Meta 10 al 17-oct $14.712 / 5 reservas = ~$2.942 por reserva si todas vinieran de Meta.
 
 ## Hecho el 2026-10-17
 - Bombo remedido (Meta, solo lectura, 11 al 17-oct, 2da lectura del día): $168.301 gastados, 120 Iniciar pago, $1.403 por Iniciar pago vs base $2.165 (-35%; la base tenía solo 20 eventos). Anotado en la Bitácora (campo Resultado confirmado, estado En seguimiento).
