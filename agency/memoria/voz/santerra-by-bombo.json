@@ -1,0 +1,171 @@
+{
+  "fuente": "Trello 'Centro Bombo' (t09C3ZLr) > 'Generalidades Santerra Buffet' > 'Prompt publicaciones Google' (tuC1nwIy, ultima edicion 2026-03-07), 'Descripcion SEO' (mYlGGfJw, 2026-02-24), 'Whatsapp - Links - Direcciones - Webs' (FOPTUm8d, 2026-03-07) + tarjeta de posts https://trello.com/c/2q50yu7c (2026-10-17) + clientes-google.json + planes.json + enlaces-perfiles-cartas.json + data-clientes.json + agency/memoria/google-resultados.json (hoja Google, leido 2026-10-12, keywords SEPTIEMBRE 2026)",
+  "actualizado": "2026-10-17",
+  "nombre_oficial": "Santerra Buffet by Bombo (prompt Trello, 'Business' en el titulo del prompt 2026-03-07). Memoria: 'Santerra By Bombo' (clientes-google.json). DATA CLIENTES: 'Santerra by Bombo'. Google: busquedas 'santerra buffet'. En posts se uso 'Santerra Buffet by Bombo' / 'Santerra'. [DATO] Vero confirma nombre exacto de la ficha.",
+  "negocio": {
+    "direccion": "Peñuelas Nte. 21, dentro de Enjoy Coquimbo (sector Peñuelas). OBLIGATORIO decir 'dentro de Enjoy Coquimbo'; NUNCA 'junto a Enjoy' ni 'cerca de Enjoy' (prompt 2026-03-07).",
+    "concepto": "Restaurante buffet tenedor libre dentro de Enjoy Coquimbo: gran variedad gastronomica en buffet libre, ambiente amplio y comodo, ideal para grupos, parejas, familias o colegas (prompt 2026-03-07).",
+    "productos_permitidos": [
+      "buffet libre / tenedor libre",
+      "pizzas",
+      "carnes (carnes asadas segun Descripcion SEO)",
+      "frutos del mar / mariscos",
+      "pastas",
+      "postres",
+      "bebestibles",
+      "cocteleria",
+      "desayuno buffet"
+    ],
+    "segun_descripcion_seo_2026_02_24": [
+      "carnes asadas",
+      "mariscos",
+      "sushi",
+      "ensaladas",
+      "pastas",
+      "pizzas",
+      "postres",
+      "terraza con musica en vivo",
+      "barra con cocteleria clasica y de autor",
+      "vinos",
+      "cervezas",
+      "jugos",
+      "ideal para eventos, grupos, familias y celebraciones"
+    ],
+    "ojo_menu": "Sushi y musica en vivo aparecen en la Descripcion SEO (2026-02-24) pero no en el prompt; los posts de hoy usaron parrilla, pastas, productos del mar y postres. [DATO] Vero confirma platos vigentes antes de usar sushi, pizzas o musica en vivo.",
+    "precio_referencial": "Aprox. $28.000 (prompt 2026-03-07). No inventar ni repetir siempre. No usado en los posts de hoy por no estar confirmado: [DATO] vigencia.",
+    "horario": {
+      "desayuno": "8:00 a 11:00 (prompt 2026-03-07)",
+      "almuerzo_y_cena": "[DATO] 12:30 a 23:30 'variable' (prompt 2026-03-07). NO mencionar hasta que Vero confirme el horario real de cada dia."
+    },
+    "delivery": "NO tiene delivery. Nunca mencionar delivery (prompt).",
+    "reservas": "Disponibles; via WhatsApp (Descripcion SEO y reservas-desk.json: tipo WhatsApp). Frases permitidas: 'reservas disponibles', 'puedes reservar tu mesa'. Sin enlaces, telefono ni WhatsApp en el texto."
+  },
+  "estrategia_google_posts": {
+    "eje": "Posts por evento (nombre + ciudad + lugar + fecha): 4 posts por evento (anticipacion, intermedio, cercano, dia previo/mismo dia) para posicionar Santerra como buena alternativa antes o despues del evento, con foco en visitas dentro de Enjoy Coquimbo (prompt 2026-03-07). Intercalar posts de venta pura (buffet, desayuno, reservas).",
+    "destacar": [
+      "buffet libre en Coquimbo",
+      "gran variedad de platos",
+      "restaurante dentro del Enjoy Coquimbo",
+      "buena opcion antes o despues del evento",
+      "ambiente comodo y amplio"
+    ],
+    "escenarios": [
+      "almuerzo antes del evento",
+      "cena despues del evento",
+      "pausa entre actividades",
+      "comida despues de visitar el casino"
+    ],
+    "cierres_del_prompt_variar": [
+      "Nos encuentras en Peñuelas Nte. 21, dentro de Enjoy Coquimbo.",
+      "Te esperamos en Peñuelas Nte. 21, dentro de Enjoy Coquimbo.",
+      "Estamos en Peñuelas Nte. 21, dentro de Enjoy Coquimbo.",
+      "Santerra Buffet by Bombo esta en Peñuelas Nte. 21, dentro de Enjoy Coquimbo."
+    ],
+    "siempre": "Cada post cierra invitando a visitar y con la direccion exacta; fecha de publicacion interna; optimizado para Google Events y SEO local.",
+    "formato_y_largo": "agency/memoria/trello.json > formato_tarjeta (~500 caracteres, rango 300-680; boton usado: Reservar / Mas informacion)"
+  },
+  "tono_posts": {
+    "estilo": "moderno, claro, cercano, profesional pero relajado, atractivo; lenguaje simple y natural (prompt 2026-03-07)",
+    "evitar": [
+      "frases demasiado promocionales",
+      "textos repetitivos",
+      "estructuras identicas"
+    ],
+    "emojis": "Maximo 1 o 2 por post. Del prompt: 🍽 🍷 ✨ 🥗",
+    "prohibido": [
+      "enlaces publicos",
+      "telefono",
+      "WhatsApp",
+      "palabra 'CTA'",
+      "delivery",
+      "'junto a Enjoy'",
+      "'cerca de Enjoy'",
+      "inventar precios",
+      "horario de almuerzo/cena sin confirmar"
+    ],
+    "mercado": "Espanol de Chile"
+  },
+  "keywords_del_prompt": [
+    "buffet coquimbo",
+    "tenedor libre coquimbo",
+    "buffet enjoy coquimbo",
+    "restaurante enjoy coquimbo",
+    "casino enjoy coquimbo",
+    "restaurante en coquimbo",
+    "buffet en enjoy"
+  ],
+  "keywords_reales_google": {
+    "fuente": "google-resultados.json > perfiles > 'Santerra' (SEPTIEMBRE 2026; historicas MAYO 2025 a SEPT 2026)",
+    "top_septiembre_2026": [
+      "tenedor libre la serena",
+      "tenedor libre coquimbo",
+      "tenedor libre",
+      "santerra buffet",
+      "tenedor libre serena",
+      "enjoy",
+      "buffet",
+      "buffet la serena",
+      "santerra",
+      "tenedor libre enjoy coquimbo",
+      "sushi",
+      "santerra buffet - penuelas norte"
+    ],
+    "historicas_constantes_12_meses": [
+      "buffet",
+      "buffet coquimbo",
+      "buffet en la serena",
+      "buffet la serena",
+      "buffet libre",
+      "desayuno buffet la serena",
+      "enjoy",
+      "santerra",
+      "santerra buffet",
+      "santerra enjoy",
+      "tenedor libre coquimbo",
+      "tenedor libre en la serena",
+      "tenedores libres en la serena"
+    ],
+    "ignorar": [
+      "restaurants",
+      "mercado coquimbo",
+      "mercado libre (ruido)"
+    ],
+    "ojo": "Hay mucha busqueda desde La Serena ('tenedor libre la serena', 'buffet la serena'): se puede decir 'a minutos de La Serena' solo si Vero confirma [DATO]. 'sushi' aparece en busquedas y en Descripcion SEO: confirmar con Vero antes de mencionarlo."
+  },
+  "metricas_google": {
+    "fuente": "agency/memoria/google-resultados.json (hoja Google, leido 2026-10-12, keywords SEPTIEMBRE 2026)",
+    "septiembre_2026": "vistas 4384, interacciones 518, menu 151, llamadas 84, chats 68, reservas 0, clics sitio web 135",
+    "agosto_2026": "vistas 4859, interacciones 591, llamadas 137",
+    "julio_2026": "vistas 3361, interacciones 412",
+    "lectura": "Mejor perfil del lote en interacciones; baja sept vs agosto (-10% vistas, -12% interacciones, llamadas 137 a 84); julio fue el valle"
+  },
+  "links": {
+    "fuente": "data-clientes.json fila 14 + enlaces-perfiles-cartas.json + Trello FOPTUm8d (2026-03-07)",
+    "perfil_google": "https://share.google/daWTPWWxmbZQCVumb",
+    "google_maps": "https://maps.app.goo.gl/dv7S5chz7LcDtEmz7 (DATA CLIENTES). [DATO] Trello FOPTUm8d y la tarjeta de hoy usan https://maps.app.goo.gl/Mv1LncNTNFkf37EA6: Vero confirma cual es el vigente",
+    "resenas_google": "https://g.page/r/CVyGphnkcslEEAE/review",
+    "whatsapp_y_reserva": "https://wa.me/56966661861",
+    "carta": "https://spleatweb.app/restaurants/ktwAgCg3QjXHSSmElKCL31CFKP32/menu",
+    "web_enjoy": "https://www.enjoy.cl/#/coquimbo/gastronomia/santerra (Trello FOPTUm8d)",
+    "instagram": "DATA CLIENTES: https://www.instagram.com/santerrabuffet/ ; Trello FOPTUm8d: https://www.instagram.com/santerrabybombo/ [DATO] Vero confirma la cuenta vigente",
+    "facebook": "https://web.facebook.com/santerrabybombo",
+    "uso": "Los links van en la descripcion de la tarjeta, NUNCA en el texto del post."
+  },
+  "posts_ya_subidos": {
+    "fuente": "Trello https://trello.com/c/2q50yu7c (2026-10-17)",
+    "post1": "Dia del Chef (20-oct): parrilla, pastas, productos del mar, postres; reservas disponibles; boton Reservar",
+    "post2": "Buffet y tenedor libre en Coquimbo (23-oct): desayuno 8:00-11:00; boton Mas informacion. El proximo lote debe variar apertura, estructura y cierre."
+  },
+  "confirma_vero": [
+    "Platos vigentes del buffet (parrilla, pastas, productos del mar, postres) y si se puede nombrar sushi, pizzas, musica en vivo",
+    "Horario de desayuno 8:00-11:00 vigente",
+    "Horario de almuerzo y cena ('12:30-23:30 variable'): no se menciona",
+    "Precio referencial ~$28.000 vigente",
+    "Link de Maps vigente (dv7S5chz7LcDtEmz7 vs Mv1LncNTNFkf37EA6)",
+    "Instagram vigente (santerrabuffet vs santerrabybombo)",
+    "Nombre exacto de la ficha (Santerra Buffet by Bombo vs Santerra By Bombo)"
+  ],
+  "pendientes": [
+    "Revisar tarjeta Halloween de Santerra (no releida para esta guia)"
+  ]
+}

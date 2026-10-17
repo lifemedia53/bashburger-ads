@@ -1,0 +1,176 @@
+{
+  "fuente": "Trello 'Centro Bombo' (t09C3ZLr) > lista 'Generalidades Bombo Tiki Beach y House' > tarjeta 'Prompt publicaciones Google (House)' (8WIK9NlV, ultima edicion 2026-06-02) + tarjeta 'Whatsapp - Links - Direcciones - Webs' (wrSAHEop, ultima edicion 2026-05-07) + tarjeta de posts https://trello.com/c/ueiz9qa5 (creada 2026-10-17) + clientes-google.json (Laura 2026-10-12) + planes.json + enlaces-perfiles-cartas.json + data-clientes.json + agency/memoria/google-resultados.json (hoja Google, leido 2026-10-12, keywords SEPTIEMBRE 2026)",
+  "actualizado": "2026-10-17",
+  "nombre_oficial": "Bombo Tiki House",
+  "fuente_nombre": "Prompt House: 'Nombre: Bombo Tiki House' (2026-06-02); clientes-google.json 'Bombo Tiki House'",
+  "foco_plan": "Plan Bombo Tiki House y Beach: 8 posts de Google al mes, foco 'energia y universo tiki; diferenciar House vs Beach' (planes.json). Diferencia clave: HOUSE = pizzeria/cocteleria con ambiente tiki, parque para ninos y delivery propio (Uber Eats + Pedidos Ya). BEACH = tenedor libre frente al mar en la Costanera. No mezclar conceptos entre ambos perfiles.",
+  "negocio": {
+    "direccion": "Av. Pacífico 3494, Coquimbo (sector costero)",
+    "concepto": "Restaurante con identidad tiki en el sector costero de Coquimbo: pizzas, coctelería, comida para compartir, ambiente relajado, salidas nocturnas, comidas familiares y parque para ninos. Pensado para almuerzos, cenas, amigos, celebraciones y familias con ninos (prompt House 2026-06-02).",
+    "productos_permitidos": [
+      "pizzas artesanales (el prompt las nombra asi)",
+      "pizzas para compartir",
+      "pizzas para pedir en linea",
+      "mojitos",
+      "tragos",
+      "cocteleria clasica",
+      "cocteleria de autor",
+      "picoteos",
+      "tablas",
+      "happy hour (solo mencionar, sin precios ni detalles)"
+    ],
+    "ambiente": [
+      "ambiente tiki",
+      "terraza",
+      "sector costero",
+      "espacio familiar",
+      "parque para ninos"
+    ],
+    "delivery": "Uber Eats y Pedidos Ya (prompt House 2026-06-02). Sin enlaces en el texto del post.",
+    "reservas": "WhatsApp (reservas-desk.json / data-clientes.json: tipo WhatsApp). No incluir numero en el post.",
+    "horario": "[DATO] el prompt dice 'Agregar horario oficial cuando lo tengas'. No mencionar horario en posts hasta que Vero lo confirme.",
+    "precios": "[DATO] no hay precios de House en el prompt. No inventar.",
+    "tenedor_libre": "[DATO] NO CONFIRMADO. El prompt House no menciona tenedor libre, pero las busquedas reales de septiembre 2026 son 'tenedor libre la serena' y 'buffet la serena'. No mencionar tenedor libre hasta que Vero confirme (pendientes.md 2026-10-17)."
+  },
+  "estrategia_google_posts": {
+    "cupo": "8 posts al mes (planes.json: google 8, compartido con Beach como plan 'Bombo Tiki House y Beach' [DATO: confirmar si son 8 por perfil o 8 en total])",
+    "tipos_de_post_alternar": {
+      "1_pizzas": "pizzas, compartir, delivery, comidas familiares",
+      "2_cocteleria": "mojitos, tragos, happy hour, salidas nocturnas",
+      "3_familiar": "parque para ninos, comidas familiares, almuerzos, fines de semana",
+      "4_panorama": "Coquimbo, sector costero, vacaciones, turistas, fines de semana",
+      "5_delivery": "Uber Eats, Pedidos Ya, pizzas en casa"
+    },
+    "eje": "Posts con motivo concreto (evento/fecha) mas dato real del local; dejar espacio para posts de venta pura (pizzas, cocteleria, delivery). Fechas/eventos no se comen el cupo (regla Laura 2026-10-12).",
+    "objetivo_del_prompt": [
+      "aumentar visitas al local",
+      "impulsar pedidos por Uber Eats y Pedidos Ya",
+      "mejorar posicionamiento local en Coquimbo",
+      "reforzar identidad tiki",
+      "destacar pizzas, cocteleria y ambiente familiar"
+    ],
+    "formato_evento_del_prompt": "NOMBRE DEL EVENTO / Fecha de publicacion interna: XX de mes / Texto principal / cierre. Formato y largo en Trello: agency/memoria/trello.json > formato_tarjeta (~500 caracteres, rango 300-680; titulo '📌 POST N – TITULO', 'Fecha publicacion interna', cierre con direccion y 'Boton: ...'). Los posts de la tarjeta de hoy usan Boton 'Como llegar' o 'Pedir en linea'.",
+    "cierres_del_prompt_variar": [
+      "Te esperamos en Av. Pacífico 3494, Coquimbo.",
+      "Ven a compartir una buena pizza.",
+      "Acercate a Bombo Tiki House.",
+      "Una buena excusa para salir.",
+      "Nos vemos en Av. Pacífico 3494.",
+      "Pide tus favoritas por Uber Eats.",
+      "Tambien estamos en Pedidos Ya.",
+      "Ideal para una salida en familia.",
+      "Perfecto para compartir frente al mar.",
+      "Ven a descubrir el ambiente tiki."
+    ],
+    "nota_cierres": "'Perfecto para compartir frente al mar' viene del prompt, pero House esta en el sector costero, no es el local frente al mar de la Costanera (ese es Beach). Preferir 'sector costero'. [DATO] Vero confirma si House puede decir 'frente al mar'."
+  },
+  "tono_posts": {
+    "estilo": "cercano, natural, moderno, relajado, chileno, apetitoso, humano; escrito como a mano. NO corporativo, robotico, demasiado publicitario ni repetitivo (prompt House 2026-06-02)",
+    "emojis": "El prompt House permite 2 a 5 por post. Ejemplos del prompt: 🍕 🍹 🌊 ✨ 🍻 😎 👨‍👩‍👧‍👦. No abusar. Regla de agencia vigente (checklist anti-retrabajo): maximo 1-2 por post salvo que Vero indique lo contrario; los posts de hoy usaron 1 por post. 🌊 solo con cuidado (House no es 'frente al mar').",
+    "prohibido": [
+      "inventar promociones",
+      "inventar precios",
+      "inventar productos",
+      "inventar eventos",
+      "hashtags",
+      "enlaces en el texto",
+      "telefono / WhatsApp en el texto (regla de los otros prompts de la marca; el prompt House no lo prohibe expresamente, pero lista el WhatsApp como canal [DATO: confirmar])",
+      "palabra 'CTA'",
+      "repetir estructuras entre posts",
+      "mencionar tenedor libre (sin confirmar)",
+      "mencionar horario (sin confirmar)",
+      "mezclar con el concepto de Beach"
+    ],
+    "variar": "aperturas y cierres distintos en cada post; no repetir frases ancla dentro del lote"
+  },
+  "keywords_del_prompt": [
+    "Bombo Tiki House",
+    "restaurante en Coquimbo",
+    "pizza en Coquimbo",
+    "pizzas en Coquimbo",
+    "comida en Coquimbo",
+    "restaurantes en Coquimbo",
+    "Av. Pacífico",
+    "sector costero de Coquimbo",
+    "delivery Coquimbo",
+    "Uber Eats Coquimbo",
+    "Pedidos Ya Coquimbo",
+    "restaurante familiar en Coquimbo",
+    "salida en Coquimbo",
+    "donde comer en Coquimbo",
+    "pizzas para compartir",
+    "cocteleria en Coquimbo"
+  ],
+  "keywords_reales_google": {
+    "fuente": "google-resultados.json > perfiles > 'Bombo Tiki House' (SEPTIEMBRE 2026; historicas MAYO 2025 a SEPT 2026)",
+    "top_septiembre_2026": [
+      "tenedor libre la serena",
+      "tenedor libre serena",
+      "tenedor libre",
+      "bombo tiki house - avenida pacifico",
+      "buffet la serena",
+      "tiki tiki",
+      "melt pizzas",
+      "bombo tenedor libre la serena"
+    ],
+    "historicas_mas_constantes": [
+      "bombo tiki house",
+      "bombo tiki",
+      "bombo tiki beach",
+      "pizza",
+      "restaurantes la serena",
+      "buffet la serena",
+      "parrilladas la serena"
+    ],
+    "ignorar": [
+      "restaurants",
+      "la serena (suelta)",
+      "attractions",
+      "comida china",
+      "comida peruana",
+      "sushi (no es del menu de House en el prompt)",
+      "bomboia la serena (marca mal escrita)"
+    ],
+    "ojo": "Las busquedas reales apuntan a tenedor libre/buffet, pero el prompt de House habla de pizzas y cocteleria. Usar 'pizza' + 'Coquimbo' + 'Bombo Tiki House - Avenida Pacífico' (calza con el perfil) y NO forzar 'tenedor libre' hasta que Vero lo confirme. Si House no es tenedor libre, esas busquedas probablemente son de Beach o ruido de marca Bombo."
+  },
+  "metricas_google": {
+    "fuente": "agency/memoria/google-resultados.json (hoja Google, leido 2026-10-12, keywords SEPTIEMBRE 2026)",
+    "septiembre_2026": "vistas 6801, interacciones 704, menu 232, direcciones 228, llamadas 68, chats 38, reservas 0",
+    "agosto_2026": "vistas 7540, interacciones 849",
+    "julio_2026": "vistas 6650, interacciones 665",
+    "lectura": "Baja de vistas e interacciones sept vs agosto (-10% y -17%); menu y direcciones tambien bajan"
+  },
+  "links": {
+    "fuente": "data-clientes.json fila 20 (DATA CLIENTES, Drive 1mJf6EznBz_Qo-P15BfqVbOcCSl8rf3Rgi_Jdweml138) + enlaces-perfiles-cartas.json + Trello wrSAHEop",
+    "perfil_google": "https://share.google/aO1ROPp7a7XL8pjE3",
+    "google_maps": "https://maps.app.goo.gl/SdgxnYwx1S9cJrtQ9 (DATA CLIENTES). [DATO] Trello wrSAHEop y la tarjeta Halloween usan https://maps.app.goo.gl/dVrPGrD5TYXS1Vjp8: Vero confirma cual es el vigente",
+    "resenas_google": "https://g.page/r/CQaA5VzZ_TdBEAE/review",
+    "whatsapp_y_reserva": "https://wa.me/56973696461",
+    "uber_eats": "https://www.ubereats.com/cl/store/bombo-tiki-house/ofjSB9_tVEC3hPPZ5tu4TA",
+    "pedidos_ya": "https://www.pedidosya.cl/restaurantes/la-serena/bombo-tiki-house-cf5779f8-0dfb-4f60-ba7a-8e08fa61c7c0-menu",
+    "rappi": "https://www.rappi.cl/restaurantes/900057060-bombo-tiki-house (DATA CLIENTES; el prompt NO lo lista como canal: no mencionar Rappi en posts)",
+    "carta": "https://spleatweb.app/restaurants/zXR8gZhHHiSWgHQdUs8WP3lKeKu2/menu (DATA CLIENTES y enlaces-perfiles-cartas.json). Trello wrSAHEop dice que bombotikihouse.com esta caida.",
+    "instagram": "https://www.instagram.com/bombotikihouse/",
+    "facebook": "https://web.facebook.com/bombotiki (compartido con Beach)",
+    "uso": "Los links van en la descripcion de la tarjeta de Trello, NUNCA en el texto del post."
+  },
+  "botones_usados": "Como llegar (post reconocimiento) / Pedir en linea (delivery) - tarjeta ueiz9qa5 (2026-10-17)",
+  "posts_ya_publicados_o_subidos": {
+    "fuente": "Trello https://trello.com/c/ueiz9qa5 (2026-10-17)",
+    "post1": "Dia del Chef (20-oct): pizzas artesanales, parque para ninos, Av. Pacífico 3494",
+    "post2": "Cocteleria y pizzas (23-oct): mojito con ambiente tiki, parque, Uber Eats y Pedidos Ya. No repetir estos angulos y cierres en el proximo lote."
+  },
+  "confirma_vero": [
+    "Horario oficial de House (el prompt dice 'agregar cuando lo tengas')",
+    "Si House tiene tenedor libre (busquedas reales dicen tenedor libre/buffet; el prompt no)",
+    "Mojitos y 'pizzas artesanales' vigentes en la carta (revisar carta una vez; proxima revision en 6 meses)",
+    "Link de Maps vigente (SdgxnYwx1S9cJrtQ9 vs dVrPGrD5TYXS1Vjp8)",
+    "Si House puede decir 'frente al mar'",
+    "Cuantos posts son por perfil (plan dice google: 8 para House y Beach)",
+    "Emojis: prompt permite 2-5, regla de agencia 1-2"
+  ],
+  "pendientes": [
+    "Revisar tarjetas Halloween de Tiki House (no releidas para esta guia; los posts del 17-oct y el prompt son la fuente)",
+    "Instagram de Beach en DATA CLIENTES apunta a la misma cuenta @bombotikihouse"
+  ]
+}

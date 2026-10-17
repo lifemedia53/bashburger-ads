@@ -1,0 +1,113 @@
+{
+  "fuente": "Trello > tarjeta 'Prompt Publicaciones Google' de Entre Tacos (c0uokhM6, id 6a1f1e270904f5cfec8d315a, ultima edicion 2026-07-12, leida 2026-10-17) + tarjetas de posts creadas 2026-10-17 (Wk9X70fT Av. del Mar, VwxABMZp Penuelas) + tarjetas Halloween 2026 (Sc8pZL1n, LwmleiBn; ultima edicion 2026-10-12) + tarjeta EVENTOS OCTUBRE 2026 (2jQfgTvw) + agency/memoria/{clientes-google,planes,enlaces-perfiles-cartas,data-clientes,reservas-desk,google-resultados}.json.",
+  "actualizado": "2026-10-17",
+  "negocio": {
+    "nombre_oficial": "Entre Tacos (copiado de 'Nombre' del prompt de Trello; DATA CLIENTES lo escribe 'Entre tacos ' con espacio final)",
+    "concepto": "Restaurante mexicano en Avenida del Mar, especializado en tacos, nachos, burritos, fajitas, quesadillas, guacamole, margaritas, cervezas, cocteleria y opciones veganas (prompt Trello 12-jul-2026). Posicionamiento pedido: 'alternativa destacada de comida mexicana en La Serena'. planes.json: foco 'cultura mexicana y vida nocturna (Av. del Mar + Penuelas)'.",
+    "sedes": {
+      "Av. del Mar": {
+        "direccion": "Avenida del Mar 900, La Serena (prompt Trello 12-jul-2026; tarjeta Wk9X70fT)",
+        "referencia": "cerca del Faro Monumental (prompt Trello, enfoque 3 Ubicacion y SEO local)",
+        "perfil_google": "https://share.google/KpAqUBTGeyiyfYjTz",
+        "maps_tarjeta_trello": "https://maps.app.goo.gl/DmbToYnfeDiEipVEA",
+        "maps_data_clientes": "https://maps.app.goo.gl/dZpESevmvUCwx31Y7",
+        "resenas": "https://g.page/r/CfNbjuvPWz51EAE/review (DATA CLIENTES)",
+        "reserva_whatsapp": "https://wa.me/56939288409 (reservas-desk.json, DATA CLIENTES)"
+      },
+      "Penuelas": {
+        "direccion": "Av. Los Pescadores 5050, Penuelas, Coquimbo (prompt Trello 12-jul-2026; tarjeta VwxABMZp)",
+        "perfil_google": "https://share.google/SPpQP8w4RRestV7Jk",
+        "maps_tarjeta_trello": "https://maps.app.goo.gl/tUdDRg1EsCDxy2SY7",
+        "maps_data_clientes": "https://maps.app.goo.gl/YoioHPd2jGWxkHu48",
+        "resenas": "https://g.page/r/CX8MBBjDHbT6EBM/review (DATA CLIENTES)",
+        "reserva_whatsapp": "https://wa.me/56988130160 (reservas-desk.json, DATA CLIENTES)"
+      }
+    },
+    "regla_sedes": "Si el pedido indica una sede, TODO el post habla solo de esa sede; nunca mezclar direcciones (prompt Trello). Los 2 perfiles se impulsan (clientes-google.json, Laura 2026-10-12).",
+    "cupo": "Plan ESTANDAR: 4 posts Google (planes.json). Regla general de agencia: plan Full = 8/mes. [DATO: confirmar si el cupo es 4 o 8 por sede]",
+    "whatsapp_en_prompt": "+56 9 3928 8409 (el prompt lo lista como unico WhatsApp, tambien para Penuelas). DATA CLIENTES: 56939288409 Av. del Mar, 56988130160 Penuelas. La tarjeta VwxABMZp usa +56 9 8813 0160 para Penuelas.",
+    "delivery": {
+      "uber_eats_av_del_mar": "https://www.ubereats.com/store-browse-uuid/483f6a83-a743-5b25-a920-ee688a242af3?diningMode=DELIVERY",
+      "uber_eats_penuelas": "https://www.ubereats.com/store-browse-uuid/a80d01f2-a91d-5b3c-a0e8-a213a61eca3f?diningMode=DELIVERY",
+      "pedidosya_av_del_mar": "https://www.pedidosya.cl/restaurantes/la-serena/entre-tacos-5480a006-386b-4c15-a625-dc96a142b83c-menu",
+      "regla": "Delivery solo si es el tema, hay promo o dato concreto; Uber Eats solo si aplica y esta confirmado (prompt). No en todos los posts."
+    },
+    "carta_web": "https://spleatweb.app/restaurants/VYFbR2EG3Jd1Z98gsoZ2Dlsakix1/menu (misma URL que Bendito en DATA CLIENTES: confirmar)",
+    "redes": {
+      "instagram": "https://www.instagram.com/entretacoscl/",
+      "facebook": "https://web.facebook.com/entretacos"
+    }
+  },
+  "platos_permitidos": {
+    "fuente": "Seccion 'MENU DE ENTRE TACOS' del prompt Trello (12-jul-2026). Menu comun a ambas sedes en el prompt; vigencia por local sin revisar en el perfil de Google (proxima revision en 6 meses).",
+    "tacos": ["Fish Tacos", "Tacos al Pastor", "Tacos de Birria", "Tacos de Camaron", "Tacos de Lengua", "Tako Tacos", "Tacos de Pollo", "Tacos Chilli con Carne", "Tacos de la Vegan"],
+    "nachos": ["Nachos C.T.M.", "Nachos Charro Veggie", "Nachos Tio Yoni", "Nachos Fogon", "Nachos Pollo Loco", "Nachos Chilli", "Nachos Costa"],
+    "para_compartir": ["Fajita Entre Tacos", "El Diecero", "La Trajinera"],
+    "entradas": ["Quesadilla y Asada", "Guacamole Entre Tacos", "Bolas del Charro", "Grillado Mestizo"],
+    "otros": ["Flautas", "Burritos fusion", "Burritos veganos", "Fajitas", "Salsas", "Guarniciones"],
+    "tragos": ["Mojitos", "Margaritas", "Pisco Sour", "Aperol Spritz", "Ramazzotti Spritz", "Pina Colada", "Caipirinha", "Caipiroska", "Espresso Martini", "Negroni", "Micheladas", "Mocktails sin alcohol", "Tragos de autor", "Cervezas"],
+    "ojo": "'Chilaquiles' y 'limonada' aparecen como busquedas reales en Google (sep 2026) pero NO estan en el menu del prompt: no nombrarlos como platos hasta que Vero confirme la carta."
+  },
+  "estrategia_google_posts": {
+    "eje": "Por tema/evento: angulos distintos (producto, experiencia, ubicacion y SEO local, ocasion, descubrimiento). Evento del mes: 20-oct Dia del Chef (tarjeta EVENTOS OCTUBRE 2026); 31-oct Halloween (tarjetas Sc8pZL1n, LwmleiBn). Posts SEO/GEO/AEO sin fecha el 23-oct.",
+    "enfoques_para_variar": ["Producto (sabor, textura)", "Experiencia (amigos, pareja, familia, margaritas, compartir)", "Ubicacion y SEO local (Av. del Mar 900 / Faro Monumental / Penuelas)", "Ocasion (fin de semana, vacaciones, verano, invierno, salida nocturna)", "Descubrimiento (probar un taco nuevo, nachos o fajitas, opciones veganas)"],
+    "temporadas_del_prompt": {
+      "verano": "Av. del Mar, vacaciones, turistas, tacos y tragos, margaritas, atardecer, panorama frente al mar",
+      "invierno": "comida contundente, tacos de birria, platos para compartir, reuniones con amigos",
+      "fin_de_semana": "panorama, amigos, tacos y margaritas, compartir, cena en Av. del Mar"
+    },
+    "evitar_patrones": ["no empezar siempre con pregunta", "no empezar siempre nombrando Entre Tacos", "no terminar siempre con la direccion", "no repetir keywords/estructura/largo", "no abusar de 've a disfrutar' ni 'te esperamos'", "no repetir titulos o cierres anteriores"],
+    "mezcla": "Dejar cupo para posts de venta pura (tacos, nachos, margaritas, delivery, reservas por WhatsApp) ademas de fechas (regla de Laura 2026-10-12). Ambas sedes tienen WhatsApp en la columna RESERVA."
+  },
+  "formato_posts": {
+    "formato_tarjeta_trello_actual": "Tarjetas del 2026-10-17: checklist 'Posts programados', item '📌 POST N – TITULO', 'Fecha publicacion interna', Titulo, texto breve (~500 caracteres), cierre, 'Link:' Maps y 'Boton: Como llegar'. Ver agency/memoria/trello.json > formato_tarjeta.",
+    "formato_segun_prompt_trello": "3 publicaciones por tema, Titulo <=60 caracteres (no todo en mayusculas), Texto 100-250 palabras (variar largo), CTA breve distinto en cada una; salida exacta 'PUBLICACION N / Titulo / Texto / CTA' sin comentarios.",
+    "conflicto": "Prompt (100-250 palabras) vs formato Laura de tarjeta (~500 caracteres). [DATO] Vero/Laura confirman cual manda."
+  },
+  "tono_posts": {
+    "estilo": "chileno neutro, cercano, buena onda, apetitoso, fresco, con energia, autentico, relajado, identidad mexicana, natural y calido; profesional sin ser rigido (prompt Trello)",
+    "no_debe_sonar": ["robotico", "corporativo", "exageradamente comercial", "como aviso tradicional", "repetitivo", "generico", "forzado", "escrito por IA"],
+    "emojis": "Permitidos, maximo 2 por post y solo si aportan naturalidad. Sugeridos por el prompt: 🌮 🌶️ 🍹 🍺 🌊 ✨. No en todas las frases ni como lista.",
+    "ortografia": "Excelente ortografia (prompt)"
+  },
+  "prohibido": [
+    "inventar ingredientes, tamanos, acompanamientos, promociones, precios o caracteristicas",
+    "decir que algo es el mas vendido o 'el mejor de La Serena' salvo que se indique",
+    "comparar con otros restaurantes",
+    "inventar terrazas, vistas, musica en vivo o actividades no confirmadas (el prompt habla de 'panorama frente al mar' como tema, pero no confirmar terraza ni vista)",
+    "inventar artistas, reservas, entradas o condiciones en eventos",
+    "hashtags (salvo que se pidan)",
+    "mas de 2 expresiones SEO relevantes por post; keyword stuffing",
+    "mencionar delivery en todos los posts",
+    "mezclar las dos direcciones en un mismo post",
+    "ofertas/descuentos en posts de reconocimiento (tarjetas 2026-10-17: solo invitacion)"
+  ],
+  "keywords": {
+    "del_prompt_trello": ["Entre Tacos", "Entre Tacos La Serena", "entretacos", "restaurante mexicano La Serena", "comida mexicana La Serena", "comida mexicana en La Serena", "tacos La Serena", "tacos en La Serena", "tacos mexicanos", "taqueria", "locales de tacos La Serena", "birria", "tacos de birria", "burritos", "quesadillas", "nachos", "fajitas", "guacamole", "margaritas", "cerveza", "bar", "pub", "para almorzar", "para cenar", "restaurantes Avenida del Mar", "comida en Avenida del Mar", "Avenida del Mar 900", "Faro Monumental", "donde comer cerca del Faro de La Serena", "panorama en La Serena", "tragos en Avenida del Mar", "opciones veganas", "delivery La Serena"],
+    "reales_google_resultados_sep_2026": {
+      "fuente": "agency/memoria/google-resultados.json (planilla Bombo Burger - Estadisticas, pestana Google, leida 2026-10-12), palabras_clave_top de septiembre 2026",
+      "Entre Tacos (Av. del Mar)": ["entre tacos", "entre tacos - avenida del mar", "tacos", "tacos la serena", "comida mexicana la serena", "comida mexicana", "birria", "entretacos"],
+      "Entre Tacos Penuelas": ["entre tacos", "entretacos", "comida mexicana la serena", "tacos la serena", "comida mexicana", "tacos al pastor", "tacos de birria", "tacos mexicanos"],
+      "ignorar": "genericas (restaurants, bar, comida) y 'chilaquiles'/'limonada' (no estan en el menu del prompt)"
+    },
+    "uso": "Maximo 1-2 por post, integradas natural; en Penuelas hablar de Coquimbo (las tarjetas 2026-10-17 usan 'comida mexicana coquimbo', 'tacos coquimbo'), en Av. del Mar de La Serena."
+  },
+  "tendencia_google": {
+    "fuente": "google-resultados.json, ultimos meses",
+    "Av. del Mar vistas/interacciones": "JUL 4310/678 -> AGO 6270/729 -> SEP 5741/638",
+    "Penuelas vistas/interacciones": "JUL 316/61 -> AGO 2747/150 -> SEP 3546/104",
+    "nota": "Reservas en Google = 0 (sep 2026)."
+  },
+  "confirma_vero": [
+    "[DATO] horarios de atencion de las 2 sedes (no estan en prompt, Generalidades ni memoria); tambien martes 20-oct y sabado 31-oct. El POST 2 de ambas tarjetas 2026-10-17 lo lleva como [DATO]",
+    "[DATO] Maps: Trello usa DmbToYnfeDiEipVEA (Av. del Mar) y tUdDRg1EsCDxy2SY7 (Penuelas); DATA CLIENTES trae dZpESevmvUCwx31Y7 y YoioHPd2jGWxkHu48. Confirmar cual es el oficial de cada perfil",
+    "[DATO] 'cerca del Casino Enjoy Coquimbo' para Penuelas: sin confirmar (misma direccion que The Cool Hostel, segun tarjeta Halloween LwmleiBn); no usar hasta que Vero confirme",
+    "[DATO] vigencia de la carta por sede: confirmar en el perfil de Google que tacos de camaron, birria, al pastor, opciones veganas, margaritas y cervezas siguen vigentes en cada sede",
+    "[DATO] WhatsApp de Penuelas: el prompt lista solo +56 9 3928 8409; DATA CLIENTES y tarjeta VwxABMZp usan 56988130160. Confirmar y si los posts pueden llevar numero",
+    "[DATO] cupo mensual de posts Google (planes.json: 4; regla general Full: 8)",
+    "[DATO] formato definitivo (prompt: 100-250 palabras x3; tarjetas: ~500 caracteres)",
+    "[DATO] carta_web: misma URL que Bendito en enlaces-perfiles-cartas.json y DATA CLIENTES; confirmar si Entre Tacos tiene carta propia",
+    "[DATO] 'Entre Tacos y Brasas' aparece como busqueda en el perfil de Penuelas (google-resultados.json): confirmar si es otro nombre/concepto antes de usarlo",
+    "[DATO] Generalidades de la marca y lista Publicados (Bash / Bendito y Entre Tacos) no fueron leidas en esta corrida: faltan correcciones de Vero por revisar"
+  ]
+}

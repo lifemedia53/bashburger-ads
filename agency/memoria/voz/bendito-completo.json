@@ -1,0 +1,118 @@
+{
+  "fuente": "Trello > tarjeta 'Prompt Publicaciones Google' de Bendito Completo (Hxray5b4, id 6a53d685d34173a7ee5d9377, ultima edicion 2026-07-14, leida 2026-10-17) + tarjetas de posts creadas 2026-10-17 (cNRZ3v4j Av. del Mar, fgt3sMej Penuelas) + tarjetas Halloween 2026 (SO5uL83J, c9astJgk; ultima edicion 2026-10-12) + tarjeta EVENTOS OCTUBRE 2026 (2jQfgTvw) + agency/memoria/{clientes-google,planes,enlaces-perfiles-cartas,data-clientes,reservas-desk,google-resultados}.json.",
+  "actualizado": "2026-10-17",
+  "negocio": {
+    "nombre_oficial": "Bendito Completo (copiado de 'Nombre' del prompt de Trello)",
+    "concepto": "Restaurante de completos y comida chilena urbana: completos, hot dogs de autor, burgers, sandwiches, papas fritas, salchipapas, chorrillanas, postres, milkshakes, desayunos y once (prompt Trello 14-jul-2026). Posicionamiento pedido: 'alternativa destacada de completos y comida chilena urbana en La Serena'.",
+    "sedes": {
+      "Av. del Mar": {
+        "direccion": "Avenida del Mar 900, La Serena (prompt Trello 14-jul-2026; tarjeta cNRZ3v4j)",
+        "referencia": "cerca del Faro Monumental (prompt Trello, enfoque 3 Ubicacion y SEO local)",
+        "perfil_google": "https://share.google/3ATTUaw4hlOuXV568 (enlaces-perfiles-cartas.json / DATA CLIENTES)",
+        "maps_tarjeta_trello": "https://maps.app.goo.gl/W72RBtPpFjMBd4h57 (tarjetas Halloween y tarjeta 2026-10-17)",
+        "maps_data_clientes": "https://maps.app.goo.gl/61RzPeNF7LQkLokG8",
+        "resenas": "https://g.page/r/CWsYabndEomLEBM/review (DATA CLIENTES)",
+        "reserva_whatsapp": "https://wa.me/56939288409 (reservas-desk.json, col. O DATA CLIENTES)"
+      },
+      "Penuelas": {
+        "direccion": "Av. Los Pescadores 5050, Penuelas, Coquimbo (prompt Trello 14-jul-2026; tarjeta fgt3sMej)",
+        "perfil_google": "https://share.google/6sPJy5HbuyYT6dJFT",
+        "maps_tarjeta_trello": "https://maps.app.goo.gl/jZWdM2tbVPorkeeJ9",
+        "maps_data_clientes": "https://maps.app.goo.gl/yLrG9N8hTbJdTbvb6",
+        "resenas": "https://g.page/r/CXP996cghVkSEBM/review (DATA CLIENTES)",
+        "reserva_whatsapp": "https://wa.me/56988130160 (reservas-desk.json, DATA CLIENTES)"
+      }
+    },
+    "regla_sedes": "Si el pedido indica una sede, TODO el post habla solo de esa sede; nunca mezclar direcciones en un mismo post (prompt Trello). Los 2 perfiles se impulsan (clientes-google.json, Laura 2026-10-12).",
+    "cupo": "Plan ESTANDAR: 4 posts Google (planes.json). Regla general de agencia: plan Full = 8/mes. [DATO: confirmar si el cupo es 4 o 8 por sede]",
+    "whatsapp_en_prompt": "+56 9 3928 8409 (el prompt lo lista como unico WhatsApp, tambien para Penuelas). DATA CLIENTES da 56939288409 para Av. del Mar y 56988130160 para Penuelas.",
+    "delivery": {
+      "uber_eats_av_del_mar": "https://www.ubereats.com/store-browse-uuid/9f744a7b-7f3a-5b48-8842-77a76ce618a3?diningMode=DELIVERY",
+      "uber_eats_penuelas": "https://www.ubereats.com/store-browse-uuid/a80d01f2-a91d-5b3c-a0e8-a213a61eca3f?diningMode=DELIVERY",
+      "pedidosya_av_del_mar": "https://www.pedidosya.cl/restaurantes/la-serena/bendito-completo-a1db4a05-380f-4151-b230-456c29849945-menu",
+      "regla": "Mencionar delivery/Uber Eats/PedidosYa solo si es el tema, hay promo o dato concreto confirmado (prompt Trello). No en todos los posts."
+    },
+    "carta_web": "https://spleatweb.app/restaurants/VYFbR2EG3Jd1Z98gsoZ2Dlsakix1/menu (enlaces-perfiles-cartas.json; es la misma URL que Entre Tacos: confirmar)",
+    "redes": {
+      "instagram": "https://www.instagram.com/benditocompleto/",
+      "facebook": "https://web.facebook.com/benditocompleto"
+    }
+  },
+  "platos_permitidos": {
+    "fuente": "Seccion 'MENU DE BENDITO COMPLETO' del prompt Trello (14-jul-2026). Menu comun a ambas sedes en el prompt; vigencia por local sin revisar en el perfil de Google (revision de menus pendiente, proxima en 6 meses).",
+    "completos": ["Completo Italiano", "Completo Dinamico", "Completo Completo", "Completo Fundido", "Completo Chorreado", "Completo A la Chilena", "Completo Vegano"],
+    "hot_dogs": ["Hot Dog Especial", "Hot dogs de autor", "Hot Dog Hot Nashville", "Texas Dogo", "El Yankee Hot Dog"],
+    "papas": ["Papas fritas", "Papas con salsa cheddar", "Papas Chilli", "Salchipapas"],
+    "entradas": ["Sopaipillas", "Alitas de pollo crocantes", "Crudo de res"],
+    "burgers": ["Burger La Chilena Brava", "Burger La Chilena Brava Doble", "Burger Crispy Bendito"],
+    "sandwiches": ["Barros Luco", "Chacarero", "Italiano", "Completo", "A lo Pobre", "Lengua de vacuno a la chilena", "Lengua de vacuno italiana", "Sandwich de pescado"],
+    "chorrillanas": ["Chorrillana Bendito", "Chorrillana Vegetariana"],
+    "postres": ["Pie de limon", "Brownie con helado", "Cheesecake de la casa", "Flan de la casa", "Tres Lechotes", "Copa de helado", "Panqueque Celestino"],
+    "milkshakes": "Mencionar solo si el tema los menciona (el prompt no lista sabores)",
+    "desayuno_y_once": ["Ave Mayo", "Ave Pimenton", "Tostadas con palta", "Omelette", "Paila de huevo"],
+    "ojo_churrasco": "El prompt NO contiene ningun plato con 'churrasco' (los sandwiches son Barros Luco, Chacarero, A lo Pobre, etc.). No afirmar que lleven churrasco ni inventar 'sandwich de churrasco'. Las tarjetas del 2026-10-17 ya lo cuidan (Dia del Churrasco sin afirmarlo)."
+  },
+  "estrategia_google_posts": {
+    "eje": "Por tema/evento: cada tema se desarrolla con angulos distintos (producto, experiencia, ubicacion y SEO local, ocasion, descubrimiento). Evento del mes: 20-oct Dia del Churrasco y Dia del Chef (tarjeta EVENTOS OCTUBRE 2026); 31-oct Halloween.",
+    "enfoques_para_variar": ["Producto (sabor, contundencia)", "Experiencia (amigos, pareja, familia, once, postre)", "Ubicacion y SEO local (Av. del Mar 900 / Faro Monumental / Penuelas)", "Ocasion (fin de semana, verano, invierno, desayuno, once)", "Descubrimiento (probar un completo distinto, hot dog de autor, opcion vegana)"],
+    "temporadas_del_prompt": {
+      "verano": "Av. del Mar, vacaciones, turistas, informal, panorama cerca del mar",
+      "invierno": "comida contundente, completos, chorrillanas, burgers, papas, desayunos, once",
+      "fin_de_semana": "panorama, amigos, completos y burgers, compartir, postres y milkshakes"
+    },
+    "evitar_patrones": ["no empezar siempre con pregunta", "no empezar siempre nombrando Bendito Completo", "no terminar siempre con la direccion", "no repetir keywords/estructura/largo", "no abusar de 've a disfrutar' ni 'te esperamos'", "no repetir titulos o cierres anteriores"],
+    "mezcla": "Dejar cupo para posts de venta pura (platos, desayuno/once, delivery, reservas por WhatsApp) ademas de fechas (regla de Laura 2026-10-12). Reservas: ambas sedes tienen WhatsApp en columna RESERVA de DATA CLIENTES."
+  },
+  "formato_posts": {
+    "formato_tarjeta_trello_actual": "Tarjetas del 2026-10-17: checklist 'Posts programados', item '📌 POST N – TITULO', 'Fecha publicacion interna', Titulo, texto breve (~500 caracteres, 2-3 parrafos), cierre, 'Link:' Maps y 'Boton: Como llegar'. Ver agency/memoria/trello.json > formato_tarjeta.",
+    "formato_segun_prompt_trello": "El prompt pide 3 publicaciones por tema, Titulo <=60 caracteres (no todo en mayusculas), Texto 100-250 palabras (variar largo), CTA breve distinto en cada una; salida exacta 'PUBLICACION N / Titulo / Texto / CTA' sin comentarios.",
+    "conflicto": "El prompt (100-250 palabras) y el formato Laura de tarjeta (~500 caracteres) difieren. Las tarjetas del 2026-10-17 usan el formato corto. [DATO] Vero/Laura confirman cual manda para Bendito."
+  },
+  "tono_posts": {
+    "estilo": "chileno neutro, cercano, buena onda, apetitoso, natural, relajado, contundente, identidad chilena, creativo; profesional sin ser rigido (prompt Trello)",
+    "no_debe_sonar": ["robotico", "corporativo", "exageradamente comercial", "como aviso tradicional", "repetitivo", "generico", "forzado", "escrito por IA"],
+    "emojis": "Permitidos, maximo 2 por post y solo si aportan naturalidad. Sugeridos por el prompt: 🌭 🍔 🍟 🥤 🌊 ✨ (las tarjetas 2026-10-17 usaron 🥪). No en todas las frases ni como lista.",
+    "ortografia": "Excelente ortografia (prompt)"
+  },
+  "prohibido": [
+    "inventar ingredientes, tamanos, acompanamientos, promociones, precios o caracteristicas",
+    "decir que algo es el mas vendido o 'el mejor de La Serena' salvo que se indique",
+    "comparar con otros restaurantes",
+    "inventar terrazas, vistas, musica en vivo o actividades no confirmadas",
+    "inventar artistas, reservas, entradas o condiciones en eventos",
+    "hashtags (salvo que se pidan)",
+    "mas de 2 expresiones SEO relevantes por post; keyword stuffing",
+    "mencionar delivery en todos los posts",
+    "mezclar las dos direcciones en un mismo post",
+    "afirmar que un sandwich lleva churrasco (no esta en el prompt)",
+    "ofertas/descuentos en posts de reconocimiento (tarjetas 2026-10-17: solo invitacion)"
+  ],
+  "keywords": {
+    "del_prompt_trello": ["Bendito Completo", "Bendito Completo La Serena", "completos La Serena", "completos en La Serena", "completo La Serena", "mejores completos de La Serena (cuidar: prompt prohibe afirmar 'el mejor')", "completos con mayo casera La Serena", "completos Avenida del Mar", "hot dogs La Serena", "burgers La Serena", "hamburguesas La Serena", "sandwiches La Serena", "salchipapas", "chorrillanas", "desayuno La Serena", "once La Serena", "restaurantes Avenida del Mar", "comida en Avenida del Mar", "comida rapida La Serena", "para almorzar", "para cenar", "Avenida del Mar 900", "Faro Monumental", "donde comer cerca del Faro de La Serena", "panorama en La Serena", "delivery La Serena", "Uber Eats La Serena", "PedidosYa La Serena", "completo vegano"],
+    "reales_google_resultados_sep_2026": {
+      "fuente": "agency/memoria/google-resultados.json (planilla Bombo Burger - Estadisticas, pestana Google, leida 2026-10-12), palabras_clave_top de septiembre 2026",
+      "Bendito Completo (Av. del Mar)": ["completos la serena", "completos en la serena", "bendito completo", "bendito completo - avenida del mar", "almuerzo de casa en la serena", "chileno"],
+      "Bendito Completo Penuelas": ["completos coquimbo", "almuerzos coquimbo", "bendito completo", "bendito completo penuelas - avenida los pescadores"],
+      "ignorar": "genericas (restaurants, bar, comida) y 'tacos'/'empanadas' en el top de Penuelas (ruido del perfil; empanadas no esta en el prompt)"
+    },
+    "uso": "Maximo 1-2 por post, integradas natural; Penuelas hablar de Coquimbo, Av. del Mar de La Serena."
+  },
+  "tendencia_google": {
+    "fuente": "google-resultados.json, ultimos meses",
+    "Av. del Mar vistas/interacciones": "JUL 747/115 -> AGO 2027/240 -> SEP 2371/223",
+    "Penuelas vistas/interacciones": "JUL 195/39 -> AGO 669/60 -> SEP 1197/63",
+    "nota": "Reservas en Google = 0 en ambos perfiles (sep 2026)."
+  },
+  "confirma_vero": [
+    "[DATO] horarios de atencion de las 2 sedes (no estan en prompt, Generalidades ni memoria); tambien horario martes 20-oct y sabado 31-oct",
+    "[DATO] Maps: Trello usa W72RBtPpFjMBd4h57 (Av. del Mar) y jZWdM2tbVPorkeeJ9 (Penuelas); DATA CLIENTES trae 61RzPeNF7LQkLokG8 y yLrG9N8hTbJdTbvb6. Confirmar cual es el oficial de cada perfil",
+    "[DATO] 'cerca del Casino Enjoy Coquimbo' para Penuelas: sin confirmar (misma direccion que The Cool Hostel, segun tarjeta Halloween c9astJgk); no usar hasta que Vero confirme",
+    "[DATO] vigencia de la carta por sede: el prompt es comun a ambas; falta revisar el perfil de Google de cada sede (Barros Luco, Chacarero, A lo Pobre, Burger Crispy Bendito, Papas Chilli, hot dogs). Los posts de Penuelas mencionan 'opcion vegana' (Completo Vegano / Chorrillana Vegetariana): confirmar que aplica a Penuelas",
+    "Sin plato con 'churrasco' en el prompt: confirmar si existe algun sandwich de churrasco antes de usar el tema Dia del Churrasco con producto",
+    "[DATO] WhatsApp de Penuelas: el prompt lista solo +56 9 3928 8409; DATA CLIENTES da 56988130160 para Penuelas",
+    "[DATO] cupo mensual de posts Google (planes.json: 4; regla general Full: 8) y si los posts llevan telefono/WhatsApp",
+    "[DATO] formato definitivo (prompt: 100-250 palabras x3; tarjetas: ~500 caracteres)",
+    "[DATO] carta_web: misma URL que Entre Tacos en enlaces-perfiles-cartas.json y DATA CLIENTES; confirmar si Bendito tiene carta propia",
+    "[DATO] Generalidades de la marca y lista Publicados (Bash / Bendito y Entre Tacos) no fueron leidas en esta corrida: faltan correcciones de Vero por revisar"
+  ]
+}
