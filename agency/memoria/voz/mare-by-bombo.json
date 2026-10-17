@@ -1,0 +1,79 @@
+{
+  "fuente": "Trello Generalidades Mare > tarjeta 'Prompt publicaciones Google' (CZqTOCMX, ultima edicion 2026-07-14, releida 2026-10-17) + tarjeta de posts https://trello.com/c/w5bG1qSx (creada 2026-10-17) + clientes-google.json + planes.json + enlaces-perfiles-cartas.json + data-clientes.json (fila 12) + google-resultados.json (leido de Drive 2026-10-12, hasta SEPTIEMBRE 2026) + reservas-desk.json",
+  "actualizado": "2026-10-17",
+  "nombre_oficial": "Mare by Bombo (prompt CZqTOCMX). clientes-google.json y planes.json lo escriben 'Mare By Bombo' (mayuscula en By): usar la grafia del prompt en los textos.",
+  "negocio": {
+    "concepto": "Restaurante de cocina de mar con enfoque gourmet frente al mar en La Serena: pescados, mariscos, ceviches, inspiracion mediterranea con toques chilenos, coctelería de autor, ambiente elegante, acuarios, servicio cuidado. Se percibe como cocina de mar premium, panorama frente al mar, ideal para turistas, parejas, familias y ocasiones especiales (fuente: prompt CZqTOCMX).",
+    "direccion": "Av. Las Higueras 0670, La Serena. Escribir siempre asi. NO decir Coquimbo, NO usar 'Avenida del Mar' como direccion oficial (prompt CZqTOCMX). El prompt dice 'La Serena, Coquimbo' en una linea pero ordena no confundir con Coquimbo.",
+    "horario": "Lunes a domingo 12:00 a 23:00 (prompt CZqTOCMX, ed. 2026-07-14). Horarios de feriado/fechas especiales: [DATO].",
+    "servicios": ["Reservas online (CoverManager)", "Delivery por Uber Eats", "Estacionamiento privado gratuito", "Pet friendly", "Coctelería de autor (pisco y frutas de la zona)"],
+    "reconocimiento": "Premio Travellers' Choice de TripAdvisor (prompt CZqTOCMX). Año del premio: [DATO]; no mencionar año.",
+    "plan_y_foco": "Google Full (8 posts/mes), plan ESENCIAL; foco: el MAR como protagonista, pilar subexplotado (planes.json)",
+    "reserva": "Acepta reservas (reservas-desk.json fila 12, CoverManager)."
+  },
+  "platos_permitidos_confirmados_en_prompt": [
+    "Ceviche clasico", "Ceviche trilogia", "Ceviche", "Pulpo en laminas", "Saltado Tierra y Mare", "Pulpo a la Parrilla", "Ostiones", "Bivalvos",
+    "Pescado Frito a lo Macho", "Atun sellado en costra de quinoa y sesamo", "Salmon en salsa de maracuya",
+    "Camarones salteados en mantequilla, ajo y perejil", "Betarraga marinada",
+    "Ensalada con hojas verdes, tomate cherry, papines, palmitos y pulpo", "Calugas fritas de la pesca del dia"
+  ],
+  "reglas_platos": "No inventar ingredientes, platos, nombres de cocteles, promociones, descuentos ni precios. No afirmar disponibilidad diaria de un plato salvo que se pida. Menu vigente en perfil de Google: revision pendiente (regla Laura, cada 6 meses).",
+  "coctelería": "Pisco sour, cocteles de autor, frutas de la zona, barra, atardecer, after office, happy hour (como enfoque). No inventar nombres de tragos (prompt).",
+  "tono_posts": {
+    "estilo": "elegante, cercano, natural, aspiracional sin ser pretencioso, marino, moderno, calido, turistico. Español chileno neutro, ortografia impecable. No caption de influencer, no publicidad agresiva, no frases vacias. Objetivo: que la persona quiera ir, no vender fuerte.",
+    "emojis": "Permitidos 2 a 5 por post (prompt); sugeridos: 🌊 🍸 🍽️ ✨ 🐟 🦪 ☀️ 🍷 🐾. Sin emojis infantiles ni saturar. Nota: la tarjeta de hoy (w5bG1qSx) usa 2-3.",
+    "prohibido": [
+      "inventar informacion, promociones, descuentos o platos",
+      "direccion distinta a Av. Las Higueras 0670",
+      "confundir con Coquimbo",
+      "decir 'Avenida del Mar' como direccion",
+      "claims tipo 'el mejor'",
+      "hashtags excesivos",
+      "sonar robotico o plantilla; repetir frases entre posts",
+      "mezclar delivery con la experiencia frente al mar (diferenciar 'en casa' vs 'en el local')",
+      "palabra 'CTA' en el texto publicado"
+    ],
+    "variar": "inicio, cierre, ritmo, longitud, keywords, emocion y enfoque. No repetir seguido: 'frente al mar', 'te esperamos', 'experiencia gastronomica', 'vista al mar', 'cocina de mar', 'Mare by Bombo'.",
+    "cierres_sugeridos_por_prompt": ["Reserva tu mesa y vive la experiencia Mare.", "Perfecto para una cena distinta en La Serena.", "Una buena excusa para salir.", "Te esperamos en Av. Las Higueras 0670.", "Reserva y asegura tu mesa.", "Haz tu reserva y disfruta sin apuro.", "Consulta disponibilidad y reserva.", "Una mesa frente al mar siempre es buena idea."]
+  },
+  "formato_posts": {
+    "regla": "Los posts se entregan en Trello (agency/memoria/trello.json > formato_tarjeta): titulo '📌 POST N – TITULO', 'Fecha publicacion interna', cuerpo, cierre con direccion y 'Boton: ...'. Largo real ~500 caracteres (300-680). Eventos: titulo del evento en mayusculas + fecha. Estructura: gancho, ambiente, propuesta gastronomica, SEO local natural, invitacion humana.",
+    "ojo_prompt_vs_trello": "El prompt de Mare permite enlaces/WhatsApp en su ficha interna, pero en el texto publicado de la tarjeta de hoy se uso solo la direccion (sin telefono ni enlaces). Mantener asi salvo que Vero indique otra cosa.",
+    "botones": {"Reservar": "cenas, fechas especiales, fines de semana, turismo, parejas, celebraciones", "Como llegar": "ubicacion, turismo, vista, Av. Las Higueras 0670", "Llamar": "disponibilidad inmediata o reservas del dia", "Menu": "platos, ceviches, pulpo, mariscos, almuerzos o delivery"}
+  },
+  "instrucciones_especiales_prompt": {
+    "turismo": "reforzar La Serena, frente al mar, donde comer, cocina de mar, mariscos, vacaciones, reservas, estacionamiento privado; sin sonar demasiado turistico",
+    "pareja": "ambiente elegante, coctelería, cena tranquila, atardecer, reserva; sin exagerar romanticismo",
+    "pet_friendly": "natural y calido, sin convertir el post en tema mascotas",
+    "delivery": "mencionar Uber Eats"
+  },
+  "keywords_del_prompt": ["Mare by Bombo", "restaurantes en La Serena", "restaurant La Serena", "restaurante frente al mar", "restaurante de mariscos en La Serena", "mariscos La Serena", "ceviche La Serena", "cocina de mar", "donde comer en La Serena", "donde cenar en La Serena", "lugares para comer en La Serena", "mejores restaurantes en La Serena", "restaurant con vista al mar", "cena romantica La Serena", "coctelería La Serena", "bares en La Serena", "pet friendly La Serena", "almuerzo en La Serena", "cena en La Serena", "turismo La Serena", "restaurantes Avenida del Mar (solo como keyword, no como direccion)"],
+  "keywords_reales_google": {
+    "fuente": "google-resultados.json > perfiles > 'Mare By Bombo' (planilla Bombo Burger - Estadisticas, pestaña Google, leida 2026-10-12; 16 meses de datos; sin volumenes, solo lista)",
+    "usar": ["restaurantes en la serena", "restaurante en la serena", "donde comer en la serena", "mejores restaurantes en la serena", "lugares para comer en la serena", "mariscos", "ceviche", "para cenar"],
+    "marca": ["mare by bombo", "mare by bombo - avenida las higueras"],
+    "ignorar": ["restaurants", "restaurant", "bombo", "bomboia la serena", "canela", "bombo burger", "tenedor libre (no es oferta de Mare)"],
+    "tendencia": "Vistas 5.067 (jul) -> 6.107 (ago) -> 6.297 (sep); interacciones 237 -> 370 -> 433. Sube mes a mes."
+  },
+  "links": {
+    "fuente": "data-clientes.json fila 12 y enlaces-perfiles-cartas.json (Drive DATA CLIENTES, leido antes de 2026-10-17). Los links NO van en el texto del post (solo en la descripcion de la tarjeta).",
+    "perfil_google": "https://share.google/w1Fpd3y2Gjr8fH6vY",
+    "google_maps": "https://maps.app.goo.gl/HhqEU5DXWTqLwwcG9 (prompt CZqTOCMX y tarjeta w5bG1qSx). DATA CLIENTES trae otro: https://maps.app.goo.gl/Z8ciGFNShdGdNNTNA (ver confirma_vero)",
+    "resenas_google": "https://g.page/r/CbaqQwRarMUZEAE/review",
+    "whatsapp": "https://wa.me/56955154464",
+    "reserva": "https://www.covermanager.com/reservation/module_restaurant/mare-by-bombo",
+    "uber_eats": "https://www.ubereats.com/cl/store/mare-by-bombo/CSljCSJBWB2FpO-05LMXuw",
+    "pedidos_ya": "https://www.pedidosya.cl/restaurantes/la-serena/mare-by-bombo-b775eef1-9e60-4f82-959f-d5dbb5ed9d30-menu (solo DATA CLIENTES; el prompt dice delivery = Uber Eats)",
+    "carta": "https://qrfy.com/p/Vz828kUwP0?utm_source=qrcode&utm_medium=pdf&utm_campaign=37339974 (DATA CLIENTES/enlaces-perfiles-cartas). La tarjeta de hoy menciona qrfy.io/p/Vz828kUwP0: mismo codigo, dominio distinto.",
+    "instagram": "https://www.instagram.com/marebybombo/",
+    "facebook": "https://web.facebook.com/marebybombolaserena"
+  },
+  "eventos_estrategia": "Posts por evento cercano/fecha (Dia del Chef 20-oct-2026, Halloween 31-oct segun tarjeta EVENTOS OCTUBRE 2026) mezclados con posts de venta pura (platos, coctelería, reservas, pet friendly, delivery Uber Eats). Fechas y cupo: no dejar que los eventos se coman los 8 posts.",
+  "confirma_vero": [
+    "[DATO] Link de carta vigente para el boton Menu: la tarjeta w5bG1qSx dejo 'Menu: [DATO]' (prompt no lo trae; DATA CLIENTES trae qrfy.com).",
+    "[DATO] Cual Google Maps es el correcto: prompt/tarjeta (HhqEU5DXWTqLwwcG9) vs DATA CLIENTES (Z8ciGFNShdGdNNTNA).",
+    "[DATO] Año del premio Travellers' Choice de TripAdvisor.",
+    "[DATO] Horario en feriados y fechas especiales.",
+    "[DATO] Platos vigentes hoy: revisar menu en el perfil de Google (lista del prompt de jul-2026)."
+  ]
+}

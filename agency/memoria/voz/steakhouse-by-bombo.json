@@ -1,0 +1,64 @@
+{
+  "fuente": "Trello Generalidades Steakhouse > tarjeta 'Prompt publicaciones Google' (sfe3UPxV, ultima edicion 2026-06-02, releida 2026-10-17) + tarjeta de posts https://trello.com/c/ScURqofF (creada 2026-10-17) + clientes-google.json + planes.json + enlaces-perfiles-cartas.json + data-clientes.json (fila 13) + google-resultados.json (perfil 'Steakhouse', leido de Drive 2026-10-12, hasta SEPTIEMBRE 2026) + reservas-desk.json + pendientes.md (tomahawk pendiente de Vero)",
+  "actualizado": "2026-10-17",
+  "nombre_oficial": "Steakhouse by Bombo (prompt sfe3UPxV y clientes-google.json). En google-resultados.json el perfil se llama solo 'Steakhouse'.",
+  "negocio": {
+    "concepto": "Restaurante de carnes en La Serena: cortes premium, carnes a la parrilla, experiencia steakhouse, vinos y carnes, almuerzos y cenas, ambiente para compartir, ocasiones especiales (prompt sfe3UPxV). Tono entretenido sin exagerar.",
+    "direccion": "Av. Las Higueras 0670, La Serena (prompt sfe3UPxV). Es la misma direccion del prompt de Mare by Bombo: ver confirma_vero.",
+    "horario": "[DATO] no esta en el prompt ni en Trello; la tarjeta ScURqofF lo dejo como [DATO] y a Vero para revisar la ficha de Google.",
+    "servicios": ["Delivery por Uber Eats (cuando corresponda)", "Reservas: el link de DATA CLIENTES es el modulo CoverManager de Mare (ver confirma_vero)"],
+    "plan_y_foco": "Google Full (8 posts/mes), plan ESENCIAL, 1 campaña Meta; sin foco del mes definido en planes.json",
+    "reserva": "reservas-desk.json fila 13 trae el link CoverManager de Mare. El post de hoy uso boton 'Pedir en linea' y no 'Reservar' por esa duda."
+  },
+  "productos_platos": {
+    "permitidos_por_prompt": ["cortes premium", "carnes a la parrilla", "vinos para acompañar"],
+    "regla": "No hay carta confirmada: NO nombrar platos concretos (ni cortes por nombre, ni baby ribs, chorizos, pollo asado, entrecot) hasta que Vero confirme carta. Las palabras de busqueda en Google no equivalen a platos vigentes.",
+    "prohibido_hasta_confirmar": "TOMAHAWK: no mencionarlo hasta que Vero lo confirme (pendientes.md 2026-10-17), aunque 'tomahawk carne' aparezca como busqueda en Google."
+  },
+  "tono_posts": {
+    "estilo": "cercano, elegante, gastronomico, con un toque entretenido; sin exagerar ni sonar corporativo (prompt sfe3UPxV). Español de Chile.",
+    "emojis": "Permitidos 2 a 5 por post (prompt): 🥩 🔥 🍷 ✨ 🍽️ 👨‍👧‍👦 📱. Nota: 📱 solo si el post habla de pedir en linea.",
+    "prohibido": [
+      "enlaces publicos en el texto (prompt)",
+      "telefono o WhatsApp en el texto (prompt)",
+      "inventar promociones, precios, descuentos o platos no confirmados (prompt)",
+      "nombrar tomahawk (hasta confirmacion de Vero)",
+      "nombrar platos o cortes especificos sin carta confirmada",
+      "repetir cierres y estructuras entre posts",
+      "palabra 'CTA' en el texto publicado"
+    ]
+  },
+  "formato_posts": {
+    "prompt": "Cada post: TITULO, Fecha publicacion interna, Texto, cierre final (CTA). Variar siempre cierres y estructuras.",
+    "trello": "Se entrega como tarjeta con checklist 'Posts programados' (agency/memoria/trello.json > formato_tarjeta): '📌 POST N – TITULO', fecha interna, cuerpo, cierre con direccion, 'Boton: ...'. Largo real ~500 caracteres (300-680).",
+    "ejemplo_de_hoy": "Post 1 Dia del Chef (20-oct) boton Como llegar; Post 2 'Un steakhouse en La Serena' (23-oct) boton Pedir en linea, con [DATO: dias y horario] visible."
+  },
+  "keywords_del_prompt": ["Steakhouse by Bombo", "steakhouse en La Serena", "restaurante de carnes en La Serena", "parrilla en La Serena", "carnes premium La Serena", "cena en La Serena", "almuerzo en La Serena", "restaurantes recomendados en La Serena", "Av. Las Higueras 0670, La Serena"],
+  "keywords_reales_google": {
+    "fuente": "google-resultados.json > perfiles > 'Steakhouse' (planilla Bombo Burger - Estadisticas, pestaña Google, leida 2026-10-12; solo 5 meses de datos; lista sin volumenes)",
+    "usar": ["steakhouse", "restaurante de carnes en la serena", "restaurante carnes la serena", "steakhouse by bombo", "steak", "parrilla/barbacoa (barbacoa aparece 2 meses)"],
+    "ojo_busquedas_de_platos": "Aparecen tomahawk carne, baby ribs, chorizos, entrecot, pollo asado, empanadas, tacos: son busquedas de usuarios, NO platos confirmados. No usarlas como platos hasta tener la carta.",
+    "ignorar": ["restaurants", "restaurant", "bombo", "bombos", "bomboia la serena", "bombo burger", "bombo buffet"],
+    "tendencia": "Vistas 443 (jul) -> 1.171 (ago) -> 1.324 (sep); interacciones 65 -> 106 -> 75."
+  },
+  "links": {
+    "fuente": "data-clientes.json fila 13 y enlaces-perfiles-cartas.json. Los links NO van en el texto del post (prompt); solo en la descripcion de la tarjeta.",
+    "perfil_google": "https://share.google/waMee4OK8Tw9m2uok",
+    "google_maps": "https://maps.app.goo.gl/CqxTGfur9hin92JM8 (DATA CLIENTES). La tarjeta ScURqofF uso otro: https://maps.app.goo.gl/uiuQ5v3yDUYbrjmBA (ver confirma_vero)",
+    "resenas_google": "https://g.page/r/CUoJgkIY1e3GEAE/review",
+    "whatsapp": "https://wa.me/56955154464 (solo para descripcion interna; NO en el post)",
+    "uber_eats": "https://www.ubereats.com/cl/store/steakhouse-by-bombo/2L8dDGFkWkiVo9v8XXQP2w?ps=1",
+    "carta": "https://spleatweb.app/restaurants/EHwwlzJNq2WaICTqAohQYOniAzX2/menu (DATA CLIENTES/enlaces-perfiles-cartas). La tarjeta de hoy puso https://qrfy.io/p/Vz828kUwP0, que es el QR de Mare (ver confirma_vero).",
+    "reserva": "https://www.covermanager.com/reservation/module_restaurant/mare-by-bombo (DATA CLIENTES; es el modulo de Mare)",
+    "instagram": "https://www.instagram.com/steakhousebybombo/",
+    "facebook": "https://web.facebook.com/steakhousebybombo"
+  },
+  "confirma_vero": [
+    "[DATO] Dias y horario de atencion (no esta en prompt ni Trello).",
+    "[DATO] Carta vigente y cortes/platos permitidos; tomahawk confirmado o no (prohibido hasta entonces).",
+    "[DATO] Direccion: el prompt sfe3UPxV da la misma que Mare by Bombo (Av. Las Higueras 0670); confirmar que es correcta para Steakhouse.",
+    "[DATO] Que Google Maps es el correcto: DATA CLIENTES (CqxTGfur9hin92JM8) vs tarjeta ScURqofF (uiuQ5v3yDUYbrjmBA).",
+    "[DATO] Link de carta correcto: spleatweb (DATA CLIENTES) vs qrfy.io/p/Vz828kUwP0 (usado en la tarjeta, es el QR de Mare).",
+    "[DATO] Reserva propia: el link CoverManager es el de Mare; confirmar si Steakhouse acepta reservas y por donde."
+  ]
+}
