@@ -26,3 +26,4 @@ fecha,cliente,agente,modelo,tokens,herramientas,costo_est_usd,veredicto
 2026-10-16,Bombo,local-seo-lead (correccion prompt+Halloween Bombo),Sonnet 5.5,123978,s/d,0.30,ajustar (retrabajo)
 2026-10-16,Varios,local-seo-lead (Lullaby/Lotus/Pressures),Sonnet 5.5,188138,s/d,0.45,mantener
 2026-10-16,Varios,local-seo-lead (ajustes Bombo/Lullaby/Pressures),Sonnet 5.5,146787,s/d,0.35,ajustar (retrabajo)
+2026-10-17,Varios,Jefe (medicion Bombo/Hostel, aviso tokens, diseno flujo IG),Sonnet 5.5,s/d,s/d,2.17,ajustar (sesion larga: el Sheet completo se leyo 1 vez y cada turno releyo todo el historial)
