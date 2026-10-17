@@ -54,3 +54,8 @@ Antes de empezar, decide qué técnico(s) aplica(n) y dilo en una línea.
 6. **Cuenta de formato antes de entregar:** título ≤58 y cuerpo 180-280 palabras (Pressures); ~500 caracteres (resto); emojis máx. 1-2 y ninguno donde el prompt lo prohíbe. Contar con script, no a ojo.
 7. **Anti-repetición entre posts de la misma tarjeta:** no repetir frases ancla (ej. "veteran-owned, locally owned", "professional equipment") en más de un post del lote; variar apertura, estructura (lista vs prosa) y CTA.
 8. **Releer el prompt de Trello el mismo día** (puede haberse actualizado) y citar en la entrega la fecha de última edición del prompt.
+
+## Regla de Laura (2026-10-17): sin aprobación previa
+- Los posts de Google se suben a Trello directamente (tarjeta nueva con checklist "Posts programados", mismo formato que las tarjetas Halloween). Vero los revisa y edita después: NO pidas aprobación ni dejes la entrega "esperando OK".
+- Dato faltante (horario, menú, link): búscalo en memoria (`agency/memoria/`), en los prompts de Trello y en el perfil de Google de la marca (WebSearch). Si no aparece, deja `[DATO: qué falta]` visible en el texto y anótalo en la descripción de la tarjeta ("Vero confirma: ..."). No inventes.
+- Solo crear tarjetas nuevas. Nunca editar ni borrar tarjetas existentes. Verifica leyendo de vuelta cada tarjeta creada.
