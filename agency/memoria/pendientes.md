@@ -19,7 +19,9 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Decisiones de Laura pendientes: dónde programan hoy (herramienta), qué estado significa aprobación del cliente, cliente de prueba (Bash Burger o Santerra), si agregan las columnas nuevas.
 
 ## Hecho el 2026-10-17
-- Bombo medido (Meta, 11 al 17-oct): $160.421 gastados, 115 Iniciar pago, $1.395 por Iniciar pago vs base $2.165 (-36%; la base tenía solo 20 eventos). Registrado en la Bitácora (campo Resultado confirmado, estado En seguimiento).
+- Bombo remedido (Meta, solo lectura, 11 al 17-oct, 2da lectura del día): $168.301 gastados, 120 Iniciar pago, $1.403 por Iniciar pago vs base $2.165 (-35%; la base tenía solo 20 eventos). Anotado en la Bitácora (campo Resultado confirmado, estado En seguimiento).
+- Hostel remedido (Meta, 10 al 17-oct): $14.712 gastados, 14.685 impresiones, 1.541 clics, sin compras medidas. Nueva entrada en la Bitácora: https://app.notion.com/p/3fc673eb9c5681a995d2fca08cc0bfad
+- Rama pasada a main con el PR https://github.com/lifemedia53/bashburger-ads/pull/2 (orden de Laura: hacerlo siempre al cerrar).
 - Pressures Perfect: ya estaba corregido en Trello (prompt GHa83Jm7, 2 posts de Lighting y descripción de la tarjeta 6qK2FXfi). Fuente: lectura de Trello el 17-oct. No requiere cambios.
 - Aviso semanal de tokens activado: lunes 08:47 (hora de Chile), tarea programada "Aviso semanal de tokens (lunes)" (trig_0136M5Q31usuL71Twpjphuvi). Primer aviso: 2026-10-19. Lee `agency/logs/` y avisa por push.
 
