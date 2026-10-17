@@ -44,3 +44,9 @@ fecha,cliente,agente,modelo,tokens,herramientas,costo_est_usd,veredicto
 2026-10-17,Varios,general-purpose Haiku (inventario posts Trello),Haiku 5.5,170692,10,0.02,mantener
 2026-10-17,Varios,general-purpose Haiku (extraccion hoja DATA CLIENTES),Haiku 5.5,151291,12,0.02,ajustar (no pudo decodificar base64; lo resolvio el Jefe)
 2026-10-17,Varios,stack-auditor (primera corrida),Sonnet 5.5,36302,6,0.09,mantener
+2026-10-17,Lullaby+Pressures,local-seo-lead (lote 7 SEO Trello),Sonnet 5.5,140461,25,0.34,ajustar (termino sin informe; hubo que pedirlo)
+2026-10-17,Lotus+Lemarc,local-seo-lead (lote 8 SEO Trello),Sonnet 5.5,126889,22,0.30,ajustar (termino sin informe; hubo que pedirlo)
+2026-10-17,Hostel+Comercializadora,local-seo-lead (lote 9 SEO Trello),Sonnet 5.5,134653,24,0.32,ajustar (termino sin informe; hubo que pedirlo)
+2026-10-17,Mare+Steakhouse,local-seo-lead (voz lote A),Sonnet 5.5,82160,10,0.20,mantener
+2026-10-17,Tiki+Santerra,local-seo-lead (voz lote B),Sonnet 5.5,134009,21,0.32,ajustar (termino sin informe; hubo que pedirlo)
+2026-10-17,Bendito+Entre Tacos,local-seo-lead (voz lote C),Sonnet 5.5,132131,24,0.32,ajustar (termino sin informe; hubo que pedirlo)

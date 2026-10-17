@@ -41,3 +41,9 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - "Vero confirma": horarios (Steakhouse, Tiki House, Ulriksen, Bendito/Entre Tacos), Gin & Tonic de Bombo Burger, tenedor libre Tiki House, nombre oficial Tiki Beach, link PedidosYa Siciliana, mecánica "comes gratis si..." Tony's, $13.990 Bash (prompt Trello dice $12.990).
 - Hoja DATA CLIENTES: no se pudo leer completa en vivo (herramienta devuelve base64); copia de 12-oct en enlaces-perfiles-cartas.json. Cartas faltantes: Tony's Centro, Comercializadora, Hostel, Lemarc, Lotus, Lullaby.
 - Pendiente sugerido: crear voz/<marca>.json para Mare, Steakhouse, Tiki, Santerra, Bendito, Entre Tacos y actualizar el prompt de Bash ($13.990).
+
+## 17-oct (tarde) — SEO sin fecha y guías de voz listos
+- Trello (tarjetas nuevas, 2 posts c/u): Lullaby https://trello.com/c/fMTOJdWM, Pressures https://trello.com/c/ypnp5IYB, Lotus Estilistas https://trello.com/c/3aquw2l2, Lemarc https://trello.com/c/ONEpzu8G, Hostel https://trello.com/c/MgwN3dIw, Comercializadora https://trello.com/c/OaqlvmRm.
+- Guías de voz nuevas en agency/memoria/voz/: mare-by-bombo, steakhouse-by-bombo, bombo-tiki-house, bombo-tiki-beach, santerra-by-bombo, bendito-completo, entre-tacos. Faltan: lullaby (sin tarjeta de prompt en Trello), lemarc (prompt vacío), tonys-pasta, la-siciliana, pressures-perfect, lotus.
+- Preguntas abiertas a Laura: ¿8 posts por perfil o en total en Tiki House+Beach?; formato de posts (prompts piden 3 posts de 100-250 palabras, tarjetas de hoy ~500 caracteres); WhatsApp Peñuelas (prompt vs hoja); cupo mensual Bendito/Entre Tacos (planes.json 4 vs regla 8).
+- Fallo recurrente de agentes: terminan sin SubagentHandback; pedir informe con SendMessage.
