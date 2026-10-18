@@ -4,14 +4,15 @@ Fuentes: planes.json, clientes.json (sin guía de voz propia: no existe voz/tiki
 ## 1. Recomendación priorizada
 Diferenciar House vs Beach (foco del plan) con un Reel de "universo tiki" por local, y apoyar el video de Carlos que Laura marcó Urgent para los ads (Notion, 18-oct). House tiene 6.801 vistas en Google pero 0 reservas y solo 138 clics a web: el tráfico existe, falta una razón clara para elegir House vs Beach. Antes de crear piezas hay que cerrar el concepto y precios (no están en memoria).
 
-## 2. Competidores (evidencia limitada)
-| Competidor | Qué hace | Qué parece funcionar | Fuente |
+## 2. Competidores (2ª pasada, 18-oct; IG/ubicación sin verificar = [DATO])
+| Competidor | Ubicación (fuente) | Qué publica / anuncios | Qué parece funcionar |
 |---|---|---|---|
-| Bombo Tiki House (propio) | 2 anuncios activos: WhatsApp (desde 13-oct) e Instagram (desde 16-oct) | Doble canal de contacto (WhatsApp+IG); resultados [DATO] | Biblioteca ids 28739703432388203, 1641212567699003 |
-| Picanha Rodizio | Anuncio "Buffet de carnes" (desde 9-sep). Ojo: ex cliente de Laura, no sumar a su pauta | Referencia de formato buffet en la zona; ubicación [DATO] | Biblioteca id 1786833759118123; clientes.json ex_clientes |
-| Hanami (Enjoy Coquimbo) | Sushi en el casino; sin buffet indicado | Cercanía a Peñuelas, no competidor directo de tenedor libre (inferencia) | WebSearch (wanderlog) |
-| Otros tenedores libres La Serena (sushi/parrilla) | [DATO] | [DATO] | WebSearch no entregó locales confirmados |
-Hallazgo: en Biblioteca, "tenedor libre La Serena" no muestra otros tenedores libres de La Serena activos; solo Bash Burger y propios de Bombo (inferencia: poca pauta competitiva directa). Frecuencia/formatos de IG de competidores: [DATO].
+| UMI Buffet | La Serena, Balmaceda 2245 o 5310 (dos publicaciones TikTok discrepan: confirmar); adulto $20.500, niño 9-12 $13.900 (TikTok, a confirmar) | Contenido en TikTok sobre el local; IG y frecuencia [DATO]; sin anuncio en Biblioteca (18-oct) | Precio por edad (inferencia: atrae familias) |
+| Festival of Flavors | Av. Francisco de Aguirre 0407, La Serena; $11.990, 2 h (reseña web, a confirmar) | [DATO] | Precio bajo y tope claro |
+| Gastronómica Santa Cruz (buffet) | Bernardo O'Higgins 626, La Serena (listado web) | [DATO] | [DATO] |
+| Picanha Rodizio | [DATO] | Anuncio "Buffet de carnes" desde 9-sep (Biblioteca 1786833759118123); ex cliente de Laura | Lleva ~6 semanas activo (señal débil) |
+| Bash Burger (hermano, no competir) | Coquimbo | Único otro tenedor libre con anuncio | n/a |
+Límite: no pude abrir Instagram, Maps ni Uber Eats (bloqueo de host); ningún IG verificado. Resultados de los 2 anuncios propios: no hay cuenta Meta de Tiki en memoria, [DATO] (pedir ID).
 
 ## 3. Lo propio (datos reales, Google sep-2026)
 - Vistas 6.801 (ago 7.540, jul 6.650); interacciones 704; menú 232; direcciones 228; llamadas 68; chat 38; web 138; reservas 0.
@@ -28,5 +29,8 @@ Hallazgo: en Biblioteca, "tenedor libre La Serena" no muestra otros tenedores li
 7. Post Google Beach: reservas de grupos/4° medio (ya hubo gráfica 12-sep). Medir: chat/llamadas.
 8. Historia destacada "Cómo reservar por WhatsApp" (reservas Google = 0 pero WhatsApp es la vía). Medir: chats.
 
+## 4b. Datos de Laura 18-oct
+House: más familiar, tenedor libre con parque para niños. Beach $14.990 y $17.990 vigentes "por ahora". Sí hay sushi. Sin guía de voz. Ajuste: ideas 1, 5 y 6 usan "parque de niños" para House, sushi como gancho en 5, y precios solo con la nota "por ahora".
+
 ## 5. [DATO] para Laura
-Concepto real y diferencia House/Beach; carta y precios vigentes; si hay sushi (aparece en keywords); guía de voz; competidores locales de La Serena a vigilar; resultados de los 2 ads activos.
+ID de cuenta Meta de Tiki (para leer los 2 ads); IG/direcciones de UMI, Festival of Flavors y Santa Cruz; carta completa.
