@@ -1,17 +1,17 @@
-# Próxima sesión (preparado el 2026-10-18, sesión 4)
+# Próxima sesión (actualizado el 2026-10-18, sesión 5)
 
 Abrir la sesión en **Sonnet** (ver `modelos.json`).
 
 ## Prompt para pegar al abrir la sesión
 
 ```
-Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md, agency/memoria/proxima-sesion.md y agency/memoria/criterios-prioridad.json y parte desde ahí.
+Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md, agency/memoria/proxima-sesion.md, agency/memoria/criterios-prioridad.json y agency/memoria/prioridades-propuesta.json y parte desde ahí.
 
-Tema de hoy: ordenar las prioridades de All Tasks en Notion (varias horas). Usa el agente ops-coordinator (Sonnet) con los criterios del archivo. Incluye las tareas abiertas y las 'Published/Reprogram' (se repiten); excluye las Complete.
-1. El agente lee todas las tareas con su contenido y propone una tabla (prioridad actual, propuesta, motivo con fuente). No escribe nada.
-2. Te las muestro por lotes de ~10 y tú apruebas. Después yo cambio Priority en Notion y verifico (tengo permiso de Laura para Priority; nunca borrar).
-3. Cuando las prioridades estén listas, ponemos fechas por lotes.
-4. Las tareas con deadline de septiembre aún abiertas: marcarlas 'posible hecha sin cerrar' y preguntarme, no cerrarlas.
+Tema de hoy: seguir ordenando prioridades de All Tasks en Notion. Ya están aplicadas las tareas 1 a 60 y la 70 (ver estado_proceso en el json). Sin releer las tareas ya hechas.
+1. Mostrarme el lote 7 (#61 a #68) para que apruebe, y seguir con los lotes de ~10 desde #71 (la tabla ya está en el json; no hace falta volver a lanzar a ops-coordinator).
+2. Tú cambias Priority en Notion (tengo permiso de Laura para Priority; nunca borrar) y verificas por muestra o con vista guardada, no releyendo cada página entera.
+3. Al final: las 9 tareas [DATO] sin responder, las 46 de septiembre (marcar 'posible hecha sin cerrar' en bloque aparte, sin cerrar) y luego fechas por lotes.
+4. Después: mapa de procesos + oficina isométrica web (tarea en Notion).
 Cierra según CLAUDE.md. Decisiones pendientes al final, en lista numerada. Respuestas cortas.
 ```
 
