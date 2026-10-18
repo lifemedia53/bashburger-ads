@@ -31,7 +31,8 @@
         "agency/memoria/playbook-life-media.json",
         "agency/memoria/meta-ads-2026.json"
       ],
-      "nota_ultima_auditoria": "7/10 (2026-10-10)"
+      "nota_ultima_auditoria": "7/10 (2026-10-10)",
+      "kpi": "costo por resultado vs línea base del cliente (Meta), por mes"
     },
     "local-seo-lead": {
       "modelo": "sonnet",
@@ -43,7 +44,8 @@
       },
       "limite": "No publica en Google: solo borradores",
       "voz_clientes": "agency/memoria/voz/<cliente>.json (pendiente: Laura pega instrucciones de ChatGPT)",
-      "nota_ultima_auditoria": "8/10 (2026-10-10) tras reentrenamiento con voz + GEO/AEO; pendiente primera entrega real en Trello"
+      "nota_ultima_auditoria": "8/10 (2026-10-10) tras reentrenamiento con voz + GEO/AEO; pendiente primera entrega real en Trello",
+      "kpi": "antes/después de resultados de Google Maps/Perfil (vistas, direcciones, llamadas, clics) mes a mes, fuente google-resultados.json; secundario: posts entregados vs cupo de 8 y correcciones de Vero (orden de Laura 2026-10-18)"
     },
     "token-controller": {
       "modelo": "haiku",
@@ -55,21 +57,33 @@
     "ops-coordinator": {
       "modelo": "haiku",
       "por_que": "tareas mecánicas y repetitivas sobre Notion (consultar, contar, listar); 20x más barato que Sonnet",
-      "limite": "propone cierres, no los ejecuta sin aprobación"
+      "limite": "propone cierres, no los ejecuta sin aprobación",
+      "kpi": "tareas vencidas sin dueño y hechas sin cerrar, semana a semana (Notion All Tasks)"
     },
     "meta-ads-auditor": {
       "modelo": "sonnet",
       "reporta_a": "paid-media-lead",
       "por_que": "diagnosticar requiere criterio (el error del CTR en The Cool Hostel fue de criterio); un mal diagnóstico cuesta más que los tokens",
-      "limite": "solo lectura en Meta"
+      "limite": "solo lectura en Meta",
+      "kpi": "hallazgos P1/P2 confirmados por Laura vs total entregado"
     },
     "market-trends-analyst": {
       "modelo": "sonnet",
       "creado": "2026-10-18 (pedido de Laura)",
       "por_que": "analizar rubro, competidores y qué funciona exige criterio; lotes de máx. 2 clientes con muestra aprobada",
       "limite": "solo lectura; no diseña ni publica; informes en agency/investigacion/; sin fuente, [DATO]",
-      "nota_ultima_auditoria": "sin auditar (muestra del 2026-10-18)"
+      "nota_ultima_auditoria": "sin auditar (muestra del 2026-10-18)",
+      "kpi": "ideas de contenido que Laura aprueba y su resultado medido después"
+    },
+    "ad-uploader": {
+      "modelo": "sonnet",
+      "creado": "2026-10-18 (pedido de Laura)",
+      "por_que": "subir anuncios desde Sheet+Drive exige exactitud; siempre en pausa",
+      "limite": "nunca activa ni toca presupuesto; ensayo primero; ver .claude/agents/ad-uploader.md",
+      "kpi": "anuncios subidos en pausa sin errores vs filas completas del Sheet",
+      "nota_ultima_auditoria": "sin auditar"
     }
   },
-  "capacitacion": "agency/capacitacion/plan.json"
+  "capacitacion": "agency/capacitacion/plan.json",
+  "kpi_nota": "KPI propuestos por el Jefe y ajustado el de Local SEO por Laura el 2026-10-18; línea base aún sin medir."
 }

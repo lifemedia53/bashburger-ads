@@ -1218,7 +1218,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 71,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3eb673eb9c5681d5aa8efaf49a602c9e",
@@ -1235,7 +1235,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 72,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3f7673eb9c5681758b33dda9fa68bc2a",
@@ -1252,7 +1252,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 73,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3f3673eb9c5681f48691eda0c62247f7",
@@ -1269,7 +1269,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 74,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3eb673eb9c5681419f1ce61539a2de70",
@@ -1286,7 +1286,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 75,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3f7673eb9c56816f8121e68f06dca937",
@@ -1303,7 +1303,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 76,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3d9673eb9c56806a85c6f26321859d5a",
@@ -1320,7 +1320,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 77,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3eb673eb9c568198b098e1d36b7c48f8",
@@ -1337,7 +1337,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 78,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3eb673eb9c5681fca302f8efc8bc45cc",
@@ -1354,7 +1354,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 79,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3e9673eb9c5680c1b875d1cb5fffb83b",
@@ -1371,7 +1371,7 @@
   "flag_septiembre": true,
   "evidencia_septiembre": "Sin evidencia de entrega; bloque de contenido no legible vía API. Preguntar a Laura si ya se entregó.",
   "n": 80,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3f0673eb9c5680aab022d4a9483909ce",
@@ -1382,13 +1382,14 @@
   "deadline": "2026-10-08",
   "scheduled_for": "2026-10-08",
   "prioridad_actual": "Urgent",
-  "prioridad_propuesta": "Urgent",
+  "prioridad_propuesta": "Low",
   "motivo": "Pedido del cliente por email: subir la foto al MLS (Bayou). Instrucción concreta en el cuerpo y vencida desde el 08-oct; cliente esperando.",
   "fuente": "Origen Email; cuerpo de la tarea",
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 81,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado",
+  "nota": "Cerrada por Laura 2026-10-18 (Complete + Low)"
  },
  {
   "id": "3ee673eb9c5680cab83ee053480af4a0",
@@ -1405,7 +1406,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 82,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3fd673eb9c568186b0beef6a73f8be4a",
@@ -1416,13 +1417,14 @@
   "deadline": "2026-10-17",
   "scheduled_for": null,
   "prioridad_actual": "Urgent",
-  "prioridad_propuesta": "Urgent",
+  "prioridad_propuesta": "Low",
   "motivo": "Lullaby: tarjeta de la cuenta publicitaria vencida (aviso 17-oct); la campaña Bliss sigue activa pero en riesgo de cortarse. No activar AWFIT hasta confirmar el pago.",
   "fuente": "Notas de seguimiento (lectura Meta 17-oct); criterios-prioridad.json (plata parada)",
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 83,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado",
+  "nota": "Cerrada por Laura 2026-10-18 (Complete + Low)"
  },
  {
   "id": "3fc673eb9c5680b88823c90f0842f041",
@@ -1439,7 +1441,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 84,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3f7673eb9c56810d80aad7f661dab3cb",
@@ -1456,7 +1458,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 85,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3d0673eb9c56800d967ef4d9bf5b8821",
@@ -1473,7 +1475,7 @@
   "flag_septiembre": true,
   "evidencia_septiembre": "Status Published/Reprogram (tarea que se repite). Deadline de septiembre pero el mes siguiente sigue activo; no cerrar.",
   "n": 86,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3d1673eb9c56802498f8e98386e7f7c8",
@@ -1490,7 +1492,7 @@
   "flag_septiembre": true,
   "evidencia_septiembre": "Ready for review desde septiembre; checklist (imágenes, video, formulario, segmentar, publicar) sin marcar. Confirmar si ya se publicó.",
   "n": 87,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3ea673eb9c5681afb526d4251e6eeed0",
@@ -1501,13 +1503,14 @@
   "deadline": "2026-09-28",
   "scheduled_for": null,
   "prioridad_actual": "Urgent",
-  "prioridad_propuesta": "Medium",
+  "prioridad_propuesta": "Low",
   "motivo": "Respuesta automática en Furnished Finder para Bliss y Davenport. Foco Lullaby es vender Bliss; mejora de respuesta a consultas, sin bloqueo indicado.",
   "fuente": "cuerpo de la tarea; planes.json (Lullaby foco Bliss)",
   "flag_septiembre": true,
   "evidencia_septiembre": "Sin evidencia de implementación; cuerpo solo plantea verificar si la plataforma permite auto-respuesta.",
   "n": 88,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado",
+  "nota": "Cerrada por Laura 2026-10-18 (Complete + Low)"
  },
  {
   "id": "3e7673eb9c5681f9a4a0dafb40a305d5",
@@ -1524,7 +1527,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 89,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3d0673eb9c568027990ae6d725ff2bcf",
@@ -1541,7 +1544,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 90,
-  "estado_proceso": "pendiente"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3f0673eb9c5680bebedbf5ad21734ddf",
