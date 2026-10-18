@@ -28,3 +28,4 @@ fecha,cliente,agente,modelo,tokens,herramientas,costo_est_usd,veredicto
 2026-10-16,Varios,local-seo-lead (ajustes Bombo/Lullaby/Pressures),Sonnet 5.5,146787,s/d,0.35,ajustar (retrabajo)
 2026-10-17,Varios,Jefe (medicion Bombo/Hostel, aviso tokens, diseno flujo IG),Sonnet 5.5,s/d,s/d,2.17,ajustar (sesion larga: el Sheet completo se leyo 1 vez y cada turno releyo todo el historial)
 2026-10-17,Varios,Jefe (2a sesion: pendientes Hostel + update de agentes),Sonnet 5.5,s/d,s/d,s/d,mantener (sesion corta; costo real en session-usage.csv)
+2026-10-18,Varios,Jefe (3a sesion: pixel Hostel, modelos, rutinas),Sonnet 5.5,s/d,s/d,s/d,ajustar (sesion larga; 3 rutinas no se pudieron crear con conectores)
