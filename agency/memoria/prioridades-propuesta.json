@@ -1046,7 +1046,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 61,
-  "estado_proceso": "propuesto_sin_aprobar"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3f2673eb9c568043bb55e3c2ccd2bd5c",
@@ -1063,7 +1063,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 62,
-  "estado_proceso": "propuesto_sin_aprobar"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3e9673eb9c5680f9a37deb865e29fef2",
@@ -1080,7 +1080,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 63,
-  "estado_proceso": "propuesto_sin_aprobar"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3dc673eb9c5680df9630ea6f93f55ae0",
@@ -1097,7 +1097,7 @@
   "flag_septiembre": true,
   "evidencia_septiembre": "El cuerpo es un log de pruebas del bot de septiembre; sin cierre explícito.",
   "n": 64,
-  "estado_proceso": "propuesto_sin_aprobar"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3d9673eb9c56805e8bc2dcf3c731bfd9",
@@ -1114,7 +1114,7 @@
   "flag_septiembre": true,
   "evidencia_septiembre": "Status Published/Reprogram; el bot sigue en uso (ver 'Bot auditoria IG V2'). Probable hecha sin cerrar.",
   "n": 65,
-  "estado_proceso": "propuesto_sin_aprobar"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3f1673eb9c5681f89968c41abd6a015e",
@@ -1131,7 +1131,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 66,
-  "estado_proceso": "propuesto_sin_aprobar"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3f6673eb9c5680ab84b2d9ab84ee7908",
@@ -1148,7 +1148,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 67,
-  "estado_proceso": "propuesto_sin_aprobar"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3e1673eb9c568085aff3d2e7d7ef15bc",
@@ -1165,7 +1165,7 @@
   "flag_septiembre": false,
   "evidencia_septiembre": null,
   "n": 68,
-  "estado_proceso": "propuesto_sin_aprobar"
+  "estado_proceso": "aplicado"
  },
  {
   "id": "3df673eb9c56801e84bfd006824d5b59",
