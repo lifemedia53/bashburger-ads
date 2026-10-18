@@ -74,6 +74,14 @@
       "limite": "solo lectura; no diseña ni publica; informes en agency/investigacion/; sin fuente, [DATO]",
       "nota_ultima_auditoria": "sin auditar (muestra del 2026-10-18)",
       "kpi": "ideas de contenido que Laura aprueba y su resultado medido después"
+    },
+    "ad-uploader": {
+      "modelo": "sonnet",
+      "creado": "2026-10-18 (pedido de Laura)",
+      "por_que": "subir anuncios desde Sheet+Drive exige exactitud; siempre en pausa",
+      "limite": "nunca activa ni toca presupuesto; ensayo primero; ver .claude/agents/ad-uploader.md",
+      "kpi": "anuncios subidos en pausa sin errores vs filas completas del Sheet",
+      "nota_ultima_auditoria": "sin auditar"
     }
   },
   "capacitacion": "agency/capacitacion/plan.json",

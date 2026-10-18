@@ -87,3 +87,4 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Prompts de Laura guardados en `agency/memoria/prompts-meta.md` (Andrómeda -> paid-media-lead; Ad Library -> market-trends-analyst; diagnóstico ToFu/BoFu -> meta-ads-auditor).
 - Lullaby: post y hotsheet cargados en Notion; fecha de publicación del post se ve el lunes 19-oct.
 - Funnel por cliente: tarea grande (puede costar >US$1); falta que Laura defina 'sequence events' y 2 clientes de muestra. Hecho solo: tarea creada.
+- Cierre sesión 6: creado el agente `ad-uploader` (siempre en pausa, ensayo primero); funnel por cliente queda para inicio de mes (muestra The Cool Hostel + Bombo Burger; 'sequence events' = secuencia de eventos del pixel por etapa, aclarado por Laura). Prioridades aplicadas 1 a 100; quedan #101 a #138. Prompt de la próxima sesión en proxima-sesion.md (lee prompts-meta.md).
