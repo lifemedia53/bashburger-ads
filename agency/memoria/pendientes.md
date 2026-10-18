@@ -4,8 +4,8 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 
 ## Hacer
 1. Bombo: remedir el test CJ Delivery (120249348553550141, cuenta 362765604642572) el 2026-10-24 y cerrar como ganador si se mantiene. No tocar público, placements, puja, atribución ni presupuesto.
-2. Hostel (campaña 120249343804190575, cuenta 1428593511882773): línea base de reservas ya recibida (ver abajo). Sin CAPI el pixel no mide compras (Meta 10 al 17-oct: $14.397 gastados, 14.368 impresiones, 1.493 clics, 0 compras medidas). No proponer campañas nuevas (decisión de Laura 2026-10-10); evaluar el 2026-10-31.
-3. Hostel: Laura NO sabe activar "Meta Pixel Conversion Tracking" en Little Hotelier (respuesta de Laura, 2026-10-17). Opciones a ofrecerle: (a) guía paso a paso con capturas de su pantalla, (b) correo a soporte de Little Hotelier pidiendo que lo activen. Ruta a verificar: Reserva directa > Configuración > Aplicaciones de complemento, pixel 1487303793186321. Little Hotelier no tiene CAPI (soporte, 2026-10-17). Cuando quede activo, verificar en Meta que llegan Purchase.
+2. Hostel: estrategia nueva ejecutada el 2026-10-18 (ver sección abajo). Medir por WhatsApp (conversaciones de Meta) vs reservas de Little Hotelier por semana de reserva, cada lunes. Evaluar el 2026-10-31 con 2 semanas de datos. No proponer campañas nuevas (decisión de Laura 2026-10-10) hasta esa fecha.
+3. Hostel: nadie anota "cómo nos conociste" en Little Hotelier (Laura, 2026-10-18: no ve ningún chat con esas palabras). Sin eso el cruce semanal es solo correlación. Pendiente: definir otra forma de atribuir (ej. preguntar al contestar el WhatsApp). El pixel de Little Hotelier sigue sin disparar Purchase (último 7-oct); Laura no sabe activarlo; sin CAPI.
 4. Instagram (programar posts yo directo, sin herramientas de terceros): Laura lo ve la semana del 2026-10-19 (respuesta 2026-10-17); no avanzar antes. Decisiones abiertas abajo. Instagram no está conectado en Composio todavía (requiere que Laura autorice cada cuenta). Google Business: sin vía directa, queda manual (Trello).
 
 ## IG: lo que mostró el calendario (fuente: lectura de Laura con Claude en Chrome del Sheet "Calendario Contenido Octubre 2026", pestañas Bash Burger y Santerra By Bombo, 2026-10-17)
@@ -44,3 +44,10 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Rutinas creadas: día 7 (resultados de Google y clientes) y días 28 y 6 (correcciones de Vero, Eventos del Año y posts del mes).
 - Halloween 2026: tarjetas listas en Trello para todos los clientes activos (ver `clientes-google.json`).
 - Pendientes que confirma Vero: horario del 31-oct (Bombo Ulriksen), tomahawk en Steakhouse, tenedor libre en Tiki House y links de PedidosYa/Uber Eats.
+
+## Sesión 4 del 2026-10-18: estrategia Hostel (fuente: Meta, lectura y cambios con OK de Laura, 18-oct)
+- Hallazgo: Laura creó el 11-oct la campaña MENSAJES CONSULTAS COOL HOSTEL 2026 (120249359954760575, conjunto CJ 1 - Viajeros La Serena 120249359954750575, anuncio Cris + Rawy Whatsapp 120249359954740575; log de actividad de Meta). Corría a $3.000/día junto a la campaña web de $2.000/día = $5.000/día, no los $2.000 que se creían.
+- Medido 10 al 18-oct: WhatsApp $18.255, 9.549 impresiones, 29 conversaciones a $629 (los 14 leads a $924 de la auditoría del 16-oct eran de otra ventana). Campaña web Purchase: $15.177, 1.608 clics, 0 compras medidas. Pixel 1487303793186321: solo 3 Purchase en octubre (1, 6 y 7-oct), ninguno después hasta el 17-oct.
+- Ejecutado con OK de Laura y verificado en vivo: campaña "Reservas Hotelier - Purchase" (120249343804190575) PAUSADA; conjunto CJ 1 bajado de $3.000 a $2.000/día ($60.000/mes, lo contratado). WhatsApp queda como única campaña activa. Cambio de presupuesto quedó primero en borrador y se publicó; lectura posterior confirma $2.000 y ACTIVE.
+- Riesgo asumido: la campaña web podía traer parte de las 5 reservas desde el 10-oct (sin atribución). Si bajan las reservas de Little Hotelier en 2 semanas, reactivar la web.
+- A $2.000/día y $629 salen ~3 conversaciones al día (~22 por semana): bajo las 50 por semana para salir del aprendizaje; se acepta porque el canal vende por mensaje.
