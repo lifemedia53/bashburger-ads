@@ -62,6 +62,13 @@
       "reporta_a": "paid-media-lead",
       "por_que": "diagnosticar requiere criterio (el error del CTR en The Cool Hostel fue de criterio); un mal diagnóstico cuesta más que los tokens",
       "limite": "solo lectura en Meta"
+    },
+    "market-trends-analyst": {
+      "modelo": "sonnet",
+      "creado": "2026-10-18 (pedido de Laura)",
+      "por_que": "analizar rubro, competidores y qué funciona exige criterio; lotes de máx. 2 clientes con muestra aprobada",
+      "limite": "solo lectura; no diseña ni publica; informes en agency/investigacion/; sin fuente, [DATO]",
+      "nota_ultima_auditoria": "sin auditar (muestra del 2026-10-18)"
     }
   },
   "capacitacion": "agency/capacitacion/plan.json"

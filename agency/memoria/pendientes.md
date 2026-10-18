@@ -62,3 +62,12 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Mapa de procesos de la agencia + oficina virtual isométrica (web, no imagen): para DESPUÉS de prioridades y fechas. Anotado como tarea en Notion: https://app.notion.com/p/3fd673eb9c568177beb0d0e2e1cee0e1. Los agentes no tienen carpeta propia: cada uno es un archivo en `.claude/agents/` y comparten `agency/memoria/`.
 - Notion: consultas SQL/rows agotadas por cupo (se reinicia en ~60 min); se trabajó con fetch por página. Verificar releyendo cada página cuesta ~3,5k tokens: para próximos lotes verificar por muestra o con vista guardada (view mode).
 - Pendiente de Meta con OK de Laura: excluir Santiago de la segmentación de Comercializadora (#38); auditoría de cuentas de The Smile Mission (#70).
+
+## Sesión 6 del 2026-10-18: lote 7 y agente de tendencias (fuente: Notion, cambios de Priority con OK de Laura, 18-oct)
+- Lote 7 (#61 a #68) aprobado por Laura y aplicado: #61 Urgent->Medium; #64 y #65 Urgent->Low; #66 Medium->Low; #62, #63, #67, #68 sin cambio. Verificado por muestra (#64 releída: Priority Low). Quedan #71 a #138 (estado_proceso "pendiente" en `prioridades-propuesta.json`).
+- #64 y #65 tienen deadline de septiembre aún abierto: van al bloque 'posible hecha sin cerrar' (no se cerraron).
+- Nuevo agente `market-trends-analyst` (Sonnet, solo lectura; `.claude/agents/market-trends-analyst.md`). Informes en `agency/investigacion/` (aprobado por Laura). Muestra con Bash Burger y Tiki House lista: `agency/investigacion/2026-10-18-bash-burger.md` y `...-tiki-house.md` (8 ideas cada una).
+- Limitación de la muestra (reporte del agente): la Biblioteca de anuncios da solo id y fechas, sin texto ni métricas; WebSearch no encontró los locales; ubicación de los 4 competidores por cliente NO verificada. Es inferencia, no prueba. Picanha Rodizio es ex cliente, no competencia.
+- Datos del agente (fuente: google-resultados.json sep-2026): Bash Burger 3.341 vistas, 218 direcciones, 49 aperturas de menú, 20 llamadas; Tiki House 6.801 vistas, 138 clics a web, 0 reservas. Tiki: 2 anuncios activos (WhatsApp desde 13-oct, Instagram desde 16-oct), sin guía de voz.
+- [DATO] para Laura: Instagram y ubicación de competidores reales; promo de Halloween Bash y su presupuesto; agenda de shows Enjoy Coquimbo; concepto House/Beach, carta y precios vigentes de Tiki (Beach $14.990 y $17.990 en Notion, sin confirmar) y si tiene sushi; guía de voz de Tiki; resultados de los 2 anuncios de Tiki.
+- Bitácora de Notion de esta sesión: no anotada (pendiente).

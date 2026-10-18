@@ -1,4 +1,4 @@
-# Próxima sesión (actualizado el 2026-10-18, sesión 5)
+# Próxima sesión (actualizado el 2026-10-18, sesión 6)
 
 Abrir la sesión en **Sonnet** (ver `modelos.json`).
 
@@ -7,8 +7,8 @@ Abrir la sesión en **Sonnet** (ver `modelos.json`).
 ```
 Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md, agency/memoria/proxima-sesion.md, agency/memoria/criterios-prioridad.json y agency/memoria/prioridades-propuesta.json y parte desde ahí.
 
-Tema de hoy: seguir ordenando prioridades de All Tasks en Notion. Ya están aplicadas las tareas 1 a 60 y la 70 (ver estado_proceso en el json). Sin releer las tareas ya hechas.
-1. Mostrarme el lote 7 (#61 a #68) para que apruebe, y seguir con los lotes de ~10 desde #71 (la tabla ya está en el json; no hace falta volver a lanzar a ops-coordinator).
+Tema de hoy: seguir ordenando prioridades de All Tasks en Notion. Ya están aplicadas las tareas 1 a 70 (ver estado_proceso en el json). Sin releer las tareas ya hechas.
+1. Seguir con los lotes de ~10 desde #71 (la tabla ya está en el json; no hace falta volver a lanzar a ops-coordinator).
 2. Tú cambias Priority en Notion (tengo permiso de Laura para Priority; nunca borrar) y verificas por muestra o con vista guardada, no releyendo cada página entera.
 3. Al final: las 9 tareas [DATO] sin responder, las 46 de septiembre (marcar 'posible hecha sin cerrar' en bloque aparte, sin cerrar) y luego fechas por lotes.
 4. Después: mapa de procesos + oficina isométrica web (tarea en Notion).
@@ -41,3 +41,6 @@ Prompts (pegar tal cual):
 
 **Revisión semanal de Notion**
 > Es lunes. Usa el agente ops-coordinator del repo lifemedia53/bashburger-ads (si no está en tu directorio, agrégalo con add_repo y clónalo; definición en .claude/agents/ops-coordinator.md). Revisa en Notion, SOLO LECTURA: All Tasks (vencidas, y hechas sin cerrar) y la Bitácora de hallazgos Ads (P1 y P2 abiertos). No modifiques nada. Entrega a Laura (push) la lista corta de prioridades de la semana: máx. 5 ítems con cliente, qué falta y fecha. Si no hay nada vencido, dilo en 1 línea. Español de Chile, breve.
+
+## Agente nuevo (sesión 6)
+- `market-trends-analyst`: muestra Bash Burger + Tiki House en `agency/investigacion/`. Laura decide si seguir con otros clientes (lotes de 2) y responde los [DATO] de pendientes.md.
