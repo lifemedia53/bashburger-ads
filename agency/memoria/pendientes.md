@@ -79,3 +79,11 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Tareas nuevas en Notion (Lullaby): rediseñar hotsheet, presentar lunes 19-oct (Urgent, Design); postear en su perfil personal el texto de Laura (Medium). [DATO] archivo del hotsheet y texto a publicar.
 - Lotus Estilistas (cuenta 2150099018564052), 7 días al 18-oct: REMARKETING MENSAJES ARS 33.417, 0 resultados medibles; AD 1.C 'Con mamá' = 82% del gasto (CJ2: ARS 15.327 por 462 impresiones). Laura: no pausar la campaña, mejorarla. Con su OK, pausé SOLO el ad 1.C de CJ 2 (120249569608530372). Dejar 'Rulos IG DM' y 'Activar textura'. Subir presupuesto solo si llegan mensajes. 'Reconocimiento Definitiva (Junio)' está contratada: no tocar. Pendiente: confirmar que mide mensajes (indicador 'leads' sin datos).
 - KPI por agente registrados en agentes.json; Local SEO = antes/después de Google Maps mes a mes (orden de Laura).
+
+## Sesión 6 (cont. 2): lote 10 y tareas nuevas (fuente: Notion, OK de Laura 2026-10-18)
+- Lote 10 (#91-#100) aplicado: #94, #95, #96 Medium; #98, #99, #100 Low (los 3 con deadline de septiembre: 'posible hecha sin cerrar'). Quedan #101 a #138.
+- Bitácora de Ads: anotada la pausa del ad de Lotus (regla de Laura: siempre anotar cambios en Meta).
+- Tareas nuevas en Notion: Apple Maps; Bing Places y Yelp; botón Preferred Sources de Google (artículo SEJ); Platform property de Instagram en Search Console (después); funnel por cliente; automatizar subida de anuncios en pausa desde Drive+Sheet; servicios en GBP + página por servicio (Pressures Perfect primero, local-seo-lead). Descartado: Google creators.
+- Prompts de Laura guardados en `agency/memoria/prompts-meta.md` (Andrómeda -> paid-media-lead; Ad Library -> market-trends-analyst; diagnóstico ToFu/BoFu -> meta-ads-auditor).
+- Lullaby: post y hotsheet cargados en Notion; fecha de publicación del post se ve el lunes 19-oct.
+- Funnel por cliente: tarea grande (puede costar >US$1); falta que Laura defina 'sequence events' y 2 clientes de muestra. Hecho solo: tarea creada.
