@@ -1,26 +1,25 @@
-# Próxima sesión (preparado el 2026-10-18)
+# Próxima sesión (preparado el 2026-10-18, sesión 4)
 
-Abrir la sesión en **Sonnet** (Opus es 81 % del gasto de 7 días; ver `modelos.json`).
+Abrir la sesión en **Sonnet** (ver `modelos.json`).
 
 ## Prompt para pegar al abrir la sesión
 
 ```
-Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md y agency/memoria/proxima-sesion.md y parte desde ahí.
+Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md, agency/memoria/proxima-sesion.md y agency/memoria/criterios-prioridad.json y parte desde ahí.
 
-Tema de hoy: estrategia nueva para The Cool Hostel (cuenta 1428593511882773). Contexto: no quiero hacer reserva de prueba; el pixel 1487303793186321 no registra Purchase desde el 7-oct aunque Little Hotelier lo muestra activado, y Little Hotelier no tiene CAPI.
-
-1. Antes de proponer, lee planes.json (contrata 3 campañas + 1 boost; foco: safe space + nómada digital + contenido en inglés), clientes.json, voz/the-cool-hostel.json y playbook-life-media.json.
-2. Con Meta (solo lectura) confirma: dónde corre hoy el anuncio "Cris+Rawy WhatsApp" (en la auditoría del 16-oct tenía 14 leads a $924), cuánto gastó cada anuncio desde el 10-oct y si el pixel volvió a disparar.
-3. Dame UNA sola recomendación, con presupuesto (hoy $2.000/día, $60.000/mes), aprendizaje de Meta y contrato. Mi hipótesis a validar: medir el Hostel por conversaciones de WhatsApp + reservas de Little Hotelier cruzadas por semana, en vez de Purchase del pixel.
-4. No cambies nada en Meta hasta que yo confirme. Después de mi OK, ejecútalo tú paso a paso y verifica el estado final.
-5. Cierra la sesión según CLAUDE.md (token-log, memoria con fuente, commit, PR, merge, Bitácora de Notion).
-
-Decisiones pendientes al final, en lista numerada. Respuestas cortas.
+Tema de hoy: ordenar las prioridades de All Tasks en Notion (varias horas). Usa el agente ops-coordinator (Sonnet) con los criterios del archivo. Incluye las tareas abiertas y las 'Published/Reprogram' (se repiten); excluye las Complete.
+1. El agente lee todas las tareas con su contenido y propone una tabla (prioridad actual, propuesta, motivo con fuente). No escribe nada.
+2. Te las muestro por lotes de ~10 y tú apruebas. Después yo cambio Priority en Notion y verifico (tengo permiso de Laura para Priority; nunca borrar).
+3. Cuando las prioridades estén listas, ponemos fechas por lotes.
+4. Las tareas con deadline de septiembre aún abiertas: marcarlas 'posible hecha sin cerrar' y preguntarme, no cerrarlas.
+Cierra según CLAUDE.md. Decisiones pendientes al final, en lista numerada. Respuestas cortas.
 ```
 
-## Otros pendientes para esta sesión o la siguiente (decisión de Laura, 2026-10-18)
-- Bash Burger, Reel Delivery UberEats ($101.568 en 14 días, frecuencia 2,22): refrescar creativo y bajar presupuesto, sin pausar en seco. Fuente: auditoría del 16-oct en Notion.
-- Mare, Steakhouse, Bendito, Tiki: pasar boosts de mensajes a una campaña estructurada (mensajes a $10k–$23k). Fuente: misma auditoría.
+## Otros pendientes (decisión de Laura, 2026-10-18)
+- Hostel: Laura no quiere seguir con la medición del Hostel por ahora ("seguiremos a ciegas"). Estrategia ya ejecutada (WhatsApp $2.000/día, web Purchase pausada). Las 4 entradas P2 del Hostel en la Bitácora siguen "En seguimiento"; decidir si pasan a Descartado.
+- Después de las prioridades: fechas vencidas y campañas sin entrega de Entre Tacos, Steakhouse, Tiki y Comercializadora (P1 Bitácora, 10-oct), una cuenta a la vez con OK.
+- Bash Burger, Reel Delivery UberEats: refrescar creativo y bajar presupuesto sin pausar en seco. Fuente: auditoría del 16-oct en Notion.
+- Mare, Steakhouse, Bendito, Tiki: boosts de mensajes a campaña estructurada. Fuente: misma auditoría.
 - Bombo, test CJ Delivery: remedir el 2026-10-24.
 
 ## Rutinas programadas (crearlas desde claude.ai, no desde la sesión)
