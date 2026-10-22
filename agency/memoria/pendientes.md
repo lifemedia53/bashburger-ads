@@ -47,3 +47,10 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Guías de voz nuevas en agency/memoria/voz/: mare-by-bombo, steakhouse-by-bombo, bombo-tiki-house, bombo-tiki-beach, santerra-by-bombo, bendito-completo, entre-tacos. Faltan: lullaby (sin tarjeta de prompt en Trello), lemarc (prompt vacío), tonys-pasta, la-siciliana, pressures-perfect, lotus.
 - Preguntas abiertas a Laura: ¿8 posts por perfil o en total en Tiki House+Beach?; formato de posts (prompts piden 3 posts de 100-250 palabras, tarjetas de hoy ~500 caracteres); WhatsApp Peñuelas (prompt vs hoja); cupo mensual Bendito/Entre Tacos (planes.json 4 vs regla 8).
 - Fallo recurrente de agentes: terminan sin SubagentHandback; pedir informe con SendMessage.
+
+## 22-oct — medición y cambios en Meta (OK de Laura)
+- Bombo oct 1–22: gasto $661.122 (sobre los $600k). TEST Delivery $346.939, 219 inicios de pago a $1.584; ROAS 2,41 (pixel). Fuente: Meta, this_month.
+- Hecho y verificado: Reconocimiento (120223562322950141) a $2.000/día, solo conjunto Santiago activo (pausados Balmaceda, Beach, Mall Plaza, Ulriksen, Video Refill). Remarketing (120248316351010141) tope $360.000. Ojo: editar monto/tope pausó ambas campañas; se reactivaron con ads_activate_entity (verificado ACTIVE).
+- Lotus Estilistas (2150099018564052): AD 1.C CJ1 pausado. AD 1.D original tenía video 8159 con copy TEXTURA (error); creado AD 1.D (v2) CAMBIO+8159 (activo, en revisión) y pausado el original. Creado AD 2.D TEXTURA+8120 en CJ2 (pausado). Método que funciona: ads_create_ad con object_story_spec inline + CTA INSTAGRAM_MESSAGE (ads_create_creative con MESSAGE_PAGE no sirve para IG Direct). Falta vincular IG de Lotus.
+- Hostel: borrador (DRAFT, no publicado) 120249519319570575 duplicado de "Cris + Rawy Whatsapp" en la campaña de mensajes; trae el Reel A y error ObjectStorySpecRedundant (image_url+image_hash). Laura lo edita al vincular su reel (DekO_1WPW9E, no visible en el IG vinculado).
+- Pendiente: aviso de tokens el lunes; prompt guías de voz en agency/prompts/guias-voz-27-oct.md (programa Laura 27-oct).
