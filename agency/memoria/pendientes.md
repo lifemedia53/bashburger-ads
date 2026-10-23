@@ -109,3 +109,11 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Notion: 'Follow up' agregado a Status; Resource Required = Video, Email, Web, AI, CM, Fotografía, Diseños. Tareas cerradas por Laura hoy: #82, #84, #85, #30 y 'Quitar esa imagen de Comer', más las 16 del bloque 'posible hecha sin cerrar'.
 - Auditorías que faltan: Bendito (#9), Lullaby (#89), Lemarc (#54, cuenta UNSETTLED), La Siciliana y Santerra (Ads MCP no habilitado). Mapa de procesos + oficina isométrica web: pendiente.
 - Reglas confirmadas por Laura: los ads los revisa el agente de Meta Ads; el Jefe ejecuta lo que mueve plata con OK explícito; anotar en Notion y memoria durante la sesión, no solo al cerrar.
+
+## Sesión 7 (cont. 2) 2026-10-23: presupuestos, Hostel pausado, skill de gasto (fuente: Laura, Meta, Notion)
+- Presupuestos mensuales dichos por Laura: Entre Tacos $100.000; Comercializadora $200.000 (más Tiki $160.000, Mare nov $300.000, Steakhouse nov $150.000). Quedan en `agency/memoria/presupuestos-ads.json`.
+- Hostel: campaña de mensajes 120249359954760575 pausada por orden de Laura; reactivar en noviembre con la estrategia vigente ($2.000/día). Verificado PAUSED.
+- Entre Tacos: Laura confirmó que la pausa del 14-oct fue a propósito (necesitaba análisis de resultados); NO reactivar Promociones/Delivery sin su OK. Pendiente: análisis de resultados.
+- Comercializadora: Carnes Parrilleras (en realidad el CONJUNTO 120245880716560680) pausado y verificado. Extender el Conjunto Tráfico (120242998584350680, fin 31-oct) al 30-nov NO se pudo: Meta rechaza por el reel no disponible de un anuncio; hacerlo en Ads Manager o archivar el anuncio roto antes del 31-oct. Ojo: los informes de auditoría llaman 'campaña' a un conjunto; verificar el tipo del id antes de actuar.
+- Bendito: auditoría hecha (solo lectura); ver Bitácora. Falta presupuesto mensual, destino real, y OK para archivar 16 elementos y renovar el boost ganador (termina 26-oct).
+- Skill nuevo `.claude/skills/gasto-ads-semanal/SKILL.md`: reporte de gasto del mes por cliente vs presupuesto con alertas, a pedido (solo lectura). Para que corra solo cada semana hay que crear una rutina en claude.ai con el conector de Meta (la herramienta de sesión no puede darle conectores).
