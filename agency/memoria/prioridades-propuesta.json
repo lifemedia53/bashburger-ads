@@ -1905,7 +1905,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 111,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3cf673eb9c5680c59a77fae75415a8ef",
@@ -1922,7 +1922,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Está Programmed con Scheduled For 2026-10-21: no es 'hecha', está en cola.",
     "n": 112,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado",
+    "prioridad_aplicada": "Medium"
   },
   {
     "id": "84a673eb9c5682429878819828771d91",
@@ -1939,7 +1940,7 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Checklist: 1 de 5 marcada (Gutter Cleaning); faltan Roof, Concrete, Bins, Fences. No está hecha.",
     "n": 113,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3e6673eb9c568037b3aef0a9ead6bdcb",
@@ -1956,7 +1957,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 114,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3ee673eb9c568039a957ecf6de4adc5a",
@@ -1973,7 +1974,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 115,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado",
+    "prioridad_aplicada": "Medium"
   },
   {
     "id": "3fb673eb9c568187ae15d9dc3fcd806b",
@@ -1990,7 +1992,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 116,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3d9673eb9c568083b505c2c09be936a5",
@@ -2007,7 +2009,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 117,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3cf673eb9c56805980f9de57c451d41c",
@@ -2024,7 +2026,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Sin evidencia de publicación. Cuerpo plantilla con Lorem ipsum.",
     "n": 118,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3cf673eb9c5680bcbeacd8ba6eaeaf1f",
@@ -2041,7 +2044,7 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "NO hecha: checklist (arreglar excel, crear público, crear campaña) sin marcar. Sigue P1.",
     "n": 119,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3e7673eb9c56811b8664f78067ad7269",
@@ -2058,7 +2061,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "NO hecha: checklist completo sin marcar.",
     "n": 120,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado",
+    "prioridad_aplicada": "Medium"
   },
   {
     "id": "3ea673eb9c56802aab89e7be01809f38",
@@ -2075,7 +2079,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 121,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "pendiente_dato"
   },
   {
     "id": "3f7673eb9c56812ea0c8dce4f7671789",
@@ -2093,7 +2097,8 @@
     "evidencia_septiembre": null,
     "cliente_inferido": "Picanha Rodizio (ex-cliente)",
     "n": 122,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f7673eb9c5681a98e5ff55c1f226456",
@@ -2111,7 +2116,7 @@
     "evidencia_septiembre": null,
     "cliente_inferido": "Casa Lotus / Somos Casa Lotus",
     "n": 123,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "pendiente_dato"
   },
   {
     "id": "3f2673eb9c5680adbd9fc48fbf759234",
@@ -2128,7 +2133,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 124,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3f7673eb9c5681259b28fa117af5837a",
@@ -2145,7 +2150,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 125,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3e7673eb9c56818f8c5af0b74112e83f",
@@ -2162,7 +2167,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 126,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3f7673eb9c5681318855c654eb23b51a",
@@ -2179,7 +2184,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 127,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3e5673eb9c568002bb36e2b83c98d687",
@@ -2196,7 +2201,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 128,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3e8673eb9c5680f2a4eac96de6f00166",
@@ -2213,7 +2218,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 129,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3e3673eb9c568044b015f1bf0f6371c4",
@@ -2230,7 +2235,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Ya publicada según su Status. Probable hecha sin cerrar.",
     "n": 130,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f1673eb9c56805c832ed0b3f623a062",
@@ -2247,7 +2253,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 131,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f1673eb9c56807da8b6c6480baf9209",
@@ -2264,7 +2271,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 132,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f1673eb9c5680d080cfe714c25dcc80",
@@ -2281,7 +2289,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 133,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "pendiente_dato"
   },
   {
     "id": "3f7673eb9c568014ad49e49402c0d4c3",
@@ -2298,7 +2306,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 134,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "pendiente_dato"
   },
   {
     "id": "3f1673eb9c5680fb987df9ea18d6ec2a",
@@ -2315,7 +2323,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 135,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "pendiente_dato"
   },
   {
     "id": "3f7673eb9c5681938138cc6af6bf1f10",
@@ -2332,7 +2340,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 136,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3e7673eb9c568006886ce6fa551d0a6c",
@@ -2349,7 +2357,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 137,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3e4673eb9c568058aa12f8b0f71262e2",
@@ -2366,6 +2375,6 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 138,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   }
 ]
