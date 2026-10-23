@@ -14,7 +14,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 1,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-26"
   },
   {
     "id": "3d1673eb9c56803b860ecee703bd5cb6",
@@ -31,7 +32,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Checklist (Max imagen, Thiago historia, Laura promo Just/Uber) sin marcar. Precio $11.990 distinto del vigente $13.990: probable obsoleta.",
     "n": 2,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-26"
   },
   {
     "id": "3d0673eb9c5680dcaaafdf1929aaf798",
@@ -49,7 +51,8 @@
     "evidencia_septiembre": "Cuerpo: 'Falta cambiar las ensaladas y picoteos' (3 pendientes); In progress. Probable avance alto, no cerrada. Relacionada con 'Cambiar todos los ubereats de Bombo Burger'.",
     "n": 3,
     "estado_proceso": "aplicado",
-    "nota": "Laura 2026-10-23: pendiente de follow up (sigue abierta)"
+    "nota": "Laura 2026-10-23: pendiente de follow up (sigue abierta)",
+    "deadline_aplicado": "2026-10-26"
   },
   {
     "id": "3f7673eb9c568101b19de556b41b3020",
@@ -66,7 +69,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 4,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-26"
   },
   {
     "id": "3cf673eb9c56808ebd2bc6c03d135971",
@@ -137,7 +141,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 8,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-02"
   },
   {
     "id": "3e7673eb9c568176aecbd7609bb99090",
@@ -154,7 +159,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 9,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-26"
   },
   {
     "id": "3f7673eb9c56812c83e6e69858b179aa",
@@ -171,7 +177,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 10,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-26"
   },
   {
     "id": "3f7673eb9c5681b6aad7f83db7093a1e",
@@ -188,7 +195,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 11,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-27"
   },
   {
     "id": "3e9673eb9c5680248c70edbf5c2e70be",
@@ -205,7 +213,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 12,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-27"
   },
   {
     "id": "3f7673eb9c56816da772f6ffa51cf7ce",
@@ -222,7 +231,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 13,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-26"
   },
   {
     "id": "3f7673eb9c5681e5b534dbd44463f23c",
@@ -239,7 +249,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 14,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-26"
   },
   {
     "id": "3fc673eb9c56808bb227d5928c486339",
@@ -256,7 +267,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 15,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-26"
   },
   {
     "id": "3d9673eb9c5680bbb128eecb3aa95de6",
@@ -308,7 +320,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 18,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-27"
   },
   {
     "id": "3f5673eb9c56814abf99c2618f3d56e4",
@@ -325,7 +338,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 19,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-27"
   },
   {
     "id": "3cf673eb9c5680ea84b1c1cff2cd3c91",
@@ -360,7 +374,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 21,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-02"
   },
   {
     "id": "3fc673eb9c5680d9a478e0f9b067c6c3",
@@ -377,7 +392,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 22,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-27"
   },
   {
     "id": "3f3673eb9c5680af99c5c3680c23baf4",
@@ -394,7 +410,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 23,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-28"
   },
   {
     "id": "3d7673eb9c56808e9a08f5d6d24b4739",
@@ -501,7 +518,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "NO hecha: checklist sin marcar. La fecha fin 30-sep ya pasó (ver tarea Codex 12/10 de Tiki).",
     "n": 29,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-27"
   },
   {
     "id": "3f7673eb9c5681b4b45ac9b5b1cf9e73",
@@ -518,7 +536,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 30,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-27"
   },
   {
     "id": "3e7673eb9c568061a429efe83300589b",
@@ -535,7 +554,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 31,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-28"
   },
   {
     "id": "3f7673eb9c568150bc11e44095b1645e",
@@ -552,7 +572,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 32,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-03"
   },
   {
     "id": "3d6673eb9c5680f69378ddea4c3f11c7",
@@ -587,7 +608,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 34,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-27"
   },
   {
     "id": "3e7673eb9c568147b30dddb0dcc18015",
@@ -604,7 +626,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 35,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-28"
   },
   {
     "id": "3d1673eb9c5680ebab02fcfd73956cd7",
@@ -638,7 +661,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 37,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-03"
   },
   {
     "id": "3d1673eb9c568079a863f48b52762f78",
@@ -673,7 +697,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 39,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-27"
   },
   {
     "id": "3e7673eb9c5681629f0bcd02311534de",
@@ -690,7 +715,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 40,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-28"
   },
   {
     "id": "3f7673eb9c568157b247f2b6975501ff",
@@ -707,7 +733,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 41,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-28"
   },
   {
     "id": "3f7673eb9c568134ac6be4834b5cb26d",
@@ -724,7 +751,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 42,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-29"
   },
   {
     "id": "3d9673eb9c568044aaedd0206bb529f8",
@@ -759,7 +787,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 44,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-29"
   },
   {
     "id": "3e5673eb9c568008a49fc588b336de7f",
@@ -776,7 +805,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 45,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-29"
   },
   {
     "id": "3d1673eb9c5680f68e3adb2e5d512841",
@@ -811,7 +841,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "NO hecha: checklist sin marcar.",
     "n": 47,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-29"
   },
   {
     "id": "3e5673eb9c56808bb68dcc08f8109e77",
@@ -828,7 +859,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 48,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-29"
   },
   {
     "id": "3f3673eb9c5680c88e14e22e7e44f522",
@@ -881,7 +913,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Checklist: 2 de 7 marcadas (acceso Meta e IG). Faltan mejorar FB, WhatsApp, posts Google, crear Importadora, campaña.",
     "n": 51,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-30"
   },
   {
     "id": "3e3673eb9c568075a946cc81a6659e2e",
@@ -898,7 +931,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Sin evidencia de ejecución; existe tarea de Auditoría Meta Lemarc abierta.",
     "n": 52,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-30"
   },
   {
     "id": "3db673eb9c56801cb16ec7845f143dec",
@@ -915,7 +949,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Sin evidencia de ejecución.",
     "n": 53,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-30"
   },
   {
     "id": "3e7673eb9c5681a9bc08d74f98314af0",
@@ -932,7 +967,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 54,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-30"
   },
   {
     "id": "3db673eb9c568022a1fcd297aee1dbf0",
@@ -985,7 +1021,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 57,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-02"
   },
   {
     "id": "3dc673eb9c5680b584e0fc7e06b4f118",
@@ -1053,7 +1090,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 61,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-02"
   },
   {
     "id": "3f2673eb9c568043bb55e3c2ccd2bd5c",
@@ -1140,7 +1178,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 66,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-04"
   },
   {
     "id": "3f6673eb9c5680ab84b2d9ab84ee7908",
@@ -1157,7 +1196,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 67,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-04"
   },
   {
     "id": "3e1673eb9c568085aff3d2e7d7ef15bc",
@@ -1174,7 +1214,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 68,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-05"
   },
   {
     "id": "3df673eb9c56801e84bfd006824d5b59",
@@ -1227,7 +1268,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 71,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-02"
   },
   {
     "id": "3eb673eb9c5681d5aa8efaf49a602c9e",
@@ -1244,7 +1286,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 72,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-05"
   },
   {
     "id": "3f7673eb9c5681758b33dda9fa68bc2a",
@@ -1261,7 +1304,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 73,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-06"
   },
   {
     "id": "3f3673eb9c5681f48691eda0c62247f7",
@@ -1278,7 +1322,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 74,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-28"
   },
   {
     "id": "3eb673eb9c5681419f1ce61539a2de70",
@@ -1295,7 +1340,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 75,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-02"
   },
   {
     "id": "3f7673eb9c56816f8121e68f06dca937",
@@ -1312,7 +1358,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 76,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-02"
   },
   {
     "id": "3d9673eb9c56806a85c6f26321859d5a",
@@ -1346,7 +1393,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 78,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-06"
   },
   {
     "id": "3eb673eb9c5681fca302f8efc8bc45cc",
@@ -1363,7 +1411,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 79,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-09"
   },
   {
     "id": "3e9673eb9c5680c1b875d1cb5fffb83b",
@@ -1380,7 +1429,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Sin evidencia de entrega; bloque de contenido no legible vía API. Preguntar a Laura si ya se entregó.",
     "n": 80,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-28"
   },
   {
     "id": "3f0673eb9c5680aab022d4a9483909ce",
@@ -1415,7 +1465,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 82,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-28"
   },
   {
     "id": "3fd673eb9c568186b0beef6a73f8be4a",
@@ -1450,7 +1501,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 84,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-28"
   },
   {
     "id": "3f7673eb9c56810d80aad7f661dab3cb",
@@ -1467,7 +1519,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 85,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-28"
   },
   {
     "id": "3d0673eb9c56800d967ef4d9bf5b8821",
@@ -1537,7 +1590,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 89,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-03"
   },
   {
     "id": "3d0673eb9c568027990ae6d725ff2bcf",
@@ -1571,7 +1625,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 91,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "pendiente",
+    "deadline_aplicado": "2026-11-03"
   },
   {
     "id": "3f1673eb9c5680bbbddfd79ac26a770b",
@@ -1588,7 +1643,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 92,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "pendiente",
+    "deadline_aplicado": "2026-11-03"
   },
   {
     "id": "3ee673eb9c5680ddbca0f04754b46692",
@@ -1639,7 +1695,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 95,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "pendiente",
+    "deadline_aplicado": "2026-11-03"
   },
   {
     "id": "3e9673eb9c5680f08bf1de3f93bfce1d",
@@ -1656,7 +1713,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 96,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "pendiente",
+    "deadline_aplicado": "2026-11-03"
   },
   {
     "id": "3ea673eb9c5681bfbb89c14ff564075a",
@@ -1673,7 +1731,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 97,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "pendiente",
+    "deadline_aplicado": "2026-11-04"
   },
   {
     "id": "3d1673eb9c5680fe8018c9aac3f68176",
@@ -1745,7 +1804,8 @@
     "evidencia_septiembre": null,
     "n": 101,
     "estado_proceso": "aplicado",
-    "prioridad_aplicada": "Low"
+    "prioridad_aplicada": "Low",
+    "deadline_aplicado": "2026-11-09"
   },
   {
     "id": "3ea673eb9c56819296fee9a580e2155f",
@@ -1763,7 +1823,8 @@
     "evidencia_septiembre": null,
     "n": 102,
     "estado_proceso": "aplicado",
-    "prioridad_aplicada": "Low"
+    "prioridad_aplicada": "Low",
+    "deadline_aplicado": "2026-11-10"
   },
   {
     "id": "3ea673eb9c568137875ff5b4d9e1b3a7",
@@ -1780,7 +1841,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "NO hecha: fue marcada Complete y reabierta a Ready for review el 06-oct por falta de evidencia de Meta.",
     "n": 103,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-29"
   },
   {
     "id": "3e7673eb9c5681a590d1d1525d174554",
@@ -1797,7 +1859,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "NO hecha: checklist sin marcar; la tarea hermana fue reabierta el 06-oct por falta de evidencia.",
     "n": 104,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-29"
   },
   {
     "id": "3d0673eb9c5680a7a4fdd9058bcba443",
@@ -1833,7 +1896,8 @@
     "evidencia_septiembre": null,
     "n": 106,
     "estado_proceso": "aplicado",
-    "prioridad_aplicada": "Medium"
+    "prioridad_aplicada": "Medium",
+    "deadline_aplicado": "2026-11-04"
   },
   {
     "id": "3f7673eb9c5681a8b026c8cb11836b1c",
@@ -1850,7 +1914,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 107,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-04"
   },
   {
     "id": "3d6673eb9c5680148177cfdc88b3045c",
@@ -1903,7 +1968,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Sin evidencia de entrega. Preguntar a Max si ya se imprimió.",
     "n": 110,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-04"
   },
   {
     "id": "3cf673eb9c568057889cf23a3796d62a",
@@ -1938,7 +2004,8 @@
     "evidencia_septiembre": "Está Programmed con Scheduled For 2026-10-21: no es 'hecha', está en cola.",
     "n": 112,
     "estado_proceso": "aplicado",
-    "prioridad_aplicada": "Medium"
+    "prioridad_aplicada": "Medium",
+    "deadline_aplicado": "2026-11-04"
   },
   {
     "id": "84a673eb9c5682429878819828771d91",
@@ -1955,7 +2022,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Checklist: 1 de 5 marcada (Gutter Cleaning); faltan Roof, Concrete, Bins, Fences. No está hecha.",
     "n": 113,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-05"
   },
   {
     "id": "3e6673eb9c568037b3aef0a9ead6bdcb",
@@ -1972,7 +2040,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 114,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-05"
   },
   {
     "id": "3ee673eb9c568039a957ecf6de4adc5a",
@@ -1990,7 +2059,8 @@
     "evidencia_septiembre": null,
     "n": 115,
     "estado_proceso": "aplicado",
-    "prioridad_aplicada": "Medium"
+    "prioridad_aplicada": "Medium",
+    "deadline_aplicado": "2026-11-05"
   },
   {
     "id": "3fb673eb9c568187ae15d9dc3fcd806b",
@@ -2007,7 +2077,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 116,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-05"
   },
   {
     "id": "3d9673eb9c568083b505c2c09be936a5",
@@ -2024,7 +2095,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 117,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-05"
   },
   {
     "id": "3cf673eb9c56805980f9de57c451d41c",
@@ -2042,7 +2114,8 @@
     "evidencia_septiembre": "Sin evidencia de publicación. Cuerpo plantilla con Lorem ipsum.",
     "n": 118,
     "estado_proceso": "aplicado",
-    "prioridad_aplicada": "Low"
+    "prioridad_aplicada": "Low",
+    "deadline_aplicado": "2026-11-10"
   },
   {
     "id": "3cf673eb9c5680bcbeacd8ba6eaeaf1f",
@@ -2059,7 +2132,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "NO hecha: checklist (arreglar excel, crear público, crear campaña) sin marcar. Sigue P1.",
     "n": 119,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-29"
   },
   {
     "id": "3e7673eb9c56811b8664f78067ad7269",
@@ -2077,7 +2151,8 @@
     "evidencia_septiembre": "NO hecha: checklist completo sin marcar.",
     "n": 120,
     "estado_proceso": "aplicado",
-    "prioridad_aplicada": "Medium"
+    "prioridad_aplicada": "Medium",
+    "deadline_aplicado": "2026-11-06"
   },
   {
     "id": "3ea673eb9c56802aab89e7be01809f38",
@@ -2114,7 +2189,8 @@
     "cliente_inferido": "Picanha Rodizio (ex-cliente)",
     "n": 122,
     "estado_proceso": "aplicado",
-    "prioridad_aplicada": "Low"
+    "prioridad_aplicada": "Low",
+    "deadline_aplicado": "2026-11-11"
   },
   {
     "id": "3f7673eb9c5681a98e5ff55c1f226456",
@@ -2150,7 +2226,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 124,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-11"
   },
   {
     "id": "3f7673eb9c5681259b28fa117af5837a",
@@ -2167,7 +2244,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 125,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-30"
   },
   {
     "id": "3e7673eb9c56818f8c5af0b74112e83f",
@@ -2184,7 +2262,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 126,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-06"
   },
   {
     "id": "3f7673eb9c5681318855c654eb23b51a",
@@ -2201,7 +2280,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 127,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-12"
   },
   {
     "id": "3e5673eb9c568002bb36e2b83c98d687",
@@ -2218,7 +2298,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 128,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-06"
   },
   {
     "id": "3e8673eb9c5680f2a4eac96de6f00166",
@@ -2235,7 +2316,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 129,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-11-06"
   },
   {
     "id": "3e3673eb9c568044b015f1bf0f6371c4",
@@ -2271,7 +2353,8 @@
     "evidencia_septiembre": null,
     "n": 131,
     "estado_proceso": "aplicado",
-    "prioridad_aplicada": "Low"
+    "prioridad_aplicada": "Low",
+    "deadline_aplicado": "2026-11-12"
   },
   {
     "id": "3f1673eb9c56807da8b6c6480baf9209",
@@ -2289,7 +2372,8 @@
     "evidencia_septiembre": null,
     "n": 132,
     "estado_proceso": "aplicado",
-    "prioridad_aplicada": "Low"
+    "prioridad_aplicada": "Low",
+    "deadline_aplicado": "2026-11-13"
   },
   {
     "id": "3f1673eb9c5680d080cfe714c25dcc80",
@@ -2362,7 +2446,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 136,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "deadline_aplicado": "2026-10-30"
   },
   {
     "id": "3e7673eb9c568006886ce6fa551d0a6c",
