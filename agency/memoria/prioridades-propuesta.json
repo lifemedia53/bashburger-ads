@@ -48,7 +48,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Cuerpo: 'Falta cambiar las ensaladas y picoteos' (3 pendientes); In progress. Probable avance alto, no cerrada. Relacionada con 'Cambiar todos los ubereats de Bombo Burger'.",
     "n": 3,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "nota": "Laura 2026-10-23: pendiente de follow up (sigue abierta)"
   },
   {
     "id": "3f7673eb9c568101b19de556b41b3020",
@@ -82,7 +83,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Cuerpo: 'Completar el mes con ideas para Bash Burger'; checklist sin marcar. Mes de septiembre terminado.",
     "n": 5,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "aplicado",
+    "scheduled_for_aplicado": "2026-10-26"
   },
   {
     "id": "3d0673eb9c568056a168f5c9f4ce81fd",
@@ -99,7 +101,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Probable hecha sin cerrar.",
     "n": 6,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3d3673eb9c56808c89ecc3c5cdaaf22d",
@@ -116,7 +119,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Probable hecha sin cerrar.",
     "n": 7,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f0673eb9c5680538857e941ea445c88",
@@ -286,7 +290,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Sin evidencia de ejecución. Existe tarea posterior 'Remarketing Mensajes' (Bombo Burger) que podría haberla reemplazado.",
     "n": 17,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3fb673eb9c568152bcf1ddc2e4105c6b",
@@ -337,7 +342,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Probable hecha sin cerrar; confirmar si la promo sigue vigente.",
     "n": 20,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f7673eb9c5681e28847ced4ed1a6854",
@@ -857,7 +863,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Checklist: Septiembre [x]; Octubre a Agosto sin marcar. Septiembre hecho; la tarea sigue por los meses siguientes.",
     "n": 50,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3cf673eb9c56805ba929f74835b06f6c",
@@ -1097,7 +1104,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "El cuerpo es un log de pruebas del bot de septiembre; sin cierre explícito.",
     "n": 64,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3d9673eb9c56805e8bc2dcf3c731bfd9",
@@ -1114,7 +1122,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Status Published/Reprogram; el bot sigue en uso (ver 'Bot auditoria IG V2'). Probable hecha sin cerrar.",
     "n": 65,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f1673eb9c5681f89968c41abd6a015e",
@@ -1492,7 +1501,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Ready for review desde septiembre; checklist (imágenes, video, formulario, segmentar, publicar) sin marcar. Confirmar si ya se publicó.",
     "n": 87,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3ea673eb9c5681afb526d4251e6eeed0",
@@ -1680,7 +1690,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Probable hecha sin cerrar.",
     "n": 98,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3d7673eb9c5680e1b246f0df2946860d",
@@ -1697,7 +1708,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Candidata a cierre/archivo: la propia nota dice que no requiere ejecución.",
     "n": 99,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3d1673eb9c56806eb5dacc83201989cb",
@@ -1714,7 +1726,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Probable hecha sin cerrar; hoy se revisa en 'Trafic to ST Bliss'.",
     "n": 100,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3d9673eb9c568012a3d4ea9f65201a68",
@@ -1801,7 +1814,8 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Ready for review; cuerpo con precios e imagen adjunta. Probable que esté entregada, confirmar con Laura.",
     "n": 105,
-    "estado_proceso": "aplicado"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f7673eb9c56817bae41f4344c5aa3c9",
@@ -1853,7 +1867,7 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Probable hecha sin cerrar.",
     "n": 108,
-    "estado_proceso": "aplicado",
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
     "prioridad_aplicada": "Low"
   },
   {
@@ -1871,7 +1885,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 109,
-    "estado_proceso": "pendiente_dato"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3de673eb9c5680fcaf11e93111431acf",
@@ -2079,7 +2094,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 121,
-    "estado_proceso": "pendiente_dato"
+    "estado_proceso": "aplicado",
+    "scheduled_for_aplicado": "2026-10-26"
   },
   {
     "id": "3f7673eb9c56812ea0c8dce4f7671789",
@@ -2116,7 +2132,8 @@
     "evidencia_septiembre": null,
     "cliente_inferido": "Casa Lotus / Somos Casa Lotus",
     "n": 123,
-    "estado_proceso": "pendiente_dato"
+    "estado_proceso": "aplicado",
+    "scheduled_for_aplicado": "2026-10-24"
   },
   {
     "id": "3f2673eb9c5680adbd9fc48fbf759234",
@@ -2235,7 +2252,7 @@
     "flag_septiembre": true,
     "evidencia_septiembre": "Ya publicada según su Status. Probable hecha sin cerrar.",
     "n": 130,
-    "estado_proceso": "aplicado",
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
     "prioridad_aplicada": "Low"
   },
   {
@@ -2289,7 +2306,8 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 133,
-    "estado_proceso": "pendiente_dato"
+    "estado_proceso": "cerrada_por_orden_laura_2026-10-23",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f7673eb9c568014ad49e49402c0d4c3",
@@ -2306,7 +2324,9 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 134,
-    "estado_proceso": "pendiente_dato"
+    "estado_proceso": "aplicado",
+    "scheduled_for_aplicado": "2026-10-28",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f1673eb9c5680fb987df9ea18d6ec2a",
@@ -2323,7 +2343,9 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 135,
-    "estado_proceso": "pendiente_dato"
+    "estado_proceso": "aplicado",
+    "scheduled_for_aplicado": "2026-10-29",
+    "prioridad_aplicada": "Low"
   },
   {
     "id": "3f7673eb9c5681938138cc6af6bf1f10",
