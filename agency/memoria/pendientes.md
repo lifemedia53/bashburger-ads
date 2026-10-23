@@ -54,3 +54,11 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Lotus Estilistas (2150099018564052): AD 1.C CJ1 pausado. AD 1.D original tenía video 8159 con copy TEXTURA (error); creado AD 1.D (v2) CAMBIO+8159 (activo, en revisión) y pausado el original. Creado AD 2.D TEXTURA+8120 en CJ2 (pausado). Método que funciona: ads_create_ad con object_story_spec inline + CTA INSTAGRAM_MESSAGE (ads_create_creative con MESSAGE_PAGE no sirve para IG Direct). Falta vincular IG de Lotus.
 - Hostel: borrador (DRAFT, no publicado) 120249519319570575 duplicado de "Cris + Rawy Whatsapp" en la campaña de mensajes; trae el Reel A y error ObjectStorySpecRedundant (image_url+image_hash). Laura lo edita al vincular su reel (DekO_1WPW9E, no visible en el IG vinculado).
 - Pendiente: aviso de tokens el lunes; prompt guías de voz en agency/prompts/guias-voz-27-oct.md (programa Laura 27-oct).
+
+## 23-oct — rutinas (fuente: list_triggers)
+- Nueva rutina trig_012t6XN2LN1sQBdfUBgCqwxr "Revisión Meta Ads (lun, mié, sáb)" 8:41 Chile, solo lectura. OJO: se creó SIN conector Meta y sin repo: Laura debe agregarlos desde claude.ai (Rutinas) o fallará.
+- Avisos de tokens DUPLICADOS: trig_0136M5Q31usuL71Twpjphuvi (8:47) y trig_018dUaPYzDn8WHj3Ng2r2DLa (8:50), ambos lunes, ambos fallaron 19-oct por límite de uso. Proponer dejar uno.
+- Rutinas de Cowork (corren en el PC de Laura): Facturación día 30 (aún no corre), Nómina 30 (activa), Nómina 14 (desactivada). Invoices día 27 y cifras Meta+Justo día 2 (sesión persistente).
+- Posts Google ya programados: días 28 y 6 (trig_0184x8MoyEJcx6Ekwekqfrki) y día 7 resultados.
+- Lotus 23-oct: CJ1 = AD 1.D (Laura corrigió texto) + AD 1.E (8120 TEXTURA, nuevo). CJ2 = AD 2.D (8120) + AD 2.E (8159 CAMBIO, nuevo); pausado "AD 1.E" mal armado en CJ2 (8120 con texto CAMBIO). v2 de 1.D pausada.
+- Idea aprobada a evaluar: paid-media que lea un Sheet y cree anuncios en PAUSA para que Laura apruebe.
