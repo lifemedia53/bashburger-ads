@@ -104,29 +104,29 @@
       "marca": "Lullaby Rentals",
       "cuenta": "10201332475268991",
       "moneda": "USD",
-      "presupuesto_mensual": null,
-      "nota": "[DATO]"
+      "presupuesto_mensual": 200,
+      "nota": "Presupuesto dicho por Laura 2026-10-23"
     },
     {
       "marca": "Santerra",
       "cuenta": "3361702410655763",
       "moneda": "CLP",
-      "presupuesto_mensual": null,
-      "nota": "Ads MCP no habilitado: no se puede leer por conector; pedir CSV manual"
+      "presupuesto_mensual": 450000,
+      "nota": "Ads MCP no habilitado: no se puede leer por conector; pedir CSV manual | Presupuesto dicho por Laura 2026-10-23"
     },
     {
       "marca": "La Siciliana Trattoria",
       "cuenta": null,
       "moneda": "CLP",
-      "presupuesto_mensual": null,
-      "nota": "Ads MCP no habilitado; cuenta por confirmar [DATO]"
+      "presupuesto_mensual": 200000,
+      "nota": "Ads MCP no habilitado; cuenta por confirmar [DATO] | Presupuesto dicho por Laura 2026-10-23"
     },
     {
       "marca": "Lemarc",
       "cuenta": null,
       "moneda": "CLP",
-      "presupuesto_mensual": null,
-      "nota": "Cuenta UNSETTLED, no se puede consultar [DATO]"
+      "presupuesto_mensual": 100000,
+      "nota": "Cuenta UNSETTLED, no se puede consultar [DATO] | Presupuesto dicho por Laura 2026-10-23"
     }
   ]
 }
