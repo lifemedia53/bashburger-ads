@@ -1625,7 +1625,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 91,
-    "estado_proceso": "pendiente",
+    "estado_proceso": "aplicado",
     "deadline_aplicado": "2026-11-03"
   },
   {
@@ -1643,7 +1643,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 92,
-    "estado_proceso": "pendiente",
+    "estado_proceso": "aplicado",
     "deadline_aplicado": "2026-11-03"
   },
   {
@@ -1661,7 +1661,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 93,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3ee673eb9c5680aa8ae8cd10af333a15",
@@ -1678,7 +1678,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 94,
-    "estado_proceso": "pendiente"
+    "estado_proceso": "aplicado"
   },
   {
     "id": "3f0673eb9c568016b4e2daa21046689f",
@@ -1695,7 +1695,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 95,
-    "estado_proceso": "pendiente",
+    "estado_proceso": "aplicado",
     "deadline_aplicado": "2026-11-03"
   },
   {
@@ -1713,7 +1713,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 96,
-    "estado_proceso": "pendiente",
+    "estado_proceso": "aplicado",
     "deadline_aplicado": "2026-11-03"
   },
   {
@@ -1731,7 +1731,7 @@
     "flag_septiembre": false,
     "evidencia_septiembre": null,
     "n": 97,
-    "estado_proceso": "pendiente",
+    "estado_proceso": "aplicado",
     "deadline_aplicado": "2026-11-04"
   },
   {
