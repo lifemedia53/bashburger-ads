@@ -1,28 +1,132 @@
 {
   "actualizado": "2026-10-23",
-  "fuente": "Presupuestos dichos por Laura el 2026-10-23 en sesión (Tiki, Mare, Steakhouse, Entre Tacos, Comercializadora) y clientes.json (Hostel). Sin fuente = null: preguntar a Laura, no inventar.",
+  "fuente": "Presupuestos dichos por Laura el 2026-10-23 en sesión (Tiki, Mare, Steakhouse, Entre Tacos, Comercializadora) y clientes.json (Hostel). Sin fuente = null: preguntar a Laura, no inventar. Segunda tanda dicha por Laura el 2026-10-23: Bombo Burger, Bash, Bendito, Tony's, Lotus x3.",
   "regla_alerta": {
     "amarilla": "gasto del mes >= 80% del presupuesto",
     "roja": "gasto del mes >= 100% del presupuesto",
     "naranja": "proyección a fin de mes (gasto / día del mes x días del mes) supera el 100% aunque todavía no se llegue"
   },
   "clientes": [
-    {"marca": "Bombo Tiki House", "cuenta": "1802064240289181", "moneda": "CLP", "presupuesto_mensual": 160000, "nota": "Laura 2026-10-23: pauta mensual de Tiki"},
-    {"marca": "Mare by Bombo", "cuenta": "4197093347202081", "moneda": "CLP", "presupuesto_mensual": null, "presupuesto_noviembre": 300000, "nota": "Laura 2026-10-23: noviembre $300.000; octubre [DATO]"},
-    {"marca": "Steakhouse by Bombo", "cuenta": "1642000733624651", "moneda": "CLP", "presupuesto_mensual": null, "presupuesto_noviembre": 150000, "nota": "Laura 2026-10-23: noviembre $150.000; todo pausado hasta noviembre; octubre [DATO]"},
-    {"marca": "Entre Tacos", "cuenta": "1542868017355716", "moneda": "CLP", "presupuesto_mensual": 100000, "nota": "Laura 2026-10-23"},
-    {"marca": "Bombo Comercializadora", "cuenta": "1447851609427252", "moneda": "CLP", "presupuesto_mensual": 200000, "nota": "Laura 2026-10-23"},
-    {"marca": "The Cool Hostel", "cuenta": "1428593511882773", "moneda": "CLP", "presupuesto_mensual": 60000, "nota": "clientes.json (lo contratado, $2.000/día); pausado hasta noviembre por orden de Laura 2026-10-23"},
-    {"marca": "Bombo Burger", "cuenta": "362765604642572", "moneda": "CLP", "presupuesto_mensual": null, "nota": "[DATO] preguntar a Laura"},
-    {"marca": "Bash Burger", "cuenta": "1753718285299909", "moneda": "CLP", "presupuesto_mensual": null, "nota": "[DATO]"},
-    {"marca": "Bendito Completo", "cuenta": "1411268713631255", "moneda": "CLP", "presupuesto_mensual": null, "nota": "[DATO]; gasto real de 30 días $229.563 (auditoría 23-oct)"},
-    {"marca": "Tony's Pasta", "cuenta": "1032681759334136", "moneda": "CLP", "presupuesto_mensual": null, "nota": "[DATO]"},
-    {"marca": "Lotus Estilistas", "cuenta": "2150099018564052", "moneda": "ARS", "presupuesto_mensual": null, "nota": "[DATO]"},
-    {"marca": "Lotus Casa Cultural", "cuenta": "701985235103370", "moneda": "ARS", "presupuesto_mensual": null, "nota": "[DATO]"},
-    {"marca": "Somos Casa Lotus", "cuenta": "1158795777045841", "moneda": "ARS", "presupuesto_mensual": null, "nota": "[DATO]"},
-    {"marca": "Lullaby Rentals", "cuenta": "10201332475268991", "moneda": "USD", "presupuesto_mensual": null, "nota": "[DATO]"},
-    {"marca": "Santerra", "cuenta": "3361702410655763", "moneda": "CLP", "presupuesto_mensual": null, "nota": "Ads MCP no habilitado: no se puede leer por conector; pedir CSV manual"},
-    {"marca": "La Siciliana Trattoria", "cuenta": null, "moneda": "CLP", "presupuesto_mensual": null, "nota": "Ads MCP no habilitado; cuenta por confirmar [DATO]"},
-    {"marca": "Lemarc", "cuenta": null, "moneda": "CLP", "presupuesto_mensual": null, "nota": "Cuenta UNSETTLED, no se puede consultar [DATO]"}
+    {
+      "marca": "Bombo Tiki House",
+      "cuenta": "1802064240289181",
+      "moneda": "CLP",
+      "presupuesto_mensual": 160000,
+      "nota": "Laura 2026-10-23: pauta mensual de Tiki"
+    },
+    {
+      "marca": "Mare by Bombo",
+      "cuenta": "4197093347202081",
+      "moneda": "CLP",
+      "presupuesto_mensual": null,
+      "presupuesto_noviembre": 300000,
+      "nota": "Laura 2026-10-23: noviembre $300.000; octubre [DATO]"
+    },
+    {
+      "marca": "Steakhouse by Bombo",
+      "cuenta": "1642000733624651",
+      "moneda": "CLP",
+      "presupuesto_mensual": null,
+      "presupuesto_noviembre": 150000,
+      "nota": "Laura 2026-10-23: noviembre $150.000; todo pausado hasta noviembre; octubre [DATO]"
+    },
+    {
+      "marca": "Entre Tacos",
+      "cuenta": "1542868017355716",
+      "moneda": "CLP",
+      "presupuesto_mensual": 100000,
+      "nota": "Laura 2026-10-23"
+    },
+    {
+      "marca": "Bombo Comercializadora",
+      "cuenta": "1447851609427252",
+      "moneda": "CLP",
+      "presupuesto_mensual": 200000,
+      "nota": "Laura 2026-10-23"
+    },
+    {
+      "marca": "The Cool Hostel",
+      "cuenta": "1428593511882773",
+      "moneda": "CLP",
+      "presupuesto_mensual": 60000,
+      "nota": "clientes.json (lo contratado, $2.000/día); pausado hasta noviembre por orden de Laura 2026-10-23"
+    },
+    {
+      "marca": "Bombo Burger",
+      "cuenta": "362765604642572",
+      "moneda": "CLP",
+      "presupuesto_mensual": 600000,
+      "nota": "Laura 2026-10-23"
+    },
+    {
+      "marca": "Bash Burger",
+      "cuenta": "1753718285299909",
+      "moneda": "CLP",
+      "presupuesto_mensual": 200000,
+      "nota": "Laura 2026-10-23"
+    },
+    {
+      "marca": "Bendito Completo",
+      "cuenta": "1411268713631255",
+      "moneda": "CLP",
+      "presupuesto_mensual": 100000,
+      "nota": "Laura 2026-10-23"
+    },
+    {
+      "marca": "Tony's Pasta",
+      "cuenta": "1032681759334136",
+      "moneda": "CLP",
+      "presupuesto_mensual": 100000,
+      "nota": "Laura 2026-10-23"
+    },
+    {
+      "marca": "Lotus Estilistas",
+      "cuenta": "2150099018564052",
+      "moneda": "ARS",
+      "presupuesto_mensual": 300000,
+      "nota": "Laura 2026-10-23"
+    },
+    {
+      "marca": "Lotus Casa Cultural",
+      "cuenta": "701985235103370",
+      "moneda": "ARS",
+      "presupuesto_mensual": 100000,
+      "nota": "Laura 2026-10-23"
+    },
+    {
+      "marca": "Somos Casa Lotus",
+      "cuenta": "1158795777045841",
+      "moneda": "ARS",
+      "presupuesto_mensual": 50000,
+      "nota": "Laura 2026-10-23"
+    },
+    {
+      "marca": "Lullaby Rentals",
+      "cuenta": "10201332475268991",
+      "moneda": "USD",
+      "presupuesto_mensual": null,
+      "nota": "[DATO]"
+    },
+    {
+      "marca": "Santerra",
+      "cuenta": "3361702410655763",
+      "moneda": "CLP",
+      "presupuesto_mensual": null,
+      "nota": "Ads MCP no habilitado: no se puede leer por conector; pedir CSV manual"
+    },
+    {
+      "marca": "La Siciliana Trattoria",
+      "cuenta": null,
+      "moneda": "CLP",
+      "presupuesto_mensual": null,
+      "nota": "Ads MCP no habilitado; cuenta por confirmar [DATO]"
+    },
+    {
+      "marca": "Lemarc",
+      "cuenta": null,
+      "moneda": "CLP",
+      "presupuesto_mensual": null,
+      "nota": "Cuenta UNSETTLED, no se puede consultar [DATO]"
+    }
   ]
 }
