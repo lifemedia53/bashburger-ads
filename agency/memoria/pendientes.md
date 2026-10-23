@@ -88,3 +88,13 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Lullaby: post y hotsheet cargados en Notion; fecha de publicación del post se ve el lunes 19-oct.
 - Funnel por cliente: tarea grande (puede costar >US$1); falta que Laura defina 'sequence events' y 2 clientes de muestra. Hecho solo: tarea creada.
 - Cierre sesión 6: creado el agente `ad-uploader` (siempre en pausa, ensayo primero); funnel por cliente queda para inicio de mes (muestra The Cool Hostel + Bombo Burger; 'sequence events' = secuencia de eventos del pixel por etapa, aclarado por Laura). Prioridades aplicadas 1 a 100; quedan #101 a #138. Prompt de la próxima sesión en proxima-sesion.md (lee prompts-meta.md).
+
+## Sesión 7 del 2026-10-23: prioridades, fechas, estados y Meta (fuente: Notion y Meta, órdenes de Laura)
+- Prioridades #1 a #138 aplicadas (json: estado_proceso). 16 tareas cerradas por orden de Laura (Complete + Low): #6, 7, 20, 65, 98, 99, 100, 108, 130, 105, 17, 64, 87, 50, 109, 133. #3 queda abierta (follow up).
+- Deadline nuevo en 85 tareas abiertas (Urgent 26-30 oct, Medium hasta 6-nov, Low hasta 13-nov); #13, #14 y #15 (Bombo Burger) pasaron al 24-oct por orden de Laura. Detalle en `deadline_aplicado` del json. Laura mueve a mano lo que quiera; el reparto de las urgentes queda para DESPUÉS de trabajar los ads.
+- Notion All Tasks: agregado el estado 'Follow up'; Resource Required ahora = Video, Email, Web, AI, CM, Fotografía, Diseños (opciones viejas borradas, orden de Laura). Laura corrige los estados a mano.
+- Regla confirmada por Laura: los ads los revisa el agente de Meta Ads (paid-media-lead); el Jefe ejecuta lo que mueve plata con su OK.
+- Gasto 1-23 oct por cuenta (Meta, lectura): `agency/investigacion/2026-10-23-gasto-mes-por-marca.md`. Cuenta 1802064240289181 = Bombo Tiki House (Laura, 23-oct). Hostel gastó $147.241 vs $60.000 contratado (incluye antes del 18-oct).
+- Meta: pausado el boost 'Publicación de Instagram' de Mare (120251550714610095, cuenta 4197093347202081) por orden de Laura; verificado PAUSED. Anotado en la Bitácora: https://app.notion.com/p/402673eb9c5681a58450c94019138fb4
+- Bombo Burger (informe paid-media-lead, Meta solo lectura): #13 remarketing frenado por spend cap $300.000, Laura lo subió a $360.000 el 22-oct; recomendación: no tocar hasta el 29-oct. #14 WEB JUSTO: CJ 1.1 y 1.3 gastan con copy vencido ('hasta septiembre'); recomendación: 4 anuncios nuevos en pausa con vigencia real, luego activar y pausar los viejos con OK. [DATO] vigencia de BancoEstado 50% y BancoChile 30%.
+- Siguiente: seguir con #29, 30 (Tiki), 74 (Lotus Estilistas), 84, 85 (Lullaby), 125 (Steakhouse), de a 2 clientes. Después: mapa de procesos + oficina isométrica web.
