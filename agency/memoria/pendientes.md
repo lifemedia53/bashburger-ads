@@ -57,7 +57,7 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 
 ## 23-oct — rutinas (fuente: list_triggers)
 - Nueva rutina trig_012t6XN2LN1sQBdfUBgCqwxr "Revisión Meta Ads (lun, mié, sáb)" 8:41 Chile, solo lectura. OJO: se creó SIN conector Meta y sin repo: Laura debe agregarlos desde claude.ai (Rutinas) o fallará.
-- Avisos de tokens DUPLICADOS: trig_0136M5Q31usuL71Twpjphuvi (8:47) y trig_018dUaPYzDn8WHj3Ng2r2DLa (8:50), ambos lunes, ambos fallaron 19-oct por límite de uso. Proponer dejar uno.
+- Aviso de tokens duplicado borrado (OK Laura 23-oct): queda trig_0136M5Q31usuL71Twpjphuvi (lunes 8:47). Nómina 14 reactivada (OK Laura).
 - Rutinas de Cowork (corren en el PC de Laura): Facturación día 30 (aún no corre), Nómina 30 (activa), Nómina 14 (desactivada). Invoices día 27 y cifras Meta+Justo día 2 (sesión persistente).
 - Posts Google ya programados: días 28 y 6 (trig_0184x8MoyEJcx6Ekwekqfrki) y día 7 resultados.
 - Lotus 23-oct: CJ1 = AD 1.D (Laura corrigió texto) + AD 1.E (8120 TEXTURA, nuevo). CJ2 = AD 2.D (8120) + AD 2.E (8159 CAMBIO, nuevo); pausado "AD 1.E" mal armado en CJ2 (8120 con texto CAMBIO). v2 de 1.D pausada.
