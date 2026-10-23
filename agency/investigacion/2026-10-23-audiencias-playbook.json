@@ -1,0 +1,982 @@
+{
+  "fecha": "2026-10-23",
+  "fuente": "Meta Ads MCP: ads_get_ad_account_custom_audiences (solo lectura, limit 100). Tamaños = approximate_count_lower_bound-upper_bound de Meta. Estándar: playbook A-001..A-007 (prefijos A- Bombo, CC-A- Casa Cultural, LE-A- Estilistas).",
+  "leyenda": "presente = existe por nombre con la definición del playbook; equivalente parcial = existe algo parecido pero no cumple la definición exacta (ventana, plataforma IG vs FB, etc.); falta = no existe; [DATO] = el nombre no deja clara la definición",
+  "marcas": [
+    {
+      "marca": "Bombo Tiki House",
+      "ad_account_id": "1802064240289181",
+      "estado_consulta": "ok",
+      "audiencias": [
+        {
+          "nombre": "TIKI HOUSE - Interactuó con la Página 30d",
+          "tipo": "PLATFORM",
+          "tamano": "1600-1900",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "TIKI HOUSE - Visitó la Página 30d",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "TIKI HOUSE - Mensajes a la Página 180d",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Similar (US, 3%) - Me gusta de la página: Lotus",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (US, 3%) - Página a la que se ha enviado un mensaje: Lotus",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (US, 3%) - Página que ha interactuado: Lotus",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (US, 3%) - Me gusta de la página: VP Marketing Design",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (US, 3%) - Página que ha interactuado: VP Marketing Design",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (US, 3%) - Página a la que se ha enviado un mensaje: VP Marketing Design",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (US, 3%) - Página a la que se ha enviado un mensaje: VP Marketing Design (2)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (US, 3%) - Audiencia basada en los Me gusta de la página: VP Marketing Design",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (US, 3%) - Página que ha interactuado: VP Marketing Design (2)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        }
+      ],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "equivalente parcial: 'Mensajes a la Página 180d' es de la Página de Facebook, no de IG [DATO]",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "equivalente parcial: 'Visitó la Página 30d' es visita a la Página FB, no al perfil IG [DATO]",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "Ninguna audiencia de sitio web/pixel identificada por nombre. [DATO]",
+      "listas_clientes": "Ninguna",
+      "notas": "Los 12 LAL 'Similar (US, 3%)' (6 de Lotus y 6 de VP Marketing Design) tienen nombres de páginas ajenas a Tiki House, todos inactivos, creados 2024. Origen [DATO]; no usar sin revisar. Los nombres con (2) son duplicados de nombre distinto en Meta."
+    },
+    {
+      "marca": "Mare by Bombo",
+      "ad_account_id": "4197093347202081",
+      "estado_consulta": "ok",
+      "audiencias": [
+        {
+          "nombre": "Público similar (CL, 1%) - MARE-A-001 | Engagement IG 365d",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "MARE-A-001 | Engagement IG 365d",
+          "tipo": "PLATFORM",
+          "tamano": "39200-46100",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 2% to 3%) - Consideración",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1% to 2%) - Consideración",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Consideración",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Retargeting (AI)",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Conversión",
+          "tipo": "PLATFORM",
+          "tamano": "112100-131800",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Consideración",
+          "tipo": "PLATFORM",
+          "tamano": "112700-132600",
+          "estado": "ACTIVE"
+        }
+      ],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "falta",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "falta",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "'Conversión' y 'Consideración' (PLATFORM, ~112k) pueden venir de pixel o de interacción; el nombre no lo aclara [DATO].",
+      "listas_clientes": "Ninguna",
+      "notas": "Solo existe 'MARE-A-001 | Engagement IG 365d' (ventana 365d, no 30d), que no es A-004. Nota: el prefijo MARE- no está en el estándar del playbook."
+    },
+    {
+      "marca": "Steakhouse by Bombo",
+      "ad_account_id": "1642000733624651",
+      "estado_consulta": "ok",
+      "audiencias": [
+        {
+          "nombre": "Similar (CL, 1%) - Instagram Automatic Audience",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        }
+      ],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "falta",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "falta",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "Ninguna",
+      "listas_clientes": "Ninguna",
+      "notas": "Solo una audiencia (LAL de IG automático, inactiva)."
+    },
+    {
+      "marca": "Entre Tacos",
+      "ad_account_id": "1542868017355716",
+      "estado_consulta": "ok",
+      "audiencias": [],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "falta",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "falta",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "Ninguna",
+      "listas_clientes": "Ninguna",
+      "notas": "Cuenta sin audiencias personalizadas (respuesta vacía, no error)."
+    },
+    {
+      "marca": "Bombo Comercializadora",
+      "ad_account_id": "1447851609427252",
+      "estado_consulta": "ok",
+      "audiencias": [
+        {
+          "nombre": "lista_clientes_meta.csv",
+          "tipo": "CUSTOM",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Base Clientes Bombo Comercializadora",
+          "tipo": "CUSTOM",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Base Clientes Bombo Comercializadora",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1% to 2%) - Base Clientes Bombo Comercializadora",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Base Clientes Bombo Comercializadora (2)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 3%) - Página a la que se envió un mensaje: Grupo Bombo Distribuidores de Alimentos",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 3%) - Página con la que se interactuó: Grupo Bombo Distribuidores de Alimentos",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 3%) - Me gusta de la página: Grupo Bombo Distribuidores de Alimentos",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        }
+      ],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "falta",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "falta",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "equivalente parcial: LAL 1% sobre 'Base Clientes' (lista de clientes), no sobre compradores VIP [DATO]"
+      },
+      "web_pixel": "Ninguna",
+      "listas_clientes": "Sí: 'lista_clientes_meta.csv' (CUSTOM, activa, creada 2026-07-06) y 'Base Clientes Bombo Comercializadora' (CUSTOM, activa, 2026-07-02).",
+      "notas": "LAL de 2024 sobre 'Grupo Bombo Distribuidores de Alimentos' (inactivos). Dos listas de clientes con nombres parecidos: [DATO] si son la misma base."
+    },
+    {
+      "marca": "The Cool Hostel",
+      "ad_account_id": "1428593511882773",
+      "estado_consulta": "ok",
+      "audiencias": [
+        {
+          "nombre": "LAL 1% TCH Contactos",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "TCH.csv",
+          "tipo": "CUSTOM",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (Worldwide, 1%) - Guardaron Publi / 180 dias",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Guardaron Publi / 180 dias",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Guardaron Publi / 180 dias",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        }
+      ],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "falta",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "equivalente parcial: 'Guardaron Publi / 180 dias' (ventana 180d, no IG 30d) [DATO]",
+        "A-005 Visitó perfil 30d": "falta",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "Ninguna identificada por nombre. [DATO]",
+      "listas_clientes": "Sí: 'TCH.csv' (CUSTOM, activa, 2026-10-11) y LAL 1% sobre contactos (activa).",
+      "notas": "Sin campañas nuevas por decisión de Laura (memoria); este dato es solo de lectura."
+    },
+    {
+      "marca": "Bombo Burger",
+      "ad_account_id": "362765604642572",
+      "estado_consulta": "ok",
+      "audiencias": [
+        {
+          "nombre": "A-001 | Mensajes IG 30d | Bombo",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "A-002 | Mensajes IG 180d | Bombo",
+          "tipo": "PLATFORM",
+          "tamano": "1200-1400",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "A-003 | Video 95% 30d | Bombo",
+          "tipo": "ENGAGEMENT",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "A-004 | Guardaron IG 30d | Bombo",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "A-005 | Visitó perfil 30d | Bombo",
+          "tipo": "PLATFORM",
+          "tamano": "7200-8500",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "A-006 | LAL 1% Mensajes | Bombo",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "A-007 | LAL 1% Compradores VIP | Bombo",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Clientes Justo | Alto Valor | Bombo",
+          "tipo": "CUSTOM",
+          "tamano": "6000-7100",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Clientes Justo | Base completa VALOR | Bombo",
+          "tipo": "CUSTOM",
+          "tamano": "9100-10700",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - A-003 | Video 95% 30d | Bombo",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - A-002 | Mensajes IG 180d | Bombo",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - A-005 | Visitó perfil 30d | Bombo",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Remarketing o Conversion",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Audiencia Amplia - Int y Mensajes",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Lookalike (CL, 1%) - Consideracion o Engagement",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Lookalike (CL, 1%) - Retargeting (Alta Intencion)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Audiencia Amplia - Int y Mensajes",
+          "tipo": "PLATFORM",
+          "tamano": "89400-105200",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 2% to 3%) - Consideracion o Engagement",
+          "tipo": "LOOKALIKE",
+          "tamano": "152100-179000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1% to 2%) - Consideracion o Engagement",
+          "tipo": "LOOKALIKE",
+          "tamano": "154200-181400",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Consideracion o Engagement",
+          "tipo": "LOOKALIKE",
+          "tamano": "158200-186200",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "ROTA - Retargeting <1000 (reemplazar)",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Consideracion o Engagement",
+          "tipo": "PLATFORM",
+          "tamano": "137400-161600",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Remarketing o Conversion",
+          "tipo": "PLATFORM",
+          "tamano": "137300-161500",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (Worldwide, 1%) - Meta Interacciones",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Meta Interacciones",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Meta Interacciones",
+          "tipo": "PLATFORM",
+          "tamano": "500500-588800",
+          "estado": "ACTIVE"
+        }
+      ],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "presente",
+        "A-002 Mensajes IG 180d": "presente",
+        "A-003 Video 95% 30d": "presente",
+        "A-004 Guardaron IG 30d": "presente (estado INACTIVE, sin audiencia activa)",
+        "A-005 Visitó perfil 30d": "presente",
+        "A-006 LAL 1% Mensajes": "presente (LAL ACTIVE)",
+        "A-007 LAL 1% Compradores VIP": "presente (LAL ACTIVE)"
+      },
+      "web_pixel": "Ninguna con nombre de web/pixel. 'Consideracion o Engagement', 'Remarketing o Conversion' y 'Meta Interacciones' no dicen su fuente [DATO].",
+      "listas_clientes": "Sí: 'Clientes Justo | Alto Valor' (6000-7100) y 'Clientes Justo | Base completa VALOR' (9100-10700), ambas CUSTOM activas, creadas 2026-02-11.",
+      "notas": "Única marca con el set A-001..A-007 completo por nombre. Tiene LAL de A-002, A-003 y A-005 inactivos."
+    },
+    {
+      "marca": "Bash Burger",
+      "ad_account_id": "1753718285299909",
+      "estado_consulta": "ok",
+      "audiencias": [
+        {
+          "nombre": "Público similar (CL, 1%) - Consideracion",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Retargeting",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Instagram Automatic Audience",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 2% to 3%) - Consideracion",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1% to 2%) - Consideracion",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (CL, 1%) - Consideracion (2)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Retargeting",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Consideracion",
+          "tipo": "PLATFORM",
+          "tamano": "103500-121800",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Conversion",
+          "tipo": "PLATFORM",
+          "tamano": "98900-116400",
+          "estado": "ACTIVE"
+        }
+      ],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "falta",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "falta",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "'Retargeting', 'Consideracion' y 'Conversion' pueden ser pixel o engagement; el nombre no lo aclara [DATO].",
+      "listas_clientes": "Ninguna",
+      "notas": "Audiencias genéricas sin prefijo de marca; no siguen la convención A-00x."
+    },
+    {
+      "marca": "Bendito Completo",
+      "ad_account_id": "1411268713631255",
+      "estado_consulta": "ok",
+      "audiencias": [],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "falta",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "falta",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "Ninguna",
+      "listas_clientes": "Ninguna",
+      "notas": "Cuenta sin audiencias personalizadas (respuesta vacía, no error)."
+    },
+    {
+      "marca": "Tony's Pasta",
+      "ad_account_id": "1032681759334136",
+      "estado_consulta": "ok",
+      "audiencias": [],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "falta",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "falta",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "Ninguna",
+      "listas_clientes": "Ninguna",
+      "notas": "Cuenta sin audiencias personalizadas (respuesta vacía, no error)."
+    },
+    {
+      "marca": "Lotus Estilistas",
+      "ad_account_id": "2150099018564052",
+      "estado_consulta": "ok",
+      "audiencias": [
+        {
+          "nombre": "LE-A-003 Video 95% reels nuevos 30d",
+          "tipo": "ENGAGEMENT",
+          "tamano": "14300-16800",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "LE-A-002 Mensajes IG 180d",
+          "tipo": "PLATFORM",
+          "tamano": "49900-58700",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "LE-A-005 Visitó perfil IG 30d",
+          "tipo": "PLATFORM",
+          "tamano": "6900-8100",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 1%) - LE-A-003 Video 95% reels nuevos 30d",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 1%) - LE-A-002 Mensajes IG 180d",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 1%) - LE-A-005 Visitó perfil IG 30d",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 1%) - Objetivo: consideración o engagement",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 2%) - Objetivo: consideración o engagement",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 3%) - Objetivo: consideración o engagement",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 1%) - Objetivo: Excluir en Audiencia amplia",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Lookalike (AR, 1%) - Objetivo: retargeting más específico (AI)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Lookalike (AR, 1%) - Objetivo: remarketing o conversión",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Lookalike (AR, 1%) - Objetivo: consideración o engagement",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Objetivo: Excluir en Audiencia amplia",
+          "tipo": "PLATFORM",
+          "tamano": "132600-156000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Objetivo: retargeting más específico (AI)",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Objetivo: consideración o engagement",
+          "tipo": "PLATFORM",
+          "tamano": "134500-158200",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Objetivo: remarketing o conversión",
+          "tipo": "PLATFORM",
+          "tamano": "132800-156300",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (Worldwide, 1%) - Activos",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 1%) - Activos",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Activos",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "lotuspartis",
+          "tipo": "PLATFORM",
+          "tamano": "134500-158200",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Personas que han visitado el perfil de esta cuenta profesional: PELUQUERÍA CONSCIENTE - Chacabuco 1025, San Telmo",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Personas que han visitado el perfil de esta cuenta profesional: PELUQUERÍA CONSCIENTE (2)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Personas que han interactuado con esta cuenta profesional: PELUQUERÍA CONSCIENTE (x2)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Página que ha interactuado: Life Media Vacation Marketing",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Me gusta de la página: Life Media Vacation Marketing",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Página a la que se ha enviado un mensaje: Life Media Vacation Marketing",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Página a la que se ha enviado un mensaje: Lotus",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Página a la que se ha enviado un mensaje: Lotus (2)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Página a la que se ha enviado un mensaje: Lotus (3)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Página que ha interactuado: Lotus",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Página que ha interactuado: Lotus (2)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Audiencia basada en los Me gusta de la página: Lotus",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Similar (AR, 3%) - Audiencia basada en los Me gusta de la página: Lotus (2)",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        }
+      ],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta (prefijo LE-A-001 no existe)",
+        "A-002 Mensajes IG 180d": "presente (LE-A-002, PLATFORM ACTIVE)",
+        "A-003 Video 95% 30d": "equivalente parcial: 'LE-A-003 Video 95% reels nuevos 30d' (agrega 'reels nuevos') [DATO]",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "presente (LE-A-005 'Visitó perfil IG 30d', PLATFORM ACTIVE)",
+        "A-006 LAL 1% Mensajes": "equivalente parcial: LAL AR 1% sobre LE-A-002 (base 180d, país AR, INACTIVE)",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "'Objetivo: remarketing o conversión' y 'Objetivo: consideración' no dicen si son pixel o engagement [DATO]. 'lotuspartis' sin definición [DATO].",
+      "listas_clientes": "Ninguna",
+      "notas": "LALs en AR (Argentina), no CL. 14 LAL citan páginas ajenas a la marca (Life Media Vacation Marketing, PELUQUERÍA CONSCIENTE, Lotus), todas inactivas: revisar si pertenecen a esta cuenta [DATO]. Los nombres con (2)/(3) son duplicados de nombre en Meta."
+    },
+    {
+      "marca": "Lotus Casa Cultural",
+      "ad_account_id": "701985235103370",
+      "estado_consulta": "ok",
+      "audiencias": [
+        {
+          "nombre": "CC-A-003 Video 95% reels nuevos 30d",
+          "tipo": "ENGAGEMENT",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "CC-A-002 Mensajes IG 180d",
+          "tipo": "PLATFORM",
+          "tamano": "7900-9300",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "CC-A-005 Visitó perfil IG 30d",
+          "tipo": "PLATFORM",
+          "tamano": "1300-1500",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 1%) - CC-A-003 Video 95% reels nuevos 30d",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 1%) - CC-A-002 Mensajes IG 180d",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Público similar (AR, 1%) - CC-A-005 Visitó perfil IG 30d",
+          "tipo": "LOOKALIKE",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Publico Rep. +50% V. Eventos C. Cultural Lotus",
+          "tipo": "ENGAGEMENT",
+          "tamano": "25200-29700",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Publico Rep. +50% V. Cumple Juani",
+          "tipo": "ENGAGEMENT",
+          "tamano": "10100-11800",
+          "estado": "ACTIVE"
+        }
+      ],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta (prefijo CC-A-001 no existe)",
+        "A-002 Mensajes IG 180d": "presente (CC-A-002, PLATFORM ACTIVE)",
+        "A-003 Video 95% 30d": "equivalente parcial: 'CC-A-003 Video 95% reels nuevos 30d' (agrega 'reels nuevos'; ENGAGEMENT ACTIVE) [DATO]",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "presente (CC-A-005, PLATFORM ACTIVE)",
+        "A-006 LAL 1% Mensajes": "equivalente parcial: LAL AR 1% sobre CC-A-002 (base 180d, país AR, INACTIVE)",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "Ninguna con nombre de web/pixel. [DATO]",
+      "listas_clientes": "Ninguna",
+      "notas": "LALs en AR. Dos audiencias de engagement de eventos ('Rep. +50% V. Eventos C. Cultural Lotus' y 'Cumple Juani') no están en el estándar; su definición exacta es [DATO]."
+    },
+    {
+      "marca": "Somos Casa Lotus",
+      "ad_account_id": "1158795777045841",
+      "estado_consulta": "ok",
+      "audiencias": [],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "falta",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "falta",
+        "A-005 Visitó perfil 30d": "falta",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "Ninguna",
+      "listas_clientes": "Ninguna",
+      "notas": "Cuenta sin audiencias personalizadas (respuesta vacía, no error)."
+    },
+    {
+      "marca": "Lullaby Rentals",
+      "ad_account_id": "10201332475268991",
+      "estado_consulta": "ok",
+      "audiencias": [
+        {
+          "nombre": "Trafico ADS desde Enero 2026",
+          "tipo": "PLATFORM",
+          "tamano": "3300-3900",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Retargeting (AI)",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Consideracion / Engagement",
+          "tipo": "PLATFORM",
+          "tamano": "4000-4700",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Remarketing o Conversion",
+          "tipo": "PLATFORM",
+          "tamano": "4000-4800",
+          "estado": "ACTIVE"
+        },
+        {
+          "nombre": "Saved ad or post <180 days>",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "INACTIVE"
+        },
+        {
+          "nombre": "Testing Aud I",
+          "tipo": "PLATFORM",
+          "tamano": "1000-1000",
+          "estado": "ACTIVE"
+        }
+      ],
+      "playbook": {
+        "A-001 Mensajes IG 30d": "falta",
+        "A-002 Mensajes IG 180d": "falta",
+        "A-003 Video 95% 30d": "falta",
+        "A-004 Guardaron IG 30d": "equivalente parcial: 'Saved ad or post <180 days>' (guardados 180d, no IG 30d) [DATO]",
+        "A-005 Visitó perfil 30d": "falta",
+        "A-006 LAL 1% Mensajes": "falta",
+        "A-007 LAL 1% Compradores VIP": "falta"
+      },
+      "web_pixel": "'Remarketing o Conversion' y 'Trafico ADS desde Enero 2026' pueden ser pixel/web; el nombre no lo aclara [DATO].",
+      "listas_clientes": "Ninguna",
+      "notas": "Sin LAL. 'Testing Aud I' parece de prueba [DATO]."
+    },
+    {
+      "marca": "Santerra",
+      "ad_account_id": "3361702410655763",
+      "estado_consulta": "error",
+      "error": "This ad account is not enabled for the Ads MCP. Ads MCP is being gradually rolled out across ad accounts. Please check back at a later date.",
+      "audiencias": [],
+      "playbook": "No evaluable: la cuenta no está habilitada para el Ads MCP.",
+      "web_pixel": "No evaluable",
+      "listas_clientes": "No evaluable",
+      "notas": "Pendiente de habilitación de Meta/MCP. Reintentar más adelante."
+    }
+  ]
+}
