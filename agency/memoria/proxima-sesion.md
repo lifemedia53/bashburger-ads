@@ -1,31 +1,32 @@
-# Próxima sesión (actualizado el 2026-10-18, cierre de la sesión 6)
+# Próxima sesión (actualizado el 2026-10-23, cierre de la sesión 7)
 
 Abrir la sesión en **Sonnet** (ver `modelos.json`). Sesión corta: cada turno relee todo.
 
 ## Prompt para pegar al abrir la sesión
 
 ```
-Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md, agency/memoria/proxima-sesion.md, agency/memoria/criterios-prioridad.json y agency/memoria/prompts-meta.md y parte desde ahí.
-
-Tema de hoy: seguir ordenando prioridades de All Tasks en Notion. Ya están aplicadas las tareas 1 a 100 (ver estado_proceso en agency/memoria/prioridades-propuesta.json). Sin releer las tareas ya hechas.
-1. Mostrarme los lotes de ~10 desde #101 hasta #138 (la tabla ya está en el json; no relanzar a ops-coordinator). Yo apruebo, tú cambias Priority en Notion (tengo permiso de Laura para Priority; nunca borrar) y verificas por muestra.
-2. Al final: las 9 tareas [DATO] sin responder y las de septiembre abiertas (#64, #65, #80, #86, #87, #98, #99, #100 y el resto del json con flag_septiembre): marcarlas 'posible hecha sin cerrar' en bloque aparte y preguntarme; no cerrar.
-3. Luego fechas por lotes aprobados.
-4. Después: mapa de procesos + oficina isométrica web (tarea en Notion).
-Cierra según CLAUDE.md (incluye anotar en la Bitácora todo cambio en Meta). Decisiones pendientes al final, en lista numerada. Respuestas cortas.
+Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md (sección 'Sesión 7'), agency/memoria/proxima-sesion.md y agency/memoria/presupuestos-ads.json y parte desde ahí.
+Primero lo urgente de Meta (con mi OK, una cuenta a la vez): 1) Comercializadora: el conjunto Tráfico (120242998584350680) vence el 31-oct, extenderlo (Meta bloquea por el reel roto de un anuncio). 2) Bendito: boost ganador termina el 26-oct. 3) Lotus Estilistas: lunes 26-oct contar DMs y decidir. 4) Bombo Burger #14: crear 4 anuncios nuevos en pausa con vigencia hasta fines de octubre.
+Luego: correr /gasto-ads-semanal, mapa de procesos + oficina isométrica web, y las auditorías que faltan (Lullaby, Lemarc, La Siciliana, Santerra).
+Decisiones pendientes al final, en lista numerada. Respuestas cortas.
 ```
 
-## Otros pendientes (decisión de Laura, 2026-10-18)
-- **Funnel por cliente** (conversión por ubicación + secuencia de eventos del pixel por etapa): se hace a inicio de mes. Muestra con The Cool Hostel y Bombo Burger. Tarea en Notion creada. Puede costar >US$1: avisar antes.
-- **Subida de anuncios en pausa desde Drive + Sheet**: agente nuevo `ad-uploader` (`.claude/agents/ad-uploader.md`), siempre en pausa, ensayo primero. Para que corra solo cada día hay que crear una rutina en claude.ai (no desde la sesión: la herramienta no puede darle conectores en esta organización) con los conectores Google Drive y Meta y el modelo Sonnet. Mientras tanto se ejecuta a pedido. Falta: Sheet por cliente con columnas título, variaciones de copy, CTA, cuenta de Ads Manager, conjunto, carpeta de Drive; cliente del ensayo.
-- **Lotus Estilistas**: REMARKETING MENSAJES sigue activa sin mensajes medidos; se pausó solo el ad 1.C de CJ 2. Subir presupuesto solo si llegan mensajes; confirmar que mide mensajes.
-- **Lullaby**: post de perfil/grupos y rediseño del hotsheet (presentar lunes 19-oct); Laura define la fecha de publicación el lunes.
-- **Tiki House**: falta ID de la cuenta Meta (no está en memoria) para leer sus 2 anuncios. Instagram de competidores sin verificar.
-- Tareas nuevas en Notion (sin hacer): Apple Maps, Bing Places y Yelp, Preferred Sources de Google, Instagram en Search Console (después), servicios en GBP + página por servicio (Pressures Perfect, local-seo-lead).
-- Hostel: Laura no quiere seguir con la medición por ahora ("seguiremos a ciegas"); las 4 entradas P2 del Hostel en la Bitácora siguen "En seguimiento": decidir si pasan a Descartado.
-- Fechas vencidas y campañas sin entrega de Entre Tacos, Steakhouse, Tiki y Comercializadora (P1 Bitácora, 10-oct), una cuenta a la vez con OK.
-- Bash Burger, Reel Delivery UberEats: refrescar creativo y bajar presupuesto sin pausar en seco. Mare, Steakhouse, Bendito, Tiki: boosts de mensajes a campaña estructurada (fuente: auditoría del 16-oct en Notion).
-- Bombo, test CJ Delivery: remedir el 2026-10-24 (120249348553550141, cuenta 362765604642572).
+## Pendientes de la sesión 7 (fuente: Laura, Meta, Notion; 2026-10-23)
+- **Comercializadora**: extender el fin del Conjunto Tráfico (120242998584350680, hoy 31-oct) a fines de noviembre. Meta lo rechaza por 'Ad Creative Is Incomplete: reel no disponible' en un anuncio del conjunto. Opciones: Laura lo hace en Ads Manager o autoriza archivar el anuncio roto. Presupuesto $200.000.
+- **Bendito**: boost ganador termina 26-oct 22:07; falta decidir renovarlo, campaña de Mensajes (WhatsApp o DM), URL real de destino y OK para archivar 16 elementos. Presupuesto $100.000 (gastó $170.606 en 1-23 oct).
+- **Entre Tacos**: Promociones e Interacción Delivery pausadas a propósito el 14-oct; Laura necesita análisis de resultados antes de reactivar. Presupuesto $100.000.
+- **Tiki**: extender el boost de mensajes desde la app de Instagram (fin 18-oct); vincular @bombotikihouse al Business Manager para crear audiencias de IG; campaña `MENSAJES 2026 - TIKI HOUSE WHATSAPP` (solo House, $160.000/mes) pendiente del video de Carlos (tarea creada) y copy.
+- **Mare**: guardar Maridaje WA para el próximo maridaje; noviembre $300.000; tarea creada para dataset/Cover Manager y cruzar conversaciones con reservas.
+- **Steakhouse**: todo pausado/archivado; reactivar en noviembre con $150.000: UNA campaña de Tráfico (Tráfico Promo, conjunto nuevo, destino verificado, pixel). Faltan destino del botón Reservar y página desactivada.
+- **Hostel**: pausado hasta noviembre; reactivar con $2.000/día ($60.000/mes).
+- **Lotus Estilistas**: lunes 26-oct contar DMs (14 hasta hoy, sin WhatsApp), duplicar a objetivo Conversaciones cuando reconecte WhatsApp. Presupuesto ARS 300.000.
+- **Lullaby**: cerrado, se deja como está. Presupuesto mensual [DATO].
+- **Bombo Burger**: #13 se mide el 29-oct; #14 crear 4 anuncios nuevos en pausa; presupuesto $600.000 (gastó $689.861 en 1-23 oct).
+- **Auditorías que faltan**: Lullaby (#89), Lemarc (#54), La Siciliana (#47), Santerra (#120); Meta no deja leer las 3 últimas.
+- **Notion**: Follow up agregado; Resource Required nuevo; Laura corrige estados a mano. Fechas Deadline nuevas puestas (85 tareas). Tareas sin revisar: #1 Bash, #34 Comercializadora, #39/#41/#42 Entre Tacos (probablemente resueltas por la pausa del 14-oct), #104 Mare, #119 Santerra, #136 Tony's, 'Bloquear Santiago de Comer' (ya resuelto en la configuración actual), 'The Smile Mission', 'Crear ad: promo martes $11.990 Bombo Burger'.
+- **Mapa de procesos + oficina isométrica web** (tarea en Notion): sin hacer.
+- **Rutina semanal del gasto en ads**: crear en claude.ai con conector de Meta (Sonnet) que corra el skill `gasto-ads-semanal` cada lunes.
+- **Meta, aprendizaje**: Meta bloquea editar boosts por API (solo app de Instagram) y publicar cambios en conjuntos con un anuncio roto; los informes de auditoría pueden llamar 'campaña' a un conjunto: verificar el tipo del id antes de actuar.
 
 ## Rutinas programadas (crearlas desde claude.ai, no desde la sesión)
 Aprobadas por Laura el 2026-10-18; sin conectores no leen Meta, Notion ni Trello. Crearlas en la pantalla de rutinas de claude.ai activando el conector indicado y poniendo el modelo a mano.
