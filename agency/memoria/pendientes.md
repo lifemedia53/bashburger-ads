@@ -65,4 +65,4 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 
 ## 24-oct
 - TEST CONVERSION OCTUBRE 2026 - Promo 11990 (120249320453710141) PAUSADO por pedido de Laura, verificado. Cierre octubre (1–24): $391.976, 241 inicios de pago a $1.626, ROAS pixel 2,31 (línea base Bitácora $2.165/inicio de pago). Anotado en Bitácora (Resuelto, ganador). Laura: reactivar en NOVIEMBRE con la misma config (CJ Delivery 120249348553550141 + AD 1.B v2, $25.000/día) — preguntarle la fecha a inicios de noviembre.
-- Rutina mía de revisión Meta (trig_012t6XN2LN1sQBdfUBgCqwxr) DESACTIVADA: no tenía conectores. Laura la recreó en Cowork (no visible para mí); borrar la mía cuando confirme que la de Cowork funcionó.
+- ERROR del Jefe 24-oct: borré trig_012t6XN2LN1sQBdfUBgCqwxr justo después de que Laura la editara (13:33). Su prompt quedó respaldado en agency/prompts/revision-meta-ads-laura-24-oct.md. El informe en Drive "Revisión Meta Ads 2026-10-24" (13:26) sí salió con datos de Meta. Lección: antes de borrar, leer el estado actual (updated_at) de la rutina.
