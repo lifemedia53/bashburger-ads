@@ -64,5 +64,5 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Idea aprobada a evaluar: paid-media que lea un Sheet y cree anuncios en PAUSA para que Laura apruebe.
 
 ## 24-oct
-- TEST CONVERSION OCTUBRE 2026 - Promo 11990 (120249320453710141) PAUSADO por pedido de Laura, verificado. Cierre octubre (1–24): $391.976, 241 inicios de pago a $1.626, ROAS pixel 2,31 (línea base Bitácora $2.165/inicio de pago). Pendiente: anotar resultado en la Bitácora de Notion.
+- TEST CONVERSION OCTUBRE 2026 - Promo 11990 (120249320453710141) PAUSADO por pedido de Laura, verificado. Cierre octubre (1–24): $391.976, 241 inicios de pago a $1.626, ROAS pixel 2,31 (línea base Bitácora $2.165/inicio de pago). Anotado en Bitácora (Resuelto, ganador). Laura: reactivar en NOVIEMBRE con la misma config (CJ Delivery 120249348553550141 + AD 1.B v2, $25.000/día) — preguntarle la fecha a inicios de noviembre.
 - Rutina mía de revisión Meta (trig_012t6XN2LN1sQBdfUBgCqwxr) DESACTIVADA: no tenía conectores. Laura la recreó en Cowork (no visible para mí); borrar la mía cuando confirme que la de Cowork funcionó.
