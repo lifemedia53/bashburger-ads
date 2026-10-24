@@ -62,3 +62,7 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Posts Google ya programados: días 28 y 6 (trig_0184x8MoyEJcx6Ekwekqfrki) y día 7 resultados.
 - Lotus 23-oct: CJ1 = AD 1.D (Laura corrigió texto) + AD 1.E (8120 TEXTURA, nuevo). CJ2 = AD 2.D (8120) + AD 2.E (8159 CAMBIO, nuevo); pausado "AD 1.E" mal armado en CJ2 (8120 con texto CAMBIO). v2 de 1.D pausada.
 - Idea aprobada a evaluar: paid-media que lea un Sheet y cree anuncios en PAUSA para que Laura apruebe.
+
+## 24-oct
+- TEST CONVERSION OCTUBRE 2026 - Promo 11990 (120249320453710141) PAUSADO por pedido de Laura, verificado. Cierre octubre (1–24): $391.976, 241 inicios de pago a $1.626, ROAS pixel 2,31 (línea base Bitácora $2.165/inicio de pago). Pendiente: anotar resultado en la Bitácora de Notion.
+- Rutina mía de revisión Meta (trig_012t6XN2LN1sQBdfUBgCqwxr) DESACTIVADA: no tenía conectores. Laura la recreó en Cowork (no visible para mí); borrar la mía cuando confirme que la de Cowork funcionó.
