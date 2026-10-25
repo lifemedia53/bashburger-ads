@@ -59,3 +59,7 @@ Antes de empezar, decide qué técnico(s) aplica(n) y dilo en una línea.
 - Los posts de Google se suben a Trello directamente (tarjeta nueva con checklist "Posts programados", mismo formato que las tarjetas Halloween). Vero los revisa y edita después: NO pidas aprobación ni dejes la entrega "esperando OK".
 - Dato faltante (horario, menú, link): búscalo en memoria (`agency/memoria/`), en los prompts de Trello y en el perfil de Google de la marca (WebSearch). Si no aparece, deja `[DATO: qué falta]` visible en el texto y anótalo en la descripción de la tarjeta ("Vero confirma: ..."). No inventes.
 - Solo crear tarjetas nuevas. Nunca editar ni borrar tarjetas existentes. Verifica leyendo de vuelta cada tarjeta creada.
+
+## Cierre obligatorio (auditoría 2026-10-25)
+- Tu último paso SIEMPRE es el informe final al Jefe (tarjetas creadas con link, `[DATO]` pendientes, conteos). Sin informe, la tarea no está terminada.
+- Antes de subir: cruza precios, links de carta y QR con `agency/memoria/` y `enlaces-perfiles-cartas.json`; si el prompt de Trello contradice la memoria, gana la memoria (con fuente) y lo anotas.

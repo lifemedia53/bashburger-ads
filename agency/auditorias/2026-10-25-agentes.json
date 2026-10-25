@@ -1,0 +1,29 @@
+{
+  "fecha": "2026-10-25",
+  "ordenada_por": "Laura",
+  "rubrica": "agency/capacitacion/plan.json (exactitud 3, sistema_laura 2, calidad 2, seguridad 2, eficiencia 1)",
+  "fuentes": ["agency/logs/token-log.csv", "agency/memoria/pendientes.md", "chat de la sesion 16-25 oct", "Meta (cambios verificados)", "Trello (tarjetas creadas 17-oct)"],
+  "agentes": {
+    "local-seo-lead": {"nota": 7.5, "exactitud": 2, "sistema_laura": 2, "calidad": 1.5, "seguridad": 2, "eficiencia": 1,
+      "bien": "~30 tarjetas de posts en Trello (16 marcas) y 7 guias de voz, ~US$0,30 por lote.",
+      "errores": ["5 de 9 corridas terminaron sin informe (hubo que pedirlo)", "Steakhouse: uso el QR de carta de Mare", "Bash: dejo $12.990 del prompt viejo (Laura confirmo $13.990)", "Formato de posts sin resolver (500 caracteres vs 100-250 palabras)"],
+      "correccion": "Regla nueva en su .md: cierre obligatorio con informe; cruzar precios/links con memoria antes de subir.", "decision": "ajustar"},
+    "paid-media-lead": {"nota": 7.5, "exactitud": 2.5, "sistema_laura": 1.5, "calidad": 1.5, "seguridad": 2, "eficiencia": 1,
+      "bien": "Analisis de 14 cuentas en 7 lotes, ~US$0,35 por lote, sin tocar Meta.",
+      "errores": ["3 de 7 lotes no leyeron Bitacora/voz/Biblioteca", "Lote 7 repitio Casa Cultural", "No se uso desde el 17-oct: el trabajo de Meta lo hizo el Jefe"],
+      "correccion": "Checklist de fuentes obligatorio al inicio; probar la carga desde Sheet como siguiente prueba.", "decision": "ajustar"},
+    "token-controller": {"nota": 5, "exactitud": 2, "sistema_laura": 1, "calidad": 1, "seguridad": 2, "eficiencia": 0.5,
+      "bien": "El hook automatico registra el consumo en session-usage.csv.",
+      "errores": ["No corrio al cierre de sesiones (token-log.csv sin filas desde el 17-oct)", "Aviso del lunes 19-oct fallo por limite de uso"],
+      "correccion": "Dejarlo solo como rutina del lunes (ya existe) y que el Jefe agregue la fila al cerrar.", "decision": "ajustar; si vuelve a fallar 2 semanas, eliminar como agente"},
+    "stack-auditor": {"nota": 8, "exactitud": 2.5, "sistema_laura": 1.5, "calidad": 1.5, "seguridad": 2, "eficiencia": 1,
+      "bien": "Una corrida (US$0,09) con hallazgos utiles: conectores rotos, duplicados, Justo caido por proxy.",
+      "errores": ["Solo 1 entregable: poca evidencia"], "decision": "mantener, solo a pedido"},
+    "jefe": {"nota": 6, "exactitud": 2, "sistema_laura": 1, "calidad": 1.5, "seguridad": 1, "eficiencia": 0.5,
+      "bien": "Cambios en Meta verificados uno a uno; errores admitidos; test de Bombo medido y cerrado en Bitacora.",
+      "errores": ["Borre la rutina que Laura acababa de editar sin releer su estado", "Cree la rutina de Meta sin conectores ni repo", "Al editar topes, Meta pauso 2 campanas de Bombo (reactivadas en minutos)", "Lotus: cree AD 1.D v2 que Laura no queria y probe CTA de Messenger que no sirve en IG", "Recomende subir remarketing +$150k y lo corregi tras ver el ROAS del mes", "Explique mal que los agentes trabajan solos", "Sesion muy larga y en Opus: gasto alto"],
+      "correccion": "Reglas nuevas en CLAUDE.md: releer estado antes de borrar/editar rutinas; verificar status_forced_to_paused despues de cada cambio de monto; sesiones cortas.", "decision": "ajustar"}
+  },
+  "pausados_no_evaluados": ["ops-coordinator", "meta-ads-auditor"],
+  "rutina_cowork_revision_meta": "funciona: informe 24-oct en Drive con datos reales"
+}

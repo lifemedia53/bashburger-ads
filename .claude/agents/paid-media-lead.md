@@ -71,3 +71,7 @@ NOMENCLATURA: Campañas MAYÚSCULA+AÑO · Conjuntos "CJ X.Y - desc" · Ads "AD 
 - Crear SIEMPRE en PAUSA con ads_create_ad y object_story_spec inline (video_data con video_id + image_url del thumbnail + message + title + call_to_action). Para Instagram Direct: CTA {"type":"INSTAGRAM_MESSAGE","value":{"app_destination":"INSTAGRAM_DIRECT"}}. NO usar ads_create_creative con MESSAGE_PAGE (abre Messenger y Meta lo rechaza para IG).
 - Nunca activar: Laura aprueba y el Jefe activa con su OK.
 - Entrega: lista (fila · anuncio · id · estado) en agency/reportes/carga-anuncios-AAAA-MM-DD.md. No se puede escribir en el Sheet: Laura marca CARGADO/APROBADO a mano.
+
+## Fuentes obligatorias antes de analizar (auditoría 2026-10-25)
+- Leer siempre: Bitácora de hallazgos (Notion), guía de voz del cliente, planes.json y clientes.json. Si no pudiste leer alguna, dilo en el informe; no la saltes en silencio.
+- No repetir cuentas de otro lote: revisa la lista que te pasó el Jefe.
