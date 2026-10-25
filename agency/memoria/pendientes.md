@@ -69,3 +69,8 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - 24-oct (OK Laura): pausadas y verificadas 5 campañas con fecha vencida y gasto $0: Tony's 52619103256377 y 52618186732977; Tiki 120248621296680618; Somos Casa Lotus 120256463856700309; Bombo "¿Cuántos no han..." 120248810866510141.
 - Comercializadora "Conjunto Tráfico" (120242998584350680): Laura pidió bajarlo. Sigue en $10.000/día EN VIVO. Mi cambio a $5.000 quedó solo como BORRADOR en Ads Manager porque ese borrador ya traía un cambio de fecha de fin a 30-nov (no lo hice yo) y un error de reel no disponible. No publiqué para no extender la campaña sin OK.
 - 24-oct (OK Laura): "Conjunto Tráfico" Comercializadora PAUSADO y verificado (fin sigue 31-oct). El borrador en Ads Manager (budget $5.000 + fin 30-nov + error reel) sigue sin publicar: Laura debe descartarlo para que no se publique por accidente.
+
+## 25-oct — auditoría de agentes y automatización
+- Auditoría: agency/auditorias/2026-10-25-agentes.json (local-seo 7,5; paid-media 7,5; token-controller 5; stack-auditor 8; Jefe 6). Reglas nuevas en CLAUDE.md y en los .md de local-seo-lead / paid-media-lead.
+- Propuesta de automatización: agency/capacitacion/propuesta-automatizacion.md. Prioridad 1: carga de anuncios desde Sheet (crear rutina en Cowork). Esperando OK de Laura.
+- Por corregir con OK de Laura (tarjetas existentes de Trello, no se editan solas): prompt de Bash ($12.990 → $13.990) y carta de Steakhouse (QR de Mare → https://spleatweb.app/restaurants/EHwwlzJNq2WaICTqAohQYOniAzX2/menu).
