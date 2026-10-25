@@ -1,13 +1,13 @@
-# Próxima sesión (actualizado el 2026-10-23, cierre de la sesión 7)
+# Próxima sesión (actualizado el 2026-10-25, cierre de la sesión 9)
 
 Abrir la sesión en **Sonnet** (ver `modelos.json`). Sesión corta: cada turno relee todo.
 
 ## Prompt para pegar al abrir la sesión
 
 ```
-Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md (sección 'Sesión 7'), agency/memoria/proxima-sesion.md y agency/memoria/presupuestos-ads.json y parte desde ahí.
-Primero lo urgente de Meta (con mi OK, una cuenta a la vez): 1) Comercializadora: el conjunto Tráfico (120242998584350680) vence el 31-oct, extenderlo (Meta bloquea por el reel roto de un anuncio). 2) Bendito: boost ganador termina el 26-oct. 3) Lotus Estilistas: lunes 26-oct contar DMs y decidir. 4) Bombo Burger #14: crear 4 anuncios nuevos en pausa con vigencia hasta fines de octubre.
-Luego: correr /gasto-ads-semanal, mapa de procesos + oficina isométrica web, y las auditorías que faltan (Lullaby, Lemarc, La Siciliana, Santerra).
+Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md (secciones 'Sesión 8' y 'Sesión 9'), agency/memoria/proxima-sesion.md, agency/memoria/sesiones-clientes.json y agency/investigacion/2026-10-25-videos-candidatos-A003.md y parte desde ahí.
+Hoy lunes 26-oct: 1) Escribirle a Andrea (tarea en Notion). 2) Revisar las audiencias A-001/2/4/5 de Bash y Steakhouse (¿pobló Meta? ¿captura datos? OJO: el ID de IG que usé tiene otro formato que el de Bombo). 3) Yo elijo los videos para A-003 (lista de candidatos en el archivo) y tú creas A-003 en Bash y Steakhouse. 4) Lotus Estilistas: contar DMs y decidir. 5) Bombo Burger #14: 4 anuncios nuevos EN PAUSA (BancoEstado 50% octubre y noviembre; BancoChile 30% hasta el 31-dic; Bombo pasó el tope de $600.000, no activar). 6) Tarea de fotógrafos: estructura de sesiones por cliente (sesiones-clientes.json), empezando por Tiki House y Beach (3 sesiones).
+Después: revisar el template de tareas de Notion, mapa de procesos + oficina isométrica web, audiencias de las demás marcas por fase del playbook, y las auditorías que faltan (Lullaby, Lemarc, La Siciliana, Santerra).
 Decisiones pendientes al final, en lista numerada. Respuestas cortas.
 ```
 
