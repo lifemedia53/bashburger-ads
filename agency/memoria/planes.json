@@ -56,7 +56,9 @@
       "rrss": "4-5 posts 0 reel",
       "plan": "ESTÁNDAR",
       "pauta": "2 campañas Meta + 1 boost IG",
-      "foco": "claridad B2B; pilar confianza (casos + operación)"
+      "foco": "claridad B2B; pilar confianza (casos + operación)",
+      "presupuesto_meta_mensual_clp": 250000,
+      "presupuesto_meta_fuente": "Laura, chat 2026-10-26 ('Comercializadora son $250.000 mensual'); asumido como inversión mensual en Meta [confirmar si incluye el fee]"
     },
     "Bash Burger": {
       "sesiones": 3,
