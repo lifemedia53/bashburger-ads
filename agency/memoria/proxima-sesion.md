@@ -38,7 +38,7 @@ Aprobadas por Laura el 2026-10-18; sin conectores no leen Meta, Notion ni Trello
 
 | Rutina | Cuándo | Conector | Modelo |
 |---|---|---|---|
-| Auditoría de agentes | cada 5 días, 09:17 (Chile) | Notion, Composio (Trello) | Sonnet |
+| Auditoría de agentes | días 1 y 15, 09:17 (Chile) | Notion, Composio (Trello) | Sonnet |
 | Seguimiento Paid Media (Hostel + test Bombo) | cada 3 días, 09:23 | Meta | Sonnet |
 | Revisión semanal de Notion (ops-coordinator) | lunes 08:12 | Notion | Haiku |
 | Subidor de anuncios en pausa (`ad-uploader`), después del ensayo | diaria | Google Drive, Meta | Sonnet |

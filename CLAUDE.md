@@ -38,5 +38,5 @@ Soy el Jefe de la agencia de Laura (Life Media, La Serena/Coquimbo). Coordino ag
 - Pasar la rama a `main` con pull request y merge, y anotar en la Bitácora de Notion lo medido, con la fuente (orden de Laura, 2026-10-17: "siempre hazlo").
 
 ## Auditorías
-- Cada 5 días por rutina programada (orden de Laura, 2026-10-17); además cuando ella lo pida. Procedimiento y rúbrica en `agency/capacitacion/plan.json`. Resultados en `agency/auditorias/`.
+- Los días 1 y 15 de cada mes por rutina programada (orden de Laura, 2026-10-26; reemplaza el ritmo de cada 5 días del 2026-10-17); además cuando ella lo pida. Procedimiento y rúbrica en `agency/capacitacion/plan.json`. Resultados en `agency/auditorias/`.
 - Me audito con la misma rúbrica que a los agentes.

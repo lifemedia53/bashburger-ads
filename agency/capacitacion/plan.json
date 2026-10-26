@@ -1,7 +1,7 @@
 {
   "nombre": "Ciclo semanal de auditoría y capacitación — Life Media",
   "responsable": "Jefe (Opus)",
-  "ritmo": "Cada 5 días (orden de Laura, 2026-10-17; reemplaza la decisión del 2026-10-10 de no programar). Corre en Sonnet, solo lectura, máx. 5 agentes por corrida.",
+  "ritmo": "Los días 1 y 15 de cada mes (orden de Laura, 2026-10-26; reemplaza el ritmo de cada 5 días del 2026-10-17). Corre en Sonnet, solo lectura, máx. 5 agentes por corrida.",
   "pasos": [
     {
       "paso": 1,
@@ -78,5 +78,5 @@
       "Automatizar solo con rutinas creadas en Cowork (con conectores): ver agency/capacitacion/propuesta-automatizacion.md"
     ]
   },
-  "automatizacion": "Rutina programada cada 5 días (orden de Laura, 2026-10-17). Ajustes de agentes: solo propuestos, los ejecuta el Jefe con OK de Laura."
+  "automatizacion": "Rutina programada los días 1 y 15 de cada mes (orden de Laura, 2026-10-26). Ajustes de agentes: solo propuestos, los ejecuta el Jefe con OK de Laura."
 }
