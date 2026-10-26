@@ -247,6 +247,17 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Consumo medido sesión 10 (token-controller, session-usage.csv): US$6,45; 21,5 M tokens, 97% lectura de caché; subagentes sin fila propia. Fila agregada en token-log.csv. Recomendación: sesión nueva cada ~25 turnos.
 - Prompt de la próxima sesión: proxima-sesion.md.
 
+## Sesión 11 (2026-10-27): lecturas (fuente: Meta lectura y Notion lectura, sin cambios)
+- Tiki (cuenta 1802064240289181): ads_get_ig_accounts = 0 cuentas; ads_get_ad_videos = 0 videos; Notion 'Crear 2 campañas de mensajes Tiki': copys House y Beach vacíos. Bloqueos: copy (ChatGPT), subir video Beach (Laura), IG vinculado/ID. El reel Deu8P9Xxkir no se puede verificar desde aquí.
+- Bombo #14: páginas de copy vacías (1.1.A, 1.1.B, 1.3.A, 1.3.B). Gasto 90d de los originales: $15.915 / $16.210 / $15.692 / $12.251. Config completa de los 4 aún sin leer.
+- Bombo 'Reconocimiento Santiago' (conjunto 120236521728660141, fin 31-dic): gasto $1.398 el 18-oct y $0 del 19 al 24-oct. Los 5 videos _YB ACTIVOS sin métricas. Es problema del conjunto, no de AD 1.A. Revisar presupuesto/límite de gasto de la campaña.
+- Audiencias 27-oct: Bash A-001/A-002 activas en 1.000 (sin captura aún), A-005 2.300-2.700, A-003 y A-004 inactivas; Steakhouse A-002 activa 1.000, A-005 1.000-1.100, A-001/A-003/A-004 inactivas.
+- (27-oct, OK de Laura, Meta) Lullaby cuenta real 10201332475268991: archivadas 24 campañas PAUSED viejas sin gasto (no borradas; verificado leyendo Meta). Quedan PAUSED 3 con creativo roto que Meta no deja archivar (6632996901748, 6628408505948, 6017360123948) y AWFIT 6890269094548 (con gasto, sin tocar; pregunta a Laura). Activa: 6963147947948. Auditorías: agency/auditorias/2026-10-27-lullaby-90d.md (cuenta vacía, blanco) y 2026-10-27-lullaby-real-90d.md (naranja: octubre $127,11 de $200; falta 2ª campaña PRO; pixel sin eventos desde 30-abr; destino/CTA de 2 anuncios sin confirmar). Bitácora de Notion: pendiente anotar.
+- (27-oct) Drive: share_file solo comparte con personas, no hace público ni quita permisos: el reel/video de Tiki lo sube Laura a mano a Meta. Lemarc 2819592505082598 UNSETTLED (pago del cliente pendiente); La Siciliana y Santerra con Ads MCP desactivado: auditoría manual con capturas de Laura.
+
+## Cierre sesión 11 (2026-10-27)
+- Hecho con OK de Laura: archivadas 24 campañas viejas de Lullaby (cuenta 10201332475268991). Auditorías Lullaby (cuenta vacía y real) guardadas. Bitácora de Notion anotada (3 entradas: archivado Lullaby https://app.notion.com/p/405673eb9c5681748cd6eb707711d00f, auditoría Lullaby https://app.notion.com/p/405673eb9c5681b2bc8ede9dded2a585, Santiago sin entrega https://app.notion.com/p/405673eb9c5681508f58fd8682ec2639).
+- Consumo: ~US$2,90 al último turno registrado (session-usage.csv); fila en token-log.csv. Prompt de la próxima sesión: proxima-sesion.md.
 ## Sesión 11 (2026-10-26): gestión, agentes y fechas (fuente: Laura, Notion, GitHub)
 - Auditoría de agentes: ahora los días 1 y 15 de cada mes (orden de Laura, 26-oct). Actualizado en CLAUDE.md, `capacitacion/plan.json` y `proxima-sesion.md`. La rutina programada en Cowork/claude.ai debe ajustarse a ese ritmo [DATO: Laura la cambia o me pide hacerlo].
 - Verificado (GitHub 26-oct): PR #17 (sesión 10) FUSIONADO a main; main tiene además 2 commits de cierre (b5268ec, 1e4235c). Bitácora de Notion tiene las entradas del 26-oct (ej. AD 1.A Bombo pausado, estado En seguimiento).

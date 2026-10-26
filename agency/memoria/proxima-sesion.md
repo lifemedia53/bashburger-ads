@@ -1,18 +1,19 @@
-# Próxima sesión (actualizado el 2026-10-25, cierre de la sesión 9)
+# Próxima sesión (actualizado el 2026-10-27, cierre de la sesión 11)
 
 Abrir la sesión en **Sonnet** (ver `modelos.json`). Sesión corta: cada turno relee todo.
 
 ## Prompt para pegar al abrir la sesión
 
 ```
-Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md (secciones 'Sesión 9' y 'Sesión 10'), agency/memoria/proxima-sesion.md y agency/auditorias/2026-10-26-tiki-house-beach-90d.md y parte desde ahí.
-Hoy martes 27-oct (urgentes con deadline hoy: Proposal Pressures, Insights de TsM a Catlos, Reel de la casa Carlos de Lemarc; ayer quedó pendiente The Smile Mission):
-1) Tiki House y Beach: 2 campañas de mensajes (WhatsApp), $160.000 repartidos 50/50 ($80.000 cada una), inicio 3-nov, copy lo escribe ChatGPT en la tarea de Notion 'Crear 2 campañas de mensajes Tiki' (deadline 28-oct). Beach usa el video 'Ad Tenedor Libre Tiki Beach' (Drive 1f8faspwDsA4_AZyQBfyzPkhb7vh1fbk-): yo no puedo subirlo a Meta (la herramienta pide URL pública o app interactiva), lo sube Laura a mano en la biblioteca de medios. House usa el reel https://www.instagram.com/reel/Deu8P9Xxkir/ (lo envió Laura): confirmar que es el de House y cómo se usa sin IG vinculado (Meta devuelve 0 cuentas IG en la cuenta 1802064240289181; Laura no sabe el ID). Audiencias propias de Tiki: pendientes. Los 8 lookalikes ajenos NO se borran.
-2) Bombo Burger: #14 (deadline 29-oct): los 4 anuncios nuevos EN PAUSA con los copys de ChatGPT (la tarea compartida está en Notion); antes leer la config completa de los 4 originales; BancoEstado 50% octubre y noviembre, BancoChile 30% hasta el 31-dic; Bombo pasó el tope de $600.000, no activar. #13 se mide el 29-oct. Medir los 5 videos AD1..AD5_R*_YB de 'Reconocimiento Santiago' (AD 1.A quedó pausado el 26-oct para que entreguen; si siguen en $0, revisar la entrega del conjunto).
-3) Lotus Estilistas: 11 mensajes nuevos (Laura, 26-oct); decidir si se pausa 1.C de CJ1 y se mueve plata a 'Rulos IG DM'.
-4) Verificar que pueblen las audiencias A-001/A-002/A-003 de Bash y Steakhouse (Bitácora de Notion del 25 y 26-oct).
-5) Urgentes siguientes por fecha: Lullaby contenido (28), Editar video de Carlos Tiki (28), Lotus 72h (28), Vino libre y 20% Steakhouse (28), Santerra ads y auditoría La Siciliana (29), Smile Mission.
-Después: mapa de procesos + oficina isométrica web, audiencias de las demás marcas por fase del playbook, auditorías que faltan (Lullaby, Lemarc, La Siciliana, Santerra), crear la rutina semanal de gasto en claude.ai.
+Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md (secciones 'Sesión 10' y 'Sesión 11') y agency/memoria/proxima-sesion.md y parte desde ahí.
+Hoy miércoles 28-oct (deadline hoy: Tiki mensajes, Lullaby contenido, Editar video de Carlos Tiki, Lotus 72h, Vino libre y 20% Steakhouse; mañana 29: #14 Bombo, Santerra ads y auditoría La Siciliana, #13 se mide; sin cerrar: Proposal Pressures, Insights TsM a Catlos, Reel Lemarc, Smile Mission).
+1) Tiki House y Beach: 2 campañas de mensajes WhatsApp, $80.000 cada una, inicio 3-nov. Bloqueos al 27-oct: copys de ChatGPT vacíos en Notion, 0 videos en la biblioteca de Meta (cuenta 1802064240289181; Laura sube a mano el video Beach y el reel de House), 0 cuentas IG vinculadas. Revisar si ya están.
+2) Bombo Burger: #14 copys (ChatGPT) aún vacíos; leer config completa de los 4 originales antes de copiar; nuevos EN PAUSA. 'Reconocimiento Santiago' (120236521728660141) sin entrega desde el 19-oct: Laura revisa presupuesto/límite de gasto; medir el 29-oct.
+3) Lotus Estilistas: 11 mensajes nuevos (26-oct); decidir si se pausa 1.C de CJ1 y se mueve plata a 'Rulos IG DM' (mi opinión: sí; falta OK de Laura).
+4) Lullaby: pago de AWFIT, destino de anuncios Reel y MT de Bliss, archivar AWFIT (sí/no); Laura archiva a mano 3 campañas con anuncio roto.
+5) Lemarc: cuenta UNSETTLED (pago del cliente). La Siciliana y Santerra: auditoría manual con capturas/CSV de Laura.
+6) Audiencias Bash/Steakhouse: re-revisar si pueblan (27-oct: A-005 Bash 2.300-2.700; A-001/A-002 en 1.000; A-003/A-004 inactivas).
+Después: mapa de procesos + oficina isométrica web, audiencias de las demás marcas por fase del playbook, rutina semanal de gasto en claude.ai.
 Reglas: sesión corta (abrir otra antes de ~25 turnos), lotes de máx. 2 clientes, cambios en Meta solo con OK de Laura y anotados en la Bitácora, nunca borrar en Notion sin confirmar. Decisiones pendientes al final, en lista numerada. Respuestas cortas.
 ```
 
