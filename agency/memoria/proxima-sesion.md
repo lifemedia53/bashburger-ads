@@ -5,10 +5,15 @@ Abrir la sesión en **Sonnet** (ver `modelos.json`). Sesión corta: cada turno r
 ## Prompt para pegar al abrir la sesión
 
 ```
-Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md (secciones 'Sesión 8' y 'Sesión 9'), agency/memoria/proxima-sesion.md, agency/memoria/sesiones-clientes.json y agency/investigacion/2026-10-25-videos-candidatos-A003.md y parte desde ahí.
-Hoy lunes 26-oct: 1) Escribirle a Andrea (tarea en Notion). 2) Revisar las audiencias A-001/2/4/5 de Bash y Steakhouse (¿pobló Meta? ¿captura datos? OJO: el ID de IG que usé tiene otro formato que el de Bombo). 3) Yo elijo los videos para A-003 (lista de candidatos en el archivo) y tú creas A-003 en Bash y Steakhouse. 4) Lotus Estilistas: contar DMs y decidir. 5) Bombo Burger #14: 4 anuncios nuevos EN PAUSA (BancoEstado 50% octubre y noviembre; BancoChile 30% hasta el 31-dic; Bombo pasó el tope de $600.000, no activar). 6) Tarea de fotógrafos: estructura de sesiones por cliente (sesiones-clientes.json), empezando por Tiki House y Beach (3 sesiones).
-Después: revisar el template de tareas de Notion, mapa de procesos + oficina isométrica web, audiencias de las demás marcas por fase del playbook, y las auditorías que faltan (Lullaby, Lemarc, La Siciliana, Santerra).
-Decisiones pendientes al final, en lista numerada. Respuestas cortas.
+Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md (secciones 'Sesión 9' y 'Sesión 10'), agency/memoria/proxima-sesion.md y agency/auditorias/2026-10-26-tiki-house-beach-90d.md y parte desde ahí.
+Hoy martes 27-oct (urgentes con deadline hoy: Proposal Pressures, Insights de TsM a Catlos, Reel de la casa Carlos de Lemarc; ayer quedó pendiente The Smile Mission):
+1) Tiki House y Beach: 2 campañas de mensajes (WhatsApp), $160.000 repartidos 50/50 ($80.000 cada una), inicio 3-nov, copy lo escribe ChatGPT en la tarea de Notion 'Crear 2 campañas de mensajes Tiki' (deadline 28-oct). Beach usa el video 'Ad Tenedor Libre Tiki Beach' (Drive 1f8faspwDsA4_AZyQBfyzPkhb7vh1fbk-): yo no puedo subirlo a Meta (la herramienta pide URL pública o app interactiva), lo sube Laura a mano en la biblioteca de medios. House usa el reel https://www.instagram.com/reel/Deu8P9Xxkir/ (lo envió Laura): confirmar que es el de House y cómo se usa sin IG vinculado (Meta devuelve 0 cuentas IG en la cuenta 1802064240289181; Laura no sabe el ID). Audiencias propias de Tiki: pendientes. Los 8 lookalikes ajenos NO se borran.
+2) Bombo Burger: #14 (deadline 29-oct): los 4 anuncios nuevos EN PAUSA con los copys de ChatGPT (la tarea compartida está en Notion); antes leer la config completa de los 4 originales; BancoEstado 50% octubre y noviembre, BancoChile 30% hasta el 31-dic; Bombo pasó el tope de $600.000, no activar. #13 se mide el 29-oct. Medir los 5 videos AD1..AD5_R*_YB de 'Reconocimiento Santiago' (AD 1.A quedó pausado el 26-oct para que entreguen; si siguen en $0, revisar la entrega del conjunto).
+3) Lotus Estilistas: 11 mensajes nuevos (Laura, 26-oct); decidir si se pausa 1.C de CJ1 y se mueve plata a 'Rulos IG DM'.
+4) Verificar que pueblen las audiencias A-001/A-002/A-003 de Bash y Steakhouse (Bitácora de Notion del 25 y 26-oct).
+5) Urgentes siguientes por fecha: Lullaby contenido (28), Editar video de Carlos Tiki (28), Lotus 72h (28), Vino libre y 20% Steakhouse (28), Santerra ads y auditoría La Siciliana (29), Smile Mission.
+Después: mapa de procesos + oficina isométrica web, audiencias de las demás marcas por fase del playbook, auditorías que faltan (Lullaby, Lemarc, La Siciliana, Santerra), crear la rutina semanal de gasto en claude.ai.
+Reglas: sesión corta (abrir otra antes de ~25 turnos), lotes de máx. 2 clientes, cambios en Meta solo con OK de Laura y anotados en la Bitácora, nunca borrar en Notion sin confirmar. Decisiones pendientes al final, en lista numerada. Respuestas cortas.
 ```
 
 ## Pendientes de la sesión 7 (fuente: Laura, Meta, Notion; 2026-10-23)
