@@ -246,3 +246,16 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Reel de House enviado por Laura (26-oct): https://www.instagram.com/reel/Deu8P9Xxkir/ (no accesible desde aquí). Video Beach 'Ad Tenedor Libre Tiki Beach': subida a Meta imposible desde la sesión (la herramienta pide URL pública o app interactiva; Drive exige login); la hace Laura a mano.
 - Consumo medido sesión 10 (token-controller, session-usage.csv): US$6,45; 21,5 M tokens, 97% lectura de caché; subagentes sin fila propia. Fila agregada en token-log.csv. Recomendación: sesión nueva cada ~25 turnos.
 - Prompt de la próxima sesión: proxima-sesion.md.
+
+## Sesión 11 (2026-10-26): gestión, agentes y fechas (fuente: Laura, Notion, GitHub)
+- Auditoría de agentes: ahora los días 1 y 15 de cada mes (orden de Laura, 26-oct). Actualizado en CLAUDE.md, `capacitacion/plan.json` y `proxima-sesion.md`. La rutina programada en Cowork/claude.ai debe ajustarse a ese ritmo [DATO: Laura la cambia o me pide hacerlo].
+- Verificado (GitHub 26-oct): PR #17 (sesión 10) FUSIONADO a main; main tiene además 2 commits de cierre (b5268ec, 1e4235c). Bitácora de Notion tiene las entradas del 26-oct (ej. AD 1.A Bombo pausado, estado En seguimiento).
+- Estado de Notion All Tasks leído por ops-coordinator (Haiku, solo lectura): 17 tareas abiertas sin fecha o vencidas; Team vacío en todas las filas; la base no tiene n° autonumérico; 55 tareas con deadline 26-oct a 2-nov (31 ads / 24 gestión).
+- Fechas puestas con OK de Laura ("usa el mejor criterio"; Deadline y Scheduled For iguales): Video de Tiki Halloween 29-oct (antes del 31-oct); 2-nov Lista FLXMLS Lullaby; 3-nov Video IA Thi/Rodri Tiki y Quitar fotos menú viejo SH/Mare; 4-nov Automatización Siciliana Cumpleaños y Automatizar subida de anuncios; 5-nov Servicios GBP + página por servicio y Funnel por cliente; 6-nov Cositas Web Pressures y Gasto en Gas (Hostel); 9-nov Carta de la Siciliana; 10-nov Fuentes preferidas Google; 11-nov Apple Maps; 12-nov Bing/Yelp; 13-nov Search Console IG y Mapa de procesos. Criterio: Urgent/Medium primero, Low después, y evitar los días 26-30 oct (ya con 9-10 tareas). Verificada por muestra (Apple Maps: 11-nov).
+- Sin fecha a propósito: 'Reunion con Lighthouse' (falta el día de la reunión) [DATO].
+- Promo martes $11.990 de Bombo: terminó (Laura, 26-oct). La tarea 'Crear ad: promo martes $11.990' (deadline 31-oct) quedaría obsoleta: cierre pendiente de OK de Laura.
+
+## Cierre sesión 11 (2026-10-26)
+- Sin cambios en Meta en esta sesión (solo lectura). Cambios en Notion: Deadline y Scheduled For en 16 tareas (ver arriba). Código/memoria: auditoría días 1 y 15, pendientes, token-log.
+- Consumo medido (session-usage.csv, sesión e7be5b00): US$1,32; Sonnet 3,54 M tokens y Haiku 0,52 M. Fila agregada en token-log.csv.
+- Prompt de la próxima sesión: `agency/prompts/proxima-sesion.md`.
