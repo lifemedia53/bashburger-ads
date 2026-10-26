@@ -74,3 +74,9 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Auditoría: agency/auditorias/2026-10-25-agentes.json (local-seo 7,5; paid-media 7,5; token-controller 5; stack-auditor 8; Jefe 6). Reglas nuevas en CLAUDE.md y en los .md de local-seo-lead / paid-media-lead.
 - Propuesta de automatización: agency/capacitacion/propuesta-automatizacion.md. Prioridad 1: carga de anuncios desde Sheet (crear rutina en Cowork). Esperando OK de Laura.
 - Por corregir con OK de Laura (tarjetas existentes de Trello, no se editan solas): prompt de Bash ($12.990 → $13.990) y carta de Steakhouse (QR de Mare → https://spleatweb.app/restaurants/EHwwlzJNq2WaICTqAohQYOniAzX2/menu).
+
+## 26-oct (OK Laura)
+- Trello corregido y verificado: prompt "Prompt publicaciones Google" de Bash (https://trello.com/c/Ufb6dB5R) $12.990 → $13.990 (único cambio); tarjeta Steakhouse (https://trello.com/c/ScURqofF) "Menú" del QR de Mare (qrfy.io) → https://spleatweb.app/restaurants/EHwwlzJNq2WaICTqAohQYOniAzX2/menu (fuente: enlaces-perfiles-cartas.json, columna L de la hoja de Laura). Quedan sin cambiar las tarjetas de posts ya publicadas.
+- Auditoría de agentes programada cada 15 días (días 1 y 15, 8:38 Chile): trig_01QDxTnaPjcsPSjYaLc6rLMY. Sin conectores (solo repo/logs); si necesita Trello/Meta hay que recrearla en Cowork.
+- Sheet de carga de anuncios (https://docs.google.com/spreadsheets/d/1XcdGELj-5cZWEr1lt9YorXiryHuZoDaukvZAywtM_Jc/edit) + guía en Drive "GUÍA - Cómo usar el Sheet de carga de anuncios Meta". Estados: BORRADOR / LISTO / CARGADO / APROBADO. Laura aún no llena el Sheet.
+- Pendiente de sesión anterior: el borrador de Comercializadora ya fue publicado por Laura ($5.000/día, fin 30-nov) — preguntar presupuesto contratado.
