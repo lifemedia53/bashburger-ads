@@ -171,3 +171,9 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Reel de House enviado por Laura (26-oct): https://www.instagram.com/reel/Deu8P9Xxkir/ (no accesible desde aquí). Video Beach 'Ad Tenedor Libre Tiki Beach': subida a Meta imposible desde la sesión (la herramienta pide URL pública o app interactiva; Drive exige login); la hace Laura a mano.
 - Consumo medido sesión 10 (token-controller, session-usage.csv): US$6,45; 21,5 M tokens, 97% lectura de caché; subagentes sin fila propia. Fila agregada en token-log.csv. Recomendación: sesión nueva cada ~25 turnos.
 - Prompt de la próxima sesión: proxima-sesion.md.
+
+## Sesión 11 (2026-10-27): lecturas (fuente: Meta lectura y Notion lectura, sin cambios)
+- Tiki (cuenta 1802064240289181): ads_get_ig_accounts = 0 cuentas; ads_get_ad_videos = 0 videos; Notion 'Crear 2 campañas de mensajes Tiki': copys House y Beach vacíos. Bloqueos: copy (ChatGPT), subir video Beach (Laura), IG vinculado/ID. El reel Deu8P9Xxkir no se puede verificar desde aquí.
+- Bombo #14: páginas de copy vacías (1.1.A, 1.1.B, 1.3.A, 1.3.B). Gasto 90d de los originales: $15.915 / $16.210 / $15.692 / $12.251. Config completa de los 4 aún sin leer.
+- Bombo 'Reconocimiento Santiago' (conjunto 120236521728660141, fin 31-dic): gasto $1.398 el 18-oct y $0 del 19 al 24-oct. Los 5 videos _YB ACTIVOS sin métricas. Es problema del conjunto, no de AD 1.A. Revisar presupuesto/límite de gasto de la campaña.
+- Audiencias 27-oct: Bash A-001/A-002 activas en 1.000 (sin captura aún), A-005 2.300-2.700, A-003 y A-004 inactivas; Steakhouse A-002 activa 1.000, A-005 1.000-1.100, A-001/A-003/A-004 inactivas.
