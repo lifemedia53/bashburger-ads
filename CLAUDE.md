@@ -35,7 +35,8 @@ Soy el Jefe de la agencia de Laura (Life Media, La Serena/Coquimbo). Coordino ag
 ## Al cerrar cada sesión de trabajo
 - Correr `token-controller` con el uso de la sesión y actualizar `agency/logs/token-log.csv`.
 - Actualizar `agency/memoria/` con lo aprendido (con fuente) y hacer commit + push.
+- Pasar la rama a `main` con pull request y merge, y anotar en la Bitácora de Notion lo medido, con la fuente (orden de Laura, 2026-10-17: "siempre hazlo").
 
 ## Auditorías
-- Solo cuando Laura lo ordene (no programarlas). Procedimiento y rúbrica en `agency/capacitacion/plan.json`. Resultados en `agency/auditorias/`.
+- Cada 5 días por rutina programada (orden de Laura, 2026-10-17); además cuando ella lo pida. Procedimiento y rúbrica en `agency/capacitacion/plan.json`. Resultados en `agency/auditorias/`.
 - Me audito con la misma rúbrica que a los agentes.

@@ -1,0 +1,39 @@
+{
+  "actualizado": "2026-10-17",
+  "fuente": "Orden de Laura 2026-10-17 (reducir y cambiar modelos cuando el consumo sea alto) + precios de agency/token-pricing.md + session-usage.csv (7 días al 17-oct: Opus US$154,45 de US$188,35; una sesión Opus del 16-oct costó US$77,35)",
+  "regla_simple_para_laura": "Abre el chat en SONNET por defecto. HAIKU si solo es leer, listar o ordenar. OPUS solo si Sonnet ya falló o es auditoría / decisión grande de dinero.",
+  "modelos": {
+    "haiku": {
+      "usar_para": ["extraer datos", "listar y contar en Notion/Trello", "revisión diaria o semanal de tareas", "avisos de tokens", "copiar valores entre archivos"],
+      "agentes": ["ops-coordinator", "token-controller"]
+    },
+    "sonnet": {
+      "usar_para": ["conversación normal con el Jefe", "posts de Google", "copy y reportes de Meta", "mediciones de campañas", "auditoría de agentes", "diagnóstico de cuentas"],
+      "agentes": ["paid-media-lead", "local-seo-lead", "meta-ads-auditor"]
+    },
+    "opus": {
+      "usar_para": ["decisión grande de dinero con varias cuentas a la vez", "rediseñar el sistema de la agencia", "cuando Sonnet se equivocó en la misma tarea y hay que resolverla"],
+      "agentes": [],
+      "aviso": "Antes de abrir una sesión en Opus, el Jefe le dice a Laura el motivo y el costo esperado. Sesión Opus larga = el gasto más alto de la agencia."
+    }
+  },
+  "senales_para_cambiar": [
+    "Opus > 50 % del gasto de 7 días: abrir la próxima sesión en Sonnet",
+    "Una sesión supera US$10: cerrarla con traspaso en pendientes.md y abrir una nueva",
+    "Tarea mecánica (extraer, listar, contar) corriendo en Sonnet u Opus: pasarla a Haiku",
+    "Un agente en Haiku falla 2 veces seguidas la misma tarea: subirlo a Sonnet (anotar en la auditoría)"
+  ],
+  "limites": "Ningún agente puede cambiar el modelo del chat de Laura. El Token Controller recomienda; Laura elige el modelo al abrir la sesión (o el Jefe cambia el campo model: de un agente en .claude/agents/ con OK de Laura).",
+  "aprendido": [
+    {
+      "fecha": "2026-10-12",
+      "hallazgo": "Extracción mecánica de pestañas y data de clientes corrió en Opus (US$0,61 + una corrida cortada por límite de gasto). Debió ser Haiku.",
+      "fuente": "agency/logs/token-log.csv, filas 2026-10-12 general-purpose"
+    },
+    {
+      "fecha": "2026-10-17",
+      "hallazgo": "Sesión larga del Jefe (medición + diseño IG + lectura completa del Sheet) costó US$2,17 solo por releer historial. Antes, sesión Opus del 16-oct: US$77,35.",
+      "fuente": "agency/logs/token-log.csv fila 2026-10-17 y agency/logs/session-usage.csv"
+    }
+  ]
+}

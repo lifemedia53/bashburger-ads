@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-10",
+  "actualizado": "2026-10-23",
   "clientes": {
     "the-cool-hostel": {
       "rubro": "hostel",
@@ -33,18 +33,17 @@
       "presupuesto_diario_clp": 2000,
       "campanas": {
         "activa": {
-          "id": "120249343804190575",
-          "nombre": "Reservas Hotelier - Purchase",
-          "objetivo": "OUTCOME_SALES",
-          "optimizacion": "Purchase",
-          "publico": "CL+AR, edad 21-55 (sugerencia Advantage+)",
-          "anuncios": [
-            "Reel Max dormido - Reservar web",
-            "Reel Cris + Rawy - Reservar web"
-          ],
-          "lanzada": "2026-10-10"
+          "id": "120249359954760575",
+          "nombre": "MENSAJES CONSULTAS COOL HOSTEL 2026",
+          "objetivo": "OUTCOME_ENGAGEMENT (conversaciones WhatsApp)",
+          "conjunto": "120249359954750575 CJ 1 - Viajeros La Serena",
+          "anuncio": "Cris + Rawy Whatsapp",
+          "presupuesto_diario_clp": 2000,
+          "creada": "2026-10-11 por Laura",
+          "fuente": "Meta, 2026-10-18"
         },
         "pausadas": [
+          "120249343804190575 Reservas Hotelier - Purchase (pausada 2026-10-18, pixel sin Purchase desde 7-oct)",
           "120249045153320575 Tráfico a Hotelier II",
           "120249209785140575 Triatlón"
         ]
@@ -56,7 +55,7 @@
         "Evaluar campaña nueva el 2026-10-31"
       ],
       "voz": "agency/memoria/voz/the-cool-hostel.json",
-      "decision_laura": "2026-10-10: dejar Meta como está (1 campaña Reservas Hotelier). No proponer más campañas por ahora"
+      "decision_laura": "2026-10-18: medir por WhatsApp + reservas Little Hotelier por semana; web Purchase pausada; WhatsApp a $2.000/día. Sin campañas nuevas hasta evaluar el 2026-10-31"
     },
     "bash-burger": {
       "rubro": "tenedor libre de hamburguesas smash ($13.990 x 2 h, confirmado por Laura 2026-10-10) + barra libre",
@@ -91,7 +90,44 @@
         "Confirmar URL de destino por anuncio (Airbnb/Furnished Finder/sitio)",
         "Confirmar si TLL = Lobster",
         "Renovar ST TLL antes del 22-oct"
-      ]
+      ],
+      "decision_laura_2026-10-23": "dejar Lullaby como está y marcar completado (#82, #84, #85)."
+    },
+    "mare-by-bombo": {
+      "meta": {
+        "cuenta": "4197093347202081"
+      },
+      "decision_laura": "2026-10-23: no reactivar MARIDAJE RESERVAS WA ahora, guardarlo para el próximo maridaje; los boosts los hace Laura desde el celular, sin solicitudes aparte; presupuesto noviembre $300.000; no se sabe cuántas de las 131 conversaciones fueron reservas (hay que cruzar datos, tarea creada).",
+      "fuente": "Laura en sesión 2026-10-23; auditoría agency/auditorias/2026-10-23-mare-by-bombo-90d.md"
+    },
+    "steakhouse-by-bombo": {
+      "meta": {
+        "cuenta": "1642000733624651"
+      },
+      "decision_laura": "2026-10-23: guarda presupuesto; todo pausado y reactivar en noviembre con $150.000; no reactivar Tráfico Promo ahora; boosts usados por alcance; boosts y campañas en $0 archivados (nunca borrar).",
+      "fuente": "Laura en sesión 2026-10-23; auditoría agency/auditorias/2026-10-23-steakhouse-90d.md"
+    },
+    "bombo-tiki-house": {
+      "meta": {
+        "cuenta": "1802064240289181",
+        "pagina": "102006285205852"
+      },
+      "decision_laura": "2026-10-23: pauta mensual $160.000; campaña de mensajes solo para House; video de Carlos disponible en WhatsApp (tarea creada); Reconocimiento pausado, no se renueva; dejar el boost nuevo Tus viernes como está; Instagram @bombotikihouse sin vincular a la cuenta de anuncios.",
+      "fuente": "Laura en sesión 2026-10-23"
+    },
+    "lotus-estilistas": {
+      "meta": {
+        "cuenta": "2150099018564052"
+      },
+      "decision_laura": "2026-10-23: 14 DMs de Instagram, sin WhatsApp; mantener la campaña y revisar el lunes 26-oct; mantener los hallazgos en Notion.",
+      "fuente": "Laura en sesión 2026-10-23"
+    },
+    "bombo-burger": {
+      "meta": {
+        "cuenta": "362765604642572"
+      },
+      "decision_laura": "2026-10-23: vigencia BancoEstado 50% y BancoChile 30% hasta fines de octubre; promo $11.990 del remarketing queda como está; pausados 3 posts de IG sin gasto.",
+      "fuente": "Laura en sesión 2026-10-23"
     }
   },
   "ex_clientes": {

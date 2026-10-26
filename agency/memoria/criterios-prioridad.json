@@ -1,0 +1,25 @@
+{
+  "fuente": "Acordado con Laura el 2026-10-18 (sesion 4). Base: planes.json, clientes.json, Bitacora de hallazgos Ads (P1) y All Tasks (Notion).",
+  "base_de_datos": "All Tasks collection://9c4673eb-9c56-8306-a680-072990a30031",
+  "prioridad": {
+    "Urgent": "Hay plata parada o un cliente bloqueado esta semana (campana sin entrega, fecha de fin vencida, cuenta bloqueada, entrega que el cliente espera).",
+    "Medium": "Entregable del mes contratado (planes.json) sin urgencia inmediata.",
+    "Low": "Mejora interna o de la agencia sin cliente esperando."
+  },
+  "alcance": {
+    "incluir": "Tareas abiertas (Status: Not started, In progress, Ready for review, Programmed) y las de estado 'Published/Reprogram', que son tareas que se repiten (Laura, 2026-10-18).",
+    "excluir": "Status Complete."
+  },
+  "permisos": "Laura autorizo cambiar Priority (2026-10-18). Fechas (Deadline / Scheduled For) en una segunda etapa, por lotes aprobados. Nunca borrar. No tocar otros campos.",
+  "metodo": [
+    "1. ops-coordinator (Sonnet) lee todas las tareas con su contenido y propone tabla: tarea, cliente, prioridad actual, prioridad propuesta, motivo con fuente. No escribe.",
+    "2. Laura aprueba por lotes de ~10 tareas.",
+    "3. El Jefe escribe las prioridades en Notion y verifica.",
+    "4. Se ponen fechas, tambien por lotes aprobados."
+  ],
+  "reglas": [
+    "Sin fuente, [DATO] y preguntar a Laura.",
+    "Respetar decisiones de Laura en clientes.json.",
+    "Tareas con deadline de septiembre aun abiertas: marcar como 'posible hecha sin cerrar' y preguntar, no cerrar."
+  ]
+}

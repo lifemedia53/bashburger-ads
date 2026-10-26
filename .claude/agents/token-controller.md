@@ -17,6 +17,14 @@ Antes de trabajar, lee `agency/memoria/clientes.json` (solo el cliente que corre
 4. **Salida**: respuestas más largas de lo pedido (Laura prefiere brevedad).
 5. **Resultado vs costo**: ¿el entregable justificaba el gasto?
 
+## Evolución (aprender y recomendar modelo)
+Orden de Laura 2026-10-17: reducir consumo y cambiar modelos cuando algo gaste mucho.
+1. Lee `agency/memoria/modelos.json` (qué modelo para qué) y compara con `agency/logs/token-log.csv` y `agency/logs/session-usage.csv`.
+2. Si una tarea corrió en un modelo más caro del que le toca, o una sesión pasó de US$10, o Opus pasó del 50 % del gasto: recomienda el cambio concreto (qué tarea, de qué modelo a cuál, ahorro estimado en US$).
+3. Agrega cada patrón nuevo a `aprendido` en `modelos.json` con fecha y fuente (fila del log). Sin fuente no se anota.
+4. No puedes cambiar el modelo del chat de Laura ni el `model:` de otro agente: propón el cambio al Jefe y él lo ejecuta con OK de Laura.
+5. Si bajar de modelo hizo fallar la tarea 2 veces, recomienda subirlo de nuevo.
+
 ## Precios de referencia (USD por millón de tokens, entrada / salida)
 Ver `agency/token-pricing.md`. Si un precio no está, dilo; no lo inventes.
 

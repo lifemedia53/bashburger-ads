@@ -1,0 +1,27 @@
+{
+  "fuente": "Imagen del Sheet de contratación, enviada por Laura el 2026-10-25 (filas 45-66). Transcripción mía.",
+  "nota": "[DATO] la imagen no dice el período de 'Sesiones' ni de 'Google'; el RRSS dice SEMANAL. Se asume mensual para Sesiones y Google (confirmar con Laura).",
+  "clientes": [
+    {"local": "Bombo Burger", "sesiones": 4, "google": "8", "rrss_semanal": "3 posts 2 reels"},
+    {"local": "Santerra By Bombo", "sesiones": 3, "google": "8", "rrss_semanal": "3 posts 1 reel"},
+    {"local": "The Cool Hostel", "sesiones": 2, "google": "8", "rrss_semanal": "2 posts 1 reel"},
+    {"local": "Bombo Comercializadora", "sesiones": 0, "google": "8", "rrss_semanal": "4-5 posts 0 reel"},
+    {"local": "Bash Burger", "sesiones": 3, "google": "8", "rrss_semanal": "3 posts 1 reel"},
+    {"local": "Entre Tacos", "sesiones": 3, "google": "4", "rrss_semanal": "2 posts 1 reel"},
+    {"local": "Bendito Completo", "sesiones": 3, "google": "4", "rrss_semanal": "2 posts 1 reel"},
+    {"local": "Bombo Tiki House y Beach", "sesiones": 4, "sesiones_detalle": "2 por local (House y Beach): 1 de Carlos (video) + 1 de Rocío (fotos) por local. Laura 2026-10-26: pasó de 3 a 4", "google": "4", "rrss_semanal": "3 posts 1 reel"},
+    {"local": "Mare By Bombo", "sesiones": 1, "google": "4", "rrss_semanal": "2 posts 1 reel"},
+    {"local": "Steakhouse by Bombo", "sesiones": 1, "google": "4", "rrss_semanal": "2 posts 1 reel"},
+    {"local": "Tony's Pasta", "sesiones": 1, "google": "6", "rrss_semanal": "1 post 1 reel"},
+    {"local": "Lullaby Rentals", "sesiones": 0, "google": "8", "rrss_semanal": "2 posts 1 reel"},
+    {"local": "Pressures Perfect", "sesiones": 0, "google": "8 + WEB SEO", "rrss_semanal": "2 posts 1 reel"},
+    {"local": "Lemarc", "sesiones": 2, "google": "4", "rrss_semanal": "1 post 1 reel"},
+    {"local": "La Siciliana Trattoria", "sesiones": 3, "google": "8", "rrss_semanal": "2 posts 1 reel"},
+    {"local": "Lotus Estilistas", "sesiones": 0, "google": "2", "rrss_semanal": "0"},
+    {"local": "Lotus Casa Cultural", "sesiones": 0, "google": "4", "rrss_semanal": "0"},
+    {"local": "Somos Casa Lotus", "sesiones": 0, "google": "0", "rrss_semanal": "0"},
+    {"local": "Lighthouse", "sesiones": 0, "google": "0", "rrss_semanal": "2 posts 1 reel"},
+    {"local": "Smile Mision SM", "sesiones": null, "google": null, "rrss_semanal": null},
+    {"local": "Vendedor de Autos - Carlos", "sesiones": null, "google": null, "rrss_semanal": null}
+  ]
+}
