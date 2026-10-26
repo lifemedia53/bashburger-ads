@@ -277,4 +277,7 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Notion (órdenes de Laura): cerradas 'Pagarle a Bombo Distri' y 'Equipos para audiovisuales'; UberEats/Justo Bash y Booking.com a hoy 28-oct (Booking + revisar precios de la mix en enero y shared); Insights TsM y Doc Nómina al 29-oct; 'Escribirle a Andrea' al 2-nov. Team: Ads/Administración/Web = Laura; UberEats/Justo = Laura+Max; Google Profile = Max (87 tareas). Sin Team: RRSS (25, Vero/Thiago/Rodri sin criterio), Gráficas Adicionales (5), sin tipo (9).
 - Lullaby: AWFIT NO se archiva (Laura).
 - local-seo-lead: 23 tarjetas nuevas de posts de noviembre en Trello (46 posts), copia en agency/borradores/2026-10-26-noviembre-posts-google.md; 17 [DATO] para Vero.
-- Pendiente: qué actualizar en 'Actualizar Doc Nomina' (solo dice 'Bash Pagó 700'); cierre (token-log, PR a main).
+- Nómina (Laura): registrar el pago de Bash (700, CLP) en el doc de nómina; anotado en la tarea. Team Laura también en Gráficas Adicionales y sin tipo (14). RRSS (25 tareas) sin Team: Laura lo deja pendiente.
+
+## Cierre sesión 12 (2026-10-28)
+- Consumo: ~US$5,82 (session-usage.csv); fila en token-log.csv. Pendientes para la próxima: Tiki (video Beach, IG, copys), #14 Bombo (copys), Lotus (sin decisión), Team de RRSS, 17 [DATO] de Vero en posts de noviembre, reactivar Bombo en noviembre con OK de Laura.
