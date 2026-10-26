@@ -81,3 +81,6 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Sheet de carga de anuncios (https://docs.google.com/spreadsheets/d/1XcdGELj-5cZWEr1lt9YorXiryHuZoDaukvZAywtM_Jc/edit) + guía en Drive "GUÍA - Cómo usar el Sheet de carga de anuncios Meta". Estados: BORRADOR / LISTO / CARGADO / APROBADO. Laura aún no llena el Sheet.
 - Pendiente de sesión anterior: el borrador de Comercializadora ya fue publicado por Laura ($5.000/día, fin 30-nov) — preguntar presupuesto contratado.
 - 26-oct: Comercializadora presupuesto Meta mensual = $250.000 (Laura). Ritmo actual: Tráfico $5.000/día + Reconocimiento $1.850/día ≈ $205k/mes → dentro del presupuesto. Octubre gastado ~$86k (Tráfico $58.586 + Reconocimiento $28.036). Confirmado por Laura: son solo inversión en Meta.
+
+## Cierre 26-oct
+- Sesión cerrada por Laura. Prompt para la próxima: agency/prompts/proxima-sesion.md. Rama de trabajo pasada a main por pedido de Laura.
