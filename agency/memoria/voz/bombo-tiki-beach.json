@@ -1,0 +1,162 @@
+{
+  "fuente": "Trello 'Centro Bombo' (t09C3ZLr) > 'Generalidades Bombo Tiki Beach y House' > 'Prompt publicaciones Google (Beach)' (qNXmpzNu, ultima edicion 2026-05-10), 'Descripcion SEO' (NfthlOHM, 2026-01-28), 'Whatsapp - Links - Direcciones - Webs' (wrSAHEop, 2026-05-07) + tarjeta de posts https://trello.com/c/J9UJYZv0 (2026-10-17) + clientes-google.json + planes.json + enlaces-perfiles-cartas.json + data-clientes.json + agency/memoria/google-resultados.json (hoja Google, leido 2026-10-12, keywords SEPTIEMBRE 2026)",
+  "actualizado": "2026-10-17",
+  "nombre_oficial": "[DATO] Vero confirma. En uso: 'Bombo Tiki Beach'.",
+  "conflicto_nombre": {
+    "prompt_trello": "'Bombo Tiki Tenedor Libre' (prompt Beach 2026-05-10; tambien 'Bombo Tiki Tenedor libre' en wrSAHEop)",
+    "descripcion_seo_trello": "'Bombo Tiki' (2026-01-28)",
+    "memoria_y_lista_trello": "'Bombo Tiki Beach' (clientes-google.json, lista 'Posteos Google Tiki Beach', planes.json)",
+    "ficha_google": "se busca como 'Bombo Tiki Beach Tenedor Libre - Avenida Costanera' (google-resultados.json, keywords)",
+    "decision_provisoria": "Usar 'Bombo Tiki Beach' en los posts (como la tarjeta del 17-oct) hasta que Vero confirme. No mezclar con House."
+  },
+  "foco_plan": "Plan Bombo Tiki House y Beach: foco 'energia y universo tiki; diferenciar House vs Beach' (planes.json). BEACH = tenedor libre frente al mar en la Costanera de Coquimbo. HOUSE = pizzeria/cocteleria con parque para ninos y delivery propio. No mezclar.",
+  "negocio": {
+    "direccion": "Av. Costanera 5623, Coquimbo (frente al mar). Nota en Trello wrSAHEop: 'Av. Costanera 5611, 1800005 Coquimbo (mala la direccion)': la direccion correcta a usar es 5623.",
+    "concepto": "Restaurante tenedor libre frente al mar en la Costanera de Coquimbo, para comer con calma, variedad y compartir en ambiente relajado; comer sin limites con buena variedad; ideal para grupos, parejas o familias (prompt Beach 2026-05-10).",
+    "apertura": "15 septiembre 2025 (Trello wrSAHEop)",
+    "productos_permitidos": [
+      "tenedor libre",
+      "pizzas",
+      "carnes",
+      "frutos del mar",
+      "postres",
+      "bebestibles",
+      "cocteleria tradicional",
+      "cocteleria de autor",
+      "happy hour (solo mencionar; no inventar precios ni detalles)"
+    ],
+    "no_listar_todo_siempre": "El prompt pide mencionar segun contexto y evitar listar todo en cada post.",
+    "precio_referencial": "Aprox. $14.990 (rango habitual $15.000 a $20.000) (prompt Beach 2026-05-10; wrSAHEop). No repetir siempre el precio. [DATO] vigencia 2026: Vero confirma antes de usarlo.",
+    "horario": "Lunes a domingo 12:00 a 00:00 (prompt Beach, ene-2026/2026-05-10; Descripcion SEO). Delivery hasta las 23:00 (wrSAHEop). No hace falta en todos los posts. [DATO] Vero confirma vigencia (feriados no confirmados).",
+    "happy_hour": "Disponible (prompt). Horario: 'todo el dia o de 4 a 8pm' en wrSAHEop = [DATO] sin confirmar; no dar horario.",
+    "delivery": "Solo pizzas; Pedidos Ya (wrSAHEop). Frases del prompt: 'pide pizzas para disfrutar en casa' / 'pizzas disponibles para pedir en linea'. No mencionar apps salvo necesidad; sin enlaces.",
+    "reservas": "Por WhatsApp (wrSAHEop, Descripcion SEO, reservas-desk.json). No incluir numero en el post.",
+    "eventos_musica_djs": "No (wrSAHEop). No inventar eventos."
+  },
+  "estrategia_google_posts": {
+    "eje": "Posts por evento: 4 posts por evento (anticipacion, intermedio, cercano, dia previo/mismo dia) que inviten a almorzar o cenar frente al mar antes o despues del evento (prompt Beach). Ademas posts de venta pura (tenedor libre, pizzas en linea) para no gastar el cupo solo en fechas.",
+    "enfoque": [
+      "comer bien y sin apuros",
+      "buena previa o cierre del evento",
+      "variedad del tenedor libre",
+      "panorama frente al mar",
+      "ubicacion en la Costanera de Coquimbo"
+    ],
+    "escenarios": [
+      "salir a comer despues del evento",
+      "juntarse con amigos",
+      "almorzar frente al mar",
+      "cerrar el dia con buena comida"
+    ],
+    "cta_prioridad": "1) Visitar el local (Maps / Como llegar) 2) pedir pizzas en linea ocasionalmente",
+    "cierres_del_prompt_variar": [
+      "Nos encuentras en Av. Costanera 5623, Coquimbo.",
+      "Te esperamos en Av. Costanera 5623, Coquimbo.",
+      "Estamos en Av. Costanera 5623, Coquimbo.",
+      "Bombo Tiki esta en Av. Costanera 5623, Coquimbo.",
+      "Ven a conocer nuestro tenedor libre frente al mar en Av. Costanera 5623, Coquimbo."
+    ],
+    "siempre": "Incluir la direccion exacta Av. Costanera 5623, Coquimbo y fecha de publicacion interna; no repetir el mismo cierre.",
+    "formato_y_largo": "agency/memoria/trello.json > formato_tarjeta (~500 caracteres, rango 300-680; titulo '📌 POST N – TITULO'; 'Boton: Como llegar | Pedir en linea')"
+  },
+  "tono_posts": {
+    "estilo": "juvenil, moderno, cercano, natural, relajado; lenguaje simple y seguro (prompt Beach 2026-05-10)",
+    "evitar": [
+      "frases demasiado publicitarias",
+      "exceso de jerga",
+      "textos repetitivos",
+      "estructuras identicas entre posts"
+    ],
+    "emojis": "Maximo 1 o 2 por post. Del prompt: 🍕 🍹 🌊 ✨",
+    "prohibido": [
+      "enlaces publicos",
+      "telefono",
+      "WhatsApp en el texto",
+      "palabra 'CTA'",
+      "inventar precios o detalles de happy hour",
+      "delivery de algo que no sea pizza",
+      "repetir inicios o cierres",
+      "mezclar con el concepto de House (parque para ninos, ambiente tiki de House)"
+    ]
+  },
+  "keywords_del_prompt": [
+    "Costanera",
+    "frente al mar",
+    "Coquimbo",
+    "tenedor libre",
+    "pizzas",
+    "frutos del mar",
+    "restaurante frente al mar",
+    "panorama en la Costanera"
+  ],
+  "keywords_reales_google": {
+    "fuente": "google-resultados.json > perfiles > 'Bombo Tiki Beach' (SEPTIEMBRE 2026; historicas MAYO 2025 a SEPT 2026)",
+    "top_septiembre_2026": [
+      "tenedor libre la serena",
+      "tenedor libre",
+      "tenedor libre serena",
+      "tenedor libre coquimbo",
+      "bombo tiki beach tenedor libre - avenida costanera",
+      "tenedor libre bombo la serena",
+      "tenedor libre en la serena",
+      "tiki tiki"
+    ],
+    "historicas_constantes_12_meses": [
+      "tenedor libre",
+      "tenedor libre avenida del mar",
+      "tenedor libre coquimbo",
+      "tenedor libre en coquimbo",
+      "tenedor libre en la serena",
+      "bombo tiki tenedor libre",
+      "buffet coquimbo",
+      "buffet libre",
+      "tenedor libre en la serena precios"
+    ],
+    "ignorar": [
+      "restaurants",
+      "restaurant",
+      "bar",
+      "bars",
+      "bombo (suelta)",
+      "tenedor libre de hamburguesas la serena (Beach no es de hamburguesas)"
+    ],
+    "ojo": "Mucha busqueda viene de La Serena: mencionar 'cerca de La Serena' solo si Vero confirma distancia/ruta [DATO]; Coquimbo y Costanera si estan en el prompt."
+  },
+  "metricas_google": {
+    "fuente": "agency/memoria/google-resultados.json (hoja Google, leido 2026-10-12, keywords SEPTIEMBRE 2026)",
+    "septiembre_2026": "vistas 3127, interacciones 231, menu 27, direcciones 125, llamadas 15, chats 16, reservas 0",
+    "agosto_2026": "vistas 3317, interacciones 281, menu 59",
+    "julio_2026": "vistas 2604, interacciones 278",
+    "lectura": "Vistas casi estables (-6% vs agosto); interacciones -18%; menu cae de 59 a 27"
+  },
+  "links": {
+    "fuente": "data-clientes.json fila 21 + enlaces-perfiles-cartas.json + Trello wrSAHEop (2026-05-07)",
+    "perfil_google": "https://share.google/hPMHlgrdeNPBIQdJc",
+    "google_maps": "https://maps.app.goo.gl/Koxc8V5T8knAkc6P8 (DATA CLIENTES). [DATO] Trello wrSAHEop y la tarjeta de hoy usan https://maps.app.goo.gl/tFB4wbGyVseQFPr97: Vero confirma cual es el vigente",
+    "resenas_google": "https://g.page/r/CQ_sLt12F0tHEAE/review",
+    "whatsapp_y_reserva": "https://wa.me/56943569600",
+    "pedidos_ya": "https://www.pedidosya.cl/restaurantes/la-serena/bombo-tiki-beach-807be900-a33a-4e94-b402-d60dd2f69108-menu",
+    "carta": "https://spleatweb.app/restaurants/IJbsdCd424X9HbOlYVpJ5YuYyZe2/menu",
+    "instagram": "DATA CLIENTES lista https://www.instagram.com/bombotikihouse/ (la misma cuenta de House). [DATO] confirmar si Beach tiene cuenta propia",
+    "facebook": "https://web.facebook.com/bombotiki",
+    "uso": "Los links van en la descripcion de la tarjeta, NUNCA en el texto del post."
+  },
+  "posts_ya_subidos": {
+    "fuente": "Trello https://trello.com/c/J9UJYZv0 (2026-10-17)",
+    "post1": "Dia del Chef (20-oct): tenedor libre frente al mar, pizzas, carnes, frutos del mar y postres",
+    "post2": "Tenedor libre con vista al mar (23-oct): horario 12:00-00:00, happy hour, coctelerias, pizzas en linea. Cuidado: ya se uso horario y happy hour; el proximo lote debe variar."
+  },
+  "confirma_vero": [
+    "Nombre oficial de Beach: 'Bombo Tiki Tenedor Libre' (prompt) vs 'Bombo Tiki Beach' (memoria/lista) vs 'Bombo Tiki Beach Tenedor Libre - Avenida Costanera' (ficha Google)",
+    "Que la ficha mantiene happy hour y horario lunes a domingo 12:00-00:00 (viene del prompt de enero/mayo 2026); horario de feriados",
+    "Horario del happy hour ('todo el dia o de 4 a 8pm' sin confirmar)",
+    "Precio referencial vigente ($14.990 / rango $15.000-$20.000)",
+    "Link de Maps vigente (Koxc8V5T8knAkc6P8 vs tFB4wbGyVseQFPr97) y direccion en la ficha (5623 vs 5611)",
+    "Instagram propio de Beach",
+    "Carta vigente (revisar 1 vez, proxima revision en 6 meses)",
+    "Cuantos posts son por perfil (plan: google 8 para House y Beach)"
+  ],
+  "pendientes": [
+    "Revisar tarjetas Halloween de Tiki Beach (no releidas para esta guia)"
+  ]
+}

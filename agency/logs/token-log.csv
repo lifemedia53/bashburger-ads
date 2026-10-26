@@ -26,6 +26,31 @@ fecha,cliente,agente,modelo,tokens,herramientas,costo_est_usd,veredicto
 2026-10-16,Bombo,local-seo-lead (correccion prompt+Halloween Bombo),Sonnet 5.5,123978,s/d,0.30,ajustar (retrabajo)
 2026-10-16,Varios,local-seo-lead (Lullaby/Lotus/Pressures),Sonnet 5.5,188138,s/d,0.45,mantener
 2026-10-16,Varios,local-seo-lead (ajustes Bombo/Lullaby/Pressures),Sonnet 5.5,146787,s/d,0.35,ajustar (retrabajo)
+2026-10-16,Varios,local-seo-lead (entrenamiento: auditoria+reglas+re-test),Sonnet 5.5,82662,15,0.20,mantener
+2026-10-16,Bash+Bombo,paid-media-lead (analisis lote 1),Sonnet 5.5,198278,14,0.47,mantener
+2026-10-16,Mare+Steakhouse,paid-media-lead (analisis lote 2),Sonnet 5.5,137243,12,0.33,mantener
+2026-10-16,Bendito+EntreTacos,paid-media-lead (analisis lote 3),Sonnet 5.5,143225,11,0.34,mantener
+2026-10-16,Tonys+Tiki,paid-media-lead (analisis lote 4),Sonnet 5.5,137279,10,0.33,ajustar (no leyo Bitacora; tope de 10 llamadas)
+2026-10-16,Comercializadora+Lullaby,paid-media-lead (analisis lote 5),Sonnet 5.5,175819,10,0.42,ajustar (no leyo voz ni Biblioteca)
+2026-10-16,Lotus Casa Cultural+Somos,paid-media-lead (analisis lote 6),Sonnet 5.5,107121,9,0.26,mantener
+2026-10-16,Estilistas+Hostel,paid-media-lead (analisis lote 7),Sonnet 5.5,110133,9,0.26,ajustar (repite Casa Cultural del lote 6; no leyo paginas de pausas)
+2026-10-17,Mare+Steakhouse,local-seo-lead (muestra borradores lote 1),Sonnet 5.5,103603,13,0.25,mantener
+2026-10-17,Mare+Steakhouse,local-seo-lead (subida a Trello lote 1),Sonnet 5.5,79899,13,0.19,mantener
+2026-10-17,Bash+Santerra,local-seo-lead (lote 2 Trello),Sonnet 5.5,100542,24,0.24,mantener
+2026-10-17,Tiki House+Beach,local-seo-lead (lote 3 Trello),Sonnet 5.5,102935,20,0.25,mantener
+2026-10-17,Bendito+Entre Tacos,local-seo-lead (lote 4 Trello),Sonnet 5.5,s/d,27,s/d,mantener
+2026-10-17,Tonys+Siciliana,local-seo-lead (lote 5 Trello),Sonnet 5.5,139338,22,0.33,mantener
+2026-10-17,Bombo Burger 5 locales,local-seo-lead (lote 6 Trello),Sonnet 5.5,158349,23,0.38,mantener
+2026-10-17,Varios,general-purpose Haiku (inventario posts Trello),Haiku 5.5,170692,10,0.02,mantener
+2026-10-17,Varios,general-purpose Haiku (extraccion hoja DATA CLIENTES),Haiku 5.5,151291,12,0.02,ajustar (no pudo decodificar base64; lo resolvio el Jefe)
+2026-10-17,Varios,stack-auditor (primera corrida),Sonnet 5.5,36302,6,0.09,mantener
+2026-10-17,Lullaby+Pressures,local-seo-lead (lote 7 SEO Trello),Sonnet 5.5,140461,25,0.34,ajustar (termino sin informe; hubo que pedirlo)
+2026-10-17,Lotus+Lemarc,local-seo-lead (lote 8 SEO Trello),Sonnet 5.5,126889,22,0.30,ajustar (termino sin informe; hubo que pedirlo)
+2026-10-17,Hostel+Comercializadora,local-seo-lead (lote 9 SEO Trello),Sonnet 5.5,134653,24,0.32,ajustar (termino sin informe; hubo que pedirlo)
+2026-10-17,Mare+Steakhouse,local-seo-lead (voz lote A),Sonnet 5.5,82160,10,0.20,mantener
+2026-10-17,Tiki+Santerra,local-seo-lead (voz lote B),Sonnet 5.5,134009,21,0.32,ajustar (termino sin informe; hubo que pedirlo)
+2026-10-17,Bendito+Entre Tacos,local-seo-lead (voz lote C),Sonnet 5.5,132131,24,0.32,ajustar (termino sin informe; hubo que pedirlo)
+2026-10-26,Varios,Jefe (sesion 22-26 oct: medicion Bombo/Hostel/Lotus, rutinas, auditoria agentes),Opus 5.5 + Sonnet 5.5,s/d,s/d,s/d,ajustar (sesion muy larga; cerrar antes y usar Sonnet)
 2026-10-17,Varios,Jefe (medicion Bombo/Hostel, aviso tokens, diseno flujo IG),Sonnet 5.5,s/d,s/d,2.17,ajustar (sesion larga: el Sheet completo se leyo 1 vez y cada turno releyo todo el historial)
 2026-10-17,Varios,Jefe (2a sesion: pendientes Hostel + update de agentes),Sonnet 5.5,s/d,s/d,s/d,mantener (sesion corta; costo real en session-usage.csv)
 2026-10-18,Varios,Jefe (3a sesion: pixel Hostel, modelos, rutinas),Sonnet 5.5,s/d,s/d,s/d,ajustar (sesion larga; 3 rutinas no se pudieron crear con conectores)
@@ -38,3 +63,4 @@ fecha,cliente,agente,modelo,tokens,herramientas,costo_est_usd,veredicto
 2026-10-25,Varios,"Jefe (cierre sesion eeb505c9, 2026-10-23 al 25; suma Sonnet y Haiku de session-usage.csv)",Sonnet 5.5 + Haiku 5.5,15923879,[DATO],4.88,"ajustar (sesion larga: 14,1M tokens de cache leidos, precio de cache [DATO]; incluye el parcial de 0,55 de la fila 37 de la misma sesion)"
 2026-10-26,Varios,"Jefe (sesion 10, cierre; 45fddf09, ~50 turnos; fila unica en session-usage.csv; subagentes meta-ads-auditor ~157k y cierre: costo s/d)",Sonnet 5.5,21487816,n/d,6.4497,"ajustar (sesion 10, larga: conviene cortar antes; cache lectura 20,86M = 97% del total)"
 2026-10-27,Varios,"Jefe (sesion 11, 976cd62c; costo de session-usage.csv al ultimo turno registrado; subagentes meta-ads-auditor x2 ~274k tokens, costo s/d)",Sonnet 5.5,7199000,n/d,2.90,"mantener (sesion corta, bloqueada por copys y videos; cache lectura 6,7M)"
+2026-10-26,Varios,"Jefe (sesion 11, e7be5b00; cierre; subagente ops-coordinator Haiku ~130k tokens; fila de session-usage.csv: Sonnet 3,54M + Haiku 0,52M tokens)",Sonnet 5.5 + Haiku 5.5,4065753,n/d,1.3211,"mantener (sesion corta; 92% cache lectura; costo de session-usage.csv al momento del cierre)"

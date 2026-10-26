@@ -44,7 +44,7 @@
       },
       "limite": "No publica en Google: solo borradores",
       "voz_clientes": "agency/memoria/voz/<cliente>.json (pendiente: Laura pega instrucciones de ChatGPT)",
-      "nota_ultima_auditoria": "8/10 (2026-10-10) tras reentrenamiento con voz + GEO/AEO; pendiente primera entrega real en Trello",
+      "nota_ultima_auditoria": "7/10 (2026-10-16) auditoría formal; 7,5 en la auditoría 2026-10-25 (ver agency/auditorias/2026-10-25-agentes.json)",
       "kpi": "antes/después de resultados de Google Maps/Perfil (vistas, direcciones, llamadas, clics) mes a mes, fuente google-resultados.json; secundario: posts entregados vs cupo de 8 y correcciones de Vero (orden de Laura 2026-10-18)"
     },
     "token-controller": {

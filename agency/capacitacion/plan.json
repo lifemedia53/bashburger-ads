@@ -1,7 +1,7 @@
 {
   "nombre": "Ciclo semanal de auditoría y capacitación — Life Media",
   "responsable": "Jefe (Opus)",
-  "ritmo": "Cada 5 días (orden de Laura, 2026-10-17; reemplaza la decisión del 2026-10-10 de no programar). Corre en Sonnet, solo lectura, máx. 5 agentes por corrida.",
+  "ritmo": "Los días 1 y 15 de cada mes (orden de Laura, 2026-10-26; reemplaza el ritmo de cada 5 días del 2026-10-17). Corre en Sonnet, solo lectura, máx. 5 agentes por corrida.",
   "pasos": [
     {
       "paso": 1,
@@ -50,7 +50,8 @@
     "paid-media-lead": [
       "Mensual: novedades Meta Ads → meta-ads-2026.json",
       "Tras cada auditoría: aplicar lecciones al checklist_obligatorio",
-      "Laboratorio del playbook: 1 prueba A/B por mes documentada"
+      "Laboratorio del playbook: 1 prueba A/B por mes documentada",
+      "Lección 25-oct: crear anuncios IG Direct con ads_create_ad + object_story_spec inline y CTA INSTAGRAM_MESSAGE (no ads_create_creative con MESSAGE_PAGE); los creativos son inmutables: cambiar texto = crear anuncio nuevo o editarlo en Ads Manager; ads_update_entity con monto/tope puede dejar la campaña en PAUSED (revisar status_forced_to_paused)"
     ],
     "meta-ads-auditor": [
       "Contrastar sus diagnósticos con el resultado real 2 semanas después",
@@ -59,7 +60,9 @@
     "local-seo-lead": [
       "Mensual: novedades GBP/GEO/AEO → geo-aeo-2026.json",
       "Antes de cada marca nueva: crear su guía de voz desde Trello/Drive",
-      "Comparar sus posts con los publicados de mejor rendimiento (Estadísticas Google)"
+      "Comparar sus posts con los publicados de mejor rendimiento (Estadísticas Google)",
+      "Lección 25-oct: cerrar siempre con informe; cruzar precios/QR/links con memoria antes de subir (Steakhouse usó el QR de Mare; Bash quedó en $12.990)",
+      "GBP oficial: no poner teléfonos/emails/redes en el texto del post (usar botón); Offers y Eventos requieren fechas; hoteles no pueden crear Offers; posts > 6 meses se archivan"
     ],
     "ops-coordinator": [
       "Medir: tareas vencidas semana a semana; meta = bajar",
@@ -67,8 +70,13 @@
     ],
     "token-controller": [
       "Mantener precios al día",
-      "Reporte semanal de costo por agente y por cliente"
+      "Reporte semanal de costo por agente y por cliente",
+      "Lección 25-oct: no corrió al cierre; el Jefe agrega la fila de token-log.csv y la rutina del lunes hace el resumen"
+    ],
+    "jefe": [
+      "Lección 25-oct: releer estado (updated_at) antes de borrar/editar rutinas; verificar pausas forzadas tras cambiar montos; sesiones cortas y en Sonnet",
+      "Automatizar solo con rutinas creadas en Cowork (con conectores): ver agency/capacitacion/propuesta-automatizacion.md"
     ]
   },
-  "automatizacion": "Rutina programada cada 5 días (orden de Laura, 2026-10-17). Ajustes de agentes: solo propuestos, los ejecuta el Jefe con OK de Laura."
+  "automatizacion": "Rutina programada los días 1 y 15 de cada mes (orden de Laura, 2026-10-26). Ajustes de agentes: solo propuestos, los ejecuta el Jefe con OK de Laura."
 }

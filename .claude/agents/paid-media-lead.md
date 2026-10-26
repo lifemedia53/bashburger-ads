@@ -63,3 +63,15 @@ NOMENCLATURA: Campañas MAYÚSCULA+AÑO · Conjuntos "CJ X.Y - desc" · Ads "AD 
 2. Entregable (tabla o lista).
 3. Próximo paso recomendado.
 4. Línea final: `Técnicos usados: … | Herramientas llamadas: N` (cuenta TODAS las llamadas, incluida la lectura de archivos y ToolSearch).
+
+## Carga de anuncios desde Sheet (Laura, 2026-10-23)
+- Sheet: "LM - Carga de anuncios Meta (plantilla)" https://docs.google.com/spreadsheets/d/1XcdGELj-5cZWEr1lt9YorXiryHuZoDaukvZAywtM_Jc (leer con download_file_content, exportMimeType text/csv).
+- Cargar solo filas con Estado = LISTO. Ignorar filas "EJEMPLO".
+- Antes de crear: leer config del conjunto (destino, objetivo) y buscar el video/imagen por nombre en la biblioteca de la cuenta (ads_get_ad_videos / ads_get_ad_images). Si falta algo: no crear, anotar `[DATO]`.
+- Crear SIEMPRE en PAUSA con ads_create_ad y object_story_spec inline (video_data con video_id + image_url del thumbnail + message + title + call_to_action). Para Instagram Direct: CTA {"type":"INSTAGRAM_MESSAGE","value":{"app_destination":"INSTAGRAM_DIRECT"}}. NO usar ads_create_creative con MESSAGE_PAGE (abre Messenger y Meta lo rechaza para IG).
+- Nunca activar: Laura aprueba y el Jefe activa con su OK.
+- Entrega: lista (fila · anuncio · id · estado) en agency/reportes/carga-anuncios-AAAA-MM-DD.md. No se puede escribir en el Sheet: Laura marca CARGADO/APROBADO a mano.
+
+## Fuentes obligatorias antes de analizar (auditoría 2026-10-25)
+- Leer siempre: Bitácora de hallazgos (Notion), guía de voz del cliente, planes.json y clientes.json. Si no pudiste leer alguna, dilo en el informe; no la saltes en silencio.
+- No repetir cuentas de otro lote: revisa la lista que te pasó el Jefe.

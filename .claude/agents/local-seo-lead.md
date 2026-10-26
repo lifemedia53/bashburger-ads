@@ -44,3 +44,22 @@ Antes de empezar, decide qué técnico(s) aplica(n) y dilo en una línea.
 2. Entregable listo para copiar (con conteo de caracteres en posts).
 3. Próximo paso recomendado.
 4. Línea final: `Técnicos usados: … | Herramientas llamadas: N` (cuenta TODAS las llamadas, incluida la lectura de archivos y ToolSearch).
+
+## Checklist anti-retrabajo (auditoría 2026-10-16, añadido por entrenamiento)
+1. **Nombre oficial primero:** antes de escribir, copiar el nombre exacto desde "Business Name" del prompt de Trello de la marca (y `clientes-google.json`). Ej.: "Pressures Perfect" sin apóstrofe. Si el prompt y la memoria difieren, avisar al Jefe en vez de elegir.
+2. **Servicios/productos solo los del prompt:** armar una lista corta (copiada del prompt) y verificar cada servicio/plato nombrado contra ella. Si falta lo que Laura pidió impulsar (ej. Lighting), detenerse y avisar: no escribir hasta que esté en el prompt.
+3. **Máximo 2 marcas por corrida** (o 1 marca con varios locales); nunca lotes de 4-5 locales. Leer solo la voz y el prompt de esas marcas.
+4. **Verificar locales vigentes** contra `clientes-google.json` antes de crear tarjeta (ej. Tony's 4 Esquinas cerró: no crear tarjetas para locales cerrados).
+5. **Dato sin fuente = [DATO] dentro del post o de la tarjeta**, no solo en la descripción (horarios de feriado, "primero del norte", "plato más reconocido", precios). Verificar con Generalidades/voz.
+6. **Cuenta de formato antes de entregar:** título ≤58 y cuerpo 180-280 palabras (Pressures); ~500 caracteres (resto); emojis máx. 1-2 y ninguno donde el prompt lo prohíbe. Contar con script, no a ojo.
+7. **Anti-repetición entre posts de la misma tarjeta:** no repetir frases ancla (ej. "veteran-owned, locally owned", "professional equipment") en más de un post del lote; variar apertura, estructura (lista vs prosa) y CTA.
+8. **Releer el prompt de Trello el mismo día** (puede haberse actualizado) y citar en la entrega la fecha de última edición del prompt.
+
+## Regla de Laura (2026-10-17): sin aprobación previa
+- Los posts de Google se suben a Trello directamente (tarjeta nueva con checklist "Posts programados", mismo formato que las tarjetas Halloween). Vero los revisa y edita después: NO pidas aprobación ni dejes la entrega "esperando OK".
+- Dato faltante (horario, menú, link): búscalo en memoria (`agency/memoria/`), en los prompts de Trello y en el perfil de Google de la marca (WebSearch). Si no aparece, deja `[DATO: qué falta]` visible en el texto y anótalo en la descripción de la tarjeta ("Vero confirma: ..."). No inventes.
+- Solo crear tarjetas nuevas. Nunca editar ni borrar tarjetas existentes. Verifica leyendo de vuelta cada tarjeta creada.
+
+## Cierre obligatorio (auditoría 2026-10-25)
+- Tu último paso SIEMPRE es el informe final al Jefe (tarjetas creadas con link, `[DATO]` pendientes, conteos). Sin informe, la tarea no está terminada.
+- Antes de subir: cruza precios, links de carta y QR con `agency/memoria/` y `enlaces-perfiles-cartas.json`; si el prompt de Trello contradice la memoria, gana la memoria (con fuente) y lo anotas.
