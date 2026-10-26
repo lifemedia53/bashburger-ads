@@ -270,3 +270,11 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Sin cambios en Meta en esta sesión (solo lectura). Cambios en Notion: Deadline y Scheduled For en 16 tareas (ver arriba). Código/memoria: auditoría días 1 y 15, pendientes, token-log.
 - Consumo medido (session-usage.csv, sesión e7be5b00): US$1,32; Sonnet 3,54 M tokens y Haiku 0,52 M. Fila agregada en token-log.csv.
 - Prompt de la próxima sesión: `agency/prompts/proxima-sesion.md`.
+
+## Sesión 12 (2026-10-28): pausa Bombo, Notion, posts noviembre (fuente: Laura, Meta, Notion, Trello)
+- (OK de Laura) Meta: las 5 campañas ACTIVAS de Bombo Burger (cuenta 362765604642572) pausadas y verificadas (0 ACTIVE): 120249474794120141, 120248316351010141, 120248177852410141, 120223562322950141, 120249107813060141. Remarketing no se bajó a $3.000 (quedó pausado). Bitácora: https://app.notion.com/p/405673eb9c5681348853c5f730d7a523
+- Tiki (lectura): sigue 0 videos y 0 IG vinculados en 1802064240289181; copys vacíos en Notion. Lotus: AD 1.C de CJ1 ya estaba pausado desde el 22-oct; 1.B Rulos IG DM casi sin entrega (7d); decisión de Laura: ninguna por ahora.
+- Notion (órdenes de Laura): cerradas 'Pagarle a Bombo Distri' y 'Equipos para audiovisuales'; UberEats/Justo Bash y Booking.com a hoy 28-oct (Booking + revisar precios de la mix en enero y shared); Insights TsM y Doc Nómina al 29-oct; 'Escribirle a Andrea' al 2-nov. Team: Ads/Administración/Web = Laura; UberEats/Justo = Laura+Max; Google Profile = Max (87 tareas). Sin Team: RRSS (25, Vero/Thiago/Rodri sin criterio), Gráficas Adicionales (5), sin tipo (9).
+- Lullaby: AWFIT NO se archiva (Laura).
+- local-seo-lead: 23 tarjetas nuevas de posts de noviembre en Trello (46 posts), copia en agency/borradores/2026-10-26-noviembre-posts-google.md; 17 [DATO] para Vero.
+- Pendiente: qué actualizar en 'Actualizar Doc Nomina' (solo dice 'Bash Pagó 700'); cierre (token-log, PR a main).
