@@ -1,19 +1,20 @@
-# Próxima sesión (actualizado el 2026-10-27, cierre de la sesión 11)
+# Próxima sesión (actualizado el 2026-10-28, cierre de la sesión 12)
 
 Abrir la sesión en **Sonnet** (ver `modelos.json`). Sesión corta: cada turno relee todo.
 
 ## Prompt para pegar al abrir la sesión
 
 ```
-Hola Jefe. Sesión nueva en Sonnet. Lee agency/memoria/pendientes.md (secciones 'Sesión 10' y 'Sesión 11') y agency/memoria/proxima-sesion.md y parte desde ahí.
-Hoy miércoles 28-oct (deadline hoy: Tiki mensajes, Lullaby contenido, Editar video de Carlos Tiki, Lotus 72h, Vino libre y 20% Steakhouse; mañana 29: #14 Bombo, Santerra ads y auditoría La Siciliana, #13 se mide; sin cerrar: Proposal Pressures, Insights TsM a Catlos, Reel Lemarc, Smile Mission).
-1) Tiki House y Beach: 2 campañas de mensajes WhatsApp, $80.000 cada una, inicio 3-nov. Bloqueos al 27-oct: copys de ChatGPT vacíos en Notion, 0 videos en la biblioteca de Meta (cuenta 1802064240289181; Laura sube a mano el video Beach y el reel de House), 0 cuentas IG vinculadas. Revisar si ya están.
-2) Bombo Burger: #14 copys (ChatGPT) aún vacíos; leer config completa de los 4 originales antes de copiar; nuevos EN PAUSA. 'Reconocimiento Santiago' (120236521728660141) sin entrega desde el 19-oct: Laura revisa presupuesto/límite de gasto; medir el 29-oct.
-3) Lotus Estilistas: 11 mensajes nuevos (26-oct); decidir si se pausa 1.C de CJ1 y se mueve plata a 'Rulos IG DM' (mi opinión: sí; falta OK de Laura).
-4) Lullaby: pago de AWFIT, destino de anuncios Reel y MT de Bliss, archivar AWFIT (sí/no); Laura archiva a mano 3 campañas con anuncio roto.
-5) Lemarc: cuenta UNSETTLED (pago del cliente). La Siciliana y Santerra: auditoría manual con capturas/CSV de Laura.
-6) Audiencias Bash/Steakhouse: re-revisar si pueblan (27-oct: A-005 Bash 2.300-2.700; A-001/A-002 en 1.000; A-003/A-004 inactivas).
-Después: mapa de procesos + oficina isométrica web, audiencias de las demás marcas por fase del playbook, rutina semanal de gasto en claude.ai.
+Hola Jefe. Sesión nueva en Sonnet. Lee CLAUDE.md, agency/memoria/pendientes.md (secciones 'Sesión 11' y 'Sesión 12') y agency/memoria/proxima-sesion.md y parte desde ahí.
+Estado: Bombo Burger TODO pausado (28-oct, OK de Laura); AWFIT de Lullaby NO se archiva; Lotus sin decisión (primero ver en Instagram Direct de qué anuncio vienen los mensajes); Team en Notion asignado salvo RRSS (25 tareas, pendiente); posts de Google de noviembre subidos a Trello (23 tarjetas, 17 [DATO] para Vero).
+1) Tiki House y Beach: 2 campañas de mensajes WhatsApp, $80.000 cada una, inicio 3-nov. Revisar si ya están: copys de ChatGPT en Notion, video de Beach subido a Meta (cuenta 1802064240289181), reel de House, IG vinculado.
+2) Bombo Burger: #14 copys (ChatGPT) en Notion; leer config completa de los 4 originales antes de copiar; nuevos EN PAUSA. Reactivar Bombo (test CJ Delivery misma config, Remarketing tope $360.000 y bajar a $3.000/día, AD 3.1.A con error) solo con OK de Laura; preguntar fecha en noviembre.
+3) Lotus: ¿vinculó el IG? Si sí, revisar IG Direct; no mover plata sin saber qué anuncio trae los mensajes.
+4) Nómina: tarea 'Actualizar Doc Nomina' (registrar pago de Bash 700 CLP), deadline 29-oct. Booking.com hoy: sumar precios de la mix en enero y shared.
+5) Hostel: reel DekO_1WPW9E y borrador 120249519319570575. Lemarc UNSETTLED. La Siciliana y Santerra: auditoría manual con capturas de Laura.
+6) Audiencias Bash/Steakhouse: re-revisar (28-oct: Bash A-005 3.000-3.500; A-001/A-002 en 1.000; A-003/A-004 inactivas).
+7) Test del Sheet de carga cuando Laura arme una fila LISTO (crear en pausa, nunca activar sin OK).
+Después: Team de RRSS, mapa de procesos + oficina isométrica web, rutina semanal de gasto en claude.ai.
 Reglas: sesión corta (abrir otra antes de ~25 turnos), lotes de máx. 2 clientes, cambios en Meta solo con OK de Laura y anotados en la Bitácora, nunca borrar en Notion sin confirmar. Decisiones pendientes al final, en lista numerada. Respuestas cortas.
 ```
 
