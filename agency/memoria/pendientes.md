@@ -281,3 +281,8 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 
 ## Cierre sesión 12 (2026-10-28)
 - Consumo: ~US$5,82 (session-usage.csv); fila en token-log.csv. Pendientes para la próxima: Tiki (video Beach, IG, copys), #14 Bombo (copys), Lotus (sin decisión), Team de RRSS, 17 [DATO] de Vero en posts de noviembre, reactivar Bombo en noviembre con OK de Laura.
+
+## Sesión 13 (2026-10-29): auditorías cerradas y primeros entregables de agentes (fuente: Laura, Notion, Meta lectura)
+- (OK de Laura, Notion) Cerradas (Complete) las auditorías 90d de Bendito, Comercializadora, Entre Tacos, Steakhouse y Lullaby (informes en agency/auditorias/). Quedan abiertas La Siciliana y Santerra (Ads MCP apagado, capturas de Laura; "para más tarde") y Lemarc (Meta sigue UNSETTLED/no consultable 29-oct aunque Laura dice que pagó; revisar de nuevo).
+- Paid Media (lectura, sin cambios): agency/borradores/2026-10-29-paid-media-bash-steakhouse.md. Bash octubre $230.781 de $200.000 (115%); propuesta bajar Delivery de $7.142 a ~$5.000/día desde 1-nov y tope ~$50.000 al boost (pendiente OK de Laura). Audiencias: usar solo A-005, releer el 5-nov. Steakhouse: sin pixel a propósito; noviembre una campaña de Tráfico ~$5.000/día, falta destino. Justo POS no disponible (ERR_PROXY_TUNNEL): cruces con ventas [DATO].
+- Local SEO (borrador): agency/borradores/2026-10-29-local-seo-servicios-y-fichas.md (servicios Pressures Perfect, tabla NAP de 23 fichas, 53 [DATO] para Max/Vero). No pudo abrir web de Pressures ni Google Maps (403).
