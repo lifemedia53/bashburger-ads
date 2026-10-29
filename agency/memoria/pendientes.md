@@ -297,3 +297,10 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 ## Cierre sesión 13 (2026-10-29)
 - Hecho (OK de Laura): 5 auditorías cerradas en Notion; Bash Delivery $5.000/día publicado; Bendito boost pausado y Delivery $3.000/día; ChatGPT-Codex en Team; comentario para Max; 2 entradas en la Bitácora; recordatorio 5-nov (trig_01Dm77Zv19GxqSD71vFNrx6j). Informes de agentes en agency/borradores/2026-10-29-*.
 - Consumo: ~US$6,77 en session-usage.csv al último registro (Sonnet, 18,2 M tokens, sesión efbb153a) + 3 subagentes Sonnet (~0,5 M tokens, costo s/d). Sesión larga: sugerir sesión nueva. Prompt de la próxima sesión: agency/memoria/proxima-sesion.md.
+
+## Sesión 14 (2026-10-29): lecturas sin cambios (fuente: Meta lectura, Notion lectura)
+- Tiki (cuenta 1802064240289181): ads_get_ig_accounts = 0 y ads_get_ad_videos = 0; sigue bloqueado hasta que Laura vincule el IG y suba videos. Copys de ChatGPT completos en la tarea de Notion (402673eb-9c56-8116-89d6-d046cbf7aa04): 4 textos/títulos/descripciones por campaña (House, Beach, Reconocimiento, Remarketing).
+- Lotus Estilistas (2150099018564052): 0 IG vinculados. Existen otras cuentas Lotus (701985235103370, 1158795777045841, 1412751867673464); no revisadas.
+- Lemarc (2819592505082598): sigue UNSETTLED y no consultable (29-oct).
+- Tarea 'Actualizar Doc Nomina': el doc de nómina no está enlazado en Notion; lo registra Laura (Bash 700 CLP). [DATO] ubicación del doc.
+- Nada se cambió en Meta ni Notion.
