@@ -1,5 +1,7 @@
 # Tiki House y Beach — copys corregidos (Claude, 2026-10-29)
 
+> DESCARTADO por Laura (29-oct): se usan los copys de ChatGPT de la tarea de Notion. Este borrador no se usa.
+
 Fuente de los datos: Laura (sesión 29-oct: Beach $11.990 desde las 18:00, ahora con burgers y panes; House con Tenedor Premium de Carnes y tenedor libre clásico que NO incluye carnes; House en La Serena; destino WhatsApp; incluir parque para niños), guías de voz bombo-tiki-house.json / bombo-tiki-beach.json, playbook v2.0.
 Dirección House: Av. Pacífico 3494, La Serena (registros propios; un listado de Apart Hotel Gran Pacífico, Av. Pacífico 3490, La Serena, lo ubica a 2 min a pie; el número exacto sigue por confirmar en la ficha de Google).
 Reglas: tuteo, sin hashtags, sin precios ni datos no confirmados, 1-2 emojis, sin enlaces ni teléfonos en el texto. CTA de ambas: Enviar mensaje (WhatsApp).
