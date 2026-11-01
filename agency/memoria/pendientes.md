@@ -304,3 +304,11 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Lemarc (2819592505082598): sigue UNSETTLED y no consultable (29-oct).
 - Tarea 'Actualizar Doc Nomina': el doc de nómina no está enlazado en Notion; lo registra Laura (Bash 700 CLP). [DATO] ubicación del doc.
 - Nada se cambió en Meta ni Notion.
+
+## Sesión 14 (cont.) 2026-11-01: delivery, copys y presupuestos (fuente: Laura, Meta lectura, Notion)
+- Laura: por ahora TODOS los anuncios llevan enlace a delivery (no hay promociones activas). Steakhouse $3.000/día (decisión de Laura; tiene delivery Uber; imagen a crear o sacar del IG). Mare y Tony's tienen delivery. Picanha Rodizio NO es cliente: no volver a traerlo.
+- Entre Tacos: crear campaña nueva Delivery + Reconocimiento solo Peñuelas (reemplaza reactivar Promociones). Link UberEats Peñuelas: https://www.ubereats.com/store-browse-uuid/a80d01f2-a91d-5b3c-a0e8-a213a61eca3f?diningMode=DELIVERY. Boosts activos 1-nov: 'Instagram Post' (termina hoy 19:50) y 'Nadie se resiste' (hasta 12-nov).
+- Davenport = AWFIT; presupuesto 'tal cual'. Hostel: sin presupuesto hasta cerrar balance; no reactivar.
+- Comercializadora: averiguar qué promocionar (tarea creada en Notion). Presupuesto $250.000 (Laura 26-oct) vs $200.000 (archivo).
+- Notion: tarea de copys para ChatGPT-Codex (Team) con prompt y respuestas a sus dudas; 5 tareas de la reunión Lullaby + 2 de Bliss/Bayou creadas.
+- Lotus (Reconocimiento): las 3 campañas sanas (frecuencia <2, CPM bajo); no pausar. Playbook sin criterio explícito de apagado.
