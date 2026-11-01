@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-23",
+  "actualizado": "2026-11-01",
   "fuente": "Presupuestos dichos por Laura el 2026-10-23 en sesión (Tiki, Mare, Steakhouse, Entre Tacos, Comercializadora) y clientes.json (Hostel). Sin fuente = null: preguntar a Laura, no inventar. Segunda tanda dicha por Laura el 2026-10-23: Bombo Burger, Bash, Bendito, Tony's, Lotus x3.",
   "regla_alerta": {
     "amarilla": "gasto del mes >= 80% del presupuesto",
@@ -11,8 +11,8 @@
       "marca": "Bombo Tiki House",
       "cuenta": "1802064240289181",
       "moneda": "CLP",
-      "presupuesto_mensual": 160000,
-      "nota": "Laura 2026-10-23: pauta mensual de Tiki"
+      "presupuesto_mensual": 200000,
+      "nota": "Laura 2026-11-01: Tiki $200.000 total (House + Beach + Reconocimiento + Remarketing), se distribuye después; antes $160.000 (2026-10-23)"
     },
     {
       "marca": "Mare by Bombo",
@@ -28,7 +28,7 @@
       "moneda": "CLP",
       "presupuesto_mensual": null,
       "presupuesto_noviembre": 150000,
-      "nota": "Laura 2026-10-23: noviembre $150.000; todo pausado hasta noviembre; octubre [DATO]"
+      "nota": "Laura 2026-10-23: noviembre $150.000; todo pausado hasta noviembre; octubre [DATO] | Laura 2026-11-01: $3.000/día y va a delivery UberEats"
     },
     {
       "marca": "Entre Tacos",
@@ -41,8 +41,8 @@
       "marca": "Bombo Comercializadora",
       "cuenta": "1447851609427252",
       "moneda": "CLP",
-      "presupuesto_mensual": 200000,
-      "nota": "Laura 2026-10-23"
+      "presupuesto_mensual": 250000,
+      "nota": "Laura 2026-11-01: $250.000 (confirmado de nuevo; antes 200.000 en este archivo)"
     },
     {
       "marca": "The Cool Hostel",

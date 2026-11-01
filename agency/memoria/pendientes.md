@@ -312,3 +312,4 @@ Leer esto al iniciar una sesión nueva y seguir desde aquí.
 - Comercializadora: averiguar qué promocionar (tarea creada en Notion). Presupuesto $250.000 (Laura 26-oct) vs $200.000 (archivo).
 - Notion: tarea de copys para ChatGPT-Codex (Team) con prompt y respuestas a sus dudas; 5 tareas de la reunión Lullaby + 2 de Bliss/Bayou creadas.
 - Lotus (Reconocimiento): las 3 campañas sanas (frecuencia <2, CPM bajo); no pausar. Playbook sin criterio explícito de apagado.
+- (1-nov, Laura) Tiki $200.000 total, se distribuye; Comercializadora $250.000; Steakhouse va a delivery (UberEats). Links de delivery de todos en agency/memoria/links-delivery.json (fuente: Sheet 'Desk', hoja DATA CLIENTES). Bombo Burger: link = https://www.bomboburger.cl/pedir; no volver a preguntarlo. Alerta: Bendito Peñuelas y Entre Tacos Peñuelas tienen el mismo link UberEats en el Sheet (confirmar).
