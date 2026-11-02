@@ -1,24 +1,21 @@
-# Próxima sesión (actualizado el 2026-10-29, cierre de la sesión 13)
+# Próxima sesión (actualizado el 2026-11-02, cierre de la sesión 14)
 
 Abrir la sesión en **Sonnet** (ver `modelos.json`). Sesión corta: cada turno relee todo.
 
 ## Prompt para pegar al abrir la sesión
 
 ```
-Hola Jefe. Sesión nueva en Sonnet. Lee CLAUDE.md, agency/memoria/pendientes.md (secciones 'Sesión 12' y 'Sesión 13') y agency/memoria/proxima-sesion.md y parte desde ahí.
-Estado (29-oct): Bombo Burger TODO pausado; AWFIT de Lullaby NO se archiva; auditorías 90d cerradas en Notion salvo La Siciliana y Santerra (Ads MCP apagado: capturas de Laura) y Lemarc (Laura dice que pagó; Meta aún UNSETTLED, releer); Bash Delivery publicado a $5.000/día y Bendito (boost pausado, Delivery $3.000/día) hechos y verificados; recordatorio agendado para releer gasto de Bash y Bendito el 5-nov; ChatGPT-Codex ya está en Team de All Tasks.
-1) Tiki House y Beach (inicio 3-nov): usar los copys de ChatGPT de la tarea de Notion 'Crear 2 campañas de mensajes Tiki'. Laura decidió: Beach va a IG Direct, House a WhatsApp; $80.000 cada una; Laura armó las audiencias (yo no las veo) y quiere Reconocimiento y Remarketing también. Datos de Laura: Beach $11.990 desde las 18:00 con burgers y panes; House en La Serena con Tenedor Premium de Carnes y tenedor libre clásico sin carnes. Laura sube el video de Beach (Drive 1f8faspwDsA4_AZyQBfyzPkhb7vh1fbk-) y elige el reel de House; ella vincula el IG (la API aún lista 0 IG y 0 videos en la cuenta 1802064240289181: releer con ads_get_ig_accounts y ads_get_ad_videos). Leer playbook (mensajes: atribución 1d clic, placements manuales IG+FB, menor costo, mínimo $1.700/día). Todo EN PAUSA, nada se activa sin OK de Laura. [DATO] presupuesto de Reconocimiento/Remarketing y días de vigencia del $11.990.
-2) Entre Tacos: cuando Laura avise, reactivar Promociones (conjunto 120246477974110252) a $2.500/día, releyendo el estado antes. Interacción Delivery sigue pausada en noviembre.
-3) Steakhouse noviembre: UNA campaña de Tráfico al perfil de IG (objetivo del mes: seguidores), ~$5.000/día ($150.000), desde el 1-nov, nace en pausa; falta gráfica del Creative Team.
-4) Bombo Burger: #14 copys (ChatGPT) siguen vacíos en Notion; leer config completa de los 4 originales antes de copiar; nuevos EN PAUSA. Reactivar Bombo (test CJ Delivery misma config, Remarketing tope $360.000 y bajar a $3.000/día, AD 3.1.A con error) solo con OK de Laura; preguntar fecha en noviembre.
-5) Lotus: ¿vinculó el IG? Si sí, revisar IG Direct; no mover plata sin saber qué anuncio trae los mensajes.
-6) Nómina: tarea 'Actualizar Doc Nomina' (registrar pago de Bash 700 CLP), Booking.com: sumar precios de la mix en enero y shared.
-7) Bendito: presupuesto contratado $100.000 se mantiene; si hace falta destino, UberEats de Bendito (Av. del Mar o Peñuelas), no hay URL web; pedir anuncio nuevo de Delivery al Creative Team para diciembre.
-8) Local SEO: borrador agency/borradores/2026-10-29-local-seo-servicios-y-fichas.md ya pasado a Max por comentario en Notion (Yelp solo Pressures Perfect; Lullaby fuera). Confirmar con Vero los [DATO] y la dirección de House (La Serena, Av. Pacífico 3494).
-9) Hostel: reel DekO_1WPW9E y borrador 120249519319570575. La Siciliana y Santerra: auditoría manual con capturas de Laura. Audiencias Bash/Steakhouse: usar solo A-005, releer el 5-nov.
-10) Test del Sheet de carga cuando Laura arme una fila LISTO (crear en pausa, nunca activar sin OK).
-Después: Team de RRSS (25 tareas sin Team), mapa de procesos + oficina isométrica web, rutina semanal de gasto en claude.ai, Market Trends para RRSS (Laura dijo "aún no").
-Reglas: sesión corta (abrir otra antes de ~25 turnos), lotes de máx. 2 clientes, cambios en Meta solo con OK de Laura y anotados en la Bitácora (ojo: bajar un monto puede pausar el conjunto solo; verificar y reactivar si corresponde; los cambios de ads_update_entity pueden quedar en borrador: publicar con ads_activate_entity y verificar leyendo Meta), nunca borrar en Notion sin confirmar. Decisiones pendientes al final, en lista numerada. Respuestas cortas.
+Hola Jefe. Sesión nueva en Sonnet. Lee CLAUDE.md, agency/memoria/pendientes.md (secciones 'Sesión 14' y los '(1-nov)') y agency/memoria/links-delivery.json y parte desde ahí.
+Estado (2-nov): TODO va a enlace de DELIVERY (no hay promos activas). Links en links-delivery.json (Sheet 'Desk'); Bombo Burger = https://www.bomboburger.cl/pedir (no volver a preguntar). Entre Tacos Peñuelas ya tiene su link corregido.
+Hecho en Meta (con OK de Laura): Entre Tacos (cuenta 1542868017355716) en BORRADOR de Ads Manager: TRAFICO DELIVERY 2026 - PEÑUELAS 120249780414350252 (CJ 1.1 120249780417590252, $1.700/día) y RECONOCIMIENTO 2026 - PEÑUELAS 120249780414380252 (se queda guardado para diciembre; el presupuesto no alcanza en noviembre). Steakhouse (1642000733624651): TRAFICO DELIVERY 2026 - STEAKHOUSE 120250383626120559, CJ 120250383791630559 $3.000/día, PAUSADO. Faltan anuncios (gráfica del Creative Team + copys de ChatGPT).
+1) Crear en pausa (misma receta: ABO, nomenclatura del playbook, Coquimbo/La Serena 17 km mínimo, FB+IG manual, LPV, menor costo): Mare (de sus $300.000, $200.000 son del maridaje del 14-nov con Steakhouse; delivery ~$3.000/día), Tony's ($100.000, delivery ~$2.000/día + 1 boost), Bombo Burger (WEB JUSTO a https://www.bomboburger.cl/pedir; leer config completa de los originales antes de copiar). Presupuestos: yo los manejo.
+2) Copys: tarea de Notion 'ChatGPT: copys de Delivery noviembre' (Team ChatGPT-Codex, id 40b673eb-9c56-81d7-93c4-cbbbc6f50722) con prompt y respuestas; cuando ChatGPT entregue, llevarlos a Meta como anuncios en pausa. Ideas de creativos están en la conversación anterior (Entre Tacos Peñuelas: reel de la bolsa de UberEats abriéndose; Steakhouse: corte humeante o el mejor post del IG; sin promos).
+3) Presupuestos: Tiki $200.000 total (falta repartir House/Beach/Recon/Remarketing); Comercializadora $250.000 (tarea 'qué promocionar' creada); Hostel sin presupuesto hasta cerrar el balance (no reactivar).
+4) Lullaby/Bliss: borradores de presupuesto por conjunto (Reel $2,50, Post $2,00, MT $2,00; campaña 6963147947948, cuenta 10201332475268991) SIN publicar: Laura debe desactivar Advantage campaign budget y publicar; luego verificar. AWFIT = Davenport, presupuesto tal cual.
+5) Local SEO: Laura aprueba la lista de efemérides (pendiente de OK) y luego se pide al local-seo-lead rehacer los posts de noviembre en Trello. Mensajes por encargado con 2-3 preguntas (lista del SEO en la conversación de 1-nov).
+6) Tiki: IG sin vincular y 0 videos (releer ads_get_ig_accounts/ads_get_ad_videos). Entre Tacos: Promociones sigue pausada (no se reactiva; se reemplaza por Delivery Peñuelas).
+7) Pendientes de siempre: Bombo #14 copys, Nómina (doc sin enlace), Santerra y La Siciliana (capturas de Laura), audiencias A-005 el 5-nov, Team de RRSS.
+Reglas: sesión corta (abrir otra antes de ~25 turnos), lotes de máx. 2 clientes, cambios en Meta solo con OK de Laura y anotados en la Bitácora, todo EN PAUSA, nunca borrar en Notion sin confirmar. Picanha NO es cliente. Decisiones pendientes al final, en lista numerada. Respuestas cortas.
 ```
 
 ## Pendientes de la sesión 7 (fuente: Laura, Meta, Notion; 2026-10-23)
