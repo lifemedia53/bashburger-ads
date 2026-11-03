@@ -20,7 +20,7 @@ Entrada: [MARCA] y [URL de su Ad Library]. Entregable: HTML bien diseñado con g
 Analizar: formatos (video/imagen/carrusel y distribución); partnerships vs brand ads ("with" + handle); mensajes que repiten; a quién les hablan (inferido); top 10 anuncios con más impresiones; anuncios más longevos; velocidad creativa; conclusión estratégica (qué hacen bien, gaps, oportunidades).
 Límite real (verificado 2026-10-18): la herramienta de Meta (ads_library_search) entrega id y fechas, sin texto ni impresiones; WebFetch no abre Instagram ni Maps. "Top 10 por impresiones" no se puede con las herramientas actuales: marcar [DATO]. La longevidad (fechas) sí se puede.
 
-## 3. Diagnóstico de performance por rol en el funnel → agente: meta-ads-auditor (solo lectura) con paid-media-lead
+## 3. Diagnóstico de performance por rol en el funnel → agente: paid-media-lead (solo lectura; meta-ads-auditor retirado 3-nov)
 Entrada: últimos 30 días mínimo (comparar con período anterior), negocio, ticket promedio, objetivo, CPA objetivo, ROAS objetivo, y datos por conjunto y anuncio (Spend, Impresiones, Alcance, Frecuencia, CPM, CTR, CPC, Conversiones, CPA, ROAS).
 Criterio de roles:
 - TOP OF FUNNEL: spend alto / frecuencia baja / CPM bajo / CPA alto. Crea atención; se juzga por CPM, CTR, alcance, frecuencia.
