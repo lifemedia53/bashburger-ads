@@ -1,0 +1,21 @@
+{
+  "fuente": "Sheet 'Desk' hoja DATA CLIENTES (Drive 1mJf6EznBz_Qo-P15BfqVbOcCSl8rf3Rgi_Jdweml138), dado por Laura el 2026-11-01",
+  "nota": "Bombo Burger: el enlace de delivery de Justo es https://www.bomboburger.cl/pedir (Laura 2026-11-01, no volver a preguntar). Link de Entre Tacos Peñuelas corregido por Laura en el Sheet 'Desk' el 2026-11-01 (antes repetía el de Bendito Peñuelas). Bombo Playa y Mall tienen el UberEats de Balmaceda en modo PICKUP (revisar).",
+  "ubereats_delivery": {
+    "bash_burger": "https://www.ubereats.com/cl/store/bash-burger-coquimbo/-2KfKfY5Vh2GPQBhr_vkcg?diningMode=DELIVERY (en el Sheet viene como PICKUP; web https://www.bashburger.cl/)",
+    "bombo_balmaceda": "https://www.ubereats.com/cl/store/bombo-burger-balmaceda/1QoBwlESQ6C1T9CiuUcU2w?diningMode=DELIVERY",
+    "bombo_ulriksen": "https://www.ubereats.com/cl/store/bombo-burger-ulriksen/Un6obAvhX2-tbro9jjA3kg?diningMode=DELIVERY",
+    "bombo_santiago": "https://www.ubereats.com/cl/store/bombo-burger-santiago/BW9lx4aZX22LcKfi7A7HDg?diningMode=DELIVERY",
+    "entre_tacos_av_del_mar": "https://www.ubereats.com/store-browse-uuid/483f6a83-a743-5b25-a920-ee688a242af3?diningMode=DELIVERY",
+    "entre_tacos_penuelas": "https://www.ubereats.com/store-browse-uuid/68c94285-1f04-598d-ad7c-6ef255ce9b2f?diningMode=DELIVERY",
+    "bendito_av_del_mar": "https://www.ubereats.com/store-browse-uuid/9f744a7b-7f3a-5b48-8842-77a76ce618a3?diningMode=DELIVERY",
+    "bendito_penuelas": "https://www.ubereats.com/store-browse-uuid/a80d01f2-a91d-5b3c-a0e8-a213a61eca3f?diningMode=DELIVERY",
+    "tonys_pasta_centro": "https://www.ubereats.com/cl/store/tonys-pasta/GiB5y1hAUBye79xON-f53w",
+    "mare_by_bombo": "https://www.ubereats.com/cl/store/mare-by-bombo/CSljCSJBWB2FpO-05LMXuw",
+    "steakhouse_by_bombo": "https://www.ubereats.com/cl/store/steakhouse-by-bombo/2L8dDGFkWkiVo9v8XXQP2w?ps=1"
+  },
+  "web_pedir": {
+    "bombo_burger": "https://www.bomboburger.cl/pedir",
+    "bash_burger": "https://www.bashburger.cl/"
+  }
+}
