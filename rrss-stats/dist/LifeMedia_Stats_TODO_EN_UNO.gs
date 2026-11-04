@@ -15,7 +15,7 @@ var LM = {
   SHEETS: {
     DASHBOARD: 'DASHBOARD', RESUMEN: 'RESUMEN', REGISTROS: 'REGISTROS',
     CONTENIDOS: 'CONTENIDOS', CONFIG: 'CONFIG', CONTROL: 'CONTROL',
-    DICCIONARIO: 'DICCIONARIO', DISPONIBILIDAD: 'DISPONIBILIDAD', DIFERENCIAS: 'DIFERENCIAS_BSUITE'
+    DICCIONARIO: 'DICCIONARIO', DISPONIBILIDAD: 'DISPONIBILIDAD', DIFERENCIAS: 'DIFERENCIAS_BSUITE', MANUALES: 'MANUALES'
   },
   // Columnas existentes primero (no se reordenan); las nuevas se agregan a la derecha.
   HEADERS: {
@@ -26,6 +26,7 @@ var LM = {
     CONTENIDOS: ['Marca', 'Plataforma', 'Mes', 'Formato', 'Fecha de publicación', 'ID contenido', 'URL', 'Vistas',
       'Alcance', 'Interacciones', 'Guardados', 'Compartidos', 'Comentarios', 'Reacciones', 'Origen', 'Estado',
       'Fecha extracción'],
+    MANUALES: ['Marca', 'Plataforma', 'Mes', 'Métrica', 'Valor', 'Fuente', 'Estado'],
     DISPONIBILIDAD: ['Fecha', 'Marca', 'Plataforma', 'Métrica API', 'Resultado', 'Detalle'],
     DIFERENCIAS: ['Marca', 'Plataforma', 'Mes', 'Métrica', 'Valor API', 'Valor Business Suite', 'Diferencia',
       'Diferencia %', 'Nota', 'Fecha']
@@ -901,6 +902,45 @@ function setManualValue(marca, plat, ym, metrica, valor, fuente) {
   applyPlan_(ex, plan);
   logControl_(marca, plat, ym, 'MANUAL', metrica + ' = ' + n + ' (' + rec.fuente + '); insertados ' + plan.inserts.length + ', actualizados ' + plan.updates.length + ', omitidos ' + plan.skipped.length, 'setManualValue', 'INFO');
   return { inserts: plan.inserts.length, updates: plan.updates.length, skipped: plan.skipped.map(function (x) { return x.reason; }) };
+}
+
+/** Crea la hoja MANUALES con las filas pendientes del piloto (octubre 2026). Laura completa 'Valor' y ejecuta aplicarManuales(). */
+function prepararManuales() {
+  var sh = getSheet_(LM.SHEETS.MANUALES, LM.HEADERS.MANUALES), src = 'Business Suite (captura de Laura 2026-11-04)';
+  if (sh.getLastRow() > 1) return 'MANUALES ya tiene filas; no se agregó nada.';
+  var T = "Tony's Pasta", rows = [
+    [T, 'Instagram', '2026-10', 'Alcance', '', 'Business Suite (manual)', ''],
+    [T, 'Instagram', '2026-10', 'Seguidores cierre', '', 'Business Suite (manual)', ''],
+    [T, 'Facebook', '2026-10', 'Seguidores cierre', '', 'Business Suite (manual)', ''],
+    [T, 'Facebook', '2026-10', 'Interacciones', 5, src, ''],
+    [T, 'Facebook', '2026-10', 'Clics en enlaces', 209, src, '']];
+  sh.getRange(2, 3, rows.length, 1).setNumberFormat('@');
+  sh.getRange(2, 1, rows.length, 7).setValues(rows);
+  return 'Hoja MANUALES lista: completa los Valor vacíos y ejecuta aplicarManuales().';
+}
+
+/** Aplica las filas de MANUALES con Valor y sin 'APLICADO'. Si el valor reemplaza uno de la API distinto, la diferencia queda en DIFERENCIAS_BSUITE. */
+function aplicarManuales() {
+  return lock_(function () {
+    var sh = getSheet_(LM.SHEETS.MANUALES, LM.HEADERS.MANUALES), idx = headerIndex_(sh), n = sh.getLastRow(), done = 0, errs = 0;
+    if (n < 2) return 'Sin filas.';
+    sh.getRange(2, 1, n - 1, sh.getLastColumn()).getValues().forEach(function (r, i) {
+      var valor = r[idx['Valor']], estado = String(r[idx['Estado']] || '');
+      if (valor === '' || valor === null || estado.indexOf('APLICADO') === 0) return;
+      var mes = r[idx['Mes']], row = i + 2;
+      if (Object.prototype.toString.call(mes) === '[object Date]') mes = Utilities.formatDate(mes, LM.TZ, 'yyyy-MM');
+      try {
+        var marca = String(r[idx['Marca']]).trim(), plat = String(r[idx['Plataforma']]).trim(), met = String(r[idx['Métrica']]).trim();
+        var k = recordKey_(marca, plat, String(mes), met), prev = null;
+        readExisting_().rows.forEach(function (x) { if (x.clave === k && (x.estadoDato === LM.DATA.OK || x.estadoDato === LM.DATA.ZERO)) prev = x.valor; });
+        if (prev !== null && toNumber_(prev) !== toNumber_(valor)) recordBsuiteDifference(marca, plat, String(mes), met, valor, 'Se usa Business Suite; la API tenía otro valor');
+        var res = setManualValue(marca, plat, String(mes), met, valor, String(r[idx['Fuente']] || 'Business Suite (manual)'));
+        var msg = res.skipped.length ? 'OMITIDO: ' + res.skipped.join(', ') : 'APLICADO ' + todayStr_();
+        sh.getRange(row, idx['Estado'] + 1).setValue(msg); if (!res.skipped.length) done++;
+      } catch (e) { sh.getRange(row, idx['Estado'] + 1).setValue('ERROR: ' + scrub_(e.message)); errs++; }
+    });
+    return 'Aplicados: ' + done + ', con error: ' + errs;
+  });
 }
 
 // ======== Diagnostics.gs ========
