@@ -318,4 +318,28 @@ console.log('\n[Varios meses]');
     assert(!/30 DE 31/.test(al('2026-09')[h.indexOf('Observaciones')]), 'septiembre: alcance completo'); assert.strictEqual(al('2026-09')[h.indexOf('Estado dato')], 'OK'); });
 }
 
+console.log('\n[Regresión 2] Spreadsheet en otra zona horaria que el script');
+{
+  const UTC = { name: 'UTC', off: 'Z' };
+  test('una fecha de celda a medianoche UTC sigue siendo octubre (no septiembre por usar la zona del script)', () => {
+    const env = makeEnv({ sheetTz: UTC }); env.ctx.d_ = new Date('2026-10-01T00:00:00Z');
+    assert.strictEqual(run(env, 'normMonth_(d_)'), '2026-10'); assert.strictEqual(run(env, 'normDay_(d_)'), '2026-10-01'); });
+  test('repetir la extracción con el Spreadsheet en UTC no duplica ni cambia de mes', () => {
+    const env = makeEnv({ sheetTz: UTC, responder: (u) => { const m = (u.match(/metric=([a-z_]+)/) || [])[1]; return m ? { code: 200, body: { data: [{ name: m, total_value: { value: 10 } }] } } : { code: 200, body: { data: [] } }; } });
+    run(env, 'setupSheets()');
+    env.sheets.CONFIG.grid = [['CONFIGURACIÓN DE CUENTAS', 'Cliente', 'Plataforma', 'ID Meta', 'Usuario', 'Activo', 'Origen histórico', 'Conexión API', 'Última extracción'], [1, 'A', 'Instagram', '17841', '', 'Sí', 'x', 'PENDIENTE', '']];
+    env.ss.insertSheet('RESUMEN').grid = [['Marca', 'Plataforma', 'Mes', 'Vistas', 'Estado', 'Fuente']]; env.ss.insertSheet('DASHBOARD').grid = [['x'], [''], ['Marca'], ['INDICADORES']];
+    run(env, 'setupSheets()'); const go = () => run(env, "runForAll_(function(){return ['2026-10'];}, 'CIERRE')"); go(); const n = env.sheets.REGISTROS.getLastRow(); go(); assert.strictEqual(env.sheets.REGISTROS.getLastRow(), n);
+    assert(env.sheets.REGISTROS.grid.slice(1).every(r => r[2] === '2026-10')); });
+  test('repararDuplicados restaura el mes desde la Clave (filas corridas a septiembre) y conserva la lectura más reciente', () => {
+    const env = makeEnv({ sheetTz: UTC }); run(env, 'setupSheets()'); const g = env.sheets.REGISTROS, h = g.grid[0], C = n => h.indexOf(n);
+    const mk = (mes, ini, fin, met, val, ts, clave) => { const r = new Array(h.length).fill(''); r[0] = 'A'; r[1] = 'Instagram'; r[2] = mes; r[3] = ini; r[4] = fin; r[5] = met; r[6] = val; r[7] = 'API'; r[8] = 'EXTRAÍDO'; r[C('Fecha extracción')] = ts; r[C('Clave')] = clave; r[C('Estado dato')] = 'OK'; return r; };
+    g.grid.push(mk('2026-09', '2026-09-30', '2026-10-30', 'Seguidores cierre', 111, '2026-11-03T22:40:24', 'a|instagram|2026-10|seguidores cierre'));
+    g.grid.push(mk('2026-10', '2026-10-01', '2026-10-31', 'Seguidores cierre', 222, '2026-11-03T22:55:37', 'a|instagram|2026-10|seguidores cierre'));
+    g.grid.push(mk('2026-09', '2026-09-30', '2026-10-30', 'Mensajes', '', '2026-11-03T22:40:24', 'a|instagram|2026-10|mensajes'));
+    const out = run(env, 'repararDuplicados()'); const rows = g.grid.slice(1).filter(r => r[5]);
+    assert.strictEqual(rows.length, 2, out); const seg = rows.find(r => r[5] === 'Seguidores cierre'); assert.strictEqual(seg[6], 222);
+    rows.forEach(r => { assert.strictEqual(r[2], '2026-10'); assert.strictEqual(r[3], '2026-10-01'); assert.strictEqual(r[4], '2026-10-31'); }); });
+}
+
 console.log(`\nResultado: ${pass} OK, ${fail} fallos`); if (fail) { console.log(failures.join('\n')); process.exit(1); }
