@@ -19,6 +19,7 @@ class Range {
   setValues(v) { v.forEach((row, i) => row.forEach((x, j) => this.sh._set(this.r + i, this.c + j, x))); }
   getValue() { return this.getValues()[0][0]; }
   setValue(x) { this.sh._set(this.r, this.c, x); return this; }
+  setNumberFormat() { return this; }
   getFormula() { return this.sh.formulas[this.r + ',' + this.c] || ''; }
 }
 class Sheet {

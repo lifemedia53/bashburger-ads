@@ -202,4 +202,24 @@ console.log('\n[Correcciones tras prueba real] alcance >30 días, cierre de segu
   test('setManualValue rechaza valores no numéricos', () => { const env = makeEnv(); run(env, 'setupSheets()'); let ok = false; try { run(env, `setManualValue('A','Instagram','2026-10','Alcance','abc')`); } catch (e) { ok = true; } assert(ok); });
 }
 
+console.log('\n[MANUALES] carga asistida por hoja');
+{
+  function setupM() { const env = makeEnv(); run(env, 'setupSheets()'); run(env, 'prepararManuales()');
+    env.sheets.REGISTROS.grid.push(["Tony's Pasta", 'Facebook', '2026-10', '', '', 'Interacciones', 240, 'API', 'EXTRAÍDO', 'aditivo', '', '', '', "tony's pasta|facebook|2026-10|interacciones", 'OK', '']);
+    env.sheets.REGISTROS.grid.push(["Tony's Pasta", 'Instagram', '2026-10', '', '', 'Alcance', '', 'API', 'EXTRAÍDO', 'no aditivo', '', '', '', "tony's pasta|instagram|2026-10|alcance", 'NO DISPONIBLE', '']);
+    return env; }
+  test('prepararManuales crea las filas pendientes y es idempotente', () => { const env = setupM(); assert.strictEqual(env.sheets.MANUALES.getLastRow(), 6); run(env, 'prepararManuales()'); assert.strictEqual(env.sheets.MANUALES.getLastRow(), 6); });
+  test('aplicarManuales: omite filas sin valor, aplica las llenas, registra diferencia API vs BS y no repite', () => {
+    const env = setupM(); const m = env.sheets.MANUALES, h = m.grid[0], vi = h.indexOf('Valor');
+    m.grid[1][vi] = '45.123'; // IG Alcance (texto con punto de miles)
+    const out = run(env, 'aplicarManuales()'); assert(/Aplicados: 3/.test(out), out);
+    const reg = env.sheets.REGISTROS.grid, inter = reg.filter(r => r[5] === 'Interacciones' && r[1] === 'Facebook'); assert.strictEqual(inter.length, 1); assert.strictEqual(inter[0][6], 5);
+    assert.strictEqual(reg.find(r => r[5] === 'Alcance' && r[1] === 'Instagram')[6], 45123);
+    const dif = env.sheets.DIFERENCIAS_BSUITE.grid.slice(1); assert.strictEqual(dif.length, 1); assert.strictEqual(dif[0][4], 240); assert.strictEqual(dif[0][5], 5);
+    const out2 = run(env, 'aplicarManuales()'); assert(/Aplicados: 0/.test(out2)); assert.strictEqual(env.sheets.DIFERENCIAS_BSUITE.getLastRow(), 2); });
+  test('un valor no numérico queda con ERROR en la hoja y no rompe el resto', () => {
+    const env = setupM(); const m = env.sheets.MANUALES, h = m.grid[0]; m.grid[1][h.indexOf('Valor')] = 'abc';
+    run(env, 'aplicarManuales()'); assert(/^ERROR/.test(m.grid[1][h.indexOf('Estado')])); assert(/APLICADO/.test(m.grid[4][h.indexOf('Estado')])); });
+}
+
 console.log(`\nResultado: ${pass} OK, ${fail} fallos`); if (fail) { console.log(failures.join('\n')); process.exit(1); }

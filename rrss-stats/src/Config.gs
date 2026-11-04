@@ -13,7 +13,7 @@ var LM = {
   SHEETS: {
     DASHBOARD: 'DASHBOARD', RESUMEN: 'RESUMEN', REGISTROS: 'REGISTROS',
     CONTENIDOS: 'CONTENIDOS', CONFIG: 'CONFIG', CONTROL: 'CONTROL',
-    DICCIONARIO: 'DICCIONARIO', DISPONIBILIDAD: 'DISPONIBILIDAD', DIFERENCIAS: 'DIFERENCIAS_BSUITE'
+    DICCIONARIO: 'DICCIONARIO', DISPONIBILIDAD: 'DISPONIBILIDAD', DIFERENCIAS: 'DIFERENCIAS_BSUITE', MANUALES: 'MANUALES'
   },
   // Columnas existentes primero (no se reordenan); las nuevas se agregan a la derecha.
   HEADERS: {
@@ -24,6 +24,7 @@ var LM = {
     CONTENIDOS: ['Marca', 'Plataforma', 'Mes', 'Formato', 'Fecha de publicación', 'ID contenido', 'URL', 'Vistas',
       'Alcance', 'Interacciones', 'Guardados', 'Compartidos', 'Comentarios', 'Reacciones', 'Origen', 'Estado',
       'Fecha extracción'],
+    MANUALES: ['Marca', 'Plataforma', 'Mes', 'Métrica', 'Valor', 'Fuente', 'Estado'],
     DISPONIBILIDAD: ['Fecha', 'Marca', 'Plataforma', 'Métrica API', 'Resultado', 'Detalle'],
     DIFERENCIAS: ['Marca', 'Plataforma', 'Mes', 'Métrica', 'Valor API', 'Valor Business Suite', 'Diferencia',
       'Diferencia %', 'Nota', 'Fecha']
