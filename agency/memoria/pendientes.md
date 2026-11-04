@@ -3,7 +3,7 @@
 Leer esto al iniciar una sesión nueva y seguir desde aquí.
 
 ## Hacer
-0. (2026-11-04) Stats RRSS: Laura debe crear token de Meta y completar CONFIG; ver `agency/memoria/rrss-stats.md` y `rrss-stats/docs/SETUP.md`.
+0. (2026-11-04) Stats RRSS: piloto Tony's sep/oct validado y automatizado. Confirmar la primera corrida diaria (hoja SALDOS_SEGUIDORES) y seguir con otras marcas; ver `agency/memoria/rrss-stats.md` y `rrss-stats/docs/INFORME.md`.
 1. 17-oct: medir el test de Bombo (CJ Delivery 120249348553550141, cuenta 362765604642572, desde el 11-oct) y la campaña del Hostel (120249343804190575) contra la línea base de la Bitácora.
 2. Tokens: Laura pasará el gasto real de la consola (sesión 23% / semana 29% al 16-oct, semana se reinicia jueves 2:00 a.m.).
 3. Capacitación (Laura pidió rating de agentes el 16-oct, ver rating provisional abajo): local-seo-lead primero (retrabajo), token-controller segundo (no corrió el 16-oct).

@@ -37,3 +37,36 @@ Fechas y zona horaria · cero vs nulo vs error · alcance nunca sumado · reinte
 - Hallazgo: IG `reach` y `accounts_engaged` fallan en rangos >30 días (error #100). Meses de 31 días → NO DISPONIBLE (no se suma); ingreso con `setManualValue()`.
 - Seguidores de cierre en meses cerrados: PENDIENTE (la API solo da saldo actual).
 - Pruebas simuladas: 52/52.
+
+## Informe final — 2026-11-04 (piloto Tony's Pasta, sep y oct 2026)
+
+### Verificado con datos reales
+- Conexión: token de usuario del sistema, permisos concedidos y cuentas de Tony's (IG, FB, anuncios) respondiendo OK (`diagnose`).
+- Extracción real de **septiembre y octubre 2026** (IG + FB + Marketing API), validada y bloqueada (`VALIDADO`) por Laura; RESUMEN y DASHBOARD alimentados y funcionando.
+- Cotejo octubre vs Business Suite: IG vistas 147.512 = 147.512 (exacto); IG nuevos seguidores 572 = 572 (exacto); IG interacciones 1.327 ≈ 1,3 mil; IG visitas 2.738 ≈ 2,7 mil; IG alcance 38.047 (días 1-30) vs 39,9 mil (mes completo, coherente); FB vistas 14.296 ≈ 14,3 mil; FB alcance 4.734 ≈ 4,7 mil; FB visitas 42 = 42; FB nuevos seguidores 1 = 1.
+- Clics en enlaces: Marketing API `inline_link_clicks` vs Business Suite: IG 619 vs 638 (-3%), FB 211 vs 209 (+1%). Decisión de Laura: usarlo como "Clics en enlaces" rotulado APROXIMADO.
+- Activadores creados (CONTROL registra `ACTIVADORES`: runDaily, runMonthlyClose, retryFailed).
+
+### Probado solo con datos simulados (76 pruebas, `node rrss-stats/tests/run-tests.js`)
+Cálculos, claves, duplicados, estados del dato, reintentos, seguridad del token, upsert idempotente, bloqueo de histórico/validado, manejo de zona horaria del Spreadsheet, conversión de fechas de Sheets, fórmulas del DASHBOARD, `setupTriggers` (mock de ScriptApp).
+**Aún sin observar en producción:** la primera ejecución automática de `runDaily` (06:00) y la creación de la hoja `SALDOS_SEGUIDORES`; el cierre automático del día 2.
+
+### Errores propios encontrados en el Sheet real (las pruebas simuladas no los vieron) y corregidos
+1. Google Sheets convertía "2026-10" en fecha → la clave no coincidía → filas duplicadas. (Mock ahora reproduce la conversión.)
+2. `repararDuplicados` leyó fechas con la zona del script y el Spreadsheet usa otra → 11 filas corridas a septiembre. (Ahora usa la zona del Spreadsheet y restaura el mes desde la Clave.)
+3. Fórmula con comas fallaba (#ERROR!) en el formato regional es-CL; "" vale 0 en una resta; fórmulas previas del DASHBOARD mostraban 0 donde no hay dato. (Corregido con `repararDashboard`.)
+Lección: toda lógica que toca el Sheet debe verificarse contra el Sheet real (descargar y revisar) antes de darla por terminada.
+
+### Límites conocidos de la API (documentados)
+- IG `reach`/`accounts_engaged`: máximo 30 días por consulta → en meses de 31 días se usa la ventana días 1-30, rotulada; nunca se suman alcances.
+- Seguidores al cierre: meses con cierre fuera de los últimos 30 días y sin snapshot → NO DISPONIBLE (septiembre). Octubre es DERIVADO (±1 día de cambio neto). Desde el 5-nov el saldo diario permite cierres exactos.
+- Sin split orgánico/pago a nivel de cuenta: Vistas/Alcance orgánicos NO DISPONIBLE; los de anuncios van aparte (Marketing API).
+
+### Pendiente
+1. Confirmar la primera corrida diaria (hoja `SALDOS_SEGUIDORES`, filas nuevas en REGISTROS del mes en curso) y el cierre del día 2.
+2. FB "Interacciones con el contenido" (BS=5; la API a nivel página solo da 2 reacciones): sin equivalente verificado → PENDIENTE.
+3. Mensajes / contactos iniciados (Messaging API, permisos extra) y vistas/interacciones de historias (se capturan solo en vivo; revisar que el diario las guarde).
+4. Contenido de Facebook (posts) no extraído; solo IG en CONTENIDOS.
+5. Comparar el cierre de seguidores derivado de octubre con Business Suite.
+6. Incorporar las demás marcas (docs/NUEVAS_CUENTAS.md): cada cliente con portfolio propio debe compartir activos con Life Media.
+7. Rotación/vigencia del token; revisar permisos de la app si Meta cambia métricas (`probeMetrics` / `probeCandidates` sirven de diagnóstico).
