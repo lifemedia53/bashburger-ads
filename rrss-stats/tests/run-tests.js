@@ -283,4 +283,25 @@ console.log('\n[Regresión] Sheets convierte "2026-10" en fecha');
     assert(rows.find(r => r[8] === 'HISTÓRICO'), 'histórico intacto'); assert.strictEqual(env.sheets.DASHBOARD.grid[2][3], '2026-10'); });
 }
 
+console.log('\n[Hallazgos 2] desglose follow_type y clics de anuncios');
+{
+  const BR = (f, n) => ({ total_value: { value: f + n, breakdowns: [{ dimension_keys: ['follow_type'], results: [{ dimension_values: ['FOLLOWER'], value: f }, { dimension_values: ['NON_FOLLOWER'], value: n }] }] } });
+  test('parse con desglose: toma el valor de FOLLOWER / NON_FOLLOWER y no el total', () => {
+    const env = makeEnv(); env.ctx.it_ = { name: 'x', ...BR(557, 897) };
+    assert.strictEqual(run(env, "parseInsightValue_(it_, 'SUMA', 'FOLLOWER').value"), 557); assert.strictEqual(run(env, "parseInsightValue_(it_, 'SUMA', 'NON_FOLLOWER').value"), 897);
+    assert.strictEqual(run(env, "parseInsightValue_(it_, 'SUMA', 'OTRO').ok"), false); });
+  test('Nuevos seguidores IG en mes de 31 días: tramos de ≤30 días sumados (métrica aditiva) con breakdown', () => {
+    const env = makeEnv({ responder: (url) => { const since = +url.match(/since=(\d+)/)[1], until = +url.match(/until=(\d+)/)[1];
+      if (until - since > 2592000) return { code: 400, body: { error: { code: 100, message: 'cannot be more than 30 days' } } };
+      return { code: 200, body: { data: [{ name: 'follows_and_unfollows', ...(until - since > 100000 ? BR(557, 897) : BR(15, 30)) }] } }; } });
+    const r = run(env, `(function(){var c=catalogByKey_('ig_new_follows');return resultFrom_(c.key, fetchInsight_('x/insights', c, monthWindow_('2026-10', false), getToken_(), {metric_type:'total_value',period:'day'}));})()`);
+    assert.strictEqual(r.value, 572); assert(env.fetchLog.every(c => /breakdown=follow_type/.test(c.url))); });
+  test('los clics de anuncios se extraen de Marketing API y quedan como concepto ADS separado', () => {
+    const env = makeEnv({ responder: () => ({ code: 200, body: { data: [{ publisher_platform: 'instagram', impressions: '800', reach: '500', inline_link_clicks: '638' }] } }) });
+    const r = run(env, `extractAds_({marca:'A',plat:'Instagram',adAccount:'999'}, '2026-10', new Date('2026-11-04T12:00:00Z'))`);
+    assert.strictEqual(r.find(x => x.key === 'ads_link_clicks').value, 638); assert(/inline_link_clicks/.test(env.fetchLog[0].url));
+    const recs = run(env, `toRecords_({marca:'A',plat:'Instagram'},'2026-10',[{key:'ads_link_clicks',status:'OK',value:638,detail:''}],{periodState:'EXTRAÍDO',nowIso:'x',now:new Date()})`);
+    assert(/Solo anuncios/.test(recs.find(x => x.metrica === 'Clics en enlaces Ads').obs)); });
+}
+
 console.log(`\nResultado: ${pass} OK, ${fail} fallos`); if (fail) { console.log(failures.join('\n')); process.exit(1); }

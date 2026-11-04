@@ -5,8 +5,13 @@
  */
 
 /** Extrae el valor numérico de una respuesta de insights (total_value o serie de valores). */
-function parseInsightValue_(item, regla) {
+function parseInsightValue_(item, regla, pick) {
   if (!item) return { ok: false, detail: 'La API no devolvió la métrica' };
+  if (pick) {
+    var br = item.total_value && item.total_value.breakdowns && item.total_value.breakdowns[0], hit = null;
+    ((br && br.results) || []).forEach(function (x) { if ((x.dimension_values || [])[0] === pick) hit = toNumber_(x.value); });
+    return hit === null ? { ok: false, detail: 'Sin resultado para ' + pick + ' en el desglose' } : { ok: true, value: hit };
+  }
   if (item.total_value && item.total_value.value !== undefined) {
     var n = toNumber_(item.total_value.value);
     return n === null ? { ok: false, detail: 'total_value no numérico' } : { ok: true, value: n };
@@ -35,8 +40,9 @@ function fetchInsight_(path, entry, w, token, baseParams) {
   function one(win) {
     var p = {}; Object.keys(baseParams).forEach(function (k) { p[k] = baseParams[k]; });
     p.metric = entry.api; p.since = win.since; p.until = win.until;
+    if (entry.breakdown) p.breakdown = entry.breakdown;
     var res = metaGet_(path, p, token);
-    return parseInsightValue_((res.data || [])[0], entry.regla);
+    return parseInsightValue_((res.data || [])[0], entry.regla, entry.pick);
   }
   try { return one(w); } catch (e) {
     if (entry.regla === 'NO_ADITIVO' && e.kind === 'NO_DISPONIBLE' && (w.until - w.since) > 30 * 86400) {
@@ -138,7 +144,7 @@ function extractAds_(account, ym, now) {
   var token = getToken_(account.marca), w = monthWindow_(ym, true, now), out = [];
   var acct = 'act_' + String(account.adAccount).replace(/^act_/, '');
   try {
-    var rows = metaGetAll_(acct + '/insights', { fields: 'impressions,reach', breakdowns: 'publisher_platform', level: 'account',
+    var rows = metaGetAll_(acct + '/insights', { fields: 'impressions,reach,inline_link_clicks', breakdowns: 'publisher_platform', level: 'account',
       time_range: JSON.stringify({ since: w.sinceStr, until: w.untilStr }) }, token, 5);
     var want = account.plat === 'Instagram' ? 'instagram' : 'facebook';
     var row = rows.filter(function (r) { return r.publisher_platform === want; })[0];
