@@ -115,3 +115,29 @@ function backupSpreadsheet_() {
   PropertiesService.getScriptProperties().setProperty('ULTIMO_RESPALDO', copy.getId());
   return copy.getId();
 }
+
+// ---------- Saldos diarios de seguidores (para cierres exactos hacia adelante) ----------
+function normDate_(v) {
+  return Object.prototype.toString.call(v) === '[object Date]' ? Utilities.formatDate(v, LM.TZ, 'yyyy-MM-dd') : String(v);
+}
+function readSnapshot_(marca, plat, fecha) {
+  var sh = getSS_().getSheetByName(LM.SHEETS.SALDOS);
+  if (!sh || sh.getLastRow() < 2) return null;
+  var idx = headerIndex_(sh), out = null;
+  sh.getRange(2, 1, sh.getLastRow() - 1, sh.getLastColumn()).getValues().forEach(function (r) {
+    if (r[idx['Marca']] === marca && r[idx['Plataforma']] === plat && normDate_(r[idx['Fecha']]) === fecha) out = toNumber_(r[idx['Seguidores']]);
+  });
+  return out;
+}
+/** Guarda el saldo de hoy (una fila por Marca+Plataforma+Fecha; repetir actualiza, no duplica). */
+function upsertSnapshot_(marca, plat, fecha, valor, nowIso) {
+  var sh = getSheet_(LM.SHEETS.SALDOS, LM.HEADERS.SALDOS), idx = headerIndex_(sh), n = sh.getLastRow(), at = 0, width = sh.getLastColumn();
+  if (n > 1) sh.getRange(2, 1, n - 1, width).getValues().forEach(function (r, i) {
+    if (r[idx['Marca']] === marca && r[idx['Plataforma']] === plat && normDate_(r[idx['Fecha']]) === fecha) at = i + 2;
+  });
+  var row = new Array(width).fill(''); function s(h, v) { row[idx[h]] = v; }
+  s('Marca', marca); s('Plataforma', plat); s('Fecha', fecha); s('Seguidores', valor); s('Fuente', 'Graph API followers_count'); s('Fecha extracción', nowIso);
+  var target = at || n + 1;
+  sh.getRange(target, 3, 1, 1).setNumberFormat('@');
+  sh.getRange(target, 1, 1, width).setValues([row]);
+}

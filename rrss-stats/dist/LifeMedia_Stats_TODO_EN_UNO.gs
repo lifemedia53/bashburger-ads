@@ -15,7 +15,7 @@ var LM = {
   SHEETS: {
     DASHBOARD: 'DASHBOARD', RESUMEN: 'RESUMEN', REGISTROS: 'REGISTROS',
     CONTENIDOS: 'CONTENIDOS', CONFIG: 'CONFIG', CONTROL: 'CONTROL',
-    DICCIONARIO: 'DICCIONARIO', DISPONIBILIDAD: 'DISPONIBILIDAD', DIFERENCIAS: 'DIFERENCIAS_BSUITE', MANUALES: 'MANUALES'
+    DICCIONARIO: 'DICCIONARIO', DISPONIBILIDAD: 'DISPONIBILIDAD', DIFERENCIAS: 'DIFERENCIAS_BSUITE', MANUALES: 'MANUALES', SALDOS: 'SALDOS_SEGUIDORES'
   },
   // Columnas existentes primero (no se reordenan); las nuevas se agregan a la derecha.
   HEADERS: {
@@ -26,6 +26,7 @@ var LM = {
     CONTENIDOS: ['Marca', 'Plataforma', 'Mes', 'Formato', 'Fecha de publicación', 'ID contenido', 'URL', 'Vistas',
       'Alcance', 'Interacciones', 'Guardados', 'Compartidos', 'Comentarios', 'Reacciones', 'Origen', 'Estado',
       'Fecha extracción'],
+    SALDOS: ['Marca', 'Plataforma', 'Fecha', 'Seguidores', 'Fuente', 'Fecha extracción'],
     MANUALES: ['Marca', 'Plataforma', 'Mes', 'Métrica', 'Valor', 'Fuente', 'Estado'],
     DISPONIBILIDAD: ['Fecha', 'Marca', 'Plataforma', 'Métrica API', 'Resultado', 'Detalle'],
     DIFERENCIAS: ['Marca', 'Plataforma', 'Mes', 'Métrica', 'Valor API', 'Valor Business Suite', 'Diferencia',
@@ -158,6 +159,12 @@ function scrub_(text) {
     .slice(0, 500);
 }
 
+/** Suma n días a 'YYYY-MM-DD' (n puede ser negativo). */
+function addDays_(ymd, n) {
+  var p = ymd.split('-'), d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + n));
+  return d.getUTCFullYear() + '-' + pad2_(d.getUTCMonth() + 1) + '-' + pad2_(d.getUTCDate());
+}
+
 // ======== MetaApi.gs ========
 /** Cliente Graph / Marketing API (solo lectura). Token SIEMPRE desde Propiedades del script. */
 
@@ -258,7 +265,7 @@ function parseInsightValue_(item, regla) {
 
 function resultFrom_(key, parsed) {
   if (!parsed.ok) return { key: key, status: LM.DATA.NA, value: null, detail: parsed.detail };
-  return { key: key, status: parsed.value === 0 ? LM.DATA.ZERO : LM.DATA.OK, value: parsed.value, detail: '' };
+  return { key: key, status: parsed.value === 0 ? LM.DATA.ZERO : LM.DATA.OK, value: parsed.value, detail: parsed.note || '' };
 }
 function failureFrom_(key, e) {
   var st = e.kind === 'NO_DISPONIBLE' ? LM.DATA.NA : LM.DATA.ERROR;
@@ -275,11 +282,11 @@ function fetchInsight_(path, entry, w, token, baseParams) {
   }
   try { return one(w); } catch (e) {
     if (entry.regla === 'NO_ADITIVO' && e.kind === 'NO_DISPONIBLE' && (w.until - w.since) > 30 * 86400) {
-      // Límite de la API: máx. 30 días. El alcance único NO se suma por tramos ni se estima.
-      var ref = null;
-      try { var rr = one({ since: w.since, until: w.since + 30 * 86400 }); if (rr.ok) ref = rr.value; } catch (e3) { /* sin referencia */ }
-      return { ok: false, detail: 'Límite de la API: máx. 30 días entre since y until y el mes tiene más. No se suma ni se estima.' +
-        (ref !== null ? ' Referencia días 1-30 (NO es el mes completo): ' + ref : '') };
+      // Límite de la API: máx. 30 días. NO se suma por tramos ni se estima: se consulta UNA ventana de 30 días (días 1-30) y se rotula.
+      var rr = null;
+      try { rr = one({ since: w.since, until: w.since + 30 * 86400 }); } catch (e3) { rr = null; }
+      if (rr && rr.ok) return { ok: true, value: rr.value, note: 'Ventana días 1-30 (límite API de 30 días); el mes tiene 31 días. No es el mes completo.' };
+      return { ok: false, detail: 'Límite de la API: máx. 30 días entre since y until y el mes tiene más; la ventana de 30 días también falló.' };
     }
     if (e.kind === 'TRANSITORIO' || e.kind === 'PERMISO' || entry.regla !== 'SUMA') throw e;
     var total = 0, chunks = chunkWindow_(w, 30);
@@ -431,6 +438,33 @@ function bestContent_(rows) {
   return { row: pool[0], criterio: key };
 }
 
+/** Cierre de seguidores de un mes terminado, 100% automático: 1) snapshot diario del día 1 siguiente; 2) derivado de cambios netos. */
+function resolveClosingFollowers_(account, ym, now) {
+  var key = account.plat === 'Instagram' ? 'ig_followers_closing' : 'fb_followers_closing', closing = monthInfo_(ym).last;
+  try {
+    var next = addDays_(closing, 1), snap = readSnapshot_(account.marca, account.plat, next);
+    if (snap !== null) return { key: key, status: snap === 0 ? LM.DATA.ZERO : LM.DATA.OK, value: snap, detail: 'Snapshot diario del ' + next + ' (≈ cierre; hasta ~6 h después)' };
+    var today = todayStr_(now), through = addDays_(today, -1);
+    if (daysBetween_(closing, today) > 28) return { key: key, status: LM.DATA.NA, value: null, detail: 'Cierre fuera de la ventana de 30 días de Meta y sin snapshot guardado' };
+    var token = getToken_(account.marca), tk = account.plat === 'Facebook' ? pageToken_(account.id, token) : token;
+    var cur = toNumber_(metaGet_(account.id, { fields: 'followers_count' }, tk).followers_count);
+    if (cur === null) return { key: key, status: LM.DATA.NA, value: null, detail: 'followers_count ausente' };
+    var since = localMidnightEpoch_(next), until = Math.floor((now || new Date()).getTime() / 1000), net = {};
+    function addSeries(metric, sign) {
+      var res = metaGet_(account.id + '/insights', { metric: metric, period: 'day', since: since, until: until }, tk);
+      (((res.data || [])[0] || {}).values || []).forEach(function (v) {
+        var n = toNumber_(v.value); if (n === null || !v.end_time) return;
+        var day = addDays_(String(v.end_time).slice(0, 10), -1); net[day] = (net[day] || 0) + sign * n;
+      });
+    }
+    if (account.plat === 'Instagram') addSeries('follower_count', 1);
+    else { addSeries('page_daily_follows_unique', 1); addSeries('page_daily_unfollows_unique', -1); }
+    var r = deriveClosingFollowers_(cur, net, closing, through);
+    if (!r.ok) return { key: key, status: LM.DATA.NA, value: null, detail: r.detail };
+    return { key: key, status: LM.DATA.OK, value: r.value, detail: 'DERIVADO: followers_count actual (' + cur + ') menos el cambio neto diario posterior al cierre; error posible de ±1 día de cambio neto por el corte horario de Meta' };
+  } catch (e) { return failureFrom_(key, e); }
+}
+
 // ======== Normalize.gs ========
 /** Normalización: resultados crudos -> registros con marca, plataforma, período, métrica, valor, origen. */
 
@@ -463,6 +497,7 @@ function toRecords_(account, ym, results, ctx) {
       var fuente = c.concepto === 'ADS' ? 'Marketing API /insights (' + c.api + ')'
         : (account.plat === 'Instagram' ? 'Instagram Graph API /insights (' + c.api + ')' : 'Facebook Page Insights (' + c.api + ')');
       var obs = c.concepto === 'ADS' ? 'Solo anuncios. Concepto distinto al total; no mezclar con orgánico.' : '';
+      if (/Ventana días 1-30/.test(r.detail || '')) obs = (obs ? obs + ' ' : '') + 'ALCANCE DE 30 DE 31 DÍAS (límite de la API); mismo criterio todos los meses de 31 días.';
       if (c.regla === 'NO_ADITIVO') obs = (obs ? obs + ' ' : '') + 'No aditivo: consultado sobre el período completo, no suma de días.';
       push(c.metrica, r.value, r.status, c.regla === 'SUMA' ? 'aditivo' : 'no aditivo', fuente, obs, r.detail);
     } else if (r.key === 'ig_followers_now' || r.key === 'fb_followers_now') {
@@ -620,6 +655,32 @@ function backupSpreadsheet_() {
   var file = DriveApp.getFileById(ss.getId()), copy = file.makeCopy(name);
   PropertiesService.getScriptProperties().setProperty('ULTIMO_RESPALDO', copy.getId());
   return copy.getId();
+}
+
+// ---------- Saldos diarios de seguidores (para cierres exactos hacia adelante) ----------
+function normDate_(v) {
+  return Object.prototype.toString.call(v) === '[object Date]' ? Utilities.formatDate(v, LM.TZ, 'yyyy-MM-dd') : String(v);
+}
+function readSnapshot_(marca, plat, fecha) {
+  var sh = getSS_().getSheetByName(LM.SHEETS.SALDOS);
+  if (!sh || sh.getLastRow() < 2) return null;
+  var idx = headerIndex_(sh), out = null;
+  sh.getRange(2, 1, sh.getLastRow() - 1, sh.getLastColumn()).getValues().forEach(function (r) {
+    if (r[idx['Marca']] === marca && r[idx['Plataforma']] === plat && normDate_(r[idx['Fecha']]) === fecha) out = toNumber_(r[idx['Seguidores']]);
+  });
+  return out;
+}
+/** Guarda el saldo de hoy (una fila por Marca+Plataforma+Fecha; repetir actualiza, no duplica). */
+function upsertSnapshot_(marca, plat, fecha, valor, nowIso) {
+  var sh = getSheet_(LM.SHEETS.SALDOS, LM.HEADERS.SALDOS), idx = headerIndex_(sh), n = sh.getLastRow(), at = 0, width = sh.getLastColumn();
+  if (n > 1) sh.getRange(2, 1, n - 1, width).getValues().forEach(function (r, i) {
+    if (r[idx['Marca']] === marca && r[idx['Plataforma']] === plat && normDate_(r[idx['Fecha']]) === fecha) at = i + 2;
+  });
+  var row = new Array(width).fill(''); function s(h, v) { row[idx[h]] = v; }
+  s('Marca', marca); s('Plataforma', plat); s('Fecha', fecha); s('Seguidores', valor); s('Fuente', 'Graph API followers_count'); s('Fecha extracción', nowIso);
+  var target = at || n + 1;
+  sh.getRange(target, 3, 1, 1).setNumberFormat('@');
+  sh.getRange(target, 1, 1, width).setValues([row]);
 }
 
 // ======== Summary.gs ========
@@ -783,6 +844,12 @@ function runAccount_(account, ym, mode, now) {
   var ctx0 = { periodState: partial ? LM.PERIOD_STATES.PARTIAL : LM.PERIOD_STATES.EXTRACTED, nowIso: nowIso, now: now };
   var results = (account.plat === 'Instagram' ? extractInstagram_(account, ym, now) : extractFacebook_(account, ym, now))
     .concat(extractAds_(account, ym, now));
+  if (ym !== currentMonth_(now)) results.push(resolveClosingFollowers_(account, ym, now));
+  if (partial) {
+    results.forEach(function (r) {
+      if ((r.key === 'ig_followers_now' || r.key === 'fb_followers_now') && (r.status === LM.DATA.OK || r.status === LM.DATA.ZERO)) upsertSnapshot_(account.marca, account.plat, todayStr_(now), r.value, nowIso);
+    });
+  }
   var recs = toRecords_(account, ym, results, ctx0), ex = readExisting_(), plan = planUpsert_(ex.rows, recs);
   applyPlan_(ex, plan);
   plan.conflicts.forEach(function (c) {
@@ -979,6 +1046,30 @@ function probeMetrics(marca) {
     results.forEach(function (r) {
       var c = catalogByKey_(r.key);
       rows.push([new Date(), a.marca, a.plat, c ? c.api : r.key, r.status, r.detail || (r.value === null ? '' : 'valor de prueba=' + r.value)]);
+    });
+  });
+  if (rows.length) sh.getRange(sh.getLastRow() + 1, 1, rows.length, 6).setValues(rows);
+  return rows.length;
+}
+
+/**
+ * Descubrimiento de equivalencias con Business Suite: consulta varias métricas candidatas del mes y las anota en DISPONIBILIDAD
+ * ('valor de prueba=N') para compararlas con lo que muestra Business Suite. Solo lectura.
+ */
+function probeCandidates(marca, ym) {
+  var sh = getSheet_(LM.SHEETS.DISPONIBILIDAD, LM.HEADERS.DISPONIBILIDAD), now = new Date(), month = ym || prevMonth_(currentMonth_(now)), w = monthWindow_(month, true, now), rows = [];
+  var cands = { Facebook: ['page_post_engagements', 'page_actions_post_reactions_total', 'page_total_actions', 'page_consumptions_unique',
+      'page_website_clicks_logged_in_unique', 'page_cta_clicks_logged_in_total', 'page_cta_clicks_logged_in_unique', 'page_posts_impressions', 'post_engagements', 'page_follows'],
+    Instagram: ['profile_links_taps', 'website_clicks', 'likes', 'comments', 'shares', 'saves', 'reposts', 'replies', 'follows_and_unfollows', 'total_interactions'] };
+  readAccounts_().filter(function (a) { return a.authorized && a.activo && (!marca || a.marca === marca); }).forEach(function (a) {
+    var token = a.plat === 'Facebook' ? pageToken_(a.id, getToken_(a.marca)) : getToken_(a.marca);
+    (cands[a.plat] || []).forEach(function (m) {
+      var params = a.plat === 'Facebook' ? { period: 'total_over_range' } : { metric_type: 'total_value', period: 'day' }, res;
+      try {
+        params.metric = m; params.since = w.since; params.until = w.until;
+        var r = parseInsightValue_((metaGet_(a.id + '/insights', params, token).data || [])[0], 'SUMA');
+        res = r.ok ? 'OK' : 'NO DISPONIBLE'; rows.push([new Date(), a.marca, a.plat, 'candidata:' + m, res, r.ok ? 'valor de prueba=' + r.value : r.detail]);
+      } catch (e) { rows.push([new Date(), a.marca, a.plat, 'candidata:' + m, e.kind === 'NO_DISPONIBLE' ? 'NO DISPONIBLE' : 'ERROR', scrub_(e.message)]); }
     });
   });
   if (rows.length) sh.getRange(sh.getLastRow() + 1, 1, rows.length, 6).setValues(rows);

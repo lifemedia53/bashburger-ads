@@ -82,3 +82,9 @@ function scrub_(text) {
     .replace(/EAA[A-Za-z0-9]{20,}/g, '[OCULTO]')
     .slice(0, 500);
 }
+
+/** Suma n días a 'YYYY-MM-DD' (n puede ser negativo). */
+function addDays_(ymd, n) {
+  var p = ymd.split('-'), d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + n));
+  return d.getUTCFullYear() + '-' + pad2_(d.getUTCMonth() + 1) + '-' + pad2_(d.getUTCDate());
+}
