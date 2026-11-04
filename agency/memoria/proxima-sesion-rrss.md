@@ -1,0 +1,13 @@
+# Prompt para la próxima sesión — Estadísticas RRSS (2026-11-04)
+
+Lee `CLAUDE.md`, `agency/memoria/pendientes.md`, `agency/memoria/rrss-stats.md` y `rrss-stats/docs/INFORME.md`. Respuestas cortas, español de Chile, una recomendación clara.
+
+Contexto: sistema de estadísticas de Instagram y Facebook en Google Apps Script (código en `rrss-stats/`; pegar `rrss-stats/dist/LifeMedia_Stats_TODO_EN_UNO.gs` en Apps Script del Sheet 10fF2P9B7SjubbRau4x4P8zUpcL3EJ_u_ELZdL17W2-8). Piloto Tony's Pasta: septiembre y octubre 2026 extraídos, cotejados con Business Suite y VALIDADOS; DASHBOARD y activadores funcionando. Token solo en Propiedades del script (jamás pedirlo ni pegarlo). El conector de Drive es de solo lectura: para revisar el Sheet, descargarlo como xlsx (download_file_content con exportMimeType xlsx) y leerlo con openpyxl. Laura quiere todo automático, sin cargas manuales.
+
+Haz en este orden:
+1. Revisar el Sheet: ¿corrió el diario de las 6:00? Debe existir la hoja SALDOS_SEGUIDORES y filas nuevas de noviembre en REGISTROS (estado PARCIAL), sin duplicados ni Mes≠Clave. Si no corrió, mirar CONTROL (ERROR/ACTIVADORES) y reparar.
+2. Pendientes de datos de Tony's: FB "Interacciones con el contenido" (BS=5; la API a nivel página solo da 2 reacciones), mensajes/contactos iniciados (Messaging API), vistas e interacciones de historias (solo existen 24 h; verificar que el diario las guarde), contenido de Facebook (posts).
+3. Siguiente marca: preguntarle a Laura cuál. Si tiene portfolio propio, debe compartir página, Instagram y cuenta de anuncios con el portfolio Life Media (Configuración → Usuarios → Socios) y asignarlos al usuario del sistema `lm-stats-reader`; luego agregar filas en CONFIG (ver `rrss-stats/docs/NUEVAS_CUENTAS.md`). Máximo 2 marcas por lote; muestra aprobada antes del resto.
+4. Cierre pendiente de la sesión anterior (órdenes de CLAUDE.md): token-controller con el uso, Bitácora de Notion con lo medido y su fuente, memoria actualizada, commit + push + PR + merge.
+
+Reglas que no se rompen: no inventar métricas ni tratar vacío como 0; alcances únicos nunca se suman; orgánico y anuncios separados; no tocar meses HISTÓRICO/VALIDADO; respaldo antes de cualquier reparación; verificar siempre contra el Sheet real (los mocks no ven la conversión de fechas, zona horaria ni separadores de fórmulas de Google Sheets); cada cambio de código: pruebas (`node rrss-stats/tests/run-tests.js`), regenerar el archivo único en `rrss-stats/dist`, commit, PR y merge. Datos de Tony's: página 1235804806272995, Instagram 17841459832773317, cuenta de anuncios 1032681759334136.
