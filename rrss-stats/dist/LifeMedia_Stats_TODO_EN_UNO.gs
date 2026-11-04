@@ -521,6 +521,12 @@ function toRecords_(account, ym, results, ctx) {
       if (/Ventana días 1-30/.test(r.detail || '')) obs = (obs ? obs + ' ' : '') + 'ALCANCE DE 30 DE 31 DÍAS (límite de la API); mismo criterio todos los meses de 31 días.';
       if (c.regla === 'NO_ADITIVO') obs = (obs ? obs + ' ' : '') + 'No aditivo: consultado sobre el período completo, no suma de días.';
       push(c.metrica, r.value, r.status, c.regla === 'SUMA' ? 'aditivo' : 'no aditivo', fuente, obs, r.detail);
+      // Decisión de Laura (2026-11-04): "Clics en enlaces" = clics de enlace de anuncios, rotulado APROXIMADO
+      // (oct-2026 vs Business Suite: IG 619 vs 638 = -3%, FB 211 vs 209 = +1%). El orgánico (profile_links_taps) dio 0.
+      if (c.key === 'ads_link_clicks' && (r.status === LM.DATA.OK || r.status === LM.DATA.ZERO)) {
+        push('Clics en enlaces', r.value, r.status, 'aditivo', 'Marketing API inline_link_clicks (APROXIMADO)',
+          'APROXIMADO: clics de enlace de anuncios; difiere 1-3% de Business Suite (oct-2026: IG 619 vs 638, FB 211 vs 209). El orgánico (profile_links_taps) fue 0.', r.detail);
+      }
     } else if (r.key === 'ig_followers_now' || r.key === 'fb_followers_now') {
       if (ctx.periodState === LM.PERIOD_STATES.PARTIAL) {
         push('Seguidores cierre', r.value, r.status, 'saldo', 'Graph API followers_count', 'Saldo del día de extracción (mes en curso), no cierre.', r.detail);

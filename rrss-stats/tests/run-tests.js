@@ -342,4 +342,18 @@ console.log('\n[Regresión 2] Spreadsheet en otra zona horaria que el script');
     rows.forEach(r => { assert.strictEqual(r[2], '2026-10'); assert.strictEqual(r[3], '2026-10-01'); assert.strictEqual(r[4], '2026-10-31'); }); });
 }
 
+console.log('\n[Decisión Laura] Clics en enlaces aproximados desde anuncios');
+{
+  test('Clics en enlaces = clics de anuncios, marcado APROXIMADO, y reemplaza el PENDIENTE existente sin duplicar', () => {
+    const env = makeEnv(); run(env, 'setupSheets()');
+    const recs = run(env, `toRecords_({marca:'A',plat:'Instagram'},'2026-10',[{key:'ads_link_clicks',status:'OK',value:619,detail:''}],{periodState:'EXTRAÍDO',nowIso:'x',now:new Date()})`);
+    const c = recs.filter(r => r.metrica === 'Clics en enlaces'); assert.strictEqual(c.length, 1); assert.strictEqual(c[0].valor, 619); assert(/APROXIMADO/.test(c[0].obs) && /APROXIMADO/.test(c[0].fuente)); assert.strictEqual(c[0].estadoDato, 'OK');
+    assert.strictEqual(recs.find(r => r.metrica === 'Clics en enlaces Ads').valor, 619);
+    const p = JSON.parse(JSON.stringify(run(env, `planUpsert_([{row:9,clave:'a|instagram|2026-10|clics en enlaces',valor:'',estado:'EXTRAÍDO',estadoDato:'PENDIENTE'}], toRecords_({marca:'A',plat:'Instagram'},'2026-10',[{key:'ads_link_clicks',status:'OK',value:619,detail:''}],{periodState:'EXTRAÍDO',nowIso:'x',now:new Date()}))`)));
+    assert(p.updates.some(u => u.row === 9 && u.rec.valor === 619)); });
+  test('sin anuncios (sin dato) los clics siguen PENDIENTE, no 0', () => {
+    const env = makeEnv(); const recs = run(env, `toRecords_({marca:'A',plat:'Instagram'},'2026-10',[{key:'ads_link_clicks',status:'ERROR',value:null,detail:'x'}],{periodState:'EXTRAÍDO',nowIso:'x',now:new Date()})`);
+    const c = recs.find(r => r.metrica === 'Clics en enlaces'); assert.strictEqual(c.valor, null); assert.strictEqual(c.estadoDato, 'PENDIENTE'); });
+}
+
 console.log(`\nResultado: ${pass} OK, ${fail} fallos`); if (fail) { console.log(failures.join('\n')); process.exit(1); }
