@@ -13,6 +13,7 @@ function fmt(date, tz, f) {
     .replace(/^Z$/, zz);
 }
 
+let SHEET_TZ = { name: 'America/Santiago', off: '-03:00' };
 class Range {
   constructor(sh, r, c, nr, nc) { Object.assign(this, { sh, r, c, nr, nc }); }
   getValues() { const o = []; for (let i = 0; i < this.nr; i++) { const row = []; for (let j = 0; j < this.nc; j++) { const v = (this.sh.grid[this.r - 1 + i] || [])[this.c - 1 + j]; row.push(v === undefined ? '' : v); } o.push(row); } return o; }
@@ -28,7 +29,7 @@ class Sheet {
   _coerce(r, c, x) {
     if (typeof x === 'string' && this.fmt[r + ',' + c] !== '@') {
       const m = x.match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/);
-      if (m) return new Date(`${m[1]}-${m[2]}-${m[3] || '01'}T00:00:00-03:00`); // Sheets convierte a fecha
+      if (m) return new Date(`${m[1]}-${m[2]}-${m[3] || '01'}T00:00:00${SHEET_TZ.off}`); // Sheets convierte a fecha (en la zona del Spreadsheet)
     }
     return x;
   }
@@ -43,7 +44,8 @@ class Sheet {
 }
 function makeEnv(opts = {}) {
   const sheets = {}, env = { sheets, fetchLog: [], props: Object.assign({ META_ACCESS_TOKEN: 'EAAFAKETOKEN0123456789ABCDEFGHIJ' }, opts.props || {}), sleeps: [], responder: opts.responder || (() => ({ code: 200, body: { data: [] } })) };
-  const ss = { getSheetByName: n => sheets[n] || null, insertSheet: n => (sheets[n] = new Sheet(n)), getName: () => 'Test', getId: () => 'id' };
+  SHEET_TZ = opts.sheetTz || { name: 'America/Santiago', off: '-03:00' };
+  const ss = { getSpreadsheetTimeZone: () => SHEET_TZ.name, getSheetByName: n => sheets[n] || null, insertSheet: n => (sheets[n] = new Sheet(n)), getName: () => 'Test', getId: () => 'id' };
   const ctx = {
     console, JSON, Math, Date, Object, Array, String, Number, isFinite, Error, encodeURIComponent, parseInt,
     Utilities: { formatDate: (d, tz, f) => fmt(d, tz, f), sleep: ms => env.sleeps.push(ms) },

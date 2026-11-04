@@ -172,8 +172,12 @@ function addDays_(ymd, n) {
 
 /** Google Sheets convierte '2026-10' en fecha: se normaliza SIEMPRE antes de comparar claves. */
 function isDate_(v) { return Object.prototype.toString.call(v) === '[object Date]'; }
-function normMonth_(v) { return isDate_(v) ? Utilities.formatDate(v, LM.TZ, 'yyyy-MM') : String(v == null ? '' : v).trim(); }
-function normDay_(v) { return isDate_(v) ? Utilities.formatDate(v, LM.TZ, 'yyyy-MM-dd') : String(v == null ? '' : v).trim(); }
+/** Las fechas de las celdas están en la zona horaria DEL SPREADSHEET (puede diferir de la del script): se formatea con esa. */
+function sheetTz_() {
+  try { return getSS_().getSpreadsheetTimeZone() || LM.TZ; } catch (e) { return LM.TZ; }
+}
+function normMonth_(v) { return isDate_(v) ? Utilities.formatDate(v, sheetTz_(), 'yyyy-MM') : String(v == null ? '' : v).trim(); }
+function normDay_(v) { return isDate_(v) ? Utilities.formatDate(v, sheetTz_(), 'yyyy-MM-dd') : String(v == null ? '' : v).trim(); }
 
 // ======== MetaApi.gs ========
 /** Cliente Graph / Marketing API (solo lectura). Token SIEMPRE desde Propiedades del script. */
@@ -1061,29 +1065,34 @@ var RETIRADAS = [['Instagram', 'Clics en enlaces'], ['Facebook', 'Interacciones'
 function repararDuplicados() {
   return lock_(function () {
     var backup = backupSpreadsheet_(), ex = readExisting_(), sh = ex.sh, idx = ex.idx, width = sh.getLastColumn(), n = sh.getLastRow();
-    var data = n > 1 ? sh.getRange(2, 1, n - 1, width).getValues() : [], last = {}, del = {};
+    var data = n > 1 ? sh.getRange(2, 1, n - 1, width).getValues() : [], groups = {}, del = {}, fixedMonths = 0;
     function isApiRow(r) { var o = r[idx['Fila original']]; return (o === '' || o === null) && LM.LOCKED_STATES.indexOf(r[idx['Estado']]) < 0; }
+    // La Clave (texto) es la fuente de verdad del mes: Marca|Plataforma|Mes|Métrica.
+    function monthOf(r) { var p = String(r[idx['Clave']] || '').split('|'); return p.length >= 4 && /^\d{4}-\d{2}$/.test(p[2]) ? p[2] : normMonth_(r[idx['Mes']]); }
     data.forEach(function (r, i) {
       if (!isApiRow(r)) return;
-      var met = r[idx['Métrica']], plat = r[idx['Plataforma']], k = recordKey_(r[idx['Marca']], plat, normMonth_(r[idx['Mes']]), met);
+      var met = r[idx['Métrica']], plat = r[idx['Plataforma']], ym = monthOf(r), k = recordKey_(r[idx['Marca']], plat, ym, met);
       if (RETIRADAS.some(function (x) { return x[0] === plat && x[1] === met; }) && [LM.DATA.OK, LM.DATA.ZERO].indexOf(r[idx['Estado dato']]) >= 0) { del[i + 2] = true; return; }
-      if (last[k] !== undefined) del[last[k]] = true;
-      last[k] = i + 2;
+      (groups[k] = groups[k] || []).push({ row: i + 2, ts: String(r[idx['Fecha extracción']] || ''), ym: ym });
     });
+    Object.keys(groups).forEach(function (k) {
+      var g = groups[k].sort(function (a, b) { return a.ts < b.ts ? -1 : a.ts > b.ts ? 1 : a.row - b.row; });
+      g.slice(0, -1).forEach(function (x) { del[x.row] = true; });   // se conserva la lectura más reciente
+    });
+    var keep = {}; Object.keys(groups).forEach(function (k) { var g = groups[k]; keep[g[g.length - 1].row] = g[g.length - 1].ym; });
     var rows = Object.keys(del).map(Number).sort(function (a, b) { return b - a; });
-    rows.forEach(function (row) { sh.deleteRow(row); });
-    var n2 = sh.getLastRow(), fixed = 0;
-    if (n2 > 1) sh.getRange(2, 1, n2 - 1, width).getValues().forEach(function (r, i) {
-      if (!isApiRow(r)) return;
-      textDateCols_(sh, idx, i + 2, 1);
-      sh.getRange(i + 2, idx['Mes'] + 1).setValue(normMonth_(r[idx['Mes']]));
-      sh.getRange(i + 2, idx['Inicio'] + 1).setValue(normDay_(r[idx['Inicio']]));
-      sh.getRange(i + 2, idx['Fin'] + 1).setValue(normDay_(r[idx['Fin']])); fixed++;
+    // Primero se corrigen las fechas (con los números de fila originales) y después se borra de abajo hacia arriba.
+    Object.keys(keep).forEach(function (row) {
+      var ym = keep[row], info = monthInfo_(ym);
+      textDateCols_(sh, idx, +row, 1);
+      sh.getRange(+row, idx['Mes'] + 1).setValue(ym); sh.getRange(+row, idx['Inicio'] + 1).setValue(info.first); sh.getRange(+row, idx['Fin'] + 1).setValue(info.last);
+      fixedMonths++;
     });
+    rows.forEach(function (row) { sh.deleteRow(row); });
     var dash = getSS_().getSheetByName(LM.SHEETS.DASHBOARD);
     if (dash && isDate_(dash.getRange('D3').getValue())) { var v = normMonth_(dash.getRange('D3').getValue()); dash.getRange('D3').setNumberFormat('@'); dash.getRange('D3').setValue(v); }
-    logControl_('', '', '', 'REPARACIÓN', 'Respaldo ' + backup + '; filas eliminadas: ' + rows.length + '; filas con fechas en texto: ' + fixed, 'repararDuplicados', 'INFO');
-    return 'Respaldo: ' + backup + ' | filas eliminadas: ' + rows.length + ' | normalizadas: ' + fixed;
+    logControl_('', '', '', 'REPARACIÓN', 'Respaldo ' + backup + '; filas eliminadas: ' + rows.length + '; filas con mes/fechas restaurados desde la Clave: ' + fixedMonths, 'repararDuplicados', 'INFO');
+    return 'Respaldo: ' + backup + ' | filas eliminadas: ' + rows.length + ' | normalizadas: ' + fixedMonths;
   });
 }
 

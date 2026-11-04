@@ -91,5 +91,9 @@ function addDays_(ymd, n) {
 
 /** Google Sheets convierte '2026-10' en fecha: se normaliza SIEMPRE antes de comparar claves. */
 function isDate_(v) { return Object.prototype.toString.call(v) === '[object Date]'; }
-function normMonth_(v) { return isDate_(v) ? Utilities.formatDate(v, LM.TZ, 'yyyy-MM') : String(v == null ? '' : v).trim(); }
-function normDay_(v) { return isDate_(v) ? Utilities.formatDate(v, LM.TZ, 'yyyy-MM-dd') : String(v == null ? '' : v).trim(); }
+/** Las fechas de las celdas están en la zona horaria DEL SPREADSHEET (puede diferir de la del script): se formatea con esa. */
+function sheetTz_() {
+  try { return getSS_().getSpreadsheetTimeZone() || LM.TZ; } catch (e) { return LM.TZ; }
+}
+function normMonth_(v) { return isDate_(v) ? Utilities.formatDate(v, sheetTz_(), 'yyyy-MM') : String(v == null ? '' : v).trim(); }
+function normDay_(v) { return isDate_(v) ? Utilities.formatDate(v, sheetTz_(), 'yyyy-MM-dd') : String(v == null ? '' : v).trim(); }
