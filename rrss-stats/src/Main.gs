@@ -199,3 +199,38 @@ function aplicarManuales() {
     return 'Aplicados: ' + done + ', con error: ' + errs;
   });
 }
+
+/**
+ * Reparación única: (1) respalda; (2) elimina filas API duplicadas de REGISTROS (deja la más reciente);
+ * (3) retira lecturas API que se presentaban como equivalentes sin serlo; (4) fuerza texto en Mes/Inicio/Fin; (5) restaura D3 del DASHBOARD como texto.
+ * Nunca toca filas HISTÓRICO/VALIDADO ni filas con 'Fila original'.
+ */
+var RETIRADAS = [['Instagram', 'Clics en enlaces'], ['Facebook', 'Interacciones']];
+function repararDuplicados() {
+  return lock_(function () {
+    var backup = backupSpreadsheet_(), ex = readExisting_(), sh = ex.sh, idx = ex.idx, width = sh.getLastColumn(), n = sh.getLastRow();
+    var data = n > 1 ? sh.getRange(2, 1, n - 1, width).getValues() : [], last = {}, del = {};
+    function isApiRow(r) { var o = r[idx['Fila original']]; return (o === '' || o === null) && LM.LOCKED_STATES.indexOf(r[idx['Estado']]) < 0; }
+    data.forEach(function (r, i) {
+      if (!isApiRow(r)) return;
+      var met = r[idx['Métrica']], plat = r[idx['Plataforma']], k = recordKey_(r[idx['Marca']], plat, normMonth_(r[idx['Mes']]), met);
+      if (RETIRADAS.some(function (x) { return x[0] === plat && x[1] === met; }) && [LM.DATA.OK, LM.DATA.ZERO].indexOf(r[idx['Estado dato']]) >= 0) { del[i + 2] = true; return; }
+      if (last[k] !== undefined) del[last[k]] = true;
+      last[k] = i + 2;
+    });
+    var rows = Object.keys(del).map(Number).sort(function (a, b) { return b - a; });
+    rows.forEach(function (row) { sh.deleteRow(row); });
+    var n2 = sh.getLastRow(), fixed = 0;
+    if (n2 > 1) sh.getRange(2, 1, n2 - 1, width).getValues().forEach(function (r, i) {
+      if (!isApiRow(r)) return;
+      textDateCols_(sh, idx, i + 2, 1);
+      sh.getRange(i + 2, idx['Mes'] + 1).setValue(normMonth_(r[idx['Mes']]));
+      sh.getRange(i + 2, idx['Inicio'] + 1).setValue(normDay_(r[idx['Inicio']]));
+      sh.getRange(i + 2, idx['Fin'] + 1).setValue(normDay_(r[idx['Fin']])); fixed++;
+    });
+    var dash = getSS_().getSheetByName(LM.SHEETS.DASHBOARD);
+    if (dash && isDate_(dash.getRange('D3').getValue())) { var v = normMonth_(dash.getRange('D3').getValue()); dash.getRange('D3').setNumberFormat('@'); dash.getRange('D3').setValue(v); }
+    logControl_('', '', '', 'REPARACIÓN', 'Respaldo ' + backup + '; filas eliminadas: ' + rows.length + '; filas con fechas en texto: ' + fixed, 'repararDuplicados', 'INFO');
+    return 'Respaldo: ' + backup + ' | filas eliminadas: ' + rows.length + ' | normalizadas: ' + fixed;
+  });
+}

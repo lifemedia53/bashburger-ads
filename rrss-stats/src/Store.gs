@@ -70,7 +70,7 @@ function readExisting_() {
   if (n < 2) return { sh: sh, idx: headerIndex_(sh), rows: [] };
   var idx = headerIndex_(sh), data = sh.getRange(2, 1, n - 1, sh.getLastColumn()).getValues(), rows = [];
   data.forEach(function (r, i) {
-    rows.push({ row: i + 2, clave: recordKey_(r[idx['Marca']], r[idx['Plataforma']], r[idx['Mes']], r[idx['Métrica']]),
+    rows.push({ row: i + 2, clave: recordKey_(r[idx['Marca']], r[idx['Plataforma']], normMonth_(r[idx['Mes']]), r[idx['Métrica']]),
       valor: r[idx['Valor']], estado: r[idx['Estado']], estadoDato: r[idx['Estado dato']] || (r[idx['Valor']] === '' ? '' : LM.DATA.OK) });
   });
   return { sh: sh, idx: idx, rows: rows };
@@ -87,15 +87,21 @@ function recordToRow_(rec, idx, width) {
 }
 
 /** Aplica el plan. Las actualizaciones tocan solo las columnas de la API (no 'Fila original'). */
+/** Formato texto en Mes/Inicio/Fin ANTES de escribir, para que Sheets no los convierta en fechas. */
+function textDateCols_(sh, idx, row, nrows) {
+  ['Mes', 'Inicio', 'Fin'].forEach(function (h) { if (idx[h] !== undefined) sh.getRange(row, idx[h] + 1, nrows, 1).setNumberFormat('@'); });
+}
 function applyPlan_(ctx, plan) {
   var width = ctx.sh.getLastColumn();
   if (plan.inserts.length) {
-    var rows = plan.inserts.map(function (r) { return recordToRow_(r, ctx.idx, width); });
-    ctx.sh.getRange(ctx.sh.getLastRow() + 1, 1, rows.length, width).setValues(rows);
+    var rows = plan.inserts.map(function (r) { return recordToRow_(r, ctx.idx, width); }), at = ctx.sh.getLastRow() + 1;
+    textDateCols_(ctx.sh, ctx.idx, at, rows.length);
+    ctx.sh.getRange(at, 1, rows.length, width).setValues(rows);
   }
   plan.updates.forEach(function (u) {
     var row = recordToRow_(u.rec, ctx.idx, width), cur = ctx.sh.getRange(u.row, 1, 1, width).getValues()[0];
     if (ctx.idx['Fila original'] !== undefined) row[ctx.idx['Fila original']] = cur[ctx.idx['Fila original']];
+    textDateCols_(ctx.sh, ctx.idx, u.row, 1);
     ctx.sh.getRange(u.row, 1, 1, width).setValues([row]);
   });
 }
