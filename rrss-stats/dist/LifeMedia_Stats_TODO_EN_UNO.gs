@@ -273,6 +273,13 @@ function fetchInsight_(path, entry, w, token, baseParams) {
     return parseInsightValue_((res.data || [])[0], entry.regla);
   }
   try { return one(w); } catch (e) {
+    if (entry.regla === 'NO_ADITIVO' && e.kind === 'NO_DISPONIBLE' && (w.until - w.since) > 30 * 86400) {
+      // Límite de la API: máx. 30 días. El alcance único NO se suma por tramos ni se estima.
+      var ref = null;
+      try { var rr = one({ since: w.since, until: w.since + 30 * 86400 }); if (rr.ok) ref = rr.value; } catch (e3) { /* sin referencia */ }
+      return { ok: false, detail: 'Límite de la API: máx. 30 días entre since y until y el mes tiene más. No se suma ni se estima.' +
+        (ref !== null ? ' Referencia días 1-30 (NO es el mes completo): ' + ref : '') };
+    }
     if (e.kind === 'TRANSITORIO' || e.kind === 'PERMISO' || entry.regla !== 'SUMA') throw e;
     var total = 0, chunks = chunkWindow_(w, 30);
     for (var i = 0; i < chunks.length; i++) {
@@ -458,8 +465,14 @@ function toRecords_(account, ym, results, ctx) {
       if (c.regla === 'NO_ADITIVO') obs = (obs ? obs + ' ' : '') + 'No aditivo: consultado sobre el período completo, no suma de días.';
       push(c.metrica, r.value, r.status, c.regla === 'SUMA' ? 'aditivo' : 'no aditivo', fuente, obs, r.detail);
     } else if (r.key === 'ig_followers_now' || r.key === 'fb_followers_now') {
-      push('Seguidores cierre', r.value, r.status, 'saldo', 'Graph API followers_count',
-        ctx.periodState === LM.PERIOD_STATES.PARTIAL ? 'Saldo del día de extracción (mes en curso), no cierre.' : 'Saldo al día de extracción; cierre exacto solo si se derivó (ver detalle).', r.detail);
+      if (ctx.periodState === LM.PERIOD_STATES.PARTIAL) {
+        push('Seguidores cierre', r.value, r.status, 'saldo', 'Graph API followers_count', 'Saldo del día de extracción (mes en curso), no cierre.', r.detail);
+      } else {
+        // Mes cerrado: la API solo entrega el saldo ACTUAL; no se presenta como cierre.
+        push('Seguidores cierre', null, r.status === LM.DATA.ERROR ? LM.DATA.ERROR : LM.DATA.PENDING, 'saldo', 'Graph API followers_count',
+          'Cierre exacto pendiente: cargar con setManualValue (Business Suite) o derivar.',
+          'Saldo actual de la API: ' + r.value + ' (' + r.detail + ')');
+      }
     } else if (r.key === 'ig_best_hours') {
       push('Horarios de mayor actividad', r.value, r.status, 'texto', 'Instagram Graph API /insights (online_followers)', '', r.detail);
     } else if (r.key === 'ig_followers_closing' || r.key === 'fb_followers_closing') {
@@ -869,6 +882,25 @@ function recordBsuiteDifference(marca, plat, ym, metrica, valorBS, nota) {
   var sh = getSheet_(LM.SHEETS.DIFERENCIAS, LM.HEADERS.DIFERENCIAS), diff = api === null || api === '' ? null : toNumber_(api) - toNumber_(valorBS);
   var pct = diff === null || !toNumber_(valorBS) ? null : diff / toNumber_(valorBS);
   sh.getRange(sh.getLastRow() + 1, 1, 1, 10).setValues([[marca, plat, ym, metrica, api === null ? 'S/D' : api, valorBS, diff === null ? 'S/D' : diff, pct === null ? 'S/D' : pct, nota || '', new Date()]]);
+}
+
+/**
+ * Ingreso manual de un valor (p. ej. leído en Business Suite) cuando la API no lo entrega.
+ * Queda con Fuente explícita y estado EXTRAÍDO (se valida igual que los demás). No pisa meses bloqueados.
+ */
+function setManualValue(marca, plat, ym, metrica, valor, fuente) {
+  var n = toNumber_(valor);
+  if (n === null) throw new Error('Valor no numérico: ' + valor);
+  var info = monthInfo_(ym), nowIso = Utilities.formatDate(new Date(), LM.TZ, "yyyy-MM-dd'T'HH:mm:ssXXX");
+  var regla = ['Alcance', 'Alcance orgánico', 'Alcance Ads', 'Cuentas involucradas'].indexOf(metrica) >= 0 ? 'no aditivo'
+    : metrica === 'Seguidores cierre' ? 'saldo' : 'aditivo';
+  var rec = { marca: marca, plat: plat, mes: ym, inicio: info.first, fin: info.last, metrica: metrica, valor: n,
+    fuente: fuente || 'Business Suite (manual)', estado: LM.PERIOD_STATES.EXTRACTED, regla: regla, obs: 'Ingresado manualmente',
+    extraidoEn: nowIso, clave: recordKey_(marca, plat, ym, metrica), estadoDato: n === 0 ? LM.DATA.ZERO : LM.DATA.OK, detalle: '' };
+  var ex = readExisting_(), plan = planUpsert_(ex.rows, [rec]);
+  applyPlan_(ex, plan);
+  logControl_(marca, plat, ym, 'MANUAL', metrica + ' = ' + n + ' (' + rec.fuente + '); insertados ' + plan.inserts.length + ', actualizados ' + plan.updates.length + ', omitidos ' + plan.skipped.length, 'setManualValue', 'INFO');
+  return { inserts: plan.inserts.length, updates: plan.updates.length, skipped: plan.skipped.map(function (x) { return x.reason; }) };
 }
 
 // ======== Diagnostics.gs ========

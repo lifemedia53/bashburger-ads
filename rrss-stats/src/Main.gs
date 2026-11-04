@@ -135,3 +135,22 @@ function recordBsuiteDifference(marca, plat, ym, metrica, valorBS, nota) {
   var pct = diff === null || !toNumber_(valorBS) ? null : diff / toNumber_(valorBS);
   sh.getRange(sh.getLastRow() + 1, 1, 1, 10).setValues([[marca, plat, ym, metrica, api === null ? 'S/D' : api, valorBS, diff === null ? 'S/D' : diff, pct === null ? 'S/D' : pct, nota || '', new Date()]]);
 }
+
+/**
+ * Ingreso manual de un valor (p. ej. leído en Business Suite) cuando la API no lo entrega.
+ * Queda con Fuente explícita y estado EXTRAÍDO (se valida igual que los demás). No pisa meses bloqueados.
+ */
+function setManualValue(marca, plat, ym, metrica, valor, fuente) {
+  var n = toNumber_(valor);
+  if (n === null) throw new Error('Valor no numérico: ' + valor);
+  var info = monthInfo_(ym), nowIso = Utilities.formatDate(new Date(), LM.TZ, "yyyy-MM-dd'T'HH:mm:ssXXX");
+  var regla = ['Alcance', 'Alcance orgánico', 'Alcance Ads', 'Cuentas involucradas'].indexOf(metrica) >= 0 ? 'no aditivo'
+    : metrica === 'Seguidores cierre' ? 'saldo' : 'aditivo';
+  var rec = { marca: marca, plat: plat, mes: ym, inicio: info.first, fin: info.last, metrica: metrica, valor: n,
+    fuente: fuente || 'Business Suite (manual)', estado: LM.PERIOD_STATES.EXTRACTED, regla: regla, obs: 'Ingresado manualmente',
+    extraidoEn: nowIso, clave: recordKey_(marca, plat, ym, metrica), estadoDato: n === 0 ? LM.DATA.ZERO : LM.DATA.OK, detalle: '' };
+  var ex = readExisting_(), plan = planUpsert_(ex.rows, [rec]);
+  applyPlan_(ex, plan);
+  logControl_(marca, plat, ym, 'MANUAL', metrica + ' = ' + n + ' (' + rec.fuente + '); insertados ' + plan.inserts.length + ', actualizados ' + plan.updates.length + ', omitidos ' + plan.skipped.length, 'setManualValue', 'INFO');
+  return { inserts: plan.inserts.length, updates: plan.updates.length, skipped: plan.skipped.map(function (x) { return x.reason; }) };
+}
