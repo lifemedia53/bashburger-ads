@@ -31,3 +31,9 @@ Fechas y zona horaria · cero vs nulo vs error · alcance nunca sumado · reinte
 5. Mensajes/contactos (Messaging API), Nuevos seguidores/Bajas de IG y FB: equivalencias por validar.
 6. Facebook: contenido (posts) aún no extraído; solo métricas de página.
 7. Posible mejora: guardar saldo de seguidores diario en hoja propia para cierres exactos.
+
+## Actualización 2026-11-04 (noche) — prueba real con token
+- Verificado con datos reales: `diagnose()` OK (token, permisos, Tony's IG y FB). `probeMetrics()`: IG views, total_interactions, profile_views, profile_links_taps, followers_count, online_followers y Marketing API (impressions, reach) OK; FB page_media_view, page_total_media_view_unique, page_post_engagements, page_views_total, follows/unfollows OK.
+- Hallazgo: IG `reach` y `accounts_engaged` fallan en rangos >30 días (error #100). Meses de 31 días → NO DISPONIBLE (no se suma); ingreso con `setManualValue()`.
+- Seguidores de cierre en meses cerrados: PENDIENTE (la API solo da saldo actual).
+- Pruebas simuladas: 52/52.

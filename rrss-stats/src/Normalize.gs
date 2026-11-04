@@ -32,8 +32,14 @@ function toRecords_(account, ym, results, ctx) {
       if (c.regla === 'NO_ADITIVO') obs = (obs ? obs + ' ' : '') + 'No aditivo: consultado sobre el período completo, no suma de días.';
       push(c.metrica, r.value, r.status, c.regla === 'SUMA' ? 'aditivo' : 'no aditivo', fuente, obs, r.detail);
     } else if (r.key === 'ig_followers_now' || r.key === 'fb_followers_now') {
-      push('Seguidores cierre', r.value, r.status, 'saldo', 'Graph API followers_count',
-        ctx.periodState === LM.PERIOD_STATES.PARTIAL ? 'Saldo del día de extracción (mes en curso), no cierre.' : 'Saldo al día de extracción; cierre exacto solo si se derivó (ver detalle).', r.detail);
+      if (ctx.periodState === LM.PERIOD_STATES.PARTIAL) {
+        push('Seguidores cierre', r.value, r.status, 'saldo', 'Graph API followers_count', 'Saldo del día de extracción (mes en curso), no cierre.', r.detail);
+      } else {
+        // Mes cerrado: la API solo entrega el saldo ACTUAL; no se presenta como cierre.
+        push('Seguidores cierre', null, r.status === LM.DATA.ERROR ? LM.DATA.ERROR : LM.DATA.PENDING, 'saldo', 'Graph API followers_count',
+          'Cierre exacto pendiente: cargar con setManualValue (Business Suite) o derivar.',
+          'Saldo actual de la API: ' + r.value + ' (' + r.detail + ')');
+      }
     } else if (r.key === 'ig_best_hours') {
       push('Horarios de mayor actividad', r.value, r.status, 'texto', 'Instagram Graph API /insights (online_followers)', '', r.detail);
     } else if (r.key === 'ig_followers_closing' || r.key === 'fb_followers_closing') {

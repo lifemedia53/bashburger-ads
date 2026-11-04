@@ -170,4 +170,36 @@ console.log('\n[Integración simulada] hojas en memoria, API simulada');
     assert(env.sheets.CONTROL.grid.flat().includes('ERROR')); assert.strictEqual(env.sheets.REGISTROS.grid.filter(r => r[8] === 'HISTÓRICO').length, 2); });
 }
 
+console.log('\n[Correcciones tras prueba real] alcance >30 días, cierre de seguidores, ingreso manual');
+{
+  function apiReach(url) {
+    const m = (url.match(/metric=([a-z_]+)/) || [])[1], since = +url.match(/since=(\d+)/)[1], until = +url.match(/until=(\d+)/)[1];
+    if (m === 'reach' && until - since > 2592000) return { code: 400, body: { error: { code: 100, message: '(#100) There cannot be more than 30 days (2592000 s) between since and until.' } } };
+    return { code: 200, body: { data: [{ name: m, total_value: { value: 777 } }] } };
+  }
+  test('alcance de IG en mes de 31 días: NO DISPONIBLE, sin valor, con referencia 1-30 solo en el detalle', () => {
+    const env = makeEnv({ responder: apiReach });
+    const r = run(env, `(function(){var c=catalogByKey_('ig_reach');return resultFrom_('ig_reach', fetchInsight_('x/insights', c, monthWindow_('2026-10', false), getToken_(), {metric_type:'total_value',period:'day'}));})()`);
+    assert.strictEqual(r.status, 'NO DISPONIBLE'); assert.strictEqual(r.value, null); assert(/Referencia días 1-30/.test(r.detail) && /777/.test(r.detail)); });
+  test('alcance de IG en mes de 30 días sí se consulta completo', () => {
+    const env = makeEnv({ responder: apiReach });
+    const r = run(env, `(function(){var c=catalogByKey_('ig_reach');return resultFrom_('ig_reach', fetchInsight_('x/insights', c, monthWindow_('2026-09', false), getToken_(), {metric_type:'total_value',period:'day'}));})()`);
+    assert.strictEqual(r.status, 'OK'); assert.strictEqual(r.value, 777); });
+  test('mes cerrado: el saldo actual NO se guarda como cierre (queda PENDIENTE con el dato en el detalle)', () => {
+    const env = makeEnv();
+    const recs = run(env, `toRecords_({marca:'A',plat:'Instagram'},'2026-10',[{key:'ig_followers_now',status:'OK',value:137999,detail:'Saldo al 2026-11-03'}],{periodState:'EXTRAÍDO',nowIso:'x',now:new Date()})`);
+    const s = recs.find(r => r.metrica === 'Seguidores cierre'); assert.strictEqual(s.valor, null); assert.strictEqual(s.estadoDato, 'PENDIENTE'); assert(/137999/.test(s.detalle)); });
+  test('mes en curso: el saldo de hoy sí se guarda (parcial)', () => {
+    const env = makeEnv();
+    const recs = run(env, `toRecords_({marca:'A',plat:'Instagram'},'2026-11',[{key:'ig_followers_now',status:'OK',value:138000,detail:'Saldo al 2026-11-03'}],{periodState:'PARCIAL',nowIso:'x',now:new Date()})`);
+    assert.strictEqual(recs.find(r => r.metrica === 'Seguidores cierre').valor, 138000); });
+  test('setManualValue reemplaza un PENDIENTE, queda con fuente manual y no lo pisa una lectura fallida posterior', () => {
+    const env = makeEnv(); run(env, 'setupSheets()');
+    env.sheets.REGISTROS.grid.push(['A', 'Instagram', '2026-10', '', '', 'Alcance', '', 'x', 'EXTRAÍDO', 'no aditivo', '', '', '', 'a|instagram|2026-10|alcance', 'NO DISPONIBLE', '']);
+    const r = run(env, `setManualValue('A','Instagram','2026-10','Alcance',"45.123",'Business Suite (manual)')`); assert.strictEqual(r.updates, 1);
+    const row = env.sheets.REGISTROS.grid.filter(x => x[5] === 'Alcance'); assert.strictEqual(row.length, 1); assert.strictEqual(row[0][6], 45123); assert.strictEqual(row[0][7], 'Business Suite (manual)');
+    const p = run(env, `planUpsert_(readExisting_().rows,[{clave:'a|instagram|2026-10|alcance',valor:null,estado:'EXTRAÍDO',estadoDato:'NO DISPONIBLE'}])`); assert.strictEqual(p.updates.length, 0); });
+  test('setManualValue rechaza valores no numéricos', () => { const env = makeEnv(); run(env, 'setupSheets()'); let ok = false; try { run(env, `setManualValue('A','Instagram','2026-10','Alcance','abc')`); } catch (e) { ok = true; } assert(ok); });
+}
+
 console.log(`\nResultado: ${pass} OK, ${fail} fallos`); if (fail) { console.log(failures.join('\n')); process.exit(1); }

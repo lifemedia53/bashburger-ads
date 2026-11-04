@@ -39,6 +39,13 @@ function fetchInsight_(path, entry, w, token, baseParams) {
     return parseInsightValue_((res.data || [])[0], entry.regla);
   }
   try { return one(w); } catch (e) {
+    if (entry.regla === 'NO_ADITIVO' && e.kind === 'NO_DISPONIBLE' && (w.until - w.since) > 30 * 86400) {
+      // Límite de la API: máx. 30 días. El alcance único NO se suma por tramos ni se estima.
+      var ref = null;
+      try { var rr = one({ since: w.since, until: w.since + 30 * 86400 }); if (rr.ok) ref = rr.value; } catch (e3) { /* sin referencia */ }
+      return { ok: false, detail: 'Límite de la API: máx. 30 días entre since y until y el mes tiene más. No se suma ni se estima.' +
+        (ref !== null ? ' Referencia días 1-30 (NO es el mes completo): ' + ref : '') };
+    }
     if (e.kind === 'TRANSITORIO' || e.kind === 'PERMISO' || entry.regla !== 'SUMA') throw e;
     var total = 0, chunks = chunkWindow_(w, 30);
     for (var i = 0; i < chunks.length; i++) {
