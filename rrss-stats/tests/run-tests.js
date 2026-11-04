@@ -177,10 +177,11 @@ console.log('\n[Correcciones tras prueba real] alcance >30 días, cierre de segu
     if (m === 'reach' && until - since > 2592000) return { code: 400, body: { error: { code: 100, message: '(#100) There cannot be more than 30 days (2592000 s) between since and until.' } } };
     return { code: 200, body: { data: [{ name: m, total_value: { value: 777 } }] } };
   }
-  test('alcance de IG en mes de 31 días: NO DISPONIBLE, sin valor, con referencia 1-30 solo en el detalle', () => {
+  test('alcance de IG en mes de 31 días: una sola ventana días 1-30, rotulada, sin sumar tramos', () => {
     const env = makeEnv({ responder: apiReach });
     const r = run(env, `(function(){var c=catalogByKey_('ig_reach');return resultFrom_('ig_reach', fetchInsight_('x/insights', c, monthWindow_('2026-10', false), getToken_(), {metric_type:'total_value',period:'day'}));})()`);
-    assert.strictEqual(r.status, 'NO DISPONIBLE'); assert.strictEqual(r.value, null); assert(/Referencia días 1-30/.test(r.detail) && /777/.test(r.detail)); });
+    assert.strictEqual(r.status, 'OK'); assert.strictEqual(r.value, 777); assert(/Ventana días 1-30/.test(r.detail));
+    const calls = env.fetchLog.map(c => c.url).filter(u => /metric=reach/.test(u)); assert.strictEqual(calls.length, 2, 'intento completo + una ventana de 30 días (nunca tramos sumados)'); });
   test('alcance de IG en mes de 30 días sí se consulta completo', () => {
     const env = makeEnv({ responder: apiReach });
     const r = run(env, `(function(){var c=catalogByKey_('ig_reach');return resultFrom_('ig_reach', fetchInsight_('x/insights', c, monthWindow_('2026-09', false), getToken_(), {metric_type:'total_value',period:'day'}));})()`);
@@ -220,6 +221,41 @@ console.log('\n[MANUALES] carga asistida por hoja');
   test('un valor no numérico queda con ERROR en la hoja y no rompe el resto', () => {
     const env = setupM(); const m = env.sheets.MANUALES, h = m.grid[0]; m.grid[1][h.indexOf('Valor')] = 'abc';
     run(env, 'aplicarManuales()'); assert(/^ERROR/.test(m.grid[1][h.indexOf('Estado')])); assert(/APLICADO/.test(m.grid[4][h.indexOf('Estado')])); });
+}
+
+console.log('\n[Automático] saldos diarios y cierre de seguidores');
+{
+  test('addDays cruza mes y año', () => { const env = makeEnv(); assert.strictEqual(run(env, "addDays_('2026-10-31', 1)"), '2026-11-01'); assert.strictEqual(run(env, "addDays_('2026-01-01', -1)"), '2025-12-31'); });
+  test('snapshot diario: guarda, lee y repetir el mismo día no duplica', () => {
+    const env = makeEnv(); run(env, 'setupSheets()');
+    run(env, "upsertSnapshot_('A','Instagram','2026-11-01',138000,'x')"); run(env, "upsertSnapshot_('A','Instagram','2026-11-01',138005,'y')");
+    assert.strictEqual(env.sheets.SALDOS_SEGUIDORES.getLastRow(), 2); assert.strictEqual(run(env, "readSnapshot_('A','Instagram','2026-11-01')"), 138005); assert.strictEqual(run(env, "readSnapshot_('A','Instagram','2026-11-02')"), null); });
+  function apiSeries(url) {
+    if (/follower_count/.test(url)) return { code: 200, body: { data: [{ values: [
+      { value: 3, end_time: '2026-11-01T08:00:00+0000' }, { value: 5, end_time: '2026-11-02T08:00:00+0000' }, { value: -2, end_time: '2026-11-03T08:00:00+0000' }, { value: 1, end_time: '2026-11-04T08:00:00+0000' }] }] } };
+    if (/\/17841\?/.test(url)) return { code: 200, body: { followers_count: 1000 } };
+    return { code: 200, body: { data: [] } }; }
+  test('cierre derivado de IG: followers_count actual menos cambios netos posteriores', () => {
+    const env = makeEnv({ responder: apiSeries }); run(env, 'setupSheets()');
+    const r = run(env, `resolveClosingFollowers_({marca:'A',plat:'Instagram',id:'17841'}, '2026-10', new Date('2026-11-04T12:00:00Z'))`);
+    // etiquetas 01,02,03-nov (hasta ayer; la del 31-oct es el cierre y se excluye): 5-2+1 = 4  => 1000-4 = 996
+    assert.strictEqual(r.status, 'OK'); assert.strictEqual(r.value, 996); assert(/DERIVADO/.test(r.detail)); });
+  test('si existe snapshot del día 1 siguiente se usa ese (sin llamar a la API)', () => {
+    const env = makeEnv({ responder: apiSeries }); run(env, 'setupSheets()'); run(env, "upsertSnapshot_('A','Instagram','2026-11-01',137999,'x')");
+    const r = run(env, `resolveClosingFollowers_({marca:'A',plat:'Instagram',id:'17841'}, '2026-10', new Date('2026-11-04T12:00:00Z'))`);
+    assert.strictEqual(r.value, 137999); assert(/Snapshot/.test(r.detail)); assert.strictEqual(env.fetchLog.length, 0); });
+  test('cierre fuera de la ventana de 30 días y sin snapshot => NO DISPONIBLE (no se inventa)', () => {
+    const env = makeEnv({ responder: apiSeries }); run(env, 'setupSheets()');
+    const r = run(env, `resolveClosingFollowers_({marca:'A',plat:'Instagram',id:'17841'}, '2026-08', new Date('2026-11-04T12:00:00Z'))`);
+    assert.strictEqual(r.status, 'NO DISPONIBLE'); assert.strictEqual(r.value, null); });
+  test('la extracción de un mes cerrado trae el cierre de seguidores sin intervención manual', () => {
+    const env = makeEnv({ responder: (u) => /metric=/.test(u) && !/follower_count/.test(u) ? { code: 200, body: { data: [{ name: 'x', total_value: { value: 10 } }] } } : apiSeries(u) });
+    run(env, 'setupSheets()'); const g = env.sheets;
+    g.CONFIG.grid = [['CONFIGURACIÓN DE CUENTAS', 'Cliente', 'Plataforma', 'ID Meta', 'Usuario', 'Activo', 'Origen histórico', 'Conexión API', 'Última extracción'], [1, 'A', 'Instagram', '17841', '', 'Sí', 'x', 'PENDIENTE', '']];
+    env.ss.insertSheet('RESUMEN').grid = [['Marca', 'Plataforma', 'Mes', 'Vistas', 'Estado', 'Fuente']];
+    env.ss.insertSheet('DASHBOARD').grid = [['x'], [''], ['Marca'], ['INDICADORES']];
+    run(env, "runForAll_(function(){return ['2026-10'];}, 'CIERRE')");
+    const h = g.REGISTROS.grid[0], row = g.REGISTROS.grid.find(r => r[5] === 'Seguidores cierre'); assert(row, 'fila de seguidores cierre'); assert.strictEqual(row[h.indexOf('Estado dato')], 'OK'); });
 }
 
 console.log(`\nResultado: ${pass} OK, ${fail} fallos`); if (fail) { console.log(failures.join('\n')); process.exit(1); }

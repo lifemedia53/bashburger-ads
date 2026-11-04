@@ -34,6 +34,12 @@ function runAccount_(account, ym, mode, now) {
   var ctx0 = { periodState: partial ? LM.PERIOD_STATES.PARTIAL : LM.PERIOD_STATES.EXTRACTED, nowIso: nowIso, now: now };
   var results = (account.plat === 'Instagram' ? extractInstagram_(account, ym, now) : extractFacebook_(account, ym, now))
     .concat(extractAds_(account, ym, now));
+  if (ym !== currentMonth_(now)) results.push(resolveClosingFollowers_(account, ym, now));
+  if (partial) {
+    results.forEach(function (r) {
+      if ((r.key === 'ig_followers_now' || r.key === 'fb_followers_now') && (r.status === LM.DATA.OK || r.status === LM.DATA.ZERO)) upsertSnapshot_(account.marca, account.plat, todayStr_(now), r.value, nowIso);
+    });
+  }
   var recs = toRecords_(account, ym, results, ctx0), ex = readExisting_(), plan = planUpsert_(ex.rows, recs);
   applyPlan_(ex, plan);
   plan.conflicts.forEach(function (c) {

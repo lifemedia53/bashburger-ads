@@ -23,7 +23,7 @@ function parseInsightValue_(item, regla) {
 
 function resultFrom_(key, parsed) {
   if (!parsed.ok) return { key: key, status: LM.DATA.NA, value: null, detail: parsed.detail };
-  return { key: key, status: parsed.value === 0 ? LM.DATA.ZERO : LM.DATA.OK, value: parsed.value, detail: '' };
+  return { key: key, status: parsed.value === 0 ? LM.DATA.ZERO : LM.DATA.OK, value: parsed.value, detail: parsed.note || '' };
 }
 function failureFrom_(key, e) {
   var st = e.kind === 'NO_DISPONIBLE' ? LM.DATA.NA : LM.DATA.ERROR;
@@ -40,11 +40,11 @@ function fetchInsight_(path, entry, w, token, baseParams) {
   }
   try { return one(w); } catch (e) {
     if (entry.regla === 'NO_ADITIVO' && e.kind === 'NO_DISPONIBLE' && (w.until - w.since) > 30 * 86400) {
-      // Límite de la API: máx. 30 días. El alcance único NO se suma por tramos ni se estima.
-      var ref = null;
-      try { var rr = one({ since: w.since, until: w.since + 30 * 86400 }); if (rr.ok) ref = rr.value; } catch (e3) { /* sin referencia */ }
-      return { ok: false, detail: 'Límite de la API: máx. 30 días entre since y until y el mes tiene más. No se suma ni se estima.' +
-        (ref !== null ? ' Referencia días 1-30 (NO es el mes completo): ' + ref : '') };
+      // Límite de la API: máx. 30 días. NO se suma por tramos ni se estima: se consulta UNA ventana de 30 días (días 1-30) y se rotula.
+      var rr = null;
+      try { rr = one({ since: w.since, until: w.since + 30 * 86400 }); } catch (e3) { rr = null; }
+      if (rr && rr.ok) return { ok: true, value: rr.value, note: 'Ventana días 1-30 (límite API de 30 días); el mes tiene 31 días. No es el mes completo.' };
+      return { ok: false, detail: 'Límite de la API: máx. 30 días entre since y until y el mes tiene más; la ventana de 30 días también falló.' };
     }
     if (e.kind === 'TRANSITORIO' || e.kind === 'PERMISO' || entry.regla !== 'SUMA') throw e;
     var total = 0, chunks = chunkWindow_(w, 30);
@@ -194,4 +194,31 @@ function bestContent_(rows) {
   if (!pool.length) return null;
   pool = pool.slice().sort(function (a, b) { return b[key] - a[key]; });
   return { row: pool[0], criterio: key };
+}
+
+/** Cierre de seguidores de un mes terminado, 100% automático: 1) snapshot diario del día 1 siguiente; 2) derivado de cambios netos. */
+function resolveClosingFollowers_(account, ym, now) {
+  var key = account.plat === 'Instagram' ? 'ig_followers_closing' : 'fb_followers_closing', closing = monthInfo_(ym).last;
+  try {
+    var next = addDays_(closing, 1), snap = readSnapshot_(account.marca, account.plat, next);
+    if (snap !== null) return { key: key, status: snap === 0 ? LM.DATA.ZERO : LM.DATA.OK, value: snap, detail: 'Snapshot diario del ' + next + ' (≈ cierre; hasta ~6 h después)' };
+    var today = todayStr_(now), through = addDays_(today, -1);
+    if (daysBetween_(closing, today) > 28) return { key: key, status: LM.DATA.NA, value: null, detail: 'Cierre fuera de la ventana de 30 días de Meta y sin snapshot guardado' };
+    var token = getToken_(account.marca), tk = account.plat === 'Facebook' ? pageToken_(account.id, token) : token;
+    var cur = toNumber_(metaGet_(account.id, { fields: 'followers_count' }, tk).followers_count);
+    if (cur === null) return { key: key, status: LM.DATA.NA, value: null, detail: 'followers_count ausente' };
+    var since = localMidnightEpoch_(next), until = Math.floor((now || new Date()).getTime() / 1000), net = {};
+    function addSeries(metric, sign) {
+      var res = metaGet_(account.id + '/insights', { metric: metric, period: 'day', since: since, until: until }, tk);
+      (((res.data || [])[0] || {}).values || []).forEach(function (v) {
+        var n = toNumber_(v.value); if (n === null || !v.end_time) return;
+        var day = addDays_(String(v.end_time).slice(0, 10), -1); net[day] = (net[day] || 0) + sign * n;
+      });
+    }
+    if (account.plat === 'Instagram') addSeries('follower_count', 1);
+    else { addSeries('page_daily_follows_unique', 1); addSeries('page_daily_unfollows_unique', -1); }
+    var r = deriveClosingFollowers_(cur, net, closing, through);
+    if (!r.ok) return { key: key, status: LM.DATA.NA, value: null, detail: r.detail };
+    return { key: key, status: LM.DATA.OK, value: r.value, detail: 'DERIVADO: followers_count actual (' + cur + ') menos el cambio neto diario posterior al cierre; error posible de ±1 día de cambio neto por el corte horario de Meta' };
+  } catch (e) { return failureFrom_(key, e); }
 }

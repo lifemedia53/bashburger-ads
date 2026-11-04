@@ -29,6 +29,7 @@ function toRecords_(account, ym, results, ctx) {
       var fuente = c.concepto === 'ADS' ? 'Marketing API /insights (' + c.api + ')'
         : (account.plat === 'Instagram' ? 'Instagram Graph API /insights (' + c.api + ')' : 'Facebook Page Insights (' + c.api + ')');
       var obs = c.concepto === 'ADS' ? 'Solo anuncios. Concepto distinto al total; no mezclar con orgánico.' : '';
+      if (/Ventana días 1-30/.test(r.detail || '')) obs = (obs ? obs + ' ' : '') + 'ALCANCE DE 30 DE 31 DÍAS (límite de la API); mismo criterio todos los meses de 31 días.';
       if (c.regla === 'NO_ADITIVO') obs = (obs ? obs + ' ' : '') + 'No aditivo: consultado sobre el período completo, no suma de días.';
       push(c.metrica, r.value, r.status, c.regla === 'SUMA' ? 'aditivo' : 'no aditivo', fuente, obs, r.detail);
     } else if (r.key === 'ig_followers_now' || r.key === 'fb_followers_now') {
