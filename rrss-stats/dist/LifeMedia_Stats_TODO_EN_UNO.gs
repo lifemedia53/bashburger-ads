@@ -53,6 +53,10 @@ var CATALOG = [
   { key: 'ig_engaged', plat: 'Instagram', metrica: 'Cuentas involucradas', api: 'accounts_engaged', regla: 'NO_ADITIVO', concepto: 'TOTAL', verificada: false },
   { key: 'ig_profile_views', plat: 'Instagram', metrica: 'Visitas al perfil', api: 'profile_views', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'ig_link_taps', plat: 'Instagram', metrica: 'Toques en enlaces del perfil (API)', api: 'profile_links_taps', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
+  { key: 'ig_new_follows', plat: 'Instagram', metrica: 'Nuevos seguidores', api: 'follows_and_unfollows', breakdown: 'follow_type', pick: 'FOLLOWER', regla: 'SUMA', concepto: 'TOTAL', verificada: false,
+    nota: 'Mapeo FOLLOWER=nuevos inferido (557 en días 1-30 vs 572 en Business Suite mes completo); validar.' },
+  { key: 'ig_unfollows', plat: 'Instagram', metrica: 'Bajas', api: 'follows_and_unfollows', breakdown: 'follow_type', pick: 'NON_FOLLOWER', regla: 'SUMA', concepto: 'TOTAL', verificada: false,
+    nota: 'Mapeo NON_FOLLOWER=bajas inferido por magnitud (agosto: 1024 bajas); validar contra seguidores netos.' },
   // ---- Facebook (Graph API /{page-id}/insights) ----
   { key: 'fb_views', plat: 'Facebook', metrica: 'Vistas', api: 'page_media_view', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'fb_reach', plat: 'Facebook', metrica: 'Alcance', api: 'page_total_media_view_unique', regla: 'NO_ADITIVO', concepto: 'TOTAL', verificada: false },
@@ -62,6 +66,7 @@ var CATALOG = [
   { key: 'fb_unfollows', plat: 'Facebook', metrica: 'Bajas', api: 'page_daily_unfollows_unique', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   // ---- Publicidad (Marketing API /act_{id}/insights, SOLO lectura; concepto distinto) ----
   { key: 'ads_impressions', plat: '*', metrica: 'Vistas Ads', api: 'impressions', regla: 'SUMA', concepto: 'ADS', verificada: false },
+  { key: 'ads_link_clicks', plat: '*', metrica: 'Clics en enlaces Ads', api: 'inline_link_clicks', regla: 'SUMA', concepto: 'ADS', verificada: false },
   { key: 'ads_reach', plat: '*', metrica: 'Alcance Ads', api: 'reach', regla: 'NO_ADITIVO', concepto: 'ADS', verificada: false }
 ];
 
@@ -252,8 +257,13 @@ function pageToken_(pageId, token) {
  */
 
 /** Extrae el valor numérico de una respuesta de insights (total_value o serie de valores). */
-function parseInsightValue_(item, regla) {
+function parseInsightValue_(item, regla, pick) {
   if (!item) return { ok: false, detail: 'La API no devolvió la métrica' };
+  if (pick) {
+    var br = item.total_value && item.total_value.breakdowns && item.total_value.breakdowns[0], hit = null;
+    ((br && br.results) || []).forEach(function (x) { if ((x.dimension_values || [])[0] === pick) hit = toNumber_(x.value); });
+    return hit === null ? { ok: false, detail: 'Sin resultado para ' + pick + ' en el desglose' } : { ok: true, value: hit };
+  }
   if (item.total_value && item.total_value.value !== undefined) {
     var n = toNumber_(item.total_value.value);
     return n === null ? { ok: false, detail: 'total_value no numérico' } : { ok: true, value: n };
@@ -282,8 +292,9 @@ function fetchInsight_(path, entry, w, token, baseParams) {
   function one(win) {
     var p = {}; Object.keys(baseParams).forEach(function (k) { p[k] = baseParams[k]; });
     p.metric = entry.api; p.since = win.since; p.until = win.until;
+    if (entry.breakdown) p.breakdown = entry.breakdown;
     var res = metaGet_(path, p, token);
-    return parseInsightValue_((res.data || [])[0], entry.regla);
+    return parseInsightValue_((res.data || [])[0], entry.regla, entry.pick);
   }
   try { return one(w); } catch (e) {
     if (entry.regla === 'NO_ADITIVO' && e.kind === 'NO_DISPONIBLE' && (w.until - w.since) > 30 * 86400) {
@@ -385,7 +396,7 @@ function extractAds_(account, ym, now) {
   var token = getToken_(account.marca), w = monthWindow_(ym, true, now), out = [];
   var acct = 'act_' + String(account.adAccount).replace(/^act_/, '');
   try {
-    var rows = metaGetAll_(acct + '/insights', { fields: 'impressions,reach', breakdowns: 'publisher_platform', level: 'account',
+    var rows = metaGetAll_(acct + '/insights', { fields: 'impressions,reach,inline_link_clicks', breakdowns: 'publisher_platform', level: 'account',
       time_range: JSON.stringify({ since: w.sinceStr, until: w.untilStr }) }, token, 5);
     var want = account.plat === 'Instagram' ? 'instagram' : 'facebook';
     var row = rows.filter(function (r) { return r.publisher_platform === want; })[0];
@@ -502,6 +513,7 @@ function toRecords_(account, ym, results, ctx) {
       var fuente = c.concepto === 'ADS' ? 'Marketing API /insights (' + c.api + ')'
         : (account.plat === 'Instagram' ? 'Instagram Graph API /insights (' + c.api + ')' : 'Facebook Page Insights (' + c.api + ')');
       var obs = c.concepto === 'ADS' ? 'Solo anuncios. Concepto distinto al total; no mezclar con orgánico.' : '';
+      if (c.nota) obs = (obs ? obs + ' ' : '') + c.nota;
       if (/Ventana días 1-30/.test(r.detail || '')) obs = (obs ? obs + ' ' : '') + 'ALCANCE DE 30 DE 31 DÍAS (límite de la API); mismo criterio todos los meses de 31 días.';
       if (c.regla === 'NO_ADITIVO') obs = (obs ? obs + ' ' : '') + 'No aditivo: consultado sobre el período completo, no suma de días.';
       push(c.metrica, r.value, r.status, c.regla === 'SUMA' ? 'aditivo' : 'no aditivo', fuente, obs, r.detail);
