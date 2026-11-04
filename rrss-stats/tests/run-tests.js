@@ -153,7 +153,7 @@ console.log('\n[Integración simulada] hojas en memoria, API simulada');
     run(env, `runForAll_(function(){return ['2026-10'];}, 'CIERRE')`);
     const n = run(env, `validateMonth("Tony's Pasta",'Instagram','2026-10')`); assert(n > 0);
     const res = env.sheets.RESUMEN.grid, h = res[0], oct = res.find(r => r[2] === '2026-10'); assert(oct, 'fila de octubre en RESUMEN'); assert.strictEqual(oct[h.indexOf('Vistas')], 5000); assert.strictEqual(oct[h.indexOf('Visitas al perfil')], '', 'sin dato queda vacío, no 0'); assert.strictEqual(oct[h.indexOf('Estado')], 'VALIDADO');
-    const d = env.sheets.DASHBOARD.grid; assert.strictEqual(d[4][1], 5000); assert.strictEqual(d[4][2], 4000); assert.strictEqual(d[4][3], 0.25); assert.strictEqual(env.sheets.DASHBOARD.formulas['5,6'], '=IFERROR(B5-C5)', 'variación abs. como fórmula sin separadores');
+    const d = env.sheets.DASHBOARD.grid; assert.strictEqual(d[4][1], 5000); assert.strictEqual(d[4][2], 4000); assert.strictEqual(d[4][3], 0.25); assert.strictEqual(env.sheets.DASHBOARD.formulas['5,6'], '=IF(OR(B5="",C5=""),"",B5-C5)', 'variación abs. vacía si falta un dato');
     assert.strictEqual(d[7][1], 'S/D', 'visitas al perfil sin dato => S/D en dashboard');
     // una nueva extracción NO modifica lo validado
     run(env, `runForAll_(function(){return ['2026-10'];}, 'CIERRE')`);
@@ -367,8 +367,19 @@ console.log('\n[DASHBOARD] vacío no es cero y fórmula sin separadores');
     const env = makeEnv(); run(env, 'setupSheets()'); const d = env.ss.insertSheet('DASHBOARD');
     d.grid = [['x'], [''], ['Marca'], ['INDICADORES'], ['Vistas'], ['NOTA', 'texto']]; d.formulas['5,2'] = F(';'); d.formulas['5,3'] = F(';'); d.formulas['5,6'] = '=IF(AND(ISNUMBER(B5);ISNUMBER(C5));B5-C5;"S/D")';
     const out = run(env, 'repararDashboard()'); assert(/ajustadas: 2/.test(out), out);
-    assert(d.formulas['5,2'].includes(';"<>")')); assert(d.formulas['5,3'].includes(';"<>")')); assert.strictEqual(d.formulas['5,6'], '=IFERROR(B5-C5)'); assert.strictEqual(d.formulas['6,2'], undefined);
+    assert(d.formulas['5,2'].includes(';"<>")')); assert(d.formulas['5,3'].includes(';"<>")')); assert.strictEqual(d.formulas['5,6'], '=IF(OR(B5="";C5="");"";B5-C5)', 'usa el separador de la fórmula de la fila (;)'); assert.strictEqual(d.formulas['6,2'], undefined);
     run(env, 'repararDashboard()'); assert.strictEqual((d.formulas['5,2'].match(/"<>"/g) || []).length, 1, 'idempotente'); });
+}
+
+console.log('\n[Activadores]');
+{
+  test('setupTriggers crea los 3 activadores, es idempotente (no duplica) y deja registro en CONTROL', () => {
+    const env = makeEnv(); run(env, 'setupSheets()'); run(env, 'setupTriggers()'); run(env, 'setupTriggers()');
+    assert.deepStrictEqual(env.triggers.map(t => t.h).sort(), ['retryFailed', 'runDaily', 'runMonthlyClose']);
+    const daily = env.triggers.find(t => t.h === 'runDaily').cfg.join(' '); assert(/everyDays\(1\)/.test(daily) && /atHour\(6\)/.test(daily) && /America\/Santiago/.test(daily));
+    const mon = env.triggers.find(t => t.h === 'runMonthlyClose').cfg.join(' '); assert(/onMonthDay\(2\)/.test(mon) && /atHour\(7\)/.test(mon));
+    assert(env.sheets.CONTROL.grid.flat().includes('ACTIVADORES')); });
+  test('absFormula_: vacía si falta un dato; separador ; o ,', () => { const env = makeEnv(); assert.strictEqual(run(env, "absFormula_(7, ';')"), '=IF(OR(B7="";C7="");"";B7-C7)'); assert.strictEqual(run(env, "sepOf_('=SUMIFS(a,b)')"), ','); });
 }
 
 console.log(`\nResultado: ${pass} OK, ${fail} fallos`); if (fail) { console.log(failures.join('\n')); process.exit(1); }
