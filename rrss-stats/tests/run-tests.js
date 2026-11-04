@@ -153,7 +153,7 @@ console.log('\n[Integración simulada] hojas en memoria, API simulada');
     run(env, `runForAll_(function(){return ['2026-10'];}, 'CIERRE')`);
     const n = run(env, `validateMonth("Tony's Pasta",'Instagram','2026-10')`); assert(n > 0);
     const res = env.sheets.RESUMEN.grid, h = res[0], oct = res.find(r => r[2] === '2026-10'); assert(oct, 'fila de octubre en RESUMEN'); assert.strictEqual(oct[h.indexOf('Vistas')], 5000); assert.strictEqual(oct[h.indexOf('Visitas al perfil')], '', 'sin dato queda vacío, no 0'); assert.strictEqual(oct[h.indexOf('Estado')], 'VALIDADO');
-    const d = env.sheets.DASHBOARD.grid; assert.strictEqual(d[4][1], 5000); assert.strictEqual(d[4][2], 4000); assert.strictEqual(d[4][3], 0.25); assert.strictEqual(d[4][5], 1000);
+    const d = env.sheets.DASHBOARD.grid; assert.strictEqual(d[4][1], 5000); assert.strictEqual(d[4][2], 4000); assert.strictEqual(d[4][3], 0.25); assert.strictEqual(env.sheets.DASHBOARD.formulas['5,6'], '=IF(AND(ISNUMBER(B5),ISNUMBER(C5)),B5-C5,"S/D")', 'variación abs. como fórmula');
     assert.strictEqual(d[7][1], 'S/D', 'visitas al perfil sin dato => S/D en dashboard');
     // una nueva extracción NO modifica lo validado
     run(env, `runForAll_(function(){return ['2026-10'];}, 'CIERRE')`);

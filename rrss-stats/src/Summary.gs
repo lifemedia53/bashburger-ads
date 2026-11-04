@@ -86,7 +86,9 @@ function updateDashboard_(marca, plat, mes) {
     var r = head + 1 + i, label = sh.getRange(r, 1).getValue();
     if (label !== v.label) return; // la fila no es la esperada: no se escribe
     safeSet_(sh, 'B' + r, v.valor, formulas); safeSet_(sh, 'C' + r, v.anterior, formulas);
-    safeSet_(sh, 'D' + r, v.pct, formulas); safeSet_(sh, 'E' + r, v.estado, formulas); safeSet_(sh, 'F' + r, v.abs, formulas);
+    safeSet_(sh, 'D' + r, v.pct, formulas); safeSet_(sh, 'E' + r, v.estado, formulas);
+    // Variación absoluta como FÓRMULA: se recalcula sola cuando se cambia el mes (D3), igual que el resto del dashboard.
+    sh.getRange(r, 6).setFormula('=IF(AND(ISNUMBER(B' + r + '),ISNUMBER(C' + r + ')),B' + r + '-C' + r + ',"S/D")');
   });
   return formulas;
 }

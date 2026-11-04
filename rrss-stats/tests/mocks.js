@@ -20,6 +20,7 @@ class Range {
   getValue() { return this.getValues()[0][0]; }
   setValue(x) { this.sh._set(this.r, this.c, this.sh._coerce(this.r, this.c, x)); return this; }
   setNumberFormat(f) { for (let i = 0; i < this.nr; i++) for (let j = 0; j < this.nc; j++) this.sh.fmt[(this.r + i) + ',' + (this.c + j)] = f; return this; }
+  setFormula(f) { this.sh.formulas[this.r + ',' + this.c] = f; return this; }
   getFormula() { return this.sh.formulas[this.r + ',' + this.c] || ''; }
 }
 class Sheet {
