@@ -304,4 +304,18 @@ console.log('\n[Hallazgos 2] desglose follow_type y clics de anuncios');
     assert(/Solo anuncios/.test(recs.find(x => x.metrica === 'Clics en enlaces Ads').obs)); });
 }
 
+console.log('\n[Varios meses]');
+{
+  test('runPilotTonysSeptiembreYOctubre2026 extrae ambos meses sin duplicar y septiembre trae alcance completo (30 días)', () => {
+    const env = makeEnv({ responder: (u) => { const m = (u.match(/metric=([a-z_]+)/) || [])[1]; return m ? { code: 200, body: { data: [{ name: m, total_value: { value: 10 } }] } } : { code: 200, body: { data: [] } }; } });
+    run(env, 'setupSheets()');
+    env.sheets.CONFIG.grid = [['CONFIGURACIÓN DE CUENTAS', 'Cliente', 'Plataforma', 'ID Meta', 'Usuario', 'Activo', 'Origen histórico', 'Conexión API', 'Última extracción'], [1, "Tony's Pasta", 'Instagram', '17841', '', 'Sí', 'x', 'PENDIENTE', '']];
+    env.ss.insertSheet('RESUMEN').grid = [['Marca', 'Plataforma', 'Mes', 'Vistas', 'Estado', 'Fuente']]; env.ss.insertSheet('DASHBOARD').grid = [['x'], [''], ['Marca'], ['INDICADORES']];
+    run(env, 'setupSheets()'); run(env, 'runPilotTonysSeptiembreYOctubre2026()'); const n = env.sheets.REGISTROS.getLastRow(); run(env, 'runPilotTonysSeptiembreYOctubre2026()');
+    assert.strictEqual(env.sheets.REGISTROS.getLastRow(), n, 'idempotente');
+    const g = env.sheets.REGISTROS.grid, h = g[0], rows = g.slice(1), meses = new Set(rows.map(r => r[h.indexOf('Mes')])); assert(meses.has('2026-09') && meses.has('2026-10'));
+    const al = m => rows.find(r => r[h.indexOf('Mes')] === m && r[h.indexOf('Métrica')] === 'Alcance');
+    assert(!/30 DE 31/.test(al('2026-09')[h.indexOf('Observaciones')]), 'septiembre: alcance completo'); assert.strictEqual(al('2026-09')[h.indexOf('Estado dato')], 'OK'); });
+}
+
 console.log(`\nResultado: ${pass} OK, ${fail} fallos`); if (fail) { console.log(failures.join('\n')); process.exit(1); }
