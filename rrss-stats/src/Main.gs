@@ -110,6 +110,17 @@ function runMonth(ym, marca) {
   return lock_(function () { return runForAll_(function () { return [ym]; }, 'CIERRE', marca); });
 }
 
+/** Extracción de varios meses de una marca de una sola vez (cierre: mes completo, estado EXTRAÍDO). */
+function runMonths(months, marca) {
+  return lock_(function () { return runForAll_(function () { return months; }, 'CIERRE', marca); });
+}
+
+/** Septiembre + octubre 2026 de Tony's Pasta (con respaldo previo). Septiembre no tenía datos de API. */
+function runPilotTonysSeptiembreYOctubre2026() {
+  backupSpreadsheet_();
+  return runMonths(['2026-09', '2026-10'], "Tony's Pasta");
+}
+
 /** Primera extracción real: Tony's Pasta, octubre 2026. No toca RESUMEN/DASHBOARD hasta validar. */
 function runPilotTonysOctubre2026() {
   backupSpreadsheet_();
