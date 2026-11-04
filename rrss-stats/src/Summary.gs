@@ -88,8 +88,7 @@ function updateDashboard_(marca, plat, mes) {
     safeSet_(sh, 'B' + r, v.valor, formulas); safeSet_(sh, 'C' + r, v.anterior, formulas);
     safeSet_(sh, 'D' + r, v.pct, formulas); safeSet_(sh, 'E' + r, v.estado, formulas);
     // Variación absoluta como FÓRMULA: se recalcula sola cuando se cambia el mes (D3), igual que el resto del dashboard.
-    // Sin separadores de argumentos: funciona igual en cualquier configuración regional (es-CL usa ';', en-US usa ',').
-    sh.getRange(r, 6).setFormula('=IFERROR(B' + r + '-C' + r + ')');
+    sh.getRange(r, 6).setFormula(absFormula_(r, sepOf_(sh.getRange(r, 2).getFormula())));
   });
   return formulas;
 }
@@ -151,9 +150,14 @@ function repararDashboard() {
         var cell = sh.getRange(r, c), f = cell.getFormula(), nf = dashFixBlank_(f);
         if (nf) { cell.setFormula(nf); fixed++; }
       });
-      sh.getRange(r, 6).setFormula('=IFERROR(B' + r + '-C' + r + ')'); abs++;
+      sh.getRange(r, 6).setFormula(absFormula_(r, sepOf_(bf))); abs++;
     }
     logControl_('', '', '', 'REPARACIÓN', 'DASHBOARD: respaldo ' + backup + '; fórmulas B/C ajustadas: ' + fixed + '; variación abs.: ' + abs, 'repararDashboard', 'INFO');
     return 'Respaldo: ' + backup + ' | fórmulas ajustadas: ' + fixed + ' | variación abs.: ' + abs;
   });
 }
+
+/** Separador de argumentos que usa una fórmula existente (es-CL ';' / en-US ','). */
+function sepOf_(f) { return String(f || '').indexOf(';') >= 0 ? ';' : ','; }
+/** Variación absoluta: vacía si falta el valor o el mes anterior (en Sheets "" valdría 0 en una resta). */
+function absFormula_(r, sep) { return '=IF(OR(B' + r + '=""' + sep + 'C' + r + '="")' + sep + '""' + sep + 'B' + r + '-C' + r + ')'; }

@@ -43,7 +43,7 @@ class Sheet {
   }
 }
 function makeEnv(opts = {}) {
-  const sheets = {}, env = { sheets, fetchLog: [], props: Object.assign({ META_ACCESS_TOKEN: 'EAAFAKETOKEN0123456789ABCDEFGHIJ' }, opts.props || {}), sleeps: [], responder: opts.responder || (() => ({ code: 200, body: { data: [] } })) };
+  const sheets = {}, env = { sheets, fetchLog: [], props: Object.assign({ META_ACCESS_TOKEN: 'EAAFAKETOKEN0123456789ABCDEFGHIJ' }, opts.props || {}), sleeps: [], triggers: [], responder: opts.responder || (() => ({ code: 200, body: { data: [] } })) };
   SHEET_TZ = opts.sheetTz || { name: 'America/Santiago', off: '-03:00' };
   const ss = { getSpreadsheetTimeZone: () => SHEET_TZ.name, getSheetByName: n => sheets[n] || null, insertSheet: n => (sheets[n] = new Sheet(n)), getName: () => 'Test', getId: () => 'id' };
   const ctx = {
@@ -52,6 +52,8 @@ function makeEnv(opts = {}) {
     PropertiesService: { getScriptProperties: () => ({ getProperty: k => env.props[k] || null, setProperty: (k, v) => { env.props[k] = v; } }) },
     SpreadsheetApp: { getActiveSpreadsheet: () => ss, openById: () => ss },
     DriveApp: { getFileById: () => ({ makeCopy: () => ({ getId: () => 'copia' }) }) },
+    ScriptApp: { getProjectTriggers: () => env.triggers.map(t => ({ getHandlerFunction: () => t.h, ref: t })), deleteTrigger: (t) => { env.triggers = env.triggers.filter(x => x !== t.ref); },
+      newTrigger: (h) => { const cfg = []; const chain = new Proxy({}, { get: (_, k) => k === 'create' ? () => { env.triggers.push({ h, cfg }); return {}; } : (...a) => { cfg.push(k + '(' + a.join(',') + ')'); return chain; } }); return chain; } },
     LockService: { getScriptLock: () => ({ tryLock: () => true, releaseLock() { } }) },
     UrlFetchApp: { fetch: (url, o) => { env.fetchLog.push({ url, headers: o.headers }); const r = env.responder(url, env.fetchLog.length); return { getResponseCode: () => r.code, getContentText: () => JSON.stringify(r.body) }; } }
   };

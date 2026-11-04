@@ -809,8 +809,7 @@ function updateDashboard_(marca, plat, mes) {
     safeSet_(sh, 'B' + r, v.valor, formulas); safeSet_(sh, 'C' + r, v.anterior, formulas);
     safeSet_(sh, 'D' + r, v.pct, formulas); safeSet_(sh, 'E' + r, v.estado, formulas);
     // Variación absoluta como FÓRMULA: se recalcula sola cuando se cambia el mes (D3), igual que el resto del dashboard.
-    // Sin separadores de argumentos: funciona igual en cualquier configuración regional (es-CL usa ';', en-US usa ',').
-    sh.getRange(r, 6).setFormula('=IFERROR(B' + r + '-C' + r + ')');
+    sh.getRange(r, 6).setFormula(absFormula_(r, sepOf_(sh.getRange(r, 2).getFormula())));
   });
   return formulas;
 }
@@ -872,12 +871,17 @@ function repararDashboard() {
         var cell = sh.getRange(r, c), f = cell.getFormula(), nf = dashFixBlank_(f);
         if (nf) { cell.setFormula(nf); fixed++; }
       });
-      sh.getRange(r, 6).setFormula('=IFERROR(B' + r + '-C' + r + ')'); abs++;
+      sh.getRange(r, 6).setFormula(absFormula_(r, sepOf_(bf))); abs++;
     }
     logControl_('', '', '', 'REPARACIÓN', 'DASHBOARD: respaldo ' + backup + '; fórmulas B/C ajustadas: ' + fixed + '; variación abs.: ' + abs, 'repararDashboard', 'INFO');
     return 'Respaldo: ' + backup + ' | fórmulas ajustadas: ' + fixed + ' | variación abs.: ' + abs;
   });
 }
+
+/** Separador de argumentos que usa una fórmula existente (es-CL ';' / en-US ','). */
+function sepOf_(f) { return String(f || '').indexOf(';') >= 0 ? ';' : ','; }
+/** Variación absoluta: vacía si falta el valor o el mes anterior (en Sheets "" valdría 0 en una resta). */
+function absFormula_(r, sep) { return '=IF(OR(B' + r + '=""' + sep + 'C' + r + '="")' + sep + '""' + sep + 'B' + r + '-C' + r + ')'; }
 
 // ======== Main.gs ========
 /** Puntos de entrada. Ejecutar en este orden la primera vez: setupSheets → diagnose → probeMetrics → runPilotTonysOctubre2026. */
@@ -1214,7 +1218,10 @@ function setupTriggers() {
   ScriptApp.newTrigger('runDaily').timeBased().everyDays(1).atHour(6).inTimezone(LM.TZ).create();
   ScriptApp.newTrigger('runMonthlyClose').timeBased().onMonthDay(2).atHour(7).inTimezone(LM.TZ).create();
   ScriptApp.newTrigger('retryFailed').timeBased().everyHours(6).create();
-  return 'Activadores: diario 06:00, cierre mensual día 2 07:00 (America/Santiago), reintento cada 6 h.';
+  var activos = ScriptApp.getProjectTriggers().map(function (t) { return t.getHandlerFunction(); }).filter(function (h) { return OWN_HANDLERS.indexOf(h) >= 0; });
+  var msg = 'Activadores: diario 06:00, cierre mensual día 2 07:00 (America/Santiago), reintento cada 6 h. Activos: ' + activos.join(', ');
+  logControl_('', '', '', 'ACTIVADORES', msg, 'setupTriggers', 'INFO');
+  return msg;
 }
 
 /** Recuperación: si la última extracción de una cuenta activa tiene >36 h o terminó con error, se reintenta el mes en curso. */
