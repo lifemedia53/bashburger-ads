@@ -88,3 +88,8 @@ function addDays_(ymd, n) {
   var p = ymd.split('-'), d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + n));
   return d.getUTCFullYear() + '-' + pad2_(d.getUTCMonth() + 1) + '-' + pad2_(d.getUTCDate());
 }
+
+/** Google Sheets convierte '2026-10' en fecha: se normaliza SIEMPRE antes de comparar claves. */
+function isDate_(v) { return Object.prototype.toString.call(v) === '[object Date]'; }
+function normMonth_(v) { return isDate_(v) ? Utilities.formatDate(v, LM.TZ, 'yyyy-MM') : String(v == null ? '' : v).trim(); }
+function normDay_(v) { return isDate_(v) ? Utilities.formatDate(v, LM.TZ, 'yyyy-MM-dd') : String(v == null ? '' : v).trim(); }

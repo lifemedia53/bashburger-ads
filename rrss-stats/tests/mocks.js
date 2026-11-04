@@ -16,14 +16,22 @@ function fmt(date, tz, f) {
 class Range {
   constructor(sh, r, c, nr, nc) { Object.assign(this, { sh, r, c, nr, nc }); }
   getValues() { const o = []; for (let i = 0; i < this.nr; i++) { const row = []; for (let j = 0; j < this.nc; j++) { const v = (this.sh.grid[this.r - 1 + i] || [])[this.c - 1 + j]; row.push(v === undefined ? '' : v); } o.push(row); } return o; }
-  setValues(v) { v.forEach((row, i) => row.forEach((x, j) => this.sh._set(this.r + i, this.c + j, x))); }
+  setValues(v) { v.forEach((row, i) => row.forEach((x, j) => this.sh._set(this.r + i, this.c + j, this.sh._coerce(this.r + i, this.c + j, x)))); }
   getValue() { return this.getValues()[0][0]; }
-  setValue(x) { this.sh._set(this.r, this.c, x); return this; }
-  setNumberFormat() { return this; }
+  setValue(x) { this.sh._set(this.r, this.c, this.sh._coerce(this.r, this.c, x)); return this; }
+  setNumberFormat(f) { for (let i = 0; i < this.nr; i++) for (let j = 0; j < this.nc; j++) this.sh.fmt[(this.r + i) + ',' + (this.c + j)] = f; return this; }
   getFormula() { return this.sh.formulas[this.r + ',' + this.c] || ''; }
 }
 class Sheet {
-  constructor(name) { this.name = name; this.grid = []; this.formulas = {}; }
+  constructor(name) { this.name = name; this.grid = []; this.formulas = {}; this.fmt = {}; }
+  _coerce(r, c, x) {
+    if (typeof x === 'string' && this.fmt[r + ',' + c] !== '@') {
+      const m = x.match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/);
+      if (m) return new Date(`${m[1]}-${m[2]}-${m[3] || '01'}T00:00:00-03:00`); // Sheets convierte a fecha
+    }
+    return x;
+  }
+  deleteRow(r) { this.grid.splice(r - 1, 1); }
   _set(r, c, x) { while (this.grid.length < r) this.grid.push([]); const row = this.grid[r - 1]; while (row.length < c) row.push(''); row[c - 1] = x; }
   getLastRow() { let n = 0; this.grid.forEach((r, i) => { if (r.some(v => v !== '')) n = i + 1; }); return n; }
   getLastColumn() { let n = 0; this.grid.forEach(r => { r.forEach((v, j) => { if (v !== '') n = Math.max(n, j + 1); }); }); return n; }

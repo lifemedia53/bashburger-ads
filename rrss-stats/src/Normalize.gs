@@ -55,6 +55,8 @@ function toRecords_(account, ym, results, ctx) {
     ['Alcance orgánico', LM.DATA.NA, 'Sin split orgánico/pago oficial en insights de cuenta; ver Alcance Ads (Marketing API).'],
     ['Mensajes', LM.DATA.PENDING, 'Requiere Messaging API y validar definición vs Business Suite.'],
     ['Contactos iniciados', LM.DATA.PENDING, 'Requiere Messaging API y validar definición vs Business Suite.']];
+  missing.push(['Clics en enlaces', LM.DATA.PENDING, 'Sin métrica de API equivalente verificada a "Clics en el enlace" de Business Suite (profile_links_taps dio 0 vs 638 en octubre).']);
+  if (account.plat === 'Facebook') missing.push(['Interacciones', LM.DATA.PENDING, 'Sin métrica de API equivalente verificada a "Interacciones con el contenido" de Business Suite (page_post_engagements=240 incluye otras acciones; BS mostró 5).']);
   if (account.plat === 'Instagram') {
     missing.push(['Nuevos seguidores', LM.DATA.PENDING, 'Equivalencia API vs Business Suite sin verificar (follows_and_unfollows / follower_count).']);
     missing.push(['Bajas', LM.DATA.PENDING, 'Equivalencia API vs Business Suite sin verificar.']);

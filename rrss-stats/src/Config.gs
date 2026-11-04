@@ -50,11 +50,11 @@ var CATALOG = [
   { key: 'ig_interactions', plat: 'Instagram', metrica: 'Interacciones', api: 'total_interactions', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'ig_engaged', plat: 'Instagram', metrica: 'Cuentas involucradas', api: 'accounts_engaged', regla: 'NO_ADITIVO', concepto: 'TOTAL', verificada: false },
   { key: 'ig_profile_views', plat: 'Instagram', metrica: 'Visitas al perfil', api: 'profile_views', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
-  { key: 'ig_link_taps', plat: 'Instagram', metrica: 'Clics en enlaces', api: 'profile_links_taps', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
+  { key: 'ig_link_taps', plat: 'Instagram', metrica: 'Toques en enlaces del perfil (API)', api: 'profile_links_taps', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   // ---- Facebook (Graph API /{page-id}/insights) ----
   { key: 'fb_views', plat: 'Facebook', metrica: 'Vistas', api: 'page_media_view', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'fb_reach', plat: 'Facebook', metrica: 'Alcance', api: 'page_total_media_view_unique', regla: 'NO_ADITIVO', concepto: 'TOTAL', verificada: false },
-  { key: 'fb_interactions', plat: 'Facebook', metrica: 'Interacciones', api: 'page_post_engagements', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
+  { key: 'fb_interactions', plat: 'Facebook', metrica: 'Acciones en publicaciones (API)', api: 'page_post_engagements', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'fb_profile_views', plat: 'Facebook', metrica: 'Visitas al perfil', api: 'page_views_total', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'fb_new_follows', plat: 'Facebook', metrica: 'Nuevos seguidores', api: 'page_daily_follows_unique', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'fb_unfollows', plat: 'Facebook', metrica: 'Bajas', api: 'page_daily_unfollows_unique', regla: 'SUMA', concepto: 'TOTAL', verificada: false },

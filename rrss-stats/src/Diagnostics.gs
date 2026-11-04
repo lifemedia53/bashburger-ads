@@ -40,23 +40,28 @@ function probeMetrics(marca) {
 }
 
 /**
- * Descubrimiento de equivalencias con Business Suite: consulta varias métricas candidatas del mes y las anota en DISPONIBILIDAD
- * ('valor de prueba=N') para compararlas con lo que muestra Business Suite. Solo lectura.
+ * Descubrimiento de equivalencias con Business Suite (solo lectura). Anota en DISPONIBILIDAD el valor CRUDO de cada candidata
+ * para compararlo con Business Suite. Instagram usa una ventana de 30 días (límite de la API).
  */
 function probeCandidates(marca, ym) {
   var sh = getSheet_(LM.SHEETS.DISPONIBILIDAD, LM.HEADERS.DISPONIBILIDAD), now = new Date(), month = ym || prevMonth_(currentMonth_(now)), w = monthWindow_(month, true, now), rows = [];
-  var cands = { Facebook: ['page_post_engagements', 'page_actions_post_reactions_total', 'page_total_actions', 'page_consumptions_unique',
-      'page_website_clicks_logged_in_unique', 'page_cta_clicks_logged_in_total', 'page_cta_clicks_logged_in_unique', 'page_posts_impressions', 'post_engagements', 'page_follows'],
-    Instagram: ['profile_links_taps', 'website_clicks', 'likes', 'comments', 'shares', 'saves', 'reposts', 'replies', 'follows_and_unfollows', 'total_interactions'] };
+  var cands = {
+    Facebook: [['page_post_engagements', {}], ['page_actions_post_reactions_total', {}], ['page_total_actions', {}], ['page_follows', {}], ['page_daily_follows', {}],
+      ['page_video_views', {}], ['page_posts_impressions_unique', {}], ['page_content_activity', {}], ['page_post_engagements', { period: 'day' }]],
+    Instagram: [['profile_links_taps', { breakdown: 'contact_type' }], ['profile_links_taps', {}], ['follows_and_unfollows', { breakdown: 'follow_type' }], ['follows_and_unfollows', {}],
+      ['likes', {}], ['comments', {}], ['shares', {}], ['saves', {}], ['reposts', {}], ['replies', {}], ['total_interactions', {}], ['views', { breakdown: 'follow_type' }]] };
   readAccounts_().filter(function (a) { return a.authorized && a.activo && (!marca || a.marca === marca); }).forEach(function (a) {
     var token = a.plat === 'Facebook' ? pageToken_(a.id, getToken_(a.marca)) : getToken_(a.marca);
-    (cands[a.plat] || []).forEach(function (m) {
-      var params = a.plat === 'Facebook' ? { period: 'total_over_range' } : { metric_type: 'total_value', period: 'day' }, res;
+    (cands[a.plat] || []).forEach(function (c) {
+      var params = a.plat === 'Facebook' ? { period: 'total_over_range', since: w.since, until: w.until } : { metric_type: 'total_value', period: 'day', since: w.since, until: Math.min(w.until, w.since + 30 * 86400) };
+      Object.keys(c[1]).forEach(function (k) { params[k] = c[1][k]; });
+      params.metric = c[0];
+      var label = 'candidata:' + c[0] + (c[1].breakdown ? '[' + c[1].breakdown + ']' : '') + (c[1].period ? '[' + c[1].period + ']' : '') + (a.plat === 'Instagram' ? ' (días 1-30)' : '');
       try {
-        params.metric = m; params.since = w.since; params.until = w.until;
-        var r = parseInsightValue_((metaGet_(a.id + '/insights', params, token).data || [])[0], 'SUMA');
-        res = r.ok ? 'OK' : 'NO DISPONIBLE'; rows.push([new Date(), a.marca, a.plat, 'candidata:' + m, res, r.ok ? 'valor de prueba=' + r.value : r.detail]);
-      } catch (e) { rows.push([new Date(), a.marca, a.plat, 'candidata:' + m, e.kind === 'NO_DISPONIBLE' ? 'NO DISPONIBLE' : 'ERROR', scrub_(e.message)]); }
+        var item = (metaGet_(a.id + '/insights', params, token).data || [])[0];
+        var raw = item ? (item.total_value ? JSON.stringify(item.total_value) : JSON.stringify(item.values)) : 'sin datos';
+        rows.push([new Date(), a.marca, a.plat, label, item ? 'OK' : 'NO DISPONIBLE', 'crudo=' + String(raw).slice(0, 300)]);
+      } catch (e) { rows.push([new Date(), a.marca, a.plat, label, e.kind === 'NO_DISPONIBLE' ? 'NO DISPONIBLE' : 'ERROR', scrub_(e.message)]); }
     });
   });
   if (rows.length) sh.getRange(sh.getLastRow() + 1, 1, rows.length, 6).setValues(rows);

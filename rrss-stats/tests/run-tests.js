@@ -60,7 +60,7 @@ console.log('\n[Normalize] estados del dato, orgánico vs ads, no aditivos');
       {key:'ig_followers_now',status:'OK',value:137000,detail:''}];
     return toRecords_(acc,'2026-10',res,{periodState:'EXTRAÍDO',nowIso:'2026-11-04T00:00:00-03:00',now:new Date('2026-11-04T12:00:00Z')});})()`;
   const recs = f(build), by = m => recs.find(r => r.metrica === m);
-  test('cero real se guarda como 0 con estado CERO', () => { assert.strictEqual(by('Clics en enlaces').valor, 0); assert.strictEqual(by('Clics en enlaces').estadoDato, 'CERO'); });
+  test('cero real se guarda como 0 con estado CERO', () => { assert.strictEqual(by('Toques en enlaces del perfil (API)').valor, 0); assert.strictEqual(by('Toques en enlaces del perfil (API)').estadoDato, 'CERO'); assert.strictEqual(by('Clics en enlaces').estadoDato, 'PENDIENTE'); });
   test('error y no disponible quedan SIN valor (nunca 0)', () => { assert.strictEqual(by('Visitas al perfil').valor, null); assert.strictEqual(by('Visitas al perfil').estadoDato, 'ERROR'); assert.strictEqual(by('Interacciones').valor, null); assert.strictEqual(by('Interacciones').estadoDato, 'NO DISPONIBLE'); });
   test('orgánico sin equivalente oficial se registra NO DISPONIBLE, no se deduce restando', () => { assert.strictEqual(by('Vistas orgánicas').estadoDato, 'NO DISPONIBLE'); assert.strictEqual(by('Vistas orgánicas').valor, null); assert.strictEqual(by('Vistas').valor, 1000); assert.strictEqual(by('Vistas Ads').valor, 400); });
   test('mensajes y contactos quedan PENDIENTE', () => { assert.strictEqual(by('Mensajes').estadoDato, 'PENDIENTE'); assert.strictEqual(by('Contactos iniciados').estadoDato, 'PENDIENTE'); });
@@ -159,7 +159,7 @@ console.log('\n[Integración simulada] hojas en memoria, API simulada');
     run(env, `runForAll_(function(){return ['2026-10'];}, 'CIERRE')`);
     assert.strictEqual(env.sheets.REGISTROS.grid.filter(r => r[5] === 'Vistas' && r[2] === '2026-10').length, 1); });
   test('dashboard no pisa celdas con fórmula', () => {
-    const env = setup(); run(env, 'setupSheets()'); env.sheets.DASHBOARD.formulas['5,2'] = '=RESUMEN!D2';
+    const env = setup(); run(env, 'setupSheets()'); env.sheets.RESUMEN.grid.push(["Tony's Pasta", 'Instagram', '2026-10', 100, '', '', '', '', '', '', '', '', '', '', '', '', 'VALIDADO', 'x']); env.sheets.DASHBOARD.formulas['5,2'] = '=RESUMEN!D2';
     const f = run(env, `updateDashboard_("Tony's Pasta",'Instagram','2026-10')`); assert(f.includes('B5')); assert.strictEqual(env.sheets.DASHBOARD.grid[4][1] || '', ''); });
   test('el token jamás aparece en hojas ni en CONTROL', () => {
     const env = setup(); run(env, 'setupSheets()'); run(env, `runForAll_(function(){return ['2026-10'];}, 'CIERRE')`);
@@ -256,6 +256,31 @@ console.log('\n[Automático] saldos diarios y cierre de seguidores');
     env.ss.insertSheet('DASHBOARD').grid = [['x'], [''], ['Marca'], ['INDICADORES']];
     run(env, "runForAll_(function(){return ['2026-10'];}, 'CIERRE')");
     const h = g.REGISTROS.grid[0], row = g.REGISTROS.grid.find(r => r[5] === 'Seguidores cierre'); assert(row, 'fila de seguidores cierre'); assert.strictEqual(row[h.indexOf('Estado dato')], 'OK'); });
+}
+
+console.log('\n[Regresión] Sheets convierte "2026-10" en fecha');
+{
+  function apiOK(url) { const m = (url.match(/metric=([a-z_]+)/) || [])[1]; return m ? { code: 200, body: { data: [{ name: m, total_value: { value: 10 } }] } } : { code: 200, body: { data: [] } }; }
+  function setupR() {
+    const env = makeEnv({ responder: apiOK }); run(env, 'setupSheets()');
+    env.sheets.CONFIG.grid = [['CONFIGURACIÓN DE CUENTAS', 'Cliente', 'Plataforma', 'ID Meta', 'Usuario', 'Activo', 'Origen histórico', 'Conexión API', 'Última extracción'], [1, 'A', 'Instagram', '17841', '', 'Sí', 'x', 'PENDIENTE', '']];
+    env.ss.insertSheet('RESUMEN').grid = [['Marca', 'Plataforma', 'Mes', 'Vistas', 'Estado', 'Fuente']]; env.ss.insertSheet('DASHBOARD').grid = [['x'], [''], ['Marca'], ['INDICADORES']];
+    run(env, 'setupSheets()'); return env; }
+  test('mes escrito se conserva como TEXTO (no se vuelve fecha) y repetir la extracción no duplica', () => {
+    const env = setupR(), go = () => run(env, "runForAll_(function(){return ['2026-10'];}, 'CIERRE')");
+    go(); const n1 = env.sheets.REGISTROS.getLastRow(); go(); go();
+    assert.strictEqual(env.sheets.REGISTROS.getLastRow(), n1, 'sin filas duplicadas');
+    assert.strictEqual(typeof env.sheets.REGISTROS.grid[1][2], 'string'); });
+  test('repararDuplicados: elimina duplicados API, conserva histórico, retira lecturas no equivalentes y normaliza fechas', () => {
+    const env = setupR(), g = env.sheets.REGISTROS, D = new Date('2026-10-01T00:00:00-03:00'), E = new Date('2026-10-31T00:00:00-03:00');
+    const api = (met, val, ed, plat) => ['A', plat || 'Instagram', D, D, E, met, val, 'API', 'EXTRAÍDO', 'aditivo', '', '', '', 'k', ed, ''];
+    g.grid.push(['A', 'Instagram', '2026-07', '2026-07-01', '2026-07-31', 'Vistas', 5, 'Google Sheets original', 'HISTÓRICO', 'aditivo', 24, '']);
+    g.grid.push(api('Vistas', 1, 'OK')); g.grid.push(api('Vistas', 2, 'OK')); g.grid.push(api('Clics en enlaces', 0, 'CERO')); g.grid.push(api('Interacciones', 240, 'OK', 'Facebook'));
+    env.sheets.DASHBOARD.grid[2] = ['Marca', 'A', 'Mes', D, 'Plataforma', 'Instagram'];
+    const out = run(env, 'repararDuplicados()'); assert(/eliminadas: 3/.test(out), out);
+    const rows = g.grid.slice(1).filter(r => r[5]); assert.strictEqual(rows.length, 2);
+    const v = rows.find(r => r[2] === '2026-10'); assert.strictEqual(v[6], 2, 'queda la lectura más reciente'); assert.strictEqual(typeof v[3], 'string');
+    assert(rows.find(r => r[8] === 'HISTÓRICO'), 'histórico intacto'); assert.strictEqual(env.sheets.DASHBOARD.grid[2][3], '2026-10'); });
 }
 
 console.log(`\nResultado: ${pass} OK, ${fail} fallos`); if (fail) { console.log(failures.join('\n')); process.exit(1); }

@@ -52,11 +52,11 @@ var CATALOG = [
   { key: 'ig_interactions', plat: 'Instagram', metrica: 'Interacciones', api: 'total_interactions', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'ig_engaged', plat: 'Instagram', metrica: 'Cuentas involucradas', api: 'accounts_engaged', regla: 'NO_ADITIVO', concepto: 'TOTAL', verificada: false },
   { key: 'ig_profile_views', plat: 'Instagram', metrica: 'Visitas al perfil', api: 'profile_views', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
-  { key: 'ig_link_taps', plat: 'Instagram', metrica: 'Clics en enlaces', api: 'profile_links_taps', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
+  { key: 'ig_link_taps', plat: 'Instagram', metrica: 'Toques en enlaces del perfil (API)', api: 'profile_links_taps', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   // ---- Facebook (Graph API /{page-id}/insights) ----
   { key: 'fb_views', plat: 'Facebook', metrica: 'Vistas', api: 'page_media_view', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'fb_reach', plat: 'Facebook', metrica: 'Alcance', api: 'page_total_media_view_unique', regla: 'NO_ADITIVO', concepto: 'TOTAL', verificada: false },
-  { key: 'fb_interactions', plat: 'Facebook', metrica: 'Interacciones', api: 'page_post_engagements', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
+  { key: 'fb_interactions', plat: 'Facebook', metrica: 'Acciones en publicaciones (API)', api: 'page_post_engagements', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'fb_profile_views', plat: 'Facebook', metrica: 'Visitas al perfil', api: 'page_views_total', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'fb_new_follows', plat: 'Facebook', metrica: 'Nuevos seguidores', api: 'page_daily_follows_unique', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
   { key: 'fb_unfollows', plat: 'Facebook', metrica: 'Bajas', api: 'page_daily_unfollows_unique', regla: 'SUMA', concepto: 'TOTAL', verificada: false },
@@ -164,6 +164,11 @@ function addDays_(ymd, n) {
   var p = ymd.split('-'), d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + n));
   return d.getUTCFullYear() + '-' + pad2_(d.getUTCMonth() + 1) + '-' + pad2_(d.getUTCDate());
 }
+
+/** Google Sheets convierte '2026-10' en fecha: se normaliza SIEMPRE antes de comparar claves. */
+function isDate_(v) { return Object.prototype.toString.call(v) === '[object Date]'; }
+function normMonth_(v) { return isDate_(v) ? Utilities.formatDate(v, LM.TZ, 'yyyy-MM') : String(v == null ? '' : v).trim(); }
+function normDay_(v) { return isDate_(v) ? Utilities.formatDate(v, LM.TZ, 'yyyy-MM-dd') : String(v == null ? '' : v).trim(); }
 
 // ======== MetaApi.gs ========
 /** Cliente Graph / Marketing API (solo lectura). Token SIEMPRE desde Propiedades del script. */
@@ -523,6 +528,8 @@ function toRecords_(account, ym, results, ctx) {
     ['Alcance orgánico', LM.DATA.NA, 'Sin split orgánico/pago oficial en insights de cuenta; ver Alcance Ads (Marketing API).'],
     ['Mensajes', LM.DATA.PENDING, 'Requiere Messaging API y validar definición vs Business Suite.'],
     ['Contactos iniciados', LM.DATA.PENDING, 'Requiere Messaging API y validar definición vs Business Suite.']];
+  missing.push(['Clics en enlaces', LM.DATA.PENDING, 'Sin métrica de API equivalente verificada a "Clics en el enlace" de Business Suite (profile_links_taps dio 0 vs 638 en octubre).']);
+  if (account.plat === 'Facebook') missing.push(['Interacciones', LM.DATA.PENDING, 'Sin métrica de API equivalente verificada a "Interacciones con el contenido" de Business Suite (page_post_engagements=240 incluye otras acciones; BS mostró 5).']);
   if (account.plat === 'Instagram') {
     missing.push(['Nuevos seguidores', LM.DATA.PENDING, 'Equivalencia API vs Business Suite sin verificar (follows_and_unfollows / follower_count).']);
     missing.push(['Bajas', LM.DATA.PENDING, 'Equivalencia API vs Business Suite sin verificar.']);
@@ -611,7 +618,7 @@ function readExisting_() {
   if (n < 2) return { sh: sh, idx: headerIndex_(sh), rows: [] };
   var idx = headerIndex_(sh), data = sh.getRange(2, 1, n - 1, sh.getLastColumn()).getValues(), rows = [];
   data.forEach(function (r, i) {
-    rows.push({ row: i + 2, clave: recordKey_(r[idx['Marca']], r[idx['Plataforma']], r[idx['Mes']], r[idx['Métrica']]),
+    rows.push({ row: i + 2, clave: recordKey_(r[idx['Marca']], r[idx['Plataforma']], normMonth_(r[idx['Mes']]), r[idx['Métrica']]),
       valor: r[idx['Valor']], estado: r[idx['Estado']], estadoDato: r[idx['Estado dato']] || (r[idx['Valor']] === '' ? '' : LM.DATA.OK) });
   });
   return { sh: sh, idx: idx, rows: rows };
@@ -628,15 +635,21 @@ function recordToRow_(rec, idx, width) {
 }
 
 /** Aplica el plan. Las actualizaciones tocan solo las columnas de la API (no 'Fila original'). */
+/** Formato texto en Mes/Inicio/Fin ANTES de escribir, para que Sheets no los convierta en fechas. */
+function textDateCols_(sh, idx, row, nrows) {
+  ['Mes', 'Inicio', 'Fin'].forEach(function (h) { if (idx[h] !== undefined) sh.getRange(row, idx[h] + 1, nrows, 1).setNumberFormat('@'); });
+}
 function applyPlan_(ctx, plan) {
   var width = ctx.sh.getLastColumn();
   if (plan.inserts.length) {
-    var rows = plan.inserts.map(function (r) { return recordToRow_(r, ctx.idx, width); });
-    ctx.sh.getRange(ctx.sh.getLastRow() + 1, 1, rows.length, width).setValues(rows);
+    var rows = plan.inserts.map(function (r) { return recordToRow_(r, ctx.idx, width); }), at = ctx.sh.getLastRow() + 1;
+    textDateCols_(ctx.sh, ctx.idx, at, rows.length);
+    ctx.sh.getRange(at, 1, rows.length, width).setValues(rows);
   }
   plan.updates.forEach(function (u) {
     var row = recordToRow_(u.rec, ctx.idx, width), cur = ctx.sh.getRange(u.row, 1, 1, width).getValues()[0];
     if (ctx.idx['Fila original'] !== undefined) row[ctx.idx['Fila original']] = cur[ctx.idx['Fila original']];
+    textDateCols_(ctx.sh, ctx.idx, u.row, 1);
     ctx.sh.getRange(u.row, 1, 1, width).setValues([row]);
   });
 }
@@ -713,7 +726,7 @@ function updateResumen_(rows) {
   var sh = getSS_().getSheetByName(LM.SHEETS.RESUMEN);
   if (!sh) throw new Error('Falta la hoja RESUMEN');
   var idx = headerIndex_(sh), width = sh.getLastColumn(), n = sh.getLastRow(), data = n > 1 ? sh.getRange(2, 1, n - 1, width).getValues() : [];
-  var pos = {}; data.forEach(function (r, i) { pos[[r[idx['Marca']], r[idx['Plataforma']], r[idx['Mes']]].join('|')] = { row: i + 2, estado: r[idx['Estado']] }; });
+  var pos = {}; data.forEach(function (r, i) { pos[[r[idx['Marca']], r[idx['Plataforma']], normMonth_(r[idx['Mes']])].join('|')] = { row: i + 2, estado: r[idx['Estado']] }; });
   var written = 0, skipped = 0;
   rows.forEach(function (s) {
     var k = [s.marca, s.plat, s.mes].join('|'), cur = pos[k];
@@ -723,6 +736,7 @@ function updateResumen_(rows) {
     Object.keys(s.vals).forEach(function (h) { if (idx[h] !== undefined) row[idx[h]] = s.vals[h]; });
     row[idx['Estado']] = s.estado; row[idx['Fuente']] = s.fuente;
     var target = cur ? cur.row : sh.getLastRow() + 1;
+    sh.getRange(target, idx['Mes'] + 1, 1, 1).setNumberFormat('@');
     sh.getRange(target, 1, 1, width).setValues([row]); written++;
   });
   return { written: written, skipped: skipped };
@@ -734,7 +748,7 @@ function readRecords_() {
   if (n < 2) return out;
   var idx = ex.idx, data = ex.sh.getRange(2, 1, n - 1, ex.sh.getLastColumn()).getValues();
   data.forEach(function (r) {
-    out.push({ marca: r[idx['Marca']], plat: r[idx['Plataforma']], mes: r[idx['Mes']], metrica: r[idx['Métrica']],
+    out.push({ marca: r[idx['Marca']], plat: r[idx['Plataforma']], mes: normMonth_(r[idx['Mes']]), metrica: r[idx['Métrica']],
       valor: r[idx['Valor']] === '' ? null : r[idx['Valor']], estado: r[idx['Estado']], fuente: r[idx['Fuente']],
       estadoDato: r[idx['Estado dato']] || (r[idx['Valor']] === '' ? LM.DATA.NA : LM.DATA.OK) });
   });
@@ -759,9 +773,12 @@ function updateDashboard_(marca, plat, mes) {
   var ss = getSS_(), sh = ss.getSheetByName(LM.SHEETS.DASHBOARD);
   if (!sh) throw new Error('Falta la hoja DASHBOARD');
   var resumen = readResumenAsRows_(), vals = buildDashboard_(resumen, marca, plat, mes), formulas = [];
+  // Sin datos validados para ese mes: NO se toca el dashboard (no se pisa lo que ya muestra).
+  if (vals.every(function (v) { return v.estado === 'SIN DATOS'; })) return formulas;
   var colA = sh.getRange(1, 1, Math.max(sh.getLastRow(), 15), 1).getValues().map(function (r) { return r[0]; });
   var head = colA.indexOf('INDICADORES') + 1;
   if (!head) throw new Error('No se encontró el encabezado INDICADORES en DASHBOARD');
+  sh.getRange('D3').setNumberFormat('@');
   [['B3', marca], ['D3', mes], ['F3', plat]].forEach(function (c) { safeSet_(sh, c[0], c[1], formulas); });
   sh.getRange(head, 6).setValue('Variación abs.');
   vals.forEach(function (v, i) {
@@ -783,7 +800,7 @@ function readResumenAsRows_() {
   if (n < 2) return out;
   sh.getRange(2, 1, n - 1, sh.getLastColumn()).getValues().forEach(function (r) {
     var vals = {}; Object.keys(idx).forEach(function (h) { if (['Marca', 'Plataforma', 'Mes', 'Estado', 'Fuente'].indexOf(h) < 0 && r[idx[h]] !== '') vals[h] = r[idx[h]]; });
-    out.push({ marca: r[idx['Marca']], plat: r[idx['Plataforma']], mes: r[idx['Mes']], vals: vals, estado: r[idx['Estado']] });
+    out.push({ marca: r[idx['Marca']], plat: r[idx['Plataforma']], mes: normMonth_(r[idx['Mes']]), vals: vals, estado: r[idx['Estado']] });
   });
   return out;
 }
@@ -792,7 +809,7 @@ function readResumenAsRows_() {
 function upsertContent_(rows, nowIso) {
   if (!rows.length) return 0;
   var sh = getSheet_(LM.SHEETS.CONTENIDOS, LM.HEADERS.CONTENIDOS), idx = headerIndex_(sh), width = sh.getLastColumn(), n = sh.getLastRow(), pos = {};
-  if (n > 1) sh.getRange(2, 1, n - 1, width).getValues().forEach(function (r, i) { pos[[r[idx['Marca']], r[idx['Plataforma']], r[idx['ID contenido']]].join('|')] = i + 2; });
+  if (n > 1) sh.getRange(2, 1, n - 1, width).getValues().forEach(function (r, i) { pos[[r[idx['Marca']], r[idx['Plataforma']], String(r[idx['ID contenido']])].join('|')] = i + 2; });
   var c = 0;
   rows.forEach(function (x) {
     var row = new Array(width).fill(''); function s(h, v) { if (idx[h] !== undefined) row[idx[h]] = v === null || v === undefined ? '' : v; }
@@ -801,7 +818,7 @@ function upsertContent_(rows, nowIso) {
     s('Guardados', x.guardados); s('Compartidos', x.compartidos); s('Comentarios', x.comentarios); s('Reacciones', x.reacciones);
     s('Origen', x.origen); s('Estado', x.estado === LM.DATA.OK ? 'EXTRAÍDO' : 'SIN INSIGHTS'); s('Fecha extracción', nowIso);
     var k = [x.marca, x.plat, x.id].join('|'), at = pos[k] || sh.getLastRow() + 1;
-    // el placeholder PENDIENTE de la plantilla (fila sin ID) se ignora: solo se agregan filas con ID
+    ['Mes', 'Fecha de publicación', 'ID contenido'].forEach(function (h) { if (idx[h] !== undefined) sh.getRange(at, idx[h] + 1, 1, 1).setNumberFormat('@'); });
     sh.getRange(at, 1, 1, width).setValues([row]); pos[k] = at; c++;
   });
   return c;
@@ -1010,6 +1027,41 @@ function aplicarManuales() {
   });
 }
 
+/**
+ * Reparación única: (1) respalda; (2) elimina filas API duplicadas de REGISTROS (deja la más reciente);
+ * (3) retira lecturas API que se presentaban como equivalentes sin serlo; (4) fuerza texto en Mes/Inicio/Fin; (5) restaura D3 del DASHBOARD como texto.
+ * Nunca toca filas HISTÓRICO/VALIDADO ni filas con 'Fila original'.
+ */
+var RETIRADAS = [['Instagram', 'Clics en enlaces'], ['Facebook', 'Interacciones']];
+function repararDuplicados() {
+  return lock_(function () {
+    var backup = backupSpreadsheet_(), ex = readExisting_(), sh = ex.sh, idx = ex.idx, width = sh.getLastColumn(), n = sh.getLastRow();
+    var data = n > 1 ? sh.getRange(2, 1, n - 1, width).getValues() : [], last = {}, del = {};
+    function isApiRow(r) { var o = r[idx['Fila original']]; return (o === '' || o === null) && LM.LOCKED_STATES.indexOf(r[idx['Estado']]) < 0; }
+    data.forEach(function (r, i) {
+      if (!isApiRow(r)) return;
+      var met = r[idx['Métrica']], plat = r[idx['Plataforma']], k = recordKey_(r[idx['Marca']], plat, normMonth_(r[idx['Mes']]), met);
+      if (RETIRADAS.some(function (x) { return x[0] === plat && x[1] === met; }) && [LM.DATA.OK, LM.DATA.ZERO].indexOf(r[idx['Estado dato']]) >= 0) { del[i + 2] = true; return; }
+      if (last[k] !== undefined) del[last[k]] = true;
+      last[k] = i + 2;
+    });
+    var rows = Object.keys(del).map(Number).sort(function (a, b) { return b - a; });
+    rows.forEach(function (row) { sh.deleteRow(row); });
+    var n2 = sh.getLastRow(), fixed = 0;
+    if (n2 > 1) sh.getRange(2, 1, n2 - 1, width).getValues().forEach(function (r, i) {
+      if (!isApiRow(r)) return;
+      textDateCols_(sh, idx, i + 2, 1);
+      sh.getRange(i + 2, idx['Mes'] + 1).setValue(normMonth_(r[idx['Mes']]));
+      sh.getRange(i + 2, idx['Inicio'] + 1).setValue(normDay_(r[idx['Inicio']]));
+      sh.getRange(i + 2, idx['Fin'] + 1).setValue(normDay_(r[idx['Fin']])); fixed++;
+    });
+    var dash = getSS_().getSheetByName(LM.SHEETS.DASHBOARD);
+    if (dash && isDate_(dash.getRange('D3').getValue())) { var v = normMonth_(dash.getRange('D3').getValue()); dash.getRange('D3').setNumberFormat('@'); dash.getRange('D3').setValue(v); }
+    logControl_('', '', '', 'REPARACIÓN', 'Respaldo ' + backup + '; filas eliminadas: ' + rows.length + '; filas con fechas en texto: ' + fixed, 'repararDuplicados', 'INFO');
+    return 'Respaldo: ' + backup + ' | filas eliminadas: ' + rows.length + ' | normalizadas: ' + fixed;
+  });
+}
+
 // ======== Diagnostics.gs ========
 /** Diagnóstico y verificación de disponibilidad real de métricas. Nunca imprime tokens. */
 
@@ -1053,23 +1105,28 @@ function probeMetrics(marca) {
 }
 
 /**
- * Descubrimiento de equivalencias con Business Suite: consulta varias métricas candidatas del mes y las anota en DISPONIBILIDAD
- * ('valor de prueba=N') para compararlas con lo que muestra Business Suite. Solo lectura.
+ * Descubrimiento de equivalencias con Business Suite (solo lectura). Anota en DISPONIBILIDAD el valor CRUDO de cada candidata
+ * para compararlo con Business Suite. Instagram usa una ventana de 30 días (límite de la API).
  */
 function probeCandidates(marca, ym) {
   var sh = getSheet_(LM.SHEETS.DISPONIBILIDAD, LM.HEADERS.DISPONIBILIDAD), now = new Date(), month = ym || prevMonth_(currentMonth_(now)), w = monthWindow_(month, true, now), rows = [];
-  var cands = { Facebook: ['page_post_engagements', 'page_actions_post_reactions_total', 'page_total_actions', 'page_consumptions_unique',
-      'page_website_clicks_logged_in_unique', 'page_cta_clicks_logged_in_total', 'page_cta_clicks_logged_in_unique', 'page_posts_impressions', 'post_engagements', 'page_follows'],
-    Instagram: ['profile_links_taps', 'website_clicks', 'likes', 'comments', 'shares', 'saves', 'reposts', 'replies', 'follows_and_unfollows', 'total_interactions'] };
+  var cands = {
+    Facebook: [['page_post_engagements', {}], ['page_actions_post_reactions_total', {}], ['page_total_actions', {}], ['page_follows', {}], ['page_daily_follows', {}],
+      ['page_video_views', {}], ['page_posts_impressions_unique', {}], ['page_content_activity', {}], ['page_post_engagements', { period: 'day' }]],
+    Instagram: [['profile_links_taps', { breakdown: 'contact_type' }], ['profile_links_taps', {}], ['follows_and_unfollows', { breakdown: 'follow_type' }], ['follows_and_unfollows', {}],
+      ['likes', {}], ['comments', {}], ['shares', {}], ['saves', {}], ['reposts', {}], ['replies', {}], ['total_interactions', {}], ['views', { breakdown: 'follow_type' }]] };
   readAccounts_().filter(function (a) { return a.authorized && a.activo && (!marca || a.marca === marca); }).forEach(function (a) {
     var token = a.plat === 'Facebook' ? pageToken_(a.id, getToken_(a.marca)) : getToken_(a.marca);
-    (cands[a.plat] || []).forEach(function (m) {
-      var params = a.plat === 'Facebook' ? { period: 'total_over_range' } : { metric_type: 'total_value', period: 'day' }, res;
+    (cands[a.plat] || []).forEach(function (c) {
+      var params = a.plat === 'Facebook' ? { period: 'total_over_range', since: w.since, until: w.until } : { metric_type: 'total_value', period: 'day', since: w.since, until: Math.min(w.until, w.since + 30 * 86400) };
+      Object.keys(c[1]).forEach(function (k) { params[k] = c[1][k]; });
+      params.metric = c[0];
+      var label = 'candidata:' + c[0] + (c[1].breakdown ? '[' + c[1].breakdown + ']' : '') + (c[1].period ? '[' + c[1].period + ']' : '') + (a.plat === 'Instagram' ? ' (días 1-30)' : '');
       try {
-        params.metric = m; params.since = w.since; params.until = w.until;
-        var r = parseInsightValue_((metaGet_(a.id + '/insights', params, token).data || [])[0], 'SUMA');
-        res = r.ok ? 'OK' : 'NO DISPONIBLE'; rows.push([new Date(), a.marca, a.plat, 'candidata:' + m, res, r.ok ? 'valor de prueba=' + r.value : r.detail]);
-      } catch (e) { rows.push([new Date(), a.marca, a.plat, 'candidata:' + m, e.kind === 'NO_DISPONIBLE' ? 'NO DISPONIBLE' : 'ERROR', scrub_(e.message)]); }
+        var item = (metaGet_(a.id + '/insights', params, token).data || [])[0];
+        var raw = item ? (item.total_value ? JSON.stringify(item.total_value) : JSON.stringify(item.values)) : 'sin datos';
+        rows.push([new Date(), a.marca, a.plat, label, item ? 'OK' : 'NO DISPONIBLE', 'crudo=' + String(raw).slice(0, 300)]);
+      } catch (e) { rows.push([new Date(), a.marca, a.plat, label, e.kind === 'NO_DISPONIBLE' ? 'NO DISPONIBLE' : 'ERROR', scrub_(e.message)]); }
     });
   });
   if (rows.length) sh.getRange(sh.getLastRow() + 1, 1, rows.length, 6).setValues(rows);

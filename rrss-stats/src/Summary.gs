@@ -27,7 +27,7 @@ function updateResumen_(rows) {
   var sh = getSS_().getSheetByName(LM.SHEETS.RESUMEN);
   if (!sh) throw new Error('Falta la hoja RESUMEN');
   var idx = headerIndex_(sh), width = sh.getLastColumn(), n = sh.getLastRow(), data = n > 1 ? sh.getRange(2, 1, n - 1, width).getValues() : [];
-  var pos = {}; data.forEach(function (r, i) { pos[[r[idx['Marca']], r[idx['Plataforma']], r[idx['Mes']]].join('|')] = { row: i + 2, estado: r[idx['Estado']] }; });
+  var pos = {}; data.forEach(function (r, i) { pos[[r[idx['Marca']], r[idx['Plataforma']], normMonth_(r[idx['Mes']])].join('|')] = { row: i + 2, estado: r[idx['Estado']] }; });
   var written = 0, skipped = 0;
   rows.forEach(function (s) {
     var k = [s.marca, s.plat, s.mes].join('|'), cur = pos[k];
@@ -37,6 +37,7 @@ function updateResumen_(rows) {
     Object.keys(s.vals).forEach(function (h) { if (idx[h] !== undefined) row[idx[h]] = s.vals[h]; });
     row[idx['Estado']] = s.estado; row[idx['Fuente']] = s.fuente;
     var target = cur ? cur.row : sh.getLastRow() + 1;
+    sh.getRange(target, idx['Mes'] + 1, 1, 1).setNumberFormat('@');
     sh.getRange(target, 1, 1, width).setValues([row]); written++;
   });
   return { written: written, skipped: skipped };
@@ -48,7 +49,7 @@ function readRecords_() {
   if (n < 2) return out;
   var idx = ex.idx, data = ex.sh.getRange(2, 1, n - 1, ex.sh.getLastColumn()).getValues();
   data.forEach(function (r) {
-    out.push({ marca: r[idx['Marca']], plat: r[idx['Plataforma']], mes: r[idx['Mes']], metrica: r[idx['Métrica']],
+    out.push({ marca: r[idx['Marca']], plat: r[idx['Plataforma']], mes: normMonth_(r[idx['Mes']]), metrica: r[idx['Métrica']],
       valor: r[idx['Valor']] === '' ? null : r[idx['Valor']], estado: r[idx['Estado']], fuente: r[idx['Fuente']],
       estadoDato: r[idx['Estado dato']] || (r[idx['Valor']] === '' ? LM.DATA.NA : LM.DATA.OK) });
   });
@@ -73,9 +74,12 @@ function updateDashboard_(marca, plat, mes) {
   var ss = getSS_(), sh = ss.getSheetByName(LM.SHEETS.DASHBOARD);
   if (!sh) throw new Error('Falta la hoja DASHBOARD');
   var resumen = readResumenAsRows_(), vals = buildDashboard_(resumen, marca, plat, mes), formulas = [];
+  // Sin datos validados para ese mes: NO se toca el dashboard (no se pisa lo que ya muestra).
+  if (vals.every(function (v) { return v.estado === 'SIN DATOS'; })) return formulas;
   var colA = sh.getRange(1, 1, Math.max(sh.getLastRow(), 15), 1).getValues().map(function (r) { return r[0]; });
   var head = colA.indexOf('INDICADORES') + 1;
   if (!head) throw new Error('No se encontró el encabezado INDICADORES en DASHBOARD');
+  sh.getRange('D3').setNumberFormat('@');
   [['B3', marca], ['D3', mes], ['F3', plat]].forEach(function (c) { safeSet_(sh, c[0], c[1], formulas); });
   sh.getRange(head, 6).setValue('Variación abs.');
   vals.forEach(function (v, i) {
@@ -97,7 +101,7 @@ function readResumenAsRows_() {
   if (n < 2) return out;
   sh.getRange(2, 1, n - 1, sh.getLastColumn()).getValues().forEach(function (r) {
     var vals = {}; Object.keys(idx).forEach(function (h) { if (['Marca', 'Plataforma', 'Mes', 'Estado', 'Fuente'].indexOf(h) < 0 && r[idx[h]] !== '') vals[h] = r[idx[h]]; });
-    out.push({ marca: r[idx['Marca']], plat: r[idx['Plataforma']], mes: r[idx['Mes']], vals: vals, estado: r[idx['Estado']] });
+    out.push({ marca: r[idx['Marca']], plat: r[idx['Plataforma']], mes: normMonth_(r[idx['Mes']]), vals: vals, estado: r[idx['Estado']] });
   });
   return out;
 }
@@ -106,7 +110,7 @@ function readResumenAsRows_() {
 function upsertContent_(rows, nowIso) {
   if (!rows.length) return 0;
   var sh = getSheet_(LM.SHEETS.CONTENIDOS, LM.HEADERS.CONTENIDOS), idx = headerIndex_(sh), width = sh.getLastColumn(), n = sh.getLastRow(), pos = {};
-  if (n > 1) sh.getRange(2, 1, n - 1, width).getValues().forEach(function (r, i) { pos[[r[idx['Marca']], r[idx['Plataforma']], r[idx['ID contenido']]].join('|')] = i + 2; });
+  if (n > 1) sh.getRange(2, 1, n - 1, width).getValues().forEach(function (r, i) { pos[[r[idx['Marca']], r[idx['Plataforma']], String(r[idx['ID contenido']])].join('|')] = i + 2; });
   var c = 0;
   rows.forEach(function (x) {
     var row = new Array(width).fill(''); function s(h, v) { if (idx[h] !== undefined) row[idx[h]] = v === null || v === undefined ? '' : v; }
@@ -115,7 +119,7 @@ function upsertContent_(rows, nowIso) {
     s('Guardados', x.guardados); s('Compartidos', x.compartidos); s('Comentarios', x.comentarios); s('Reacciones', x.reacciones);
     s('Origen', x.origen); s('Estado', x.estado === LM.DATA.OK ? 'EXTRAÍDO' : 'SIN INSIGHTS'); s('Fecha extracción', nowIso);
     var k = [x.marca, x.plat, x.id].join('|'), at = pos[k] || sh.getLastRow() + 1;
-    // el placeholder PENDIENTE de la plantilla (fila sin ID) se ignora: solo se agregan filas con ID
+    ['Mes', 'Fecha de publicación', 'ID contenido'].forEach(function (h) { if (idx[h] !== undefined) sh.getRange(at, idx[h] + 1, 1, 1).setNumberFormat('@'); });
     sh.getRange(at, 1, 1, width).setValues([row]); pos[k] = at; c++;
   });
   return c;
