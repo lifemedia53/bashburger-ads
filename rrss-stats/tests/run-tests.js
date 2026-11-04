@@ -153,7 +153,7 @@ console.log('\n[Integración simulada] hojas en memoria, API simulada');
     run(env, `runForAll_(function(){return ['2026-10'];}, 'CIERRE')`);
     const n = run(env, `validateMonth("Tony's Pasta",'Instagram','2026-10')`); assert(n > 0);
     const res = env.sheets.RESUMEN.grid, h = res[0], oct = res.find(r => r[2] === '2026-10'); assert(oct, 'fila de octubre en RESUMEN'); assert.strictEqual(oct[h.indexOf('Vistas')], 5000); assert.strictEqual(oct[h.indexOf('Visitas al perfil')], '', 'sin dato queda vacío, no 0'); assert.strictEqual(oct[h.indexOf('Estado')], 'VALIDADO');
-    const d = env.sheets.DASHBOARD.grid; assert.strictEqual(d[4][1], 5000); assert.strictEqual(d[4][2], 4000); assert.strictEqual(d[4][3], 0.25); assert.strictEqual(env.sheets.DASHBOARD.formulas['5,6'], '=IF(AND(ISNUMBER(B5),ISNUMBER(C5)),B5-C5,"S/D")', 'variación abs. como fórmula');
+    const d = env.sheets.DASHBOARD.grid; assert.strictEqual(d[4][1], 5000); assert.strictEqual(d[4][2], 4000); assert.strictEqual(d[4][3], 0.25); assert.strictEqual(env.sheets.DASHBOARD.formulas['5,6'], '=IFERROR(B5-C5)', 'variación abs. como fórmula sin separadores');
     assert.strictEqual(d[7][1], 'S/D', 'visitas al perfil sin dato => S/D en dashboard');
     // una nueva extracción NO modifica lo validado
     run(env, `runForAll_(function(){return ['2026-10'];}, 'CIERRE')`);
@@ -354,6 +354,21 @@ console.log('\n[Decisión Laura] Clics en enlaces aproximados desde anuncios');
   test('sin anuncios (sin dato) los clics siguen PENDIENTE, no 0', () => {
     const env = makeEnv(); const recs = run(env, `toRecords_({marca:'A',plat:'Instagram'},'2026-10',[{key:'ads_link_clicks',status:'ERROR',value:null,detail:'x'}],{periodState:'EXTRAÍDO',nowIso:'x',now:new Date()})`);
     const c = recs.find(r => r.metrica === 'Clics en enlaces'); assert.strictEqual(c.valor, null); assert.strictEqual(c.estadoDato, 'PENDIENTE'); });
+}
+
+console.log('\n[DASHBOARD] vacío no es cero y fórmula sin separadores');
+{
+  const F = (sep) => ['=IF(COUNTIFS(RESUMEN!$A$2:$A1000','$B$3','RESUMEN!$C$2:$C1000','$D$3)=0','"",SUMIFS(RESUMEN!D$2:D1000','RESUMEN!$A$2:$A1000','$B$3))'].join(sep);
+  test('dashFixBlank_ agrega el criterio de celda no vacía con el separador de la fórmula, y es idempotente', () => {
+    const env = makeEnv();
+    for (const sep of [',', ';']) { env.ctx.f_ = F(sep); const nf = run(env, 'dashFixBlank_(f_)'); assert(nf.includes(sep + 'RESUMEN!D$2:D1000' + sep + '"<>")=0'), nf); env.ctx.f_ = nf; assert.strictEqual(run(env, 'dashFixBlank_(f_)'), null); }
+    assert.strictEqual(run(env, "dashFixBlank_('=1+1')"), null); });
+  test('repararDashboard ajusta B/C, reescribe F sin separadores y no toca otras filas', () => {
+    const env = makeEnv(); run(env, 'setupSheets()'); const d = env.ss.insertSheet('DASHBOARD');
+    d.grid = [['x'], [''], ['Marca'], ['INDICADORES'], ['Vistas'], ['NOTA', 'texto']]; d.formulas['5,2'] = F(';'); d.formulas['5,3'] = F(';'); d.formulas['5,6'] = '=IF(AND(ISNUMBER(B5);ISNUMBER(C5));B5-C5;"S/D")';
+    const out = run(env, 'repararDashboard()'); assert(/ajustadas: 2/.test(out), out);
+    assert(d.formulas['5,2'].includes(';"<>")')); assert(d.formulas['5,3'].includes(';"<>")')); assert.strictEqual(d.formulas['5,6'], '=IFERROR(B5-C5)'); assert.strictEqual(d.formulas['6,2'], undefined);
+    run(env, 'repararDashboard()'); assert.strictEqual((d.formulas['5,2'].match(/"<>"/g) || []).length, 1, 'idempotente'); });
 }
 
 console.log(`\nResultado: ${pass} OK, ${fail} fallos`); if (fail) { console.log(failures.join('\n')); process.exit(1); }

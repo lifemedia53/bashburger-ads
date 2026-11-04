@@ -88,7 +88,8 @@ function updateDashboard_(marca, plat, mes) {
     safeSet_(sh, 'B' + r, v.valor, formulas); safeSet_(sh, 'C' + r, v.anterior, formulas);
     safeSet_(sh, 'D' + r, v.pct, formulas); safeSet_(sh, 'E' + r, v.estado, formulas);
     // Variación absoluta como FÓRMULA: se recalcula sola cuando se cambia el mes (D3), igual que el resto del dashboard.
-    sh.getRange(r, 6).setFormula('=IF(AND(ISNUMBER(B' + r + '),ISNUMBER(C' + r + ')),B' + r + '-C' + r + ',"S/D")');
+    // Sin separadores de argumentos: funciona igual en cualquier configuración regional (es-CL usa ';', en-US usa ',').
+    sh.getRange(r, 6).setFormula('=IFERROR(B' + r + '-C' + r + ')');
   });
   return formulas;
 }
@@ -125,4 +126,34 @@ function upsertContent_(rows, nowIso) {
     sh.getRange(at, 1, 1, width).setValues([row]); pos[k] = at; c++;
   });
   return c;
+}
+
+/**
+ * Ajusta una fórmula del DASHBOARD para que una celda VACÍA de RESUMEN no se muestre como 0: agrega al COUNTIFS el criterio
+ * "no vacío" de la columna de la métrica. Respeta el separador de la fórmula (',' o ';'). Idempotente; null si no aplica.
+ */
+function dashFixBlank_(f) {
+  if (!f || f.indexOf('"<>"') >= 0) return null;
+  var m = f.match(/SUMIFS\(RESUMEN!([A-Z]+)\$2:/), at = f.indexOf(')=0');
+  if (!m || at < 0 || f.indexOf('COUNTIFS(') < 0) return null;
+  var sep = f.indexOf(';') >= 0 ? ';' : ',';
+  return f.slice(0, at) + sep + 'RESUMEN!' + m[1] + '$2:' + m[1] + '1000' + sep + '"<>"' + f.slice(at);
+}
+
+/** Reparación única del DASHBOARD (con respaldo): vacío ≠ 0 en B y C, y "Variación abs." con fórmula sin separadores. */
+function repararDashboard() {
+  return lock_(function () {
+    var backup = backupSpreadsheet_(), sh = getSS_().getSheetByName(LM.SHEETS.DASHBOARD), n = Math.max(sh.getLastRow(), 15), fixed = 0, abs = 0;
+    for (var r = 5; r <= n; r++) {
+      var bf = sh.getRange(r, 2).getFormula();
+      if (!bf || bf.indexOf('SUMIFS(') < 0) continue;
+      [2, 3].forEach(function (c) {
+        var cell = sh.getRange(r, c), f = cell.getFormula(), nf = dashFixBlank_(f);
+        if (nf) { cell.setFormula(nf); fixed++; }
+      });
+      sh.getRange(r, 6).setFormula('=IFERROR(B' + r + '-C' + r + ')'); abs++;
+    }
+    logControl_('', '', '', 'REPARACIÓN', 'DASHBOARD: respaldo ' + backup + '; fórmulas B/C ajustadas: ' + fixed + '; variación abs.: ' + abs, 'repararDashboard', 'INFO');
+    return 'Respaldo: ' + backup + ' | fórmulas ajustadas: ' + fixed + ' | variación abs.: ' + abs;
+  });
 }
