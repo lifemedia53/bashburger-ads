@@ -65,7 +65,7 @@ NOMENCLATURA: Campañas MAYÚSCULA+AÑO · Conjuntos "CJ X.Y - desc" · Ads "AD 
 4. Línea final: `Técnicos usados: … | Herramientas llamadas: N` (cuenta TODAS las llamadas, incluida la lectura de archivos y ToolSearch).
 
 ## Carga de anuncios desde Sheet (Laura, 2026-10-23)
-- Sheet: "LM - Carga de anuncios Meta (plantilla)" https://docs.google.com/spreadsheets/d/1XcdGELj-5cZWEr1lt9YorXiryHuZoDaukvZAywtM_Jc (leer con download_file_content, exportMimeType text/csv).
+- Sheet: "Ads-a-activar-LifeMedia" (reemplaza la plantilla anterior, Laura 5-nov) https://docs.google.com/spreadsheets/d/1QAaSbsR431vt79KWDWNakDaXl-RTMg4fqB0rDch0fxc (leer con download_file_content, exportMimeType text/csv).
 - Cargar solo filas con Estado = LISTO. Ignorar filas "EJEMPLO".
 - Antes de crear: leer config del conjunto (destino, objetivo) y buscar el video/imagen por nombre en la biblioteca de la cuenta (ads_get_ad_videos / ads_get_ad_images). Si falta algo: no crear, anotar `[DATO]`.
 - Crear SIEMPRE en PAUSA con ads_create_ad y object_story_spec inline (video_data con video_id + image_url del thumbnail + message + title + call_to_action). Para Instagram Direct: CTA {"type":"INSTAGRAM_MESSAGE","value":{"app_destination":"INSTAGRAM_DIRECT"}}. NO usar ads_create_creative con MESSAGE_PAGE (abre Messenger y Meta lo rechaza para IG).
